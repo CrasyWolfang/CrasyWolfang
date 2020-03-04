@@ -1,0 +1,183 @@
+body{
+	background-color: #e0c068;
+	background-image: url("test.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-attachment: fixed;
+}
+
+#top{
+	width: 1280px;
+	height: 140px;
+	margin: 0 auto;
+}
+.toplogo {
+	width: 1280px;
+	height: 140px;
+}
+
+#topmenu{
+	width: 1280px;
+	margin: 0 auto;
+	height: 50px;
+	background-color: #927d44;
+	clear: both;
+	margin-bottom: 20px;
+}
+ul#topmenu {
+	width: 1280px;
+	height: 50px;
+	margin-top: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+ul#topmenu li {
+	display: inline;
+}
+ul#topmenu a {
+	text-align: center;
+	font-size: 1.4em;
+	display: block;
+	float: left;
+	width: 210px;
+	height: 50px;
+	text-decoration: none;
+	color: #fff;
+	line-height:2.5;
+}
+ul#topmenu a:hover {
+	background-color: #ebd69d;
+}
+
+#wrapper{
+	width: 1280px;
+	margin: 0 auto;
+}
+
+#container {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #fcfcfc;
+	text-align: center;
+	
+}
+	
+#pageflip {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#titlebox {
+	width: 720px;
+	margin: 0 auto;
+}
+.titletable {
+	margin: 0 auto;
+	min-width: 50%;
+}
+.titleunderline{
+	border-bottom: 1px solid;
+	width: 100%;
+	display: block;
+}
+.title{
+	font-size: 2em;
+	font-weight: bold;
+	text-align: left;
+}
+.subtitle{
+	margin:0;
+	padding:0;
+	text-align: left;
+}
+.date{
+	margin:0;
+	padding:0;
+	text-align: right;
+}
+
+ul#taglist li {
+	display: inline;
+}
+ul#taglist a {
+	text-align: center;
+}
+
+#postbox {	
+	width: 720px;
+	text-align: left;
+	text-indent: 2em;
+	margin: 0 auto;
+}
+
+#card {
+	width: 720px;
+	text-align: left;
+	margin: 1em auto;
+}
+
+#lefter
+{
+	width: 240px;
+	background-color: #927d44;
+	float: left;
+}
+ul#leftmenu {
+	width: 200px;
+	margin-top: 0;
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+ul#leftmenu li {
+	display: inline;
+}
+ul#leftmenu a {
+	display: block;
+	float: left;
+	width: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+	color: #fff;
+	line-height:2;
+
+}	
+ul#leftmenu a:hover {
+	background-color: #ebd69d;
+}
+
+#righter {
+	width: 240px;
+	background-color: #ebd69d;
+	float: right;
+}
+
+.center{
+	margin: auto;
+	text-align: center;
+}
+
+.dataindent{
+	text-indent: 1em;
+}
+
+.imgtable{
+	padding: 0px;
+	margin: 0px;
+}
+.imgfull{
+	text-indent: 0px;
+	width: 720px;
+}
+.imghalf{
+	text-indent: 0px;
+	width: 360px;
+}
+
+.fontbig{
+	font-size: 1.2em;
+}
+.fontlarge{
+	font-size: 1.8em;
+}
