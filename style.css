@@ -1,9 +1,16 @@
 body{
 	background-color: #e0c068;
-	background-image: url("test.png");
+	background-image: url("bg-img.png");
 	background-repeat: no-repeat;
 	background-position: left bottom;
+	background-size: 450px;
 	background-attachment: fixed;
+}
+
+a{
+	color: #5a4911;
+	text-decoration: none;
+	
 }
 
 #top{
@@ -59,6 +66,8 @@ ul#topmenu a:hover {
 	margin: 0 auto;
 	background-color: #fcfcfc;
 	text-align: center;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 	
 }
 	
@@ -151,6 +160,11 @@ ul#leftmenu a:hover {
 	width: 240px;
 	background-color: #ebd69d;
 	float: right;
+}
+
+#side {
+	width: 220px;
+	margin: 0 auto;
 }
 
 .center{
