@@ -5,6 +5,7 @@ body{
 	background-position: left bottom;
 	background-size: 450px;
 	background-attachment: fixed;
+	font-size: 1.1em;
 }
 
 a{
@@ -43,7 +44,7 @@ ul#topmenu li {
 }
 ul#topmenu a {
 	text-align: center;
-	font-size: 1.4em;
+	font-size: 1.5em;
 	display: block;
 	float: left;
 	width: 210px;
@@ -73,7 +74,7 @@ ul#topmenu a:hover {
 	
 #pageflip {
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 #titlebox {
@@ -90,7 +91,7 @@ ul#topmenu a:hover {
 	display: block;
 }
 .title{
-	font-size: 2em;
+	font-size: 2.2em;
 	font-weight: bold;
 	text-align: left;
 }
@@ -180,18 +181,10 @@ ul#leftmenu a:hover {
 	padding: 0px;
 	margin: 0px;
 }
-.imgfull{
-	text-indent: 0px;
-	width: 720px;
-}
-.imghalf{
-	text-indent: 0px;
-	width: 360px;
-}
 
 .fontbig{
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 .fontlarge{
-	font-size: 1.8em;
+	font-size: 2em;
 }
