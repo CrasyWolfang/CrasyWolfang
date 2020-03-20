@@ -14,7 +14,10 @@ a{
 	
 }
 
-a:hover {
+a:hover{
+	background-color: #e0c068;
+}
+a:hover table{
 	background-color: #e0c068;
 }
 
