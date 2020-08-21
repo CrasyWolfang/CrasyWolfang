@@ -126,6 +126,15 @@ ul#taglist a {
 	text-indent: 2em;
 	margin: 0 auto;
 }
+#postbox h2 {
+	text-indent: 2em;
+}
+#postbox p {
+	text-indent: 2em;
+}
+#postbox table {
+	width: 80%px;
+}
 
 #card {
 	width: 720px;
