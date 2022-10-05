@@ -1,6 +1,6 @@
 body{
 	background-color: #e0c068;
-	background-image: url("https://i.imgur.com/av7zgiY.png");
+	background-image: url("bg-img.png");
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	background-size: 300px;
@@ -11,7 +11,6 @@ body{
 a{
 	color: #5a4911;
 	text-decoration: none;
-	
 }
 
 a:hover{
@@ -70,12 +69,13 @@ ul#topmenu a:hover {
 }
 
 #container {
-	width: 800px;
+	width: 1040px;
 	margin: 0 auto;
 	background-color: #fcfcfc;
 	text-align: center;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
+	float: right;
 	
 }
 	
@@ -85,7 +85,7 @@ ul#topmenu a:hover {
 }
 
 #titlebox {
-	width: 720px;
+	width: 900px;
 	margin: 0 auto;
 }
 .titletable {
@@ -121,7 +121,7 @@ ul#taglist a {
 }
 
 #postbox {	
-	width: 720px;
+	width: 900px;
 	text-align: left;
 	margin: 0 auto;
 }
@@ -133,7 +133,7 @@ ul#taglist a {
 }
 
 #card {
-	width: 720px;
+	width: 900px;
 	text-align: left;
 	margin: 1em auto;
 }
@@ -199,4 +199,14 @@ ul#leftmenu a:hover {
 }
 .fontlarge{
 	font-size: 1.8em;
+}
+
+.photo{
+	padding: 1em;
+}
+.photorow{
+	display: flex;
+}
+.photoslot{
+	flex: 1 1 auto;
 }
