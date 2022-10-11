@@ -35,6 +35,7 @@ a:hover table{
 	height: 52px;
 	background-color: #927d44;
 	clear: both;
+	margin-top: -10px;
 	margin-bottom: 20px;
 }
 ul#topmenu {
