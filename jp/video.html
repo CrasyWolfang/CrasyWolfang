@@ -1,90 +1,194 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CWOLF 動画制作</title>
+<title>CWOLF </title>
 <meta charset="utf-8">
-<link rel="stylesheet"  href="https://crasywolfang.com/style.css">
-<link rel="icon" href="https://crasywolfang.com/icon.png">
+<link rel="stylesheet" href="style.css" >
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0px;
+padding: 0px;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0px;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 20px;
+padding-right: 20px;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{float: right;}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+text-decoration: none;
+}
+.photoCard h1{margin: 0px;}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+</style>
 </head>
 <body>
-<header id="top">
-<img class="topbox" src="https://i.lensdump.com/i/1ce7Om.png" width="182" height="182">
-<div class="topbox"><img src="https://i.lensdump.com/i/1cRhhT.jpg" height="182" width="100%"></div>
-</header>
-<nav id="topmenu">
-<ul id="topmenu">
-<li><a href="http://www.crasywolfang.com/jp/feed"><b> フィード </b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/photo"><b>写真撮影</b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/video"><b>動画制作</b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/culture/piano"><b>文化</b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/about"><b>について</b></a></li>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/video">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/video">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
+<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
+<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
+<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
 </ul>
 </nav>
-<div id="wrapper">
 
 
 
-<section id="container">
-
-<div id="card">
-<div id="card">
-<a href="http://www.crasywolfang.com/jp/post/20201231jabf">
-<table><tr>
-<td><img src="https://i.imgur.com/fpWKOCDt.jpg"></td>
-<td>情報動画<br>
-<span class="fontlarge">日本の離乳食</span><br>
-2020-12-31</td>
-</tr></table>
-</a>
-</div>
-</div><div id="card">
-<div id="card">
-<a href="http://www.crasywolfang.com/jp/post/20200821tcmp">
-<table><tr>
-<td><img src="https://i.imgur.com/nPmtpFN.jpg"></td>
-<td>コンサート<br>
-<span class="fontlarge">ザ・コスモポリス</span><br>
-2020-08-21</td>
-</tr></table>
-</a>
-</div>
-</div><div id="card">
-<div id="card">
-<a href="http://www.crasywolfang.com/jp/post/20200821mrbp">
-<table><tr>
-<td><img src="https://i.imgur.com/SWuzbd2.jpg"></td>
-<td>前衛的な動画<br>
-<span class="fontlarge">私の部屋は私の刑務所になった</span><br>
-2020-08-21</td>
-</tr></table>
-</a>
-</div>
-</div><div id="card">
-<div id="card">
-<a href="http://www.crasywolfang.com/jp/post/20200821cats">
-<table><tr>
-<td><img src="https://i.imgur.com/dhDpxQX.png"></td>
-<td>ストップモーション<br>
-<span class="fontlarge">猫物語</span><br>
-2020-08-21</td>
-</tr></table>
-</a>
-</div>
-</div><div id="card">
-<div id="card">
-<a href="http://www.crasywolfang.com/jp/post/20140725ccmwmv">
-<table><tr>
-<td><img src="https://i.imgur.com/PrgYKun.png"></td>
-<td>Music video<br>
-<span class="fontlarge">Colour My World</span><br>
-2014-07-25</td>
-</tr></table>
-</a>
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2023
+✉ <adress>forwardtowolf@gmail.com</adress>
 </div>
 </div>
 
-</section>
-<section id="copyright">Copyright: ©CrasyWolfang 2014-2022</section>
-</div>
 </body>
 </html>

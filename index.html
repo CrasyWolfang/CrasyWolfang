@@ -3,25 +3,75 @@
 <head>
 <title>CWOLF </title>
 <meta charset="utf-8">
-<link rel="stylesheet"  href="https://crasywolfang.com/style.css">
-<link rel="icon" href="https://crasywolfang.com/icon.png">
+<link rel="stylesheet" href="style.css" >
+<style>
+#top {
+background-color: black;
+color: white;
+text-align: center;
+top: 0px;
+width: 100%;
+position: fixed;
+}
+#menu{
+padding: 2em;
+text-align: center;
+color: white;
+background-color: black;
+border: 2px solid white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+#menu ul{
+padding-left:0;
+}
+#menu li{
+font-size: 1.2em;
+display: inline-block;
+indent: 0px;
+}
+#menu a{
+margin: 0.3em;
+padding: 1em;
+color: white;
+border: 1px solid white;
+text-decoration: none;
+}
+#menu a:hover{
+background-color:#e0c068;
+}
+body{
+background-image: url(https://i3.lensdump.com/i/6w92Az.jpeg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+}
+@media only screen and (min-height: 1080px) {
+body{
+background-image: url(https://i1.lensdump.com/i/6w98VT.jpeg);
+}
+}
+</style>
 </head>
 <body>
 
-<div id="wrapper">
-<section id="container">
-
+<div id="top">
 <h1>CrasyWolfang.com</h1>
-<img src="https://i1.lensdump.com/i/1LDMsK.jpg" width="100%">
-<center>
-<h1>よこそう</h1>
-<a href="http://www.crasywolfang.com/jp/feed">ここクリックして日本語のHPへ行く</a>
-
-<h1>Welcome!</h1>
-<a href="http://www.crasywolfang.com/en/feed">Press here to continue in English</a>
-</center>
-
-</section>
 </div>
+
+<div id="menu">
+<h1>よこそう</h1>
+<ul>
+<li><a href="https://CrasyWolfang.com/en/home">English</a></li>
+<li><a href="https://CrasyWolfang.com/jp/home">日本語</a></li>
+</ul>
+</div>
+
 </body>
 </html>
+
+
+

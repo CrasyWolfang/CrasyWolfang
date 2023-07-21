@@ -1,81 +1,222 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CWOLF について</title>
+<title>CWOLF </title>
 <meta charset="utf-8">
-<link rel="stylesheet"  href="https://crasywolfang.com/style.css">
-<link rel="icon" href="https://crasywolfang.com/icon.png">
+<link rel="stylesheet" href="style.css" >
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0px;
+padding: 0px;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0px;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 20px;
+padding-right: 20px;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{float: right;}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+text-decoration: none;
+}
+.photoCard h1{margin: 0px;}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+</style>
 </head>
 <body>
-<header id="top">
-<img class="topbox" src="https://i.lensdump.com/i/1ce7Om.png" width="182" height="182">
-<div class="topbox"><img src="https://i3.lensdump.com/i/1cR5jC.jpg" height="182" width="100%"></div>
-</header>
-<nav id="topmenu">
-<ul id="topmenu">
-<li><a href="http://www.crasywolfang.com/jp/feed"><b> フィード </b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/photo"><b>写真撮影</b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/video"><b>動画制作</b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/culture/piano"><b>文化</b></a></li>
-<li><a href="http://www.crasywolfang.com/jp/about"><b>について</b></a></li>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/about">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/about">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
+<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
+<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
+<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
 </ul>
 </nav>
-<div id="wrapper">
 
-
-
-<section id="container">
-
-<div id="postbox">
+<h1 style="text-align: center;">CWOLF WEB PROJECT</h1>
+<img style="display: block; margin-left: auto; margin-right: auto;" src="https://a.l3n.co/i/Jca1To.png">
 
 <h2>について</h2>
-
-<p>これはＣＷＯＬＦウェブ・プロジェクトである。
-ウェブサイトは<abbr title="オオカミキバ">狼牙</abbr>クレシに運営されている。
-色々な創造を共有するためにウェブサイトが開発されたし、ポートフォリオとして機能している。</p>
-
-<h2>Weblog</h2>
-
-<p>ウェブログと呼ばれているが、典型的なブロガーのブログではない。
-かえって、ウェブログはウェブサイトの内容に関して変化や公開とかアップデートである。</p>
-
-<h2>写真撮影</h2>
-
-<p>ウェブサイトには自然から街までといった写真である。
-視聴者が写真をゆっくり見たり内容を楽しんだりするめに、写真に関した投稿には文章は少ない。
-写真は場所の感じや季節の美から個人な人のポートレートに中心した撮影までといったテーマである。
-静止画も動画像も使用されている。</p>
-
-<h2>動画制作</h2>
-
-<p>動画作成に関しては、動画とコメントや自己評価が投稿させる。
-動画の描写の上は背景や工程も述べる。</p>
+<p>これは<b>CWOLF WEB PROJECT</b>というホームページである。
+HPは<abbr title="おおかみきば">狼牙</abbr>クレシによって作られて運営されている。
+写真集や動画に関して自己分析などといったメディアというのポートフォリオである。
+媒体の中は学校宿題や自分発送プロジェクトから依頼プロジェクトや協同プロジェクトまでかけたコンテンツである。
+</p>
 
 <h2>歴史</h2>
-
-<p>以前の制作はピアノを弾いてみた動画や絵や簡単なコミックやゲームに関したプロジェクトである。
-それは2011から他のウェブサイトとおして投稿されていた。
-2020年にこのウェブサイトは開放されてた。</p>
-
-<h2>連絡</h2>
-
-<p>連絡はメール通して可能である。
-連絡先はforwardtowolf@gmail.comである。
-このウェブサイトにはSNSはない。</p>
+<p>オンラインに慣れて２０１１年にピアノを弾いてみた動画とか初心者の写真がアップされ始めた。
+その活動がホームページの基本になり、芸術写真をアップしたり、サウンドトラック・カバーやビデオゲーム動画というゲームに関してプロジェクトを共有したりさせるために初版バージョンが２０１４年に作られた。
+しかし、アップされたコンテンツは少なくて、２０２０年になって初めて視覚的なコンテンツに応えたホームページが新しく公開された。
+最新の更新は２０２３年であり、コンテンツの種類を伸ばせるようにされた。</p>
 
 <h2>著作権</h2>
+<p>サイトに作られたコンテンツには ©狼牙クレシ のコピーライトがあるので、下記の条件を守ればコンテンツを使ってもいい。</p>
+<ol>
+<li>撮影者の名前が含まれる</li>
+<li>変更の場合、それを描写に入れてください</li>
+<li>政治目的ではない</li>
+<li>商業目的ではない</li>
+</ol>
+<p>場合によっては、撮影者から特定許可を引くこともできる。</p>
 
-<p>サイトで使った画像や写真によっては狼牙クレシのコピーライトがある。
-その映像や写真を使用するときは、狼牙クレシのコピーライトにより
-<ol type="1">
-<li>撮影者の名前を含めなければいけない</li><li>変更は可能である</li>
-<li>政治的目的に使ってはいけない</li><li>商業目的に使ってはいけない</li>
-</ol></p>
+<h2>連絡先</h2>
+<p>質問があれば、<code style="border: 1px solid grey; padding: 2px;">forwardtowolf@gmail.com</code>へメールを送ってください。
+依頼やサイトのフィードバックなど送ってもいい。
 
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2023
+✉ <adress>forwardtowolf@gmail.com</adress>
+</div>
 </div>
 
-</section>
-<section id="copyright">Copyright: ©CrasyWolfang 2014-2022</section>
-</div>
 </body>
 </html>
