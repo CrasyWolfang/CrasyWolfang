@@ -98,7 +98,10 @@ width: 100%;
 margin: 0px;
 }
 .title-left{float: left;}
-.title-right{float: right;}
+.title-right{
+float: right;
+text-align: right;
+}
 
 .ref{
 color: lightgrey;
@@ -118,9 +121,20 @@ padding-bottom: 2em;
 .photoCard:hover{background-color: #e0c068;}
 .photoCard a{
 color: white;
-text-decoration: none;
 }
-.photoCard h1{margin: 0px;}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.25em;
+}
+.card-left{
+float: left;
+padding-left: 0.25em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.25em;
+}
 .photoCard img{
 width: 100%;
 display: block;
@@ -218,7 +232,7 @@ padding-right: 1em;
 <div class="title">
 <h1>Malmö Museum of History</h1>
 <span class="title-left">Museum photos</span>
-<span class="title-right">2023-07-20</span>
+<span class="title-right"><span style="color: LightGray;">published: </span>2023-07-20</span>
 </div>
 
 <section class="photoParagraph"><p>Malmöhus (Malmö Castle) is a medieval era citadel in Malmö, southern Sweden. The citadel was founded in the year 1434 to gain further control over the strait Öresund<sup><abbr class="ref" title="Malmö Stad (video), 01:10; Kultur i Malmö, 02:18">ref</abbr></sup>.

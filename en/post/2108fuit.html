@@ -98,7 +98,10 @@ width: 100%;
 margin: 0px;
 }
 .title-left{float: left;}
-.title-right{float: right;}
+.title-right{
+float: right;
+text-align: right;
+}
 
 .ref{
 color: lightgrey;
@@ -118,9 +121,20 @@ padding-bottom: 2em;
 .photoCard:hover{background-color: #e0c068;}
 .photoCard a{
 color: white;
-text-decoration: none;
 }
-.photoCard h1{margin: 0px;}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.25em;
+}
+.card-left{
+float: left;
+padding-left: 0.25em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.25em;
+}
 .photoCard img{
 width: 100%;
 display: block;
@@ -218,7 +232,7 @@ padding-right: 1em;
 <div class="title">
 <h1>The Fox Gates</h1>
 <span class="title-left">Shrine photos</span>
-<span class="title-right">2023-07-20</span>
+<span class="title-right"><span style="color: LightGray;">published: </span>2023-07-20</span>
 </div>
 
 <section class="photoParagraph"><p>When you think of Japanese scenery an image of tall bamboo and vermilion shrine gates probably pop into mind.
