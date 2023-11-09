@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CWOLF </title>
+<meta charset="utf-8">
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0em;
+padding: 0em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0em;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0em;
+padding-bottom: 0em;
+padding-left: 2em;
+padding-right: 2em;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{
+float: right;
+text-align: right;
+}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+font-size: 0.8em;
+}
+.ref::before{content: '[';}
+.ref::after{content: ']';}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.15em;
+}
+.card-incipit{
+font-weight: bold;
+padding-left: 0.4em;
+}
+.card-left{
+float: left;
+padding-left: 0.4em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.4em;
+}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+margin-bottom: 0.5em;
+}
+
+.largePhoto{
+border: 1px solid white;
+margin-bottom: 1em;
+}
+.largePhoto p{
+text-indent: 2em;
+padding-left: 1em;
+padding-right: 1em;
+}
+.largePhotoTop{
+text-indent: 1em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+}
+.largePhotoTitle{
+font-size: 1.3em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+text-indent: 2em;
+}
+.largePhoto img{display: block;}
+.largeformat p{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.credits{width: 100%;}
+.credits td{
+border: 1px solid white;
+padding: 0.3em;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/post/2204kamo">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/post/2204kamo">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
+<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
+<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
+<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
+</ul>
+</nav>
+
+<div class="title">
+
+<h1>鴨川</h1>
+<span class="title-left">環境撮影</span>
+<span class="title-right"><span style="color: LightGray;">発行日　</span>TO COME</span>
+</div>
+
+<section class="photoParagraph"><p>京都には川が二つある。
+東に鴨川が流れ、西には桂川である。
+二つの川の中で鴨川は有名である。
+鴨川は北の連山から流れ、自転車で辿ると山森に入る。</p></section>
+
+<section class="sec" id="text-01">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv6yb.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv6yb.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbvJT7.jpeg"><img width="1200" src="https://b.l3n.co/i/BbvJT7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvHck.jpeg"><img src="https://c.l3n.co/i/BbvHck.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbvSsH.jpeg"><img src="https://c.l3n.co/i/BbvSsH.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbvOOe.jpeg"><img src="https://b.l3n.co/i/BbvOOe.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvzZx.jpeg"><img src="https://b.l3n.co/i/BbvzZx.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="north02">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbvqs0.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbvqs0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvQOr.jpeg"><img src="https://c.l3n.co/i/BbvQOr.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvVUF.jpeg"><img src="https://b.l3n.co/i/BbvVUF.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvdZ3.jpeg"><img src="https://c.l3n.co/i/BbvdZ3.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbvBuD.jpeg"><img src="https://c.l3n.co/i/BbvBuD.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbveD1.jpeg"><img src="https://b.l3n.co/i/BbveD1.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbvvAc.jpeg"><img src="https://c.l3n.co/i/BbvvAc.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvLVK.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvLVK.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="north03">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvsAq.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvsAq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbv4nM.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbv4nM.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>川は南へ流れ、京都に入り、直線で京都の河原町の隣に流れる。
+来客者は この線形な川辺に座って弁当を食べるイメージで覚えられているはずである。
+河原町の北に鴨川と高野川が合流し、そこに川の公園がある。
+人は公園に集まって、スポーツや楽器を練習したり、ピッキングをしたり、水で遊んだりする。</p></section>
+
+<section class="sec" id="park01">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/Bbv1uC.jpeg"><img width="1200" src="https://c.l3n.co/i/Bbv1uC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvZU9.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvZU9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbvrZ2.jpeg"><img width="1200" src="https://b.l3n.co/i/BbvrZ2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/Bbvtmv.jpeg"><img src="https://a.l3n.co/i/Bbvtmv.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvI7o.jpeg"><img src="https://b.l3n.co/i/BbvI7o.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv0Ti.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv0Ti.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvT85.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvT85.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv7Ta.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv7Ta.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>トンビは上を飛び回って、機会があれば、食べ物を気を配らない女の子から奪い取ってしまう。
+落ちた餌を食べる ために黒いカラスの群も集まる。
+しかし、トンビは他の鳥からも盗める。</p></section>
+
+<section class="sec" id="bird01">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbnx7k.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbnx7k.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbnyFx.jpeg"><img width="1200" src="https://a.l3n.co/i/BbnyFx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbnGIH.jpeg"><img src="https://b.l3n.co/i/BbnGIH.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/Bbnhoc.jpeg"><img src="https://c.l3n.co/i/Bbnhoc.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbnam1.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbnam1.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="bird02">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnMRr.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnMRr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnDI0.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnDI0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnYpF.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnYpF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbnoF3.jpeg"><img width="1200" src="https://a.l3n.co/i/BbnoF3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbnNBD.jpeg"><img width="1200" src="https://a.l3n.co/i/BbnNBD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnF8A.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnF8A.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnXxa.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnXxa.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BbnwRe.jpeg"><img src="https://a.l3n.co/i/BbnwRe.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbnUJM.jpeg"><img src="https://c.l3n.co/i/BbnUJM.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnceQ.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnceQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnPoq.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnPoq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv88K.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv88K.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="bird03">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvK5Q.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvK5Q.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="bird04">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnO0v.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnO0v.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbneJT.jpeg"><img width="1200" src="https://a.l3n.co/i/BbneJT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnlY5.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnlY5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbnnSb.jpeg"><img src="https://c.l3n.co/i/BbnnSb.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/Bbn41o.jpeg"><img src="https://a.l3n.co/i/Bbn41o.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbnvx7.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbnvx7.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="mid01">
+<div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BbvWeP.jpeg"><img src="https://a.l3n.co/i/BbvWeP.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/Bbviym.jpeg"><img src="https://c.l3n.co/i/Bbviym.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvAQZ.jpeg"><img src="https://c.l3n.co/i/BbvAQZ.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvknT.jpeg"><img src="https://b.l3n.co/i/BbvknT.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/Bbv3VA.jpeg"><img width="1200" src="https://c.l3n.co/i/Bbv3VA.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>川は駅の南でまた曲がって、町の雰囲気が感じられる。
+住民は川に沿っての道を散歩し、桜木並びに子供が遊ぶ。
+ここで線路と国道は川を越える。
+また橋の近くで子供が遊び、NTTコムの塔は背景にそびえる。
+ここ、鴨川と桂川は二・三百メートルしかは離れていない。
+その間に、西高瀬川は鴨川に合流し、鴨川は桂川に合流する。</p></section>
+
+<section class="sec" id="south01">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvY5P.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvY5P.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbvMvZ.jpeg"><img src="https://b.l3n.co/i/BbvMvZ.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/BbvuEm.jpeg"><img src="https://a.l3n.co/i/BbvuEm.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvaXr.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvaXr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BbL833.jpeg"><img src="https://a.l3n.co/i/BbL833.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbL2gF.jpeg"><img src="https://c.l3n.co/i/BbL2gF.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvGH7.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvGH7.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="south02">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbvfg9.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbvfg9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbvDHi.jpeg"><img src="https://b.l3n.co/i/BbvDHi.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/BbvF32.jpeg"><img src="https://a.l3n.co/i/BbvF32.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvUDv.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvUDv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbvXWC.jpeg"><img width="1200" src="https://b.l3n.co/i/BbvXWC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvxGT.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvxGT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvNco.jpeg"><img src="https://c.l3n.co/i/BbvNco.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/Bbvwvz.jpeg"><img src="https://a.l3n.co/i/Bbvwvz.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv5Eb.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv5Eb.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="south03">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BPn8dr.jpeg"><img width="1200" src="https://c.l3n.co/i/BPn8dr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BPnALF.jpeg"><img src="https://a.l3n.co/i/BPnALF.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BPnWa3.jpeg"><img src="https://c.l3n.co/i/BPnWa3.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="south04">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BPe5rz.jpeg"><img width="1200" src="https://a.l3n.co/i/BPe5rz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BPexX5.jpeg"><img width="1200" src="https://c.l3n.co/i/BPexX5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BPn2i7.jpeg"><img width="1200" src="https://b.l3n.co/i/BPn2i7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BPeG4T.jpeg"><img width="1200" src="https://b.l3n.co/i/BPeG4T.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<table class="credits">
+<tr><td colspan="2">情報表</td></tr>
+<tr>
+<td>撮影者</td>
+<td>狼牙クレシ</td>
+</tr>
+<tr>
+<td>撮影回</td>
+<td>5回</td>
+</tr>
+<tr>
+<td>行き先</td>
+<td>京都市鴨川
+</td>
+</tr>
+</table>
+
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2023
+✉ <adress>forwardtowolf@gmail.com</adress>
+<a href="#top" style="float: right; color: grey;">top ↑</a>
+</div>
+</div>
+
+</body>
+</html>
