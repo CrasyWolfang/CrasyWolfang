@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CWOLF </title>
+<meta charset="utf-8">
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0em;
+padding: 0em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0em;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0em;
+padding-bottom: 0em;
+padding-left: 2em;
+padding-right: 2em;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{
+float: right;
+text-align: right;
+}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+font-size: 0.8em;
+}
+.ref::before{content: '[';}
+.ref::after{content: ']';}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.15em;
+}
+.card-incipit{
+font-weight: bold;
+padding-left: 0.4em;
+}
+.card-left{
+float: left;
+padding-left: 0.4em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.4em;
+}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+margin-bottom: 0.5em;
+}
+
+.largePhoto{
+border: 1px solid white;
+margin-bottom: 1em;
+}
+.largePhoto p{
+text-indent: 2em;
+padding-left: 1em;
+padding-right: 1em;
+}
+.largePhotoTop{
+text-indent: 1em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+}
+.largePhotoTitle{
+font-size: 1.3em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+text-indent: 2em;
+}
+.largePhoto img{display: block;}
+.largeformat p{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.credits{width: 100%;}
+.credits td{
+border: 1px solid white;
+padding: 0.3em;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/post/2208skdp">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/post/2208skdp">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
+<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
+<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
+<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
+</ul>
+</nav>
+
+<div class="title">
+
+<h1>スコーネ動物園</h1>
+<span class="title-left">動物撮影</span>
+<span class="title-right"><span style="color: LightGray;">発行日　</span>2024年06月22日</span>
+</div>
+
+<section class="photoParagraph"><p>スコーネ県の真ん中にあるヘールという町の北にはスコーネ動物園がある。
+町の駅から動物園までは約３キロあり、公園の前にバス停がある。
+バスが静かな田舎道に停まり、周りには目立つものもなく。
+バスが退いたら「スコーネ動物園」と書いた看板が見える。</p>
+<p>公園の入口は別荘のような赤い建物である。
+チケットは入口かオンラインで買うことができる。
+時節によって公園の入場料は違って、ハイシーズンのチケットは350クローナ（３千５百円）までかかる。</p></section>
+
+<section class="sec" id="skull">
+
+<div class="neatPhoto"><a href="https://b.l3n.co/i/lef6sC.jpeg"><img src="https://b.l3n.co/i/lef6sC.jpeg"></a></div>
+
+</section><section class="photoParagraph"><p>最初見る囲いはソフトな木の塀に囲まれ、中にヤギが日陰に寝転がっている。
+それは触れ合い動物園で、参観者が囲いに入るとヤギ達が起きて迎えに来る。
+ヤギの中の一頭が囲いの角で体を枝に詰めて樹皮を齧った。
+その間にヤギの子が囲いの参加者に寄ってみた。</p></section>
+
+<section class="sec" id="intro">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lefsc3.jpeg"><img width="1200" src="https://b.l3n.co/i/lefsc3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leNGKv.jpeg"><img width="1200" src="https://b.l3n.co/i/leNGKv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/leNafC.jpeg"><img src="https://c.l3n.co/i/leNafC.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/leP2j5.jpeg"><img src="https://b.l3n.co/i/leP2j5.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leP8qz.jpeg"><img width="1200" src="https://a.l3n.co/i/leP8qz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lePAYT.jpeg"><img width="1200" src="https://c.l3n.co/i/lePAYT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePWhb.jpeg"><img width="1200" src="https://b.l3n.co/i/lePWhb.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>囲いの裏を出て、それからはまた触れ合い動物園である。
+この部分の中にはヒツジである。
+中に小さい鉄網の囲いもあり、そしてその中にはウサギとニワトリがいる。
+そこにいる黒いヒツジが写真家に寄り、背中を掻かれてもらうと舌でペロペロした。</p></section>
+
+<section class="sec" id="rabbit-small">
+
+<div class="neatPhoto"><a href="https://a.l3n.co/i/lef4g0.jpeg"><img src="https://a.l3n.co/i/lef4g0.jpeg"></a></div>
+
+</section>
+<section class="sec" id="chicken-rabbit">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefz5a.jpeg"><img width="1200" src="https://a.l3n.co/i/lefz5a.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/lePIwF.jpeg"><img src="https://b.l3n.co/i/lePIwF.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lePg13.jpeg"><img src="https://a.l3n.co/i/lePg13.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lePrp0.jpeg"><img width="1200" src="https://c.l3n.co/i/lePrp0.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="sheep">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leP0Sr.jpeg"><img width="1200" src="https://c.l3n.co/i/leP0Sr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lefpDq.jpeg"><img width="1200" src="https://c.l3n.co/i/lefpDq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/lefHVM.jpeg"><img src="https://c.l3n.co/i/lefHVM.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/leflvQ.jpeg"><img src="https://b.l3n.co/i/leflvQ.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lefOWA.jpeg"><img src="https://a.l3n.co/i/lefOWA.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/lefKsD.jpeg"><img src="https://b.l3n.co/i/lefKsD.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="pet">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lePtfD.jpeg"><img width="1200" src="https://a.l3n.co/i/lePtfD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lePjC7.jpeg"><img src="https://a.l3n.co/i/lePjC7.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/lefeEe.jpeg"><img src="https://b.l3n.co/i/lefeEe.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph"><p>隣には遊び場がある。
+しかし、ここから動物園は子供のために作られた気がする。
+次の囲いは子供番組の象が上下に動いてトラクターみたいに荷車が線路を辿る。
+水鉄砲を持っているブタの象が遊園地の乗客を濡れる。
+やっと、乗り物の入口の上にシュバシコウが巣を建て、上からお客さんを眺める。</p></section>
+
+<section class="sec" id="ride">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePTBA.jpeg"><img width="1200" src="https://b.l3n.co/i/lePTBA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lePR0q.jpeg"><img width="1200" src="https://c.l3n.co/i/lePR0q.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/lefvcx.jpeg"><img src="https://c.l3n.co/i/lefvcx.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lefMgH.jpeg"><img src="https://a.l3n.co/i/lefMgH.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefnHk.jpeg"><img width="1200" src="https://a.l3n.co/i/lefnHk.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lefY31.jpeg"><img width="1200" src="https://c.l3n.co/i/lefY31.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>遊び場を離れて、動物園の道を歩いていると家畜のブタの囲いがあり、淡い豚の子が緑色の草を走り回って遊んでいた。
+そして隣にはアザラシの池がある。
+池の面が魔法的に動く。
+アザラシが水面を突き破り、しばらく水面を泳いでまた潜る。</p></section>
+
+<section class="sec" id="pig">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefN9Z.jpeg"><img width="1200" src="https://a.l3n.co/i/lefN9Z.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefoDc.jpeg"><img width="1200" src="https://a.l3n.co/i/lefoDc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/leP62Q.jpeg"><img src="https://b.l3n.co/i/leP62Q.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/lefPvP.jpeg"><img src="https://b.l3n.co/i/lefPvP.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lePEYM.jpeg"><img width="1200" src="https://c.l3n.co/i/lePEYM.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="pig-seal">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lefDWK.jpeg"><img width="1200" src="https://b.l3n.co/i/lefDWK.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lePCCa.jpeg"><img width="1200" src="https://a.l3n.co/i/lePCCa.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/lePJSe.jpeg"><img src="https://c.l3n.co/i/lePJSe.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/lefUki.jpeg"><img src="https://c.l3n.co/i/lefUki.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lefcHo.jpeg"><img width="1200" src="https://b.l3n.co/i/lefcHo.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="seal">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefXX9.jpeg"><img width="1200" src="https://a.l3n.co/i/lefXX9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lefwr2.jpeg"><img width="1200" src="https://b.l3n.co/i/lefwr2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lefx3v.jpeg"><img width="1200" src="https://c.l3n.co/i/lefx3v.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>池を越えるとアナグマの囲いとヤマネコの囲いが左側にある。
+しかし、その動物は見えない。
+そして、アカギツネの囲いである。
+狐が走り回って遊んで、そして肉をしばらく齧って舎に寝転んだ。
+普通の狐の振る舞いでしょうね。</p></section>
+
+<section class="sec" id="fox">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lefa9z.jpeg"><img width="1200" src="https://c.l3n.co/i/lefa9z.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lefyNC.jpeg"><img src="https://a.l3n.co/i/lefyNC.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/lefGW5.jpeg"><img src="https://b.l3n.co/i/lefGW5.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFAk7.jpeg"><img width="1200" src="https://b.l3n.co/i/leFAk7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/lefhLT.jpeg"><img src="https://b.l3n.co/i/lefhLT.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/leF2Gb.jpeg"><img src="https://c.l3n.co/i/leF2Gb.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph"><p>そして、狐の裏にはキョウリュウである。
+ちょっと待って〜恐竜か？
+あの道に沿ってはキョウリュウのアニマトロニクスである。
+ブロントサウルス、プテロダクティルス、ティラノサウルス～
+道を出る所には恐竜のお土産さんもある。</p></section>
+
+<section class="sec" id="dino01">
+<div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/lePQxk.jpeg"><img src="https://b.l3n.co/i/lePQxk.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/leP91x.jpeg"><img src="https://c.l3n.co/i/leP91x.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFWlr.jpeg"><img width="1200" src="https://a.l3n.co/i/leFWlr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/lePdpH.jpeg"><img src="https://b.l3n.co/i/lePdpH.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/leP3oZ.jpeg"><img src="https://a.l3n.co/i/leP3oZ.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="dino02">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lePqF1.jpeg"><img width="1200" src="https://c.l3n.co/i/lePqF1.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/lePSFv.jpeg"><img src="https://c.l3n.co/i/lePSFv.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/lePK2P.jpeg"><img src="https://b.l3n.co/i/lePK2P.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="dino03">
+<div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lePpJm.jpeg"><img src="https://a.l3n.co/i/lePpJm.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lePOxo.jpeg"><img src="https://a.l3n.co/i/lePOxo.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lePm0c.jpeg"><img src="https://a.l3n.co/i/lePm0c.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/lePsBK.jpeg"><img src="https://b.l3n.co/i/lePsBK.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="dino04">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lePlR9.jpeg"><img width="1200" src="https://c.l3n.co/i/lePlR9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/leP7ei.jpeg"><img src="https://c.l3n.co/i/leP7ei.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/lePz72.jpeg"><img src="https://b.l3n.co/i/lePz72.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="dino05">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePoJb.jpeg"><img width="1200" src="https://b.l3n.co/i/lePoJb.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePLoz.jpeg"><img width="1200" src="https://b.l3n.co/i/lePLoz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/lePnIC.jpeg"><img src="https://b.l3n.co/i/lePnIC.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/lePY8T.jpeg"><img src="https://c.l3n.co/i/lePY8T.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lePvB5.jpeg"><img src="https://a.l3n.co/i/lePvB5.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lePue7.jpeg"><img src="https://a.l3n.co/i/lePue7.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph"><p>アカギツネやキョウリュウの東にはオオカミとクズリがいる。
+しかし、この動物は見ないことで知られている。
+オオカミの見晴台を入れるがここからでもオオカミは見えない。</p>
+<p>オオカミの囲いの南にはスカイウォークがある。
+この連絡通路が東の道と西の道を繋がるが方向は西へだけである。</p></section>
+
+<section class="sec" id="wolf-tower">
+
+<div class="neatPhoto"><a href="https://a.l3n.co/i/lefkZv.jpeg"><img src="https://a.l3n.co/i/lefkZv.jpeg"></a></div>
+
+</section>
+<section class="sec" id="skyway">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leFDK3.jpeg"><img width="1200" src="https://c.l3n.co/i/leFDK3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lefr5i.jpeg"><img src="https://a.l3n.co/i/lefr5i.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/leFNf0.jpeg"><img src="https://b.l3n.co/i/leFNf0.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lefRO9.jpeg"><img src="https://a.l3n.co/i/lefRO9.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/lef1To.jpeg"><img src="https://c.l3n.co/i/lef1To.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lefTc2.jpeg"><img width="1200" src="https://c.l3n.co/i/lefTc2.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>オオカミの北にはヒグマがいる。
+オオカミの逆に熊は見落としにくい。
+時々飼育員がリンゴを投げ込んで熊がモグモグ食べてプールで休む。</p></section>
+
+<section class="sec" id="bear">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePDyr.jpeg"><img width="1200" src="https://b.l3n.co/i/lePDyr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFiXF.jpeg"><img width="1200" src="https://b.l3n.co/i/leFiXF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/leFI40.jpeg"><img src="https://c.l3n.co/i/leFI40.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/leF0r3.jpeg"><img src="https://a.l3n.co/i/leF0r3.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFZND.jpeg"><img width="1200" src="https://a.l3n.co/i/leFZND.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>熊の囲いの隣にはレストランがある。
+北にはフクロウ、オオヤマネコ、アライグマとホッキョクギツネの囲いがあるが、この動物の中にはフクロウしか現れなかった。
+そして、東にはイノシシがいる。
+イノシシは囲いの地面を全部耕していて、泥で寝るのが好きである。</p></section>
+
+<section class="sec" id="restourant">
+
+<div class="neatPhoto"><a href="https://a.l3n.co/i/lePFU0.jpeg"><img src="https://a.l3n.co/i/lePFU0.jpeg"></a></div>
+
+</section>
+<section class="sec" id="owl">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFEka.jpeg"><img width="1200" src="https://a.l3n.co/i/leFEka.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leFJrx.jpeg"><img width="1200" src="https://c.l3n.co/i/leFJrx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFQ4H.jpeg"><img width="1200" src="https://b.l3n.co/i/leFQ4H.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFRaQ.jpeg"><img width="1200" src="https://a.l3n.co/i/leFRaQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lePPRF.jpeg"><img src="https://a.l3n.co/i/lePPRF.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/leFriq.jpeg"><img src="https://c.l3n.co/i/leFriq.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFVP1.jpeg"><img width="1200" src="https://a.l3n.co/i/leFVP1.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePf73.jpeg"><img width="1200" src="https://b.l3n.co/i/lePf73.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="boar">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePbuA.jpeg"><img width="1200" src="https://b.l3n.co/i/lePbuA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/lePx8M.jpeg"><img width="1200" src="https://c.l3n.co/i/lePx8M.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/lePcID.jpeg"><img src="https://c.l3n.co/i/lePcID.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lePXmq.jpeg"><img src="https://a.l3n.co/i/lePXmq.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFdic.jpeg"><img width="1200" src="https://b.l3n.co/i/leFdic.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>そうして、道を北へ行って、また遊び場を通り過ぎて、道を曲がって、また遊んでいるヤギを通り過ぎるとヘラジカの囲いに着く。
+このヘラジカは優しくて、子供が動物に飼育員からもらったリンゴを直にやることもある。
+隣にはヨーロッパバイソンもいる。
+このバイソの種は近危急種であるから見るのは不思議である。</p></section>
+
+<section class="sec" id="goat">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leFBMZ.jpeg"><img width="1200" src="https://c.l3n.co/i/leFBMZ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFmaP.jpeg"><img width="1200" src="https://a.l3n.co/i/leFmaP.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/leF36m.jpeg"><img src="https://b.l3n.co/i/leF36m.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/leFqdK.jpeg"><img src="https://a.l3n.co/i/leFqdK.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="moose">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leF4zi.jpeg"><img width="1200" src="https://c.l3n.co/i/leF4zi.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFKbo.jpeg"><img width="1200" src="https://b.l3n.co/i/leFKbo.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leFOK2.jpeg"><img width="1200" src="https://c.l3n.co/i/leFOK2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/leFHPv.jpeg"><img src="https://b.l3n.co/i/leFHPv.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/leFzjC.jpeg"><img src="https://a.l3n.co/i/leFzjC.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="bison">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leF7t9.jpeg"><img width="1200" src="https://a.l3n.co/i/leF7t9.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>次の囲いの中にはイヌワシがいる。
+ワシを観ている間、日陰に寝そべるダマジカに眺められる。
+次にはオーロックスとジャコウウシ。
+実は、オーロックスが絶滅になったが、オーロックスみたいな動物種が人為選択として作られた。
+その人造種類は今動物園にいる種類である。</p></section>
+
+<section class="sec" id="eagle">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leFSd5.jpeg"><img width="1200" src="https://c.l3n.co/i/leFSd5.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="fallow-deer">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFeMz.jpeg"><img width="1200" src="https://a.l3n.co/i/leFeMz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFnhT.jpeg"><img width="1200" src="https://b.l3n.co/i/leFnhT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leFL6b.jpeg"><img width="1200" src="https://c.l3n.co/i/leFL6b.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="auroch">
+
+<div class="neatPhoto"><a href="https://c.l3n.co/i/leP5ea.jpeg"><img src="https://c.l3n.co/i/leP5ea.jpeg"></a></div>
+
+</section>
+<section class="sec" id="muskox">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFMz7.jpeg"><img width="1200" src="https://b.l3n.co/i/leFMz7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leFYwr.jpeg"><img width="1200" src="https://c.l3n.co/i/leFYwr.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>森の角にトナカイがいる。
+若いトナカイが塀に沿って前後を巡る。
+トナカイは北欧とロシアの北に元来であり、大きい群れを形成するが、このトナカイは南のスコーネ県にい、３頭しかいない。
+舎の中には大人しいトナカイがいるが外からは見にくい。</p></section>
+
+<section class="sec" id="rain">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lePyQQ.jpeg"><img width="1200" src="https://b.l3n.co/i/lePyQQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/lePGye.jpeg"><img src="https://b.l3n.co/i/lePGye.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lePhTk.jpeg"><img src="https://a.l3n.co/i/lePhTk.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lef8UH.jpeg"><img width="1200" src="https://b.l3n.co/i/lef8UH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/lef27x.jpeg"><img src="https://c.l3n.co/i/lef27x.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lefjuK.jpeg"><img src="https://a.l3n.co/i/lefjuK.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefIAZ.jpeg"><img width="1200" src="https://a.l3n.co/i/lefIAZ.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>最後の囲いはアカシカであり、広い原の草を擦り食べる。
+アカシカは南のスウェーデンと欧州に広がっている。
+動物園の原で雄の鹿が群を見守る間に、鹿の子が一緒に遊んでいる。
+喉が乾いたら水だまりから飲む。</p></section>
+
+<section class="sec" id="deer-interlude">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFutF.jpeg"><img width="1200" src="https://b.l3n.co/i/leFutF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFfjD.jpeg"><img width="1200" src="https://a.l3n.co/i/leFfjD.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="red-deer">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leUi2Z.jpeg"><img width="1200" src="https://c.l3n.co/i/leUi2Z.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leUAYK.jpeg"><img width="1200" src="https://b.l3n.co/i/leUAYK.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/leF51k.jpeg"><img src="https://b.l3n.co/i/leF51k.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/leFwza.jpeg"><img src="https://b.l3n.co/i/leFwza.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFchM.jpeg"><img width="1200" src="https://b.l3n.co/i/leFchM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFUYA.jpeg"><img width="1200" src="https://a.l3n.co/i/leFUYA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/leFFqq.jpeg"><img src="https://c.l3n.co/i/leFFqq.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/leFxwe.jpeg"><img src="https://c.l3n.co/i/leFxwe.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFbCQ.jpeg"><img width="1200" src="https://a.l3n.co/i/leFbCQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/leFafH.jpeg"><img width="1200" src="https://b.l3n.co/i/leFafH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/leU201.jpeg"><img src="https://a.l3n.co/i/leU201.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/leU0Sm.jpeg"><img src="https://b.l3n.co/i/leU0Sm.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/leU8qc.jpeg"><img width="1200" src="https://c.l3n.co/i/leU8qc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leFGKx.jpeg"><img width="1200" src="https://a.l3n.co/i/leFGKx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/leUjCP.jpeg"><img width="1200" src="https://a.l3n.co/i/leUjCP.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>そうしてスコーネ動物園を全部巡ってしまった。
+ちゃんと見える動物もいれば、あまり見ない動物もいる。
+うるさい参観者の子供に起こされるより、動物が昼寝してちゃんと寝られるほうがいいでしょう。
+やがって、動物園は子供に作られた気がする。
+遊び場があちこちにあることだけでなく、恐竜の道などスカイウォークという動物に関係がない設備がたくさんあることだ。
+出口まで行く道に、塔の下でシャワーを浴びる子供も見えた。
+動物園は大きな遊園地に作られたのかどうか。
+それとも別に設けられた理由があるのか。</p></section>
+
+<section class="sec" id="outro">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lefgnm.jpeg"><img width="1200" src="https://b.l3n.co/i/lefgnm.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/lefCu5.jpeg"><img src="https://a.l3n.co/i/lefCu5.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/leN512.jpeg"><img src="https://c.l3n.co/i/leN512.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lefQAz.jpeg"><img width="1200" src="https://b.l3n.co/i/lefQAz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefVVT.jpeg"><img width="1200" src="https://a.l3n.co/i/lefVVT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/lef9nb.jpeg"><img src="https://b.l3n.co/i/lef9nb.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/lefmOF.jpeg"><img src="https://a.l3n.co/i/lefmOF.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/lefd57.jpeg"><img width="1200" src="https://a.l3n.co/i/lefd57.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/lefBEr.jpeg"><img width="1200" src="https://b.l3n.co/i/lefBEr.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<table class="credits">
+<tr><td colspan="2">情報表</td></tr>
+<tr>
+<td>撮影者</td>
+<td>狼牙クレシ</td>
+</tr>
+<tr>
+<td>撮影回</td>
+<td>1回</td>
+</tr>
+<tr>
+<td>行き先</td>
+<td>
+ヘール　スコーネ動物園 (Skånes Djurpark, Höör)
+</td>
+</tr>
+</table>
+
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2024
+✉ <adress>forwardtowolf@gmail.com</adress>
+<a href="#top" style="float: right; color: grey;">top ↑</a>
+</div>
+</div>
+
+</body>
+</html>
