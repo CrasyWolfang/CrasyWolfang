@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notes: Fox Gates Handbook</title>
+		<link rel="icon" href="icon.png">
+		<meta charset="utf-8">
+		<style>
+			/*tags*/
+			body{
+			background-color: #e0c068;
+			}
+			.section{
+			margin-left: 1.2em;
+			margin-right: 2em;
+			}
+			p{
+			margin-left: 1em;
+			}
+			q{
+			quotes: "“" "”" "‘" "’";
+			}
+			blockquote{
+			border: 1px solid #927d44;
+			}
+			code{
+			background-color: #fafae6;
+			color: #9e1018;
+			padding: 0.3em;
+			display: inline-block;
+			white-space: pre;
+			}
+			
+			img{
+			margin: 1em;
+			max-width: 100%;
+			}
+			table{
+			border-collapse: collapse;
+			margin: 1em;
+			}
+			th{
+			border: 1px solid black;
+			font-weight: bold;
+			color: #ffffff;
+			background: #927d44;
+			padding-top: 0.2em;
+			padding-bottom: 0.2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			td{
+			border: solid black 1px;
+			padding: 0.3em;
+			}
+			
+			/*wrappers*/
+			.maincontainer {
+			background-color: white;
+			display: grid;
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 1px solid #927d44;
+			}
+			
+			/*ID elements*/
+			#toplogo{
+			display: block;
+			margin: 1.2em;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			
+			/*classes*/
+			h1.title{
+			background: #926e44;
+			color: #ffffff;
+			padding: 0.2em;
+			padding-left: 0.5em;
+			margin-bottom: 0;
+			}
+			th.title{
+			background: #926e44 !important;
+			font-size: 1.3em;
+			font-weight: normal !important;
+			}
+			th.title abbr.ref{
+			color: #c0996d;
+			}
+			
+			ul.compact{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			}
+			
+			table.full{
+			width: 100%;
+			}
+			
+			.noframe th{
+			background-color: white;
+			white-space: nowrap;
+			text-align: left;
+			color: black;
+			border: 0px;
+			padding-left: inherit;
+			vertical-align: baseline;
+			}
+			.noframe .title{
+			background-color: white !important;
+			border-bottom: 2px solid black;
+			}
+			.noframe td{
+			border: 0px;
+			padding-left: inherit;
+			}
+			
+			td.hl{
+			border: 4px solid black;
+			}
+			td.na{
+			color: #cccccc;
+			text-align: center;
+			border: 1px solid #000000;
+			}
+			td.na::before{
+			content: "[N/A]";
+			}
+			td.code{
+			background-color: #fafae6;
+			color: #9e1018;
+			border: 1px solid #000000;
+			}
+			.ref{
+			color: #927d44;
+			text-decoration: none;
+			}
+			
+			/*further review*/
+			.quote{
+			background-color: #f0f0f0;
+			padding: 0.6em;
+			margin-left: 2.5em;
+			margin-right: 2.5em;
+			}
+			.cite{
+			margin-left: 2.5em;
+			}
+			.cite::before{
+			content: "\2014";
+			}
+			
+			.grey{
+			border: 2px solid !important;
+			color: grey;
+			padding: 0.5em;
+			}
+			
+			.tableOfContents{
+			border: 1px solid;
+			padding: 0.5em;
+			display: inline-block;
+			margin: 0.5em;
+			}
+			.tableOfContents p{
+			font-size: 1.2em;
+			font-weight: bold;
+			}
+			
+			dt{
+			font-weight: bold;
+			}
+			dd{
+			padding-bottom: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="wlp/logo.png" id="toplogo" width="380px">
+		<h1 style="text-align: center; margin-top: -8px;">"Fox Gates"</h1>
+		<h2 style="text-align: center; margin-top: -1em;">Wolf's Language Program</h2>
+		<h3 style="text-align: center; margin-top: -1em;"><i>version 11.3.1</i></h3>
+		
+		
+		
+		
+		<div class="maincontainer">
+			<div class="section">
+				<h1>Table of contents</h1>
+				<ol>
+					<li><a href="#general">General info</a></li>
+					<ol>
+						<li><a href="#general.aims">Aims</a></li>
+						
+						
+
+						<li><a href="#general.tou">Terms of usage and data collection</a></li>
+						
+						
+
+						<li><a href="#general.participation">Participation</a></li>
+						
+						
+
+						<li><a href="#general.dev">Developer notes</a></li>
+					</ol>
+					
+
+					<li><a href="#installation">Installation</a></li>
+					<ol>
+						<li><a href="#installation.java">Download Java</a></li>
+						
+						
+
+						<li><a href="#installation.program">Download Wolf's Language Program</a></li>
+						
+						
+
+						<li><a href="#installation.resources">Install resources</a></li>
+						
+						
+
+						<li><a href="#installation.launch">Launch the program</a></li>
+					</ol>
+					
+
+					<li><a href="#update">Updating the program</a></li>
+					
+					
+
+					<li><a href="#menu">Menu</a></li>
+					<ol>
+						<li><a href="#menu.login">Login</a></li>
+						
+						
+
+						<li><a href="#menu.main menu">Main Menu</a></li>
+						
+						
+
+						<li><a href="#menu.search">Search</a></li>
+						
+						
+
+						<li><a href="#menu.practice">Practice</a></li>
+						<ol>
+							<li><a href="#menu.practice.setup">Practice setup</a></li>
+							<ol>
+								<li><a href="#menu.practice.setup.material">Material selection</a></li>
+								
+								
+
+								<li><a href="#menu.practice.setup.task">Task selection</a></li>
+							</ol>
+							
+
+							<li><a href="#menu.practice.window">Practice window</a></li>
+							
+							
+
+							<li><a href="#menu.practice.results">Results menu</a></li>
+						</ol>
+						
+
+						<li><a href="#menu.res">Resources</a></li>
+						<ol>
+							<li><a href="#menu.res.browsing">Browsing</a></li>
+							
+							
+
+							<li><a href="#menu.res.prop">Resource properties</a></li>
+							
+							
+
+							<li><a href="#menu.res.entrydata">Dictionary entry data setup</a></li>
+							
+							
+
+							<li><a href="#menu.res.glossdata">Glossary data setup</a></li>
+							
+							
+
+							<li><a href="#menu.res.editmedia">Editing media</a></li>
+							
+							
+
+							<li><a href="#menu.res.editentry">Editing dictionary entries</a></li>
+							
+							
+
+							<li><a href="#menu.res.editgloss">Editing glossary lists</a></li>
+							
+							
+
+							<li><a href="#menu.res.editfolder">Editing folders</a></li>
+						</ol>
+						
+
+						<li><a href="#menu.profile">Profile menu</a></li>
+						
+						
+
+						<li><a href="#menu.settings">User settings</a></li>
+					</ol>
+					
+
+					<li><a href="#data">Data</a></li>
+					<ol>
+						<li><a href="#data.dictentry">Dictionary entry</a></li>
+						
+						
+
+						<li><a href="#data.gloss">Glossary</a></li>
+						
+						
+
+						<li><a href="#data.media">Media</a></li>
+						
+						
+
+						<li><a href="#data.classes">Data classes</a></li>
+						<ol>
+							<li><a href="#data.classes.string">String</a></li>
+							
+							
+
+							<li><a href="#data.classes.integer">Integer</a></li>
+							
+							
+
+							<li><a href="#data.classes.combo">Combo</a></li>
+							
+							
+
+							<li><a href="#data.classes.audio">Audio</a></li>
+						</ol>
+					</ol>
+					
+
+					<li><a href="#tasks">Tasks</a></li>
+					<ol>
+						<li><a href="#tasks.flash">Flash card</a></li>
+						<ol>
+							<li><a href="#tasks.flash.setup">Setup</a></li>
+							
+							
+
+							<li><a href="#tasks.flash.task">Task</a></li>
+							
+							
+
+							<li><a href="#tasks.flash.history">History</a></li>
+						</ol>
+						
+
+						<li><a href="#tasks.paper">Paper card</a></li>
+						<ol>
+							<li><a href="#tasks.paper.setup">Setup</a></li>
+							
+							
+
+							<li><a href="#tasks.paper.task">Task</a></li>
+							
+							
+
+							<li><a href="#tasks.paper.history">History</a></li>
+						</ol>
+					</ol>
+					
+
+					<li><a href="#other">Other functions</a></li>
+					<ol><li><a href="#other.shortcut">Folder shortcuts</a></li></ol>
+					
+
+					<li><a href="#lang">Language support</a></li>
+					<ol>
+						<li><a href="#lang.text">Text languages</a></li>
+						
+						
+
+						<li><a href="#lang.chinese">Chinese</a></li>
+						<ol><li><a href="#lang.chinese.vocabulary">Vocabulary</a></li></ol>
+						
+
+						<li><a href="#lang.japanese">Japanese</a></li>
+						<ol>
+							<li><a href="#lang.japanese.kana">Kana</a></li>
+							
+							
+
+							<li><a href="#lang.japanese.kanji">Kanji</a></li>
+							
+							
+
+							<li><a href="#lang.japanese.vocabulary">Vocabulary</a></li>
+							
+							
+
+							<li><a href="#lang.japanese.grammar">Grammar</a></li>
+							
+							
+
+							<li><a href="#lang.japanese.sentence">Sentence</a></li>
+						</ol>
+					</ol>
+					
+
+					<li><a href="#resources">Resources</a></li>
+					<ol>
+						<li><a href="#resources.chinese">Chinese</a></li>
+						
+						
+
+						<li><a href="#resources.japanese">Japanese</a></li>
+					</ol>
+				</ol>
+			</div>
+			<div class="section">
+				<h1 id="general">General info</h1>
+				
+				
+				
+				
+				
+				<p>Thank you for trying <i><b>Wolf's Language Program</b></i>.
+				This software has been in development since 2016 through a lot of trial and error and has now reached its 11th installation called <i>"Fox Gates"</i>.
+				The name partially derives <i>Fushimi Inari Taisha</i> in Kyoto, Japan in which the path is lined with vermilion gates all the way to the top shrine.
+				The name treats the passing of each gate as a step in language learning and in that metaphor, how learning is done in a lot of small steps to the climb towards proficiency.
+				The name also derives from the canine which has a similar appearance to a wolf and is known in Nordic entomology to be a sly and clever animal.</p><p>The program runs on <b>Java</b> and requires <b>Java SE Development Kit 17.0.9</b> to run (see <a href="#installation.java">installation</a>) and collects data on user input (see <a href="#general.tou">data collection</a>).
+				To use <i>Wolf's Language Program</i> you <b>must agree to the <a href="#general.tou">terms of usage</a></b> which will be assumed if you run the program.
+				You will <u>never be charged any money</u> to use the program on the basis that your data will be collected for research purposes (see <a href="#general.tou">data collection</a>).</p><p>This program is developed by Crasy Wolfang (contact: <code>forwardtowolf@gmail.com</code>).
+				Feel free to send any suggestions on improvements.
+				Note that this is a single person side project, therefore updates may take a while.</p>
+				<div class="section">
+					<h2 id="general.aims">Aims</h2>
+					
+					
+					
+					
+					<table class="noframe">
+						<tr>
+							<th>Languages</th>
+							<td>
+								The goal of the program is to provide <b>a platform for a wide variation of languages without neglecting characteristics of individual languages</b>.
+								The data for languages and entries is to be formatted in a way that <b>makes sense linguistically</b> and the methods for learning to have a <b>scientifically proven base</b>.
+								Therefore the data generated by the program will also be used to improve it.
+							</td>
+						</tr>
+						
+			
+						<tr>
+							<th>Digitization</th>
+							<td>
+								The program also has a goal to find a good way to <b>digitize conventional media</b> (textbook and dictionaries) in a structural manner, yet preserve as much data from the original media as possible.
+								This will provide the <b>ability to search for data</b> and to <b>create repeatable practices</b>.
+								The program will also try to provide a variation of methods in which to memorize and learn through digital means based on the resources available.
+							</td>
+						</tr>
+						
+			
+						<tr>
+							<th>Performance</th>
+							<td>
+								Small changes will also be made to the program continuously to find methods to <b>increase performance</b> for it to run on older systems, and to make it more <b>user friendly</b>.
+								The user should also be <b>able to run the program offline</b> without compromise in functionality.
+							</td>
+						</tr>
+						
+			
+						<tr>
+							<th>As a tool for learners</th>
+							<td>
+								The program should provide a useful tool for learners of supported languages <b>to repeat and practice</b>.
+								The user should be able to use the program to prepare for exams and to practice new material.
+								Note that the user is still <u>expected to own a copy</u> of the media that the program resources are based on and therefore not use this program as a substitute.
+								The program should also provide a way for the learner to compose their own glossary lists and practices which they could share with other students.
+							</td>
+						</tr>
+						
+			
+						<tr>
+							<th>As a tool for teachers</th>
+							<td>
+								The program also has a goal to provide a tool for teachers in which they could <b>check material</b> that the student is expected to know, and to <b>propose tasks</b> for in-class based on that material.
+								The teacher should also be able to <b>create practices and handouts</b> and share with their students.
+							</td>
+						</tr>
+						
+			
+						<tr>
+							<th>Research</th>
+							<td>
+								Finally the program also has the goal to <b>provide data for research</b> (see <a href="#general.tou">data collection</a>).
+								This is used to understand tendencies in learners and to find improvements on how languages are taught.
+								The aspiration is that this data can be used for research papers, but also that it can be published on its own.
+								Furthermore the program should be able to handle the available resources as <b>text corpora</b>.
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="section">
+					<h2 id="general.tou">Terms of usage and data collection</h2>
+					
+					
+					
+					
+					<p><b>By using <i>Wolf's Language Program</i> you automatically agree to the terms of service and that your data may be collected for (1) research purposes and (2) some data to improve the program.</b></p><p>(1) The program collects data via the user's input and some from feedback by the program.
+					The data collected includes practice results, time information and the user input.
+					This data may also be combined with the specified user target- and text languages.
+					The user will always be made anonymous before their data is shared or results published.</p><p>(2) For performance improvements the program might temporarily measure how long it takes to perform certain methods like saving data, searching, etc.
+					The data on program performance will never be published and is purely there to check and improve the program's performance.</p><p>The user may at any time request to get information about data collected on them or to request that their data is deleted and they can withdraw from the program.
+					Send an email to <code>forwardtowolf@gmail</code> for requests.</p>
+				</div>
+				<div class="section">
+					<h2 id="general.participation">Participation</h2>
+					
+					
+					
+					
+					<p>As a user of <i>Wolf's Language Program</i> your feedback is valuable!
+					Participation in <b>feedback is voluntary but highly appreciated</b>.
+					Via your feedback you can shape the program and make it better.
+					Suggestions and corrections can be small (ex. suggestion to move a button) or large (ex. implement a new feature).
+					These suggestion may be prioritized by demand.</p><p>If you would like to, please also send in information if you find a bug prevents the program from running with information on how to reproduce it.
+					You can notice a bug that prevents the program from proceeded if a button is pressed but color doesn't switch back until you move the mouse away from the button.
+					If the color doesn't change at all when you move the mouse away from the button the program is loading.
+					If it gets stuck like this forever there is also an error.</p><p>If you want a next text language added to the list of languages please provide information on:</p>
+					<ol>
+						<li>what language</li>
+						<li>text for font example that contain special characters for that language</li>
+						<li>and the following characters if they differ from English:</li>
+						<ol>
+							<li>space (<code> </code>)</li>
+							<li>semicolon (<code>;</code>)</li>
+							<li>slash (<code>/</code>)</li>
+							<li>parenthesis (<code>()</code>)</li>
+							<li>square brackets (<code>[]</code>)</li>
+						</ol>
+					</ol>
+					<p>Please also send a mail if there is anything unclear (the function of a button is unclear or the instructions are unclear).</p><p>Also note to that if you edit official resources that came with the program they will not be saved for the official release.
+					Please send a email if you find errors and these will be fixed with the next version release.
+					If you want to add an official resource to the program, please also send a mail for collaboration on the topic.</p><p>Email for suggestions, improvements, etc. goes to <code>forwardtowolf@gmail</code>.</p>
+				</div>
+				<div class="section">
+					<h2 id="general.dev">Developer notes</h2>
+					
+					
+					
+					
+					<p>The current changes are already known and will implemented in a future release:</p>
+					<ul>
+						<li>
+							<b>Problems with resizing</b>
+							<p>The size of the window isn't calculated correctly which will cause there to either be a surplus of blank space or so that components in the window are squeezed together.
+							Gently drag the corner of the window and resize it to temporary solve it.</p>
+						</li>
+						<li>
+							<b>Practice setup</b>
+							<p>The practice setup is currently more complicated than the average user needs it to be.
+							The advanced options will be made hidden but accessable.</p><p>There are also more task option in the list than is available for the selected material.
+							This is mostly a problem for Japanese (as it has a large variety of data and entry types available).
+							This will be changed to be adapted after the selected material.</p>
+						</li>
+						<li>
+							<b>Practice session</b>
+							<p>Audio can at the moment not be detected to be the same.
+							Therefore they do not combine like other material.</p>
+						</li>
+						<li>
+							<b>Resource menu</b>
+							<p>Presentation of resources will be improved.
+							This includes folders within the resource, tabs, etc.</p>
+						</li>
+						<li>
+							<b>Resource properties</b>
+							<p>Setting up resource data support is an absolute mess and will be revised.
+							Fortunately this is just something you have to deal with if you set up a resource which may not be too often.</p>
+						</li>
+						<li>
+							<b>Profile menu</b>
+							<p>The profile menu doesn't show much more than previous practices so far.
+							A better summary of history and other features will be added.</p>
+						</li>
+						<li>
+							<b>Audio</b>
+							<p>Playback for audio will be improved and the synchronization menu will get some upgrades.</p>
+						</li>
+						<li>
+							<b>Images</b>
+							<p>Image support will be added.
+							Like with audio, each image will be split and synchronized with the resource.</p>
+						</li>
+						<li>
+							<b>Text in books</b>
+							<p>Text for reading comprehension will be implemented and added to resources.</p>
+						</li>
+						<li>
+							<b>tone data class</b>
+							<p>A class which handles languages with tones (ex. Chinese) will be added.</p>
+						</li>
+						<li>
+							<b>character data class</b>
+							<p>A class that handles single characters (ex. kanji, hanji) will be added.</p>
+						</li>
+						<li>
+							<b>Practices</b>
+							<p>Other types of tasks are planned for the future (ex. multiple selection).</p>
+						</li>
+						<li>
+							<b>Symbols</b>
+							<p>Some fonts do not support symbols.
+							This will be fixed so that symbols work independent from the font.</p>
+						</li>
+						<li>
+							<b>Color themes</b>
+							<p>Color themes by user preferences will be added in the future.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h1 id="installation">Installation</h1>
+				
+				
+				
+				
+				
+				<ol>
+					<li><a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Download</a> and install Java SE Development Kit 17.0.9</li>
+					<li><a href="https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw">Download</a> <i>Wolf Language Program</i> ("Fox Gates") and desired resources</li>
+					<li>Install resources</li>
+					<li>Launch program and setup your profile</li>
+				</ol>
+				<div class="section">
+					<h2 id="installation.java">Download Java</h2>
+					
+					
+					
+					
+					<p><a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html</a></p>
+					<p>
+						To run the program you need <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"><b>Java SE Development Kit 17.0.9</b> which can be downloaded from Oracle's website</a>.
+						<b>Note that</b> due compilation issues <b>only version 17.0.9</b> has been confirmed to work so far.
+						With any other version the program fails to launch.
+						This is an issue that will be resolved later.
+						Please make sure to have the correct version of Java for the program to launch, and also to download the correct version for your system.
+					</p>
+					<img src="wlp/java download.png">
+					<p>Once downloaded you can open the file and follow the instructions.</p>
+				</div>
+				<div class="section">
+					<h2 id="installation.program">Download Wolf's Language Program</h2>
+					
+					
+					
+					
+					<p><a href="https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw">https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw</a></p>
+					<p>
+						<i><b>Wolf's Language Program</b></i> is currently in its test phase (alpha) and can therefore only be found on an <a href="https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw">unlisted Google Drive folder</a>.
+						Download <b>"Wolf's Language Program.zip"</b> by either selecting the file with the right mouse button or pressing the three vertical dots in the upper right corner and selecting "download."
+						This is also a good time to download the .zip for your target language(s).
+					</p>
+					<img src="wlp/google drive.png">
+					<p>
+						Then unzip/extract the files onto anywhere on the computer.
+						This can be done in windows by dragging and dropping the zip-file with the right mouse button and selecting "extract...", or via a compression program like WinRar, 7Zip, etc.
+					</p>
+					<img src="wlp/extract.png">
+					<p>
+						This extracted folder should contain "foxgates.jar" and a folder called "resources."
+						The "foxgates.jar" contains the full program.
+						For easy access, create a shortcut to "foxgates.jar" from your desktop or similar.
+						The "resources" folder is where you install content for the program.
+						Note that the program will generate more files in this folder the first time your start it.
+					</p>
+				</div>
+				<div class="section">
+					<h2 id="installation.resources">Install resources</h2>
+					
+					
+					
+					
+					<p><a href="https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw">https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw</a></p>
+					<p>
+						To install resources, first download the .zip of your target language(s) from the <a href="https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw">google drive folder</a> the same way as you downloaded "Wolf's Language Program.zip".
+						<b>Unzip</b> this/these files anywhere on the computer and <b>move</b> the containing folders <b>into the "resources" folder</b> under the same folder as the language program.
+					</p>
+					<img src="wlp/res install.png">
+				</div>
+				<div class="section">
+					<h2 id="installation.launch">Launch the program</h2>
+					
+					
+					
+					
+					<p>
+						Once you got Java and have installed the program it is ready to be launched for the first time.
+						To launch the program, open "foxgates.jar" with <b>Java(TM) Platform SE binary</b>.
+						This can be set up the first time by pressing on "foxgates.jar" with the right mouse button and selecting "Open with...", selecting <b>"Always use this app to open .jar files"</b> and selecting Java(TM) Platform SE binary in the list.
+						If is not available in the list you can find it by selecting <b>More apps</b> and scrolling down and selecting <b>Look for another app on this PC</b>.
+						From there go to where the folder you installed JAVA in (<b>"C:\Program Files\Java\jdk-17"</b> by default), <b>"bin"</b> and double click on <b>"javaw.exe"</b>.
+						Due to some bug in reading/writing <b>you might need to close the program and reopen it again</b> by double clicking on "foxgates.jar", otherwise your profile might not be saved.
+						If your folder only contains the two items (foxgates.jar and resources) you need to restart it.
+					</p>
+					<img src="wlp/openwith01.png">
+					<img src="wlp/openwith02.png">
+					<img src="wlp/openwith03.png">
+					<img src="wlp/openwith04.png">
+					<img src="wlp/openwith05.png">
+					<img src="wlp/openwith06.png">
+				</div>
+			</div>
+			<div class="section">
+				<h1 id="update">Updating the program</h1>
+				
+				
+				
+				
+				
+				<p><a href="https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw">https://drive.google.com/drive/folders/0B7SK612su6mzaU5TYm5pV20xVEE?resourcekey=0-lGuNgxAw0niR4WXxIUE7zw</a></p>
+				<p>
+					If you are registered to an e-mail list you will get an email when a new version is available.
+					Otherwise you can check your version in the main menu or on the top of window and compare it with the latest version of <i>Wolf's Language Program</i> found on <a href="obj(googledrive)">Google Drive</a>.
+				</p>
+				<img src="wlp/main menu ver.png">
+				<img src="wlp/drive ver.png">
+				<p>To update the program download <i>Wolf's Language Program.zip</i> from <a href="obj(googledrive)">Google Drive</a> and unzip it (see <a href="#installation.program">Download Wolf's Language Program</a>).
+				Drag these files into the folder where you have the language program and select "replace the file in the destination".</p>
+				<img src="wlp/update 01.png">
+				<img src="wlp/update 02.png">
+				<p>The <b>next time you start the program it will refresh files</b> that need to be updated to match the current version.
+				If you need to apply any other changes for the update to work it will be specified in the email.
+				Note that the email will also include if there have been updates to the resources in which it's recommended to download the latest one as some errors may have been corrected.</p>
+			</div>
+			<div class="section">
+				<h1 id="menu">Menu</h1>
+				
+				
+				
+				
+				
+				<div class="section">
+					<h2 id="menu.login">Login</h2>
+					
+					
+					
+					
+					<p>
+						When you start the program you will start at the login screen.
+						Here you have two options:
+					</p>
+					<img src="wlp/login.png">
+					<table class="noframe">
+						<tr>
+							<th colspan="2">1. login to existing profile</th>
+							<td>logs in the user on existing profile</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">2. create new profile</th>
+							<td>creates a new profile with the name in the field</td>
+						</tr>
+					</table>
+					<p>
+						To create a new profile, write your desired profile name into the field and press create.
+						Your profile name may not include any slash, colon, star, question-mark, quote mark, lesser/greater than or pipe symbol.
+						When you create your profile the profile settings will automatically open.
+						Read <a href="#menu.settings"><i>user settings</i></a> on how to setup your profile.
+					</p>
+				</div>
+				<div class="section">
+					<h2 id="menu.main menu">Main Menu</h2>
+					
+					
+					
+					
+					<img src="wlp/main menu.png">
+					<table class="noframe">
+						<tr>
+							<th colspan="2">1. title</th>
+							<td>Contains information about the current version of the program and what profile is logged in.</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">2. search all</th>
+							<td>Allows you to <a href="#menu.search">search</a> through all the material in available <a href="#resources">resources</a>.</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">3. practice</th>
+							<td>Opens the <a href="#menu.practice.setup">practice setup screen</a>.</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">4. resources</th>
+							<td>Allows the user to browser available material as well as edit and add their own resources.</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">5. profile</th>
+							<td>Shows you data on your profile.</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">6. settings</th>
+							<td>Contains preferences and settings for your profile.</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">7. change profile</th>
+							<td>Logs out current user and takes you to the <a href="#menu.login">login-in screen</a>.</td>
+						</tr>
+					</table>
+				</div>
+				<div class="section">
+					<h2 id="menu.search">Search</h2>
+					
+					
+					
+					
+					<p>The search menu gives the user the ability to search through all of their active resources of chosen language.
+					Note that the search will only look for <a href="#data.dictentry">dictionary entries</a>.</p>
+					<img src="wlp/search menu.png">
+					<table class="noframe">
+						<tr>
+							<th colspan="2">1. language selection</th>
+							<td>selects the target language of search</td>
+						</tr>
+						
+						
+			
+						
+						<tr>
+							<th rowspan="3">2. search input</th>
+							<th>a. input field</th>
+							<td>
+								Write your search into this field.
+								The search may contain multiple words of both the target language and translation, etc.
+								Note that the program will only show results of entries that have all of the specified words in it.
+							</td>
+						</tr>
+						<tr>
+							<th>b. clear search</th>
+							<td>Clears all search input.</td>
+						</tr>
+						
+			
+						<tr>
+							<th>c. search</th>
+							<td>Either press this button or hit enter on the search field to search.</td>
+						</tr>
+						
+			
+						<tr>
+							<th colspan="2">3. search results</th>
+							<td>shows all of the search results</td>
+						</tr>
+					</table>
+					
+					<p>Furthermore, each search result will have a few options:</p>
+					<img src="wlp/search card.png">
+					<table class="noframe">
+						<tr>
+							<th colspan="2">1. target data</th>
+							<td>main data for the entry</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">2. text data</th>
+							<td>data for languages specific for the users known languages</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">3. edit button</th>
+							<td>
+								This button can be used to edit the entry.
+								When pressed it will open up a batch with all of the entries in the search.
+								Read in <a href="#menu.res.editentry">editing dictionary entries</a> on how to edit.
+							</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">4. glossary shortcuts</th>
+							<td>
+								If you select the different rows of data you get the option to add them to your resources as <a href="#data.gloss">glossary</a> via <a href="#other.shortcut">your shortcuts</a>.
+								The <a href="#data.gloss">glossary</a> you add will only include the selected data.
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="section">
+					<h2 id="menu.practice">Practice</h2>
+					
+					
+					
+					
+					<div class="section">
+						<h3 id="menu.practice.setup">Practice setup</h3>
+						
+						
+						
+						<p>The practice setup has the options for the user to setup their practice as they like.</p>
+						<img src="wlp/session setup.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. materials selection</th>
+								<td>Selection of material for practice (<a href="#menu.practice.setup.material">see more under materials selection</a>).</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. task selection</th>
+								<td>Selection of tasks for practice (<a href="#menu.practice.setup.task">see more under task selection</a>).</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">3. start button</th>
+								<td>Starts the practice.</td>
+							</tr>
+						</table>
+						
+						<div class="section">
+							<h4 id="menu.practice.setup.material">Material selection</h4>
+							
+							
+							<img src="wlp/session material.png">
+							<table class="noframe">
+								<tr>
+									<th colspan="2">1. resource navigation</th>
+									<td>
+										This section allows you to navigate through the resources.
+										It does not display any of the entries in the resources.
+										To see content <a href="#menu.res.browsing">browser the resource</a>.
+										The selection will include everything that is inside of the current folder of the resource.
+										If no resource is selected it will include all available material in all resources.
+									</td>
+								</tr>
+								
+								
+			
+								
+								<tr>
+									<th rowspan="8">2. advanced selection</th>
+									<th>a. current</th>
+									<td>selects all material in current folder</td>
+								</tr>
+								<tr>
+									<th>b. previous</th>
+									<td>selects all material that appears before the current folder</td>
+								</tr>
+								
+			
+								<tr>
+									<th>c. limit types</th>
+									<td>only selects certain types of entries (read more about entry types under <a href="#lang">language support</a>)</td>
+								</tr>
+								
+			
+								<tr>
+									<th>d. use dictionary entries</th>
+									<td>includes dictionary entries in selection</td>
+								</tr>
+								
+			
+								<tr>
+									<th>e. use glossary</th>
+									<td>includes glossary entries in selection</td>
+								</tr>
+								
+			
+								<tr>
+									<th>f. use entry examples</th>
+									<td>also includes entry examples (glossary) in selection</td>
+								</tr>
+								
+			
+								<tr>
+									<th>g. limit amount</th>
+									<td>
+										Limits the amount of entries that are selected.
+										0 marks no limit.
+									</td>
+								</tr>
+								
+			
+								<tr>
+									<th>h. </th>
+									<td></td>
+								</tr>
+								
+			
+								<tr>
+									<th colspan="2">3. add</th>
+									<td>
+										With this button the you can add more than one folder with material.
+										This is useful if you want to practice certain folders or customize your practice in detail.
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="section">
+							<h4 id="menu.practice.setup.task">Task selection</h4>
+							
+							
+							<img src="wlp/session task.png">
+							<table class="noframe">
+								<tr>
+									<th colspan="2">1. priority label</th>
+									<td>shows the priority of the task</td>
+								</tr>
+								
+								
+			
+								<tr>
+									<th colspan="2">2. remove task setup</th>
+									<td>removes task setup from list</td>
+								</tr>
+								
+								
+			
+								<tr>
+									<th colspan="2">3. entry type selection</th>
+									<td>selection of entry type for practice</td>
+								</tr>
+								
+								
+			
+								<tr>
+									<th colspan="2">4. task selection</th>
+									<td>selection of task</td>
+								</tr>
+								
+								
+			
+								<tr>
+									<th colspan="2">5. task settings</th>
+									<td>setup of the task (see <a href="#tasks">tasks</a> for more information)</td>
+								</tr>
+								
+								
+			
+								<tr>
+									<th colspan="2">6. add condition</th>
+									<td>
+										Adds task with condition.
+										They are read from start to end and prioritized in the follow order <b>and</b> &gt; <b>or</b> &gt; <b>else</b>
+									</td>
+								</tr>
+							</table>
+							<p>
+								The tasks are read from up to down and are grouped together by their largest priority.
+								The priority have the following meaning:
+							</p>
+							<table>
+								<tr>
+									<td><b>and</b></td>
+									<td>the current setup will be added</td>
+								</tr>
+								<tr>
+									<td><b>or</b></td>
+									<td>either the previous task setup or the current task setup will be added</td>
+								</tr>
+								<tr>
+									<td><b>else</b></td>
+									<td>the current task setup will be used if the previous setup fail</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="section">
+						<h3 id="menu.practice.window">Practice window</h3>
+						
+						
+						
+						<img src="wlp/session window.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. progress</th>
+								<td>Shows how many cards are finished out of how many cards are in the practice.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. task</th>
+								<td>
+									This is the current task.
+									It will look a bit different depending on the task and the setup of the task.
+									(See <a href="#">tasks</a>).
+								</td>
+							</tr>
+							
+							
+			
+							
+							<tr>
+								<th rowspan="3">3. change cards</th>
+								<th>a. undo</th>
+								<td>
+									Undoes the last move.
+									This is useful if you slip on a key, pressed confirmed too quickly, and more.
+								</td>
+							</tr>
+							<tr>
+								<th>b. skip</th>
+								<td>
+									Skips the current card which will be shown again later.
+									Can be useful if you accidentally reveals the answer.
+								</td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. discard</th>
+								<td>Skips the current card and removes it from the practice.</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="menu.practice.results">Results menu</h3>
+						
+						
+						
+						<img src="wlp/session results.png">
+						<table class="noframe">
+							<tr>
+								<th rowspan="2">1. session information</th>
+								<th>a. lapsed time</th>
+								<td>Shows how much time has passed since the start of the session.</td>
+							</tr>
+							<tr>
+								<th>b. number of draws</th>
+								<td>
+									Shows how many times in total cards were drawn/shown.
+									For a perfect game this number should match the number of cards.
+								</td>
+							</tr>
+							
+			
+							<tr>
+								<th colspan="2">2. headers</th>
+								<td>These can be pressed also to order the cards.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">3. results</th>
+								<td>
+									These are all the results from the practice.
+									The information here will look different depending on task (see <a href="#tasks">tasks</a>).
+								</td>
+							</tr>
+							
+							
+			
+							
+							<tr>
+								<th rowspan="2">4. repeat options</th>
+								<th>a. repeat misses</th>
+								<td>Creates a new session with the tasks that have at least one miss.</td>
+							</tr>
+							<tr>
+								<th>b. repeat all</th>
+								<td>Creates a new session with the same tasks.</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="section">
+					<h2 id="menu.res">Resources</h2>
+					
+					
+					
+					
+					<p>The resource menu will show a list of available resources for the user.
+					Here is also an option to create new resources.</p>
+					<img src="wlp/res main menu.png">
+					<table class="noframe">
+						<tr>
+							<th colspan="2">1. new resource</th>
+							<td>
+								Allows for the user to create a new resource.
+								Read through <a href="#menu.res.prop">editing resources</a> for details.
+							</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">2. resource selection</th>
+							<td>Lists available resources of all languages.</td>
+						</tr>
+					</table>
+					<div class="section">
+						<h3 id="menu.res.browsing">Browsing</h3>
+						
+						
+						
+						<img src="wlp/res menu.png">
+						<table class="noframe">
+							<tr>
+								<th rowspan="3">1. edit options</th>
+								<th>a. media sync</th>
+								<td>opens the menu for <a href="#menu.res.editmedia">synchronizing media</a></td>
+							</tr>
+							<tr>
+								<th>b. edit properties</th>
+								<td>opens the <a href="#menu.res.prop">property edit screen</a></td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. add dictionary entries</th>
+								<td>opens the <a href="#menu.res.editentry">dictionary entry editor</a> for new entries</td>
+							</tr>
+							
+			
+							
+							<tr>
+								<th rowspan="2">2. tab selection</th>
+								<th>a. folders</th>
+								<td>opens the folder browser tab</td>
+							</tr>
+							<tr>
+								<th>b. search</th>
+								<td>opens the search tab (similar to <a href="#menu.search">the search menu</a>).</td>
+							</tr>
+							
+			
+							
+							<tr>
+								<th rowspan="7">3. folder browser</th>
+								<th>a. previous</th>
+								<td>opens the previous folder</td>
+							</tr>
+							<tr>
+								<th>b. current</th>
+								<td>displays the current folder</td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. sub-folders</th>
+								<td>selection which takes the user to the next folder</td>
+							</tr>
+							
+			
+							<tr>
+								<th>d. shortcut</th>
+								<td>creates a shortcut to current folder (<a href="#other.shortcut">see shortcuts</a>)</td>
+							</tr>
+							
+			
+							<tr>
+								<th>e. edit current folder</th>
+								<td>allows the user to edit the current folder (<a href="#menu.res.editfolder">see editing folders</a>)</td>
+							</tr>
+							
+			
+							<tr>
+								<th>f. add folder</th>
+								<td>allows the user to create a new folder (<a href="#menu.res.editfolder">see editing folders</a>)</td>
+							</tr>
+							
+			
+							<tr>
+								<th>g. edit glossary</th>
+								<td>allows the user to edit the glossary list in the folder (<a href="#menu.res.editgloss">see editing glossary</a>)</td>
+							</tr>
+							
+			
+							<tr>
+								<th colspan="2">4. practice all</th>
+								<td>Shortcut to the <a href="#menu.practice.setup">practice menu</a>.</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="menu.res.prop">Resource properties</h3>
+						
+						
+						
+						<img src="wlp/res prop.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. save button</th>
+								<td>saves properties</td>
+							</tr>
+							
+							
+			
+							
+							<tr>
+								<th rowspan="5">2. general</th>
+								<th>a. ID*</th>
+								<td>ID for the resources that is unique</td>
+							</tr>
+							<tr>
+								<th>b. name*</th>
+								<td>display title for the resource</td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. target language*</th>
+								<td>target language of the resource</td>
+							</tr>
+							
+			
+							<tr>
+								<th>d. text languages*</th>
+								<td>supported text languages of the resource</td>
+							</tr>
+							
+			
+							<tr>
+								<th>e. description</th>
+								<td>description for the resource</td>
+							</tr>
+							
+			
+							
+							<tr>
+								<th rowspan="2">3. dictionary setup</th>
+								<th>a. gate pass size</th>
+								<td>
+									This value determines how many files the dictionary should be split up into to run the code smoothly.
+									Values are split up based on the first x characters of the entry ID.
+									Is generally set to 0 (for no splitting) for dictionaries with less that 10.000 entries.
+								</td>
+							</tr>
+							<tr>
+								<th>b. entry data support</th>
+								<td>
+									Setup for what entry types are supported and what data is supported for each entry type.
+									Furthermore the example types and data are also specified.
+									(See <a href="#menu.res.entrydata">dictionary entry data setup</a>)
+								</td>
+							</tr>
+							
+			
+							<tr>
+								<th colspan="2">4. glossary data support</th>
+								<td>
+									Setup for what entry types are supported as glossary and what data each type support.
+									(See <a href="#menu.res.glossdata">glossary data setup</a>)
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="menu.res.entrydata">Dictionary entry data setup</h3>
+						
+						
+						
+						<img src="wlp/dict entry setup.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. header for entry type</th>
+								<td>shows the entry type that the support applies to</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. data selection</th>
+								<td>selection of data that the resource supports for the entry type</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">3. example data setup</th>
+								<td>setup for the example data (see <a href="#menu.res.glossdata">glossary data setup</a>)</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="menu.res.glossdata">Glossary data setup</h3>
+						
+						
+						
+						<img src="wlp/glossary setup.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. header for entry type</th>
+								<td>shows the entry type that the support applies to</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. data selection</th>
+								<td>selection of data that the resource supports for the entry type</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="menu.res.editmedia">Editing media</h3>
+						
+						
+						
+						<p>Resources has a menu of media.
+						In this menu new files can be synchronized.
+						See under <a href="#data.media">media</a> what files extensions are recognized.</p>
+						<img src="wlp/media main.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. registered audio files</th>
+								<td>list of known audio files</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. unregistered files</th>
+								<td>list of new/unknown files in the resource</td>
+							</tr>
+						</table>
+						<p>Audio files are synchronized by listening to the audio and marking the start of the relevant audio and where each entry ends.</p>
+						<img src="wlp/media audio.png">
+						<table class="noframe">
+							<tr>
+								<th rowspan="2">1. file start</th>
+								<th>a. remove amount</th>
+								<td>the amount of time to remove from the start of the file is specified here</td>
+							</tr>
+							<tr>
+								<th>b. test button</th>
+								<td>allows the user to listen to where the file currently starts with the amount of time removed from the start</td>
+							</tr>
+							
+			
+							
+							<tr>
+								<th rowspan="3">2. snippets of audio</th>
+								<th>a. index</th>
+								<td>index number of audio snippet</td>
+							</tr>
+							<tr>
+								<th>b. snippet titles</th>
+								<td>a title can be specified here so it's easier to find and identify the snippet of audio</td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. time of snippet</th>
+								<td>end time mark of audio snippet</td>
+							</tr>
+							
+			
+							
+							<tr>
+								<th rowspan="3">3. synchronization</th>
+								<th>a. input field</th>
+								<td>can be used instead of the set time button with <b>enter</b></td>
+							</tr>
+							<tr>
+								<th>b. set time button</th>
+								<td>splits audio and marks the end time of audio snippet</td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. synchronization button</th>
+								<td>plays the audio and listens for user input on splits</td>
+							</tr>
+							
+			
+							<tr>
+								<th colspan="2">4. apply button</th>
+								<td>saves any changes made</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="menu.res.editentry">Editing dictionary entries</h3>
+						
+						
+						
+						<p>Dictionary entries are edited in batches.
+						This is so that multiple entries can be added at the same time and so that it is possible for the editor to go back and proof read.
+						It also makes it possible to go through chapters of entries to add or revise data.
+						The user can also select important data for the batch by selecting them on the left (pressing on the title of the data).
+						This will cause the focus to jump between the specified fields when enter is pressed.
+						Also see <a href="#data.classes">data classes</a> on how to correctly format data.</p>
+						<img src="wlp/dict entry edit.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. save button</th>
+								<td>applies and saves changes</td>
+							</tr>
+							
+							
+			
+							
+							<tr>
+								<th rowspan="3">2. batch navigation</th>
+								<th>a. go to previous</th>
+								<td>applies changes and goes to the previous entry</td>
+							</tr>
+							<tr>
+								<th>b. index in batch</th>
+								<td>index of current entry in batch</td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. go to next</th>
+								<td>applies changes and goes to the next entry</td>
+							</tr>
+							
+			
+							<tr>
+								<th colspan="2">3. entry ID*</th>
+								<td>unique ID of entry in resource</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">4. entry type selector</th>
+								<td>sets the entry type for the entry</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">5. target data</th>
+								<td>
+									The target data of the entry is specified here.
+									Know that the labels on the left can be selected to jump between relevant data.
+								</td>
+							</tr>
+							
+							
+			
+							
+							<tr>
+								<th rowspan="5">6. text data</th>
+								<th>a. text language label</th>
+								<td>specified language for set of text data</td>
+							</tr>
+							<tr>
+								<th>b. remove button</th>
+								<td>removes the set of text data</td>
+							</tr>
+							
+			
+							<tr>
+								<th>c. text data</th>
+								<td>
+									The set of text data is specified here.
+									Know that the labels on the left can be selected to jump between relevant data.
+								</td>
+							</tr>
+							
+			
+							<tr>
+								<th>d. text data language selector</th>
+								<td>sets added text data to language</td>
+							</tr>
+							
+			
+							<tr>
+								<th>e. text data add button</th>
+								<td>adds another set of text data to the entry</td>
+							</tr>
+							
+			
+							<tr>
+								<th colspan="2">7. examples</th>
+								<td>examples for the entry are specified here as a glossary list (see <a href="#menu.res.editgloss">editing glossary lists)</a></td>
+							</tr>
+						</table>
+					</div>
+					<p>Glossary lists are separated by entry type.
+					Glossary can either be added by manually editing the list or by adding glossary via the <a href="#menu.search">search window</a>.
+					The glossary list is meant to be edited as a batch by default.
+					When <b>enter</b> is pressed on one of the fields the next one will be marked.
+					This will also add new rows for more glossary.
+					Note that the headers can be selected to which any column that is not highlighted will be skipped.
+					Any row left empty will be removed when the list is saved.
+					Also see <a href="#data.classes">data classes</a> on how to correctly format the data.</p>
+					<div class="section">
+						<h3 id="menu.res.editgloss">Editing glossary lists</h3>
+						
+						
+						
+						<img src="wlp/glossary edit.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. entry type label</th>
+								<td>displays what entry type the glossary list is for</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. headers</th>
+								<td>
+									Headers for the data.
+									Note that these headers can be pressed and activated to focus on certain values in batches.
+								</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">3. data</th>
+								<td>
+									The data is specified in these cells.
+									Press <b>enter</b> while a cell is in focus to go to the next cell.
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="menu.res.editfolder">Editing folders</h3>
+						
+						
+						
+						<p>Resource folders contain a ID and titles in specified languages.
+						The ID is by default a two digit number and have to be unique in that folder.
+						The folders are automatically sorted by their ID when the folder is saved.
+						As for the titles, title for the the language with the highest priority for the active user will be displayed.
+						A title in at least one language is required.</p>
+						<img src="wlp/dict folder edit.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. ID*</th>
+								<td>unique index for the current folder</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. title*</th>
+								<td>title name in specified languages</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="section">
+					<h2 id="menu.profile">Profile menu</h2>
+					
+					
+					
+					
+					<p>The profile menu contains a list of sessions that the user has done.
+					These sessions can be opened again to look at the results or to repeat the practice.
+					The menu contains basic information about each session such date and time, target language, the amount of cards, etc.</p>
+					<img src="wlp/session card.png">
+				</div>
+				<div class="section">
+					<h2 id="menu.settings">User settings</h2>
+					
+					
+					
+					
+					<p>
+						In the user settings menu you can setup your profile.
+						To exit the settings menu you must have at least one target language, a text language and a main font.
+						The language selection will adapt what translations you see and practice, and also what resources will be visible.
+					</p>
+					<img src="wlp/settings.png">
+					<table class="noframe">
+						<tr>
+							<th colspan="2">1. target language(s)*</th>
+							<td>
+								Add the languages that you want to learn here.
+								This will determine what resources you will see in your menu.
+							</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">2. text language(s)*</th>
+							<td>
+								In the text languages you add the languages that you know, or want to use to practice your target language.
+								This includes translation input for vocabulary, description and more.
+								The priority/order of your text languages will determine the preferred language for titles to be displayed in.
+								You may have a target language as a text language also.
+							</td>
+						</tr>
+						
+						
+			
+						
+						<tr>
+							<th rowspan="2">3. fonts*</th>
+							<th>a. main font</th>
+							<td>
+								Here you can select your main font which will be displayed for anything that isn't language specific.
+								Note that some fonts cannot display some symbols that are used for buttons (ex, editing (✎)).
+							</td>
+						</tr>
+						<tr>
+							<th>b. language fonts</th>
+							<td>
+								Language fonts are specific for each language.
+								Be sure to select a font that supports the language.
+								Also be careful that it's the correct font for that language as some fonts can look different between languages (such as tradition Chinese characters vs Japanese kanji).
+								On the right side you can see a preview of the selected font for that language.
+								If nothing is selected the main font will be used.
+							</td>
+						</tr>
+						
+			
+						<tr>
+							<th colspan="2">4. font size</th>
+							<td>determines the size of text in the program</td>
+						</tr>
+						
+						
+			
+						<tr>
+							<th colspan="2">5. resource shortcuts</th>
+							<td>
+								Here you can remove your shortcuts to resources.
+								Read more about shortcuts under <a href="#other.shortcut">shortcuts</a>.
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="section">
+				<h1 id="data">Data</h1>
+				
+				
+				
+				
+				
+				<div class="section">
+					<h2 id="data.dictentry">Dictionary entry</h2>
+					
+					
+					
+					
+					<p>The dictionary entry contains one set of <i>target data</i> and supports multiple instances of <i>text data</i> for multiple languages.
+					It also supports examples in the form of <a href="#data.gloss">glossary</a> which can be extracted for practices.
+					Dictionary entries can be search for and can be used to create glossary.
+					Dictionary entries are meant to list detailed information mainly for browsing but can also be used for practices.</p>
+				</div>
+				<div class="section">
+					<h2 id="data.gloss">Glossary</h2>
+					
+					
+					
+					
+					<p>Glossary contains one set of <i>target data</i> and one set of <i>text data</i> for each text language of that resource.
+					Glossary is meant for lists of vocabulary with not too much information and should mainly be used for practices.
+					Glossary cannot be searched for.</p>
+				</div>
+				<div class="section">
+					<h2 id="data.media">Media</h2>
+					
+					
+					
+					
+					<p>The program supports media in the form of audio files.
+					The files must be in .wav format and need to be synchronized into their resource.
+					Media files are stored in <code>.../resources/[resource ID]/media</code>.</p>
+				</div>
+				<div class="section">
+					<h2 id="data.classes">Data classes</h2>
+					
+					
+					
+					
+					<div class="section">
+						<h3 id="data.classes.string">String</h3>
+						
+						
+						
+						<p>String (text) values are defined as a row of text.
+						These values should be formatted so that they can be used in practices.
+						The following characters have a special function:</p>
+						<table>
+							<tr>
+								<th>character</th>
+								<th>function</th>
+								<th>example</th>
+							</tr>
+							<tr>
+								<td>semicolon (<code>;</code>)</td>
+								<td>inserted between multiple values</td>
+								<td class="code">hard; difficult</td>
+							</tr>
+							<tr>
+								<td>parenthesis (<code>()</code>)</td>
+								<td>marks words that are optional</td>
+								<td class="code">to raise (above)</td>
+							</tr>
+							<tr>
+								<td>square brackets (<code>[]</code>)</td>
+								<td>
+									Marks annotations that are ignored in practices.
+									Also marks the end and start of alternatives.
+								</td>
+								<td class="code">handsome [used for men]</td>
+							</tr>
+							<td>slash (<code>/</code>)</td>
+							<td>marks variation/alternatives (note that it should be used within square brackets)</td>
+							<td class="code">to be [difficult/hard] to understand</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="data.classes.integer">Integer</h3>
+						
+						
+						
+						<p>Integer (number) values consist of a full number (no decimals).</p>
+					</div>
+					<div class="section">
+						<h3 id="data.classes.combo">Combo</h3>
+						
+						
+						
+						<p>The combo class is a text value with a limited options such grouping or classification.</p>
+					</div>
+					<div class="section">
+						<h3 id="data.classes.audio">Audio</h3>
+						
+						
+						
+						<p>The audio class refers to a single audio snippet of a resource.
+						When the audio is available it will be displayed as a button that can be pressed to play the audio.
+						Most tasks also allow the user to press <b>space</b> or <b>0</b> (zero) to play the audio.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<h1 id="tasks">Tasks</h1>
+				
+				
+				
+				
+				
+				<div class="section">
+					<h2 id="tasks.flash">Flash card</h2>
+					
+					
+					
+					
+					<p>The flash card displays one type of data and the user inputs the requested data in the input.
+					Feedback is then shown on the answer and the correct answer.
+					The task card supports strings (text values) and integers (number values) for target data.</p>
+					<div class="section">
+						<h3 id="tasks.flash.setup">Setup</h3>
+						
+						
+						
+						<img src="wlp/taskcard flash setup.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. passive data selection</th>
+								<td>The data that is displayed for the user.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. active data selection</th>
+								<td>The target data that the user inputs.</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="tasks.flash.task">Task</h3>
+						
+						
+						
+						<img src="wlp/taskcard flash display.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. target</th>
+								<td>Shows instruction of the expected value.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. passive data</th>
+								<td>The information that the user will base their answer on.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">3. input field</th>
+								<td>
+									The answer is written here.
+									To answer press <b>enter</b>.
+									Note also that when in focus and nothing is written the user can press <b>spacebar</b> or <b>0</b> (zero) to repeat audio.
+									Also, the input doesn't care for lowercase/uppercase letters and phonetically identical characters like katakana/hiragana.
+								</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">4. feedback</th>
+								<td>Displays if the input was correct with <b>"hit"</b> or incorrect with <b>"miss"</b>.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">5. correct answer</th>
+								<td>
+									Displays the correct answer.
+									Note that the answer can be pressed to show more information.
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="tasks.flash.history">History</h3>
+						
+						
+						
+						<p>The history displayed the amount of incorrect answers.
+						If the number is pressed the input history will also be displayed.</p>
+						<img src="wlp/taskcard flash history.png">
+					</div>
+				</div>
+				<div class="section">
+					<h2 id="tasks.paper">Paper card</h2>
+					
+					
+					
+					
+					<img src="wlp/taskcard paper.jpg" width="50%">
+					<p>The paper card displays one type of data and the user inputs the requested data in the input.
+					The input is written down on a piece of paper and the user specifies if they think they passed or not.</p>
+					<div class="section">
+						<h3 id="tasks.paper.setup">Setup</h3>
+						
+						
+						
+						<img src="wlp/taskcard paper setup.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. passive data selection</th>
+								<td>The data that is displayed for the user.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. active data selection</th>
+								<td>The target data that the user inputs.</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="tasks.paper.task">Task</h3>
+						
+						
+						
+						<img src="wlp/taskcard paper display.png">
+						<table class="noframe">
+							<tr>
+								<th colspan="2">1. target</th>
+								<td>Shows instruction of the expected value.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">2. passive data</th>
+								<td>The information that the user will base their answer on.</td>
+							</tr>
+							
+							
+			
+							<tr>
+								<th colspan="2">3. input field</th>
+								<td>
+									The answer on written paper and the user then presses <b>enter</b> here to show the correct answer.
+									Note also the user can press <b>spacebar</b> or <b>0</b> (zero) when the answer isn't shown to repeat audio.
+								</td>
+							</tr>
+							
+							
+			
+							
+							<tr>
+								<th rowspan="2">4. answer input</th>
+								<th>a. miss</th>
+								<td>
+									Press this if your input is incorrect.
+									You can also press <b>space</b> or <b>0</b> (zero) to mark the answer as incorrect.
+								</td>
+							</tr>
+							<tr>
+								<th>b. hit</th>
+								<td>
+									Press this if your input is correct.
+									You can also press <b>enter</b> to mark the answer as correct.
+								</td>
+							</tr>
+							
+			
+							<tr>
+								<th colspan="2">5. correct answer</th>
+								<td>
+									Displays the correct answer.
+									Note that the answer can be pressed to show more information.
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="tasks.paper.history">History</h3>
+						
+						
+						
+						<p>The history displayed the amount of incorrect answers.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<h1 id="other">Other functions</h1>
+				
+				
+				
+				
+				
+				<div class="section">
+					<h2 id="other.shortcut">Folder shortcuts</h2>
+					
+					
+					
+					
+					<p>The folder shortcut adds a marker to resource folders so that glossary can be added directly from the <a href="#menu.search">search window</a>.
+					Shortcuts are added from <a href="#menu.res.browsing">folder browser</a> via the shortcut button and can be removed via <a href="#menu.settings">user settings</a>.</p>
+					<p>When setting the a shortcut you will get the following options:</p>
+					<img src="wlp/shortcut set.png">
+					<table class="noframe">
+						<tr>
+							<th colspan="2">1. overwrite shortcut</th>
+							<td>overwrites existing shortcut with current folder location</td>
+						</tr>
+						
+						
+			
+						
+						<tr>
+							<th rowspan="2">2. create new shortcut</th>
+							<th>a. input field</th>
+							<td>name for new shortcut of current folder location</td>
+						</tr>
+						<tr>
+							<th>b. create button</th>
+							<td>creates new shortcut</td>
+						</tr>
+						
+			
+						<tr>
+							<th colspan="2">3. cancel</th>
+							<td>closes the set shortcut options</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="section">
+				<h1 id="lang">Language support</h1>
+				
+				
+				
+				
+				
+				<div class="section">
+					<h2 id="lang.text">Text languages</h2>
+					
+					
+					
+					
+					<p>The program currently has text support for:</p>
+					<ul>
+						<li>Chinese</li>
+						<li>English</li>
+						<li>Korean</li>
+						<li>Japanese</li>
+						<li>Russian</li>
+						<li>Swedish</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h2 id="lang.chinese">Chinese</h2>
+					
+					
+					
+					
+					<div class="section">
+						<h3 id="lang.chinese.vocabulary">Vocabulary</h3>
+						
+						
+						
+						<p>Standard vocabulary for practice and searches.</p>
+						<table>
+							<tr>
+								<th>data</th>
+								<th>class</th>
+								<th>description</th>
+							</tr>
+							<tr>
+								<td>hanzi</td>
+								<td>string</td>
+								<td>target word as written in hanzi</td>
+							</tr>
+							<tr>
+								<td>pinyin</td>
+								<td>string</td>
+								<td>pronunciation of the target</td>
+							</tr>
+							<tr>
+								<td>voice</td>
+								<td>audio</td>
+								<td>voice recording of the target</td>
+							</tr>
+							<tr>
+								<td>class</td>
+								<td>combo</td>
+								<td>part of speech</td>
+							</tr>
+							<tr>
+								<td>meaning</td>
+								<td>string</td>
+								<td>translations</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="section">
+					<h2 id="lang.japanese">Japanese</h2>
+					
+					
+					
+					
+					<div class="section">
+						<h3 id="lang.japanese.kana">Kana</h3>
+						
+						
+						
+						<p>Kana are mainly used at the beginners phase for the user to learn hiragana and katakana.</p>
+						<table>
+							<tr>
+								<th>data</th>
+								<th>class</th>
+								<th>description</th>
+							</tr>
+							<tr>
+								<td>hiragana</td>
+								<td>string</td>
+								<td>target hiragana character</td>
+							</tr>
+							<tr>
+								<td>katakana</td>
+								<td>string</td>
+								<td>target katakana character</td>
+							</tr>
+							<tr>
+								<td>reading</td>
+								<td>string</td>
+								<td>the reading of target kana</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="lang.japanese.kanji">Kanji</h3>
+						
+						
+						
+						<p>Data for specific Sino-Japanese characters (kanji) used to learn reading and writing Japanese.</p>
+						<table>
+							<tr>
+								<th>data</th>
+								<th>class</th>
+								<th>description</th>
+							</tr>
+							<tr>
+								<td>kanji</td>
+								<td>string</td>
+								<td>target character</td>
+							</tr>
+							<tr>
+								<td>on</td>
+								<td>string</td>
+								<td>Chinese reading (on-yomi) of target character</td>
+							</tr>
+							<tr>
+								<td>kun</td>
+								<td>string</td>
+								<td>native reading (kun-yomi) of target character</td>
+							</tr>
+							<tr>
+								<td>stroke</td>
+								<td>int</td>
+								<td>the stroke count for the target character</td>
+							</tr>
+							<tr>
+								<td>radical</td>
+								<td>int</td>
+								<td>radical index number of target character</td>
+							</tr>
+							<tr>
+								<td>meaning</td>
+								<td>string</td>
+								<td>interpreted meaning of the target character</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="lang.japanese.vocabulary">Vocabulary</h3>
+						
+						
+						
+						<p>Standard vocabulary for practice and searches.</p>
+						<table>
+							<tr>
+								<th>data</th>
+								<th>class</th>
+								<th>description</th>
+							</tr>
+							<tr>
+								<td>kanji</td>
+								<td>string</td>
+								<td>target word as written with kanji</td>
+							</tr>
+							<tr>
+								<td>kana</td>
+								<td>string</td>
+								<td>target word as written all in kana</td>
+							</tr>
+							<tr>
+								<td>class</td>
+								<td>combo</td>
+								<td>part of speech</td>
+							</tr>
+							<tr>
+								<td>group</td>
+								<td>combo</td>
+								<td>sub-classification of the part of speech</td>
+							</tr>
+							<tr>
+								<td>meaning</td>
+								<td>string</td>
+								<td>translations</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="lang.japanese.grammar">Grammar</h3>
+						
+						
+						
+						<p>Explains sentence patterns and grammatical structures.</p>
+						<table>
+							<tr>
+								<th>data</th>
+								<th>class</th>
+								<th>description</th>
+							</tr>
+							<tr>
+								<td>phrase</td>
+								<td>string</td>
+								<td>target sentence pattern</td>
+							</tr>
+							<tr>
+								<td>formation</td>
+								<td>string</td>
+								<td>formula on how the pattern is used</td>
+							</tr>
+							<tr>
+								<td>class</td>
+								<td>string</td>
+								<td>part of speech</td>
+							</tr>
+							<tr>
+								<td>relative</td>
+								<td>string</td>
+								<td>references to similar sentence patterns</td>
+							</tr>
+							<tr>
+								<td>antonym</td>
+								<td>string</td>
+								<td>references to opposite sentence patterns</td>
+							</tr>
+							<tr>
+								<td>description</td>
+								<td>string</td>
+								<td>description of the use and function of the sentence pattern</td>
+							</tr>
+							<tr>
+								<td>translation</td>
+								<td>string</td>
+								<td>interpreted translations of the sentence pattern</td>
+							</tr>
+						</table>
+					</div>
+					<div class="section">
+						<h3 id="lang.japanese.sentence">Sentence</h3>
+						
+						
+						
+						<p>The sentence entry type was added so that example sentences can added.</p>
+						<table>
+							<tr>
+								<th>data</th>
+								<th>class</th>
+								<th>description</th>
+							</tr>
+							<tr>
+								<td>phrase</td>
+								<td>string</td>
+								<td>the full sentence</td>
+							</tr>
+							<tr>
+								<td>translation</td>
+								<td>string</td>
+								<td>translation of the full sentence</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<h1 id="resources">Resources</h1>
+				
+				
+				
+				
+				
+				<p>The following resources are provided with <i>Wolf's Language Program</i>.</p>
+				<div class="section">
+					<h2 id="resources.chinese">Chinese</h2>
+					
+					
+					
+					
+					<ul>
+						<li>
+							<b>Chinese (Lund University)</b>
+							<p>
+								Contains the material used for Chinese Studies at Lund University.
+								Has all vocabulary until chapter 10 (beginner's course) together with audio recordings.
+								Also contains extra glossary like adjectives, counters, etc. and material on extra reading: "The Lady in the Painting."
+								The text language will be changed into the original Swedish (extra material currently in English and chapter vocabulary in both Swedish and English) and "The Lady in the Painting" will be revised with correct Swedish translations and audio.
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h2 id="resources.japanese">Japanese</h2>
+					
+					
+					
+					
+					<ul>
+						<li>
+							<b>Genki</b>
+							<p>
+								By Banno et al., 1999 (The Japan Times).
+								<i>An Elementary course in Elementary Japanese.</i>
+								Has Genki 1 and Genki 2 second edition.
+								Contains all vocabulary by chapters, and the writing section including both kanji and kana.
+								Chapter names will get a revise and translation into English and audio will be added.
+							</p>
+						</li>
+						<li>
+							<b>Tobira</b>
+							<p>
+								Tobira: Gateway to Advanced Japanese Learning Through Content and Media, by Oka et al, 2009 (Kurosio).
+								Contains all vocabulary in the chapters of the main book and all kanji in the reading and writing book.
+								Sentence patterns from the book will later be added into the resource.
+							</p>
+						</li>
+						<li>
+							<b>Kanji Learner's Course</b>
+							<p>
+								Kanji dictionary of the <i>Joyo kanji list</i> by Conning, 2013 (Kodansha).
+								The data has been scraped from an external source and will be revised on a later date.
+							</p>
+						</li>
+						<li>
+							<b>A dictionary of Japanese Grammar</b>
+							<p>
+								Masaki &et; Tsutsui's Japanese Basic/Intermediate/Advanced grammar dictionaries (The Japan Times) released in 1986, 1995 and 2008.
+								Currently only contains the basic grammar but will be filled with the other two parts once the Japanese grammar class is resolved.
+							</p>
+						</li>
+						<li>
+							<b>Japanese-Multilingual Dictionary</b>
+							<p>
+								The famous JMDict found on integrated browser translators, smart-phone applications and on <a href="https://jisho.org/">Jisho.org</a>.
+								Contains the base data from the original dictionary and only English translations.
+								Will be worked on eventually to include more information and other languages.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
