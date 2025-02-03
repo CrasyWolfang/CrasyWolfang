@@ -1,596 +1,677 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CWOLF </title>
-<meta charset="utf-8">
-<style>
-body{background-color: black;}
-a{
-color: lightgrey;
-text-decoration: none;
-}
-a:hover{background-color: #e0c068;}
-#container{
-color: white;
-max-width: 1200px;
-min-width: 800px;
-margin-left: auto;
-margin-right: auto;
-}
-#top{width: 100%;}
-#topLang{float: right;}
-#topLang a{
-color: white;
-text-decoration: none;
-}
-#header img{
-display: block;
-width: 100%;
-}
-#topMenu{background-color: black;}
-#topMenu ul{
-margin: 0em;
-padding: 0em;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-}
-#topMenu li{
-display: inline;
-padding: 0em;
-font-size: 1.3em;
-border: 2px solid grey;
-}
-#topMenu a{
-padding-top: 0em;
-padding-bottom: 0em;
-padding-left: 2em;
-padding-right: 2em;
-color: white;
-}
-#bottom{
-color: grey;
-background-color: black;
-}
-
-.flowcard{
-margin: 0.5em;
-padding: 1em;
-border: solid #101010;
-}
-
-.center{
-text-align: center;
-text-decoration: underline;
-}
-
-.catCard{
-list-style: none;
-padding-left: 0;
-text-align: center;
-font-size: 1.3em;
-}
-.catCard li{
-margin: 0.3em;
-display: inline-block;
-border: 2px solid grey;
-padding: 0.5em;
-}
-.catCard li:hover{background-color: #e0c068;}
-.catCard img{
-width: 240px;
-display: block;
-}
-.catCard a{
-color: white;
-display: block;
-}
-
-.title{
-margin-left: auto;
-margin-right: auto;
-max-width: 800px;
-padding: 1em;
-padding-bottom: 2em;
-}
-.title h1{
-border-bottom: 1px solid;
-width: 100%;
-margin: 0px;
-}
-.title-left{float: left;}
-.title-right{
-float: right;
-text-align: right;
-}
-
-.ref{
-color: lightgrey;
-text-decoration: none;
-font-size: 0.8em;
-}
-.ref::before{content: '[';}
-.ref::after{content: ']';}
-
-.sec{padding-bottom: 1em;}
-
-.photoCard{
-border: 2px solid grey;
-margin-top: 1em;
-padding-bottom: 2em;
-}
-.photoCard:hover{background-color: #e0c068;}
-.photoCard a{
-color: white;
-}
-.photoCard h1{
-margin: 0px;
-padding-left: 0.15em;
-}
-.card-incipit{
-font-weight: bold;
-padding-left: 0.4em;
-}
-.card-left{
-float: left;
-padding-left: 0.4em;
-}
-.card-right{
-float: right;
-text-align: right;
-padding-right: 0.4em;
-}
-.photoCard img{
-width: 100%;
-display: block;
-}
-
-.photoParagraph{
-padding: 1em;
-text-indent: 2em;
-}
-.imgWrap{
-display: flex;
-flex-direction: row;
-width: 100%;
-gap: 0.5em;
-padding-bottom: 0.25em;
-padding-top: 0.25em;
-}
-.imgWrap img{
-display: block;
-max-width: 100%;
-gap: 0.5em;
-}
-.neatPhoto{padding: 1em;}
-.neatPhoto a{width: 60%;}
-.neatPhoto img{width: 100%;}
-.neatPhoto img,
-.neatPhoto a{
-display: block;
-margin: 0 auto;
-}
-
-.bibliography ul{
-list-style-type: none;
-text-indent: 0em;
-}
-.bibliography li:not(:last-child) {
-margin-bottom: 0.5em;
-}
-
-.largePhoto{
-border: 1px solid white;
-margin-bottom: 1em;
-}
-.largePhoto p{
-text-indent: 2em;
-padding-left: 1em;
-padding-right: 1em;
-}
-.largePhotoTop{
-text-indent: 1em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-}
-.largePhotoTitle{
-font-size: 1.3em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-text-indent: 2em;
-}
-.largePhoto img{display: block;}
-.largeformat p{
-padding-left: 1em;
-padding-right: 1em;
-}
-
-.credits{width: 100%;}
-.credits td{
-border: 1px solid white;
-padding: 0.3em;
-}
-</style>
-</head>
-<body>
-
-<div id="container">
-<div id="top">
-<small style="color: grey;">CWOLF WEB PROJECT</small>
-<div id="topLang">
-🌎
-<a href="https://CrasyWolfang.com/en/post/2206mids">English</a>
-|
-<a href="https://CrasyWolfang.com/jp/post/2206mids">日本語</a>
-</div>
-</div>
-<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-<nav id="topMenu">
-<ul>
-<li><a href="https://CrasyWolfang.com/en/home">Home</a></li>
-<li><a href="https://CrasyWolfang.com/en/photo">Photography</a></li>
-<!---<li><a href="https://CrasyWolfang.com/en/video">Video Production</a></li>--->
-<li><a href="https://CrasyWolfang.com/en/about">About</a></li>
-</ul>
-</nav>
-
-<div class="title">
-
-<h1>Midsummer</h1>
-<span class="title-left">Event photography</span>
-<span class="title-right"><span style="color: LightGray;">published: </span>2023-09-26</span>
-</div>
-
-<section class="photoParagraph"><p>
-<p>In June midsummer is celebrated.
-In Sweden this traditional event is signified by the decoration of a midsummer pole.
-Rings are hung in the pole and it is fully covered in flowers.
-Everyone gathers around the may pole preferably in folk clothes, and girls with a ring of flowers on their head.
-The community then dances together around the pole under the blue sky with live music.
-One of the dances is the famous small frog dance where the participants jump like frogs and quack like ducks.
-Both adults and children participate in the dance and everyone laughs and smiles as they dance around.
-</p></section>
-
-<section class="sec" id="summer01">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkBSf9.jpeg"><img width="1200" src="https://b.l3n.co/i/dkBSf9.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkBOwm.jpeg"><img width="1200" src="https://c.l3n.co/i/dkBOwm.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dkBFfF.jpeg"><img src="https://c.l3n.co/i/dkBFfF.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/dkBpCZ.jpeg"><img src="https://c.l3n.co/i/dkBpCZ.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkBl1i.jpeg"><img width="1200" src="https://b.l3n.co/i/dkBl1i.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkB7zP.jpeg"><img width="1200" src="https://b.l3n.co/i/dkB7zP.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkBzKo.jpeg"><img width="1200" src="https://c.l3n.co/i/dkBzKo.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkBLYC.jpeg"><img width="1200" src="https://a.l3n.co/i/dkBLYC.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/dkBn02.jpeg"><img src="https://a.l3n.co/i/dkBn02.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/dkBvqv.jpeg"><img src="https://b.l3n.co/i/dkBvqv.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/dkBMh5.jpeg"><img src="https://b.l3n.co/i/dkBMh5.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/dkBoCz.jpeg"><img src="https://a.l3n.co/i/dkBoCz.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/dkBDwb.jpeg"><img src="https://b.l3n.co/i/dkBDwb.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/dkBuST.jpeg"><img src="https://c.l3n.co/i/dkBuST.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="summer02">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkBc03.jpeg"><img width="1200" src="https://b.l3n.co/i/dkBc03.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/dkBfpr.jpeg"><img src="https://b.l3n.co/i/dkBfpr.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/dkBP17.jpeg"><img src="https://a.l3n.co/i/dkBP17.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkBbYD.jpeg"><img width="1200" src="https://b.l3n.co/i/dkBbYD.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkBXB0.jpeg"><img width="1200" src="https://a.l3n.co/i/dkBXB0.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkBx2q.jpeg"><img width="1200" src="https://c.l3n.co/i/dkBx2q.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkByJA.jpeg"><img width="1200" src="https://a.l3n.co/i/dkByJA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkB5SM.jpeg"><img width="1200" src="https://c.l3n.co/i/dkB5SM.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="summer03">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkBGxQ.jpeg"><img width="1200" src="https://b.l3n.co/i/dkBGxQ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkBh1a.jpeg"><img width="1200" src="https://a.l3n.co/i/dkBh1a.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dkm2pe.jpeg"><img src="https://c.l3n.co/i/dkm2pe.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/dkm8Fk.jpeg"><img src="https://a.l3n.co/i/dkm8Fk.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/dkmW0x.jpeg"><img src="https://c.l3n.co/i/dkmW0x.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkmjo1.jpeg"><img width="1200" src="https://a.l3n.co/i/dkmjo1.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/dkmiBH.jpeg"><img src="https://b.l3n.co/i/dkmiBH.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/dkmI2c.jpeg"><img src="https://c.l3n.co/i/dkmI2c.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkmZJK.jpeg"><img width="1200" src="https://a.l3n.co/i/dkmZJK.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkmgeZ.jpeg"><img width="1200" src="https://c.l3n.co/i/dkmgeZ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkmrxP.jpeg"><img width="1200" src="https://a.l3n.co/i/dkmrxP.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dkmR7i.jpeg"><img src="https://c.l3n.co/i/dkmR7i.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/dkmTFo.jpeg"><img src="https://a.l3n.co/i/dkmTFo.jpeg"></a></div>
-
-</div>
-
-
-</section><section class="photoParagraph"><p>
-The photos for this midsummer celebration were taken at Fredriksdal's Manor in Helsingborg, 2022.
-The manor was built in 1787.
-In 1918 the manor was donated to the city by the last private owner with the request that the area would be turned into an open-air-museum with a botanical garden.<sup><abbr class="ref" title="Fredriksdal"><a href="https://fredriksdal.se/om-fredriksdal/hus-och-gardar/herrgarden">ref</a></abbr></sup>.
-As a result, to this day the old buildings have been preserved and inside old furniture, beds and weaving machines remain on display.
-There are still cows and pigs in the old pastures.
-Furthermore, every now and then horses pass by with a wagon with visitors.
-</p></section>
-
-<section class="sec" id="fredriksdal">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkmBRb.jpeg"><img width="1200" src="https://b.l3n.co/i/dkmBRb.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkm9ez.jpeg"><img width="1200" src="https://a.l3n.co/i/dkm9ez.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkmCov.jpeg"><img width="1200" src="https://b.l3n.co/i/dkmCov.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dkmdyT.jpeg"><img src="https://c.l3n.co/i/dkmdyT.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/dkmkI9.jpeg"><img src="https://b.l3n.co/i/dkmkI9.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkm6m2.jpeg"><img width="1200" src="https://a.l3n.co/i/dkm6m2.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkmVJ5.jpeg"><img width="1200" src="https://b.l3n.co/i/dkmVJ5.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkmQ8C.jpeg"><img width="1200" src="https://c.l3n.co/i/dkmQ8C.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkmsUr.jpeg"><img width="1200" src="https://a.l3n.co/i/dkmsUr.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkmm77.jpeg"><img width="1200" src="https://c.l3n.co/i/dkmm77.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="walk">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkm4IF.jpeg"><img width="1200" src="https://b.l3n.co/i/dkm4IF.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkmO8D.jpeg"><img width="1200" src="https://c.l3n.co/i/dkmO8D.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dkmKm3.jpeg"><img src="https://c.l3n.co/i/dkmKm3.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/dkmlnA.jpeg"><img src="https://b.l3n.co/i/dkmlnA.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dkmeTQ.jpeg"><img width="1200" src="https://a.l3n.co/i/dkmeTQ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkmMZk.jpeg"><img width="1200" src="https://c.l3n.co/i/dkmMZk.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkmYmx.jpeg"><img width="1200" src="https://b.l3n.co/i/dkmYmx.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkmf5Z.jpeg"><img width="1200" src="https://c.l3n.co/i/dkmf5Z.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph">On that day there was also a mime performance downtown.
-The artist who came from France shut himself into a giant bubble for his performance.
-Inside he swam around the bubble in an amusing way and drew the faces of participants on the transparent walls of the bubble.
-As he performed some children ran around the bubble and giggled at the show.</section>
-
-<section class="sec" id="mime">
-<div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dkmDA1.jpeg"><img src="https://c.l3n.co/i/dkmDA1.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/dkmNQc.jpeg"><img src="https://b.l3n.co/i/dkmNQc.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkmcOm.jpeg"><img width="1200" src="https://b.l3n.co/i/dkmcOm.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/dkmwZo.jpeg"><img src="https://a.l3n.co/i/dkmwZo.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/dkmGAv.jpeg"><img src="https://b.l3n.co/i/dkmGAv.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkmaVC.jpeg"><img width="1200" src="https://c.l3n.co/i/dkmaVC.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dkmhn5.jpeg"><img width="1200" src="https://b.l3n.co/i/dkmhn5.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dks25z.jpeg"><img width="1200" src="https://c.l3n.co/i/dks25z.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dksAET.jpeg"><img width="1200" src="https://a.l3n.co/i/dksAET.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dksWOb.jpeg"><img src="https://c.l3n.co/i/dksWOb.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/dksic7.jpeg"><img src="https://b.l3n.co/i/dksic7.jpeg"></a></div>
-
-</div>
-
-
-</section><section class="photoParagraph">The sun crawled low onto the sea-side city.
-There were still people out on the beach.
-Music could be heard from a wooden deck and the eye quickly captured a pair dancing.
-The sun set behind the scenery and the day was concluded.</section>
-
-<section class="sec" id="beach">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dksZD3.jpeg"><img width="1200" src="https://c.l3n.co/i/dksZD3.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dks0gr.jpeg"><img src="https://c.l3n.co/i/dks0gr.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/dksIsF.jpeg"><img src="https://a.l3n.co/i/dksIsF.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dksRGA.jpeg"><img width="1200" src="https://b.l3n.co/i/dksRGA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/dkstVD.jpeg"><img width="1200" src="https://c.l3n.co/i/dkstVD.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dks1vq.jpeg"><img width="1200" src="https://a.l3n.co/i/dks1vq.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/dksrW0.jpeg"><img width="1200" src="https://b.l3n.co/i/dksrW0.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/dksEEM.jpeg"><img width="1200" src="https://a.l3n.co/i/dksEEM.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/dkskHQ.jpeg"><img src="https://c.l3n.co/i/dkskHQ.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/dks6ca.jpeg"><img src="https://a.l3n.co/i/dks6ca.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<table class="credits">
-<tr><td colspan="2">Summary</td></tr>
-<tr>
-<td>Photographer</td>
-<td>Crasy Wolfang</td>
-</tr>
-<tr>
-<td>Sessions</td>
-<td>1 session</td>
-</tr>
-<tr>
-<td>Destination</td>
-<td>
-Helsingborg
-<ol>
-<li>Fredirksdal</li>
-<li>Kärnan</li>
-<li>Gröningen</li>
-</ol>
-</td>
-</tr>
-</table>
-<details class="bibliography">
-<summary>Bibliography</summary>
-<ul>
-<li>Fredriksdal. <i>Herrgården </i>. Url: <a href="https://fredriksdal.se/om-fredriksdal/hus-och-gardar/herrgarden">https://fredriksdal.se/om-fredriksdal/hus-och-gardar/herrgarden</a> (Swe)[acc 2023-09-20]</li>
-</ul>
-</details>
-
-<div id="bottom">
-<hr>
-©CrasyWolfang 2014-2024
-✉ <adress>forwardtowolf@gmail.com</adress>
-<a href="#top" style="float: right; color: grey;">top ↑</a>
-</div>
-</div>
-
-</body>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-incipit{
+			font-weight: bold;
+			padding-left: 0.4em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2206mids">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2206mids">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/video">Video Production</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
+				</ul>
+			</nav>
+			<div class="title">
+				<h1>Midsummer</h1>
+				
+				<span class="title-left">Event photography</span>
+				
+				<span class="title-right"><span style="color: LightGray;">published: </span>2023年09月26日</span>
+			</div>
+			<div class="photo-content">
+				<p>In June midsummer is celebrated.
+				In Sweden this traditional event is signified by the decoration of a midsummer pole.
+				Rings are hung in the pole and it is fully covered in flowers.
+				Everyone gathers around the may pole preferably in folk clothes, and girls with a ring of flowers on their head.
+				The community then dances together around the pole under the blue sky with live music.
+				One of the dances is the famous small frog dance where the participants jump like frogs and quack like ducks.
+				Both adults and children participate in the dance and everyone laughs and smiles as they dance around.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkBSf9.jpeg"><img src="https://b.l3n.co/i/dkBSf9.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkBOwm.jpeg"><img src="https://c.l3n.co/i/dkBOwm.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dkBFfF.jpeg"><img src="https://c.l3n.co/i/dkBFfF.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/dkBpCZ.jpeg"><img src="https://c.l3n.co/i/dkBpCZ.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkBl1i.jpeg"><img src="https://b.l3n.co/i/dkBl1i.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkB7zP.jpeg"><img src="https://b.l3n.co/i/dkB7zP.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkBzKo.jpeg"><img src="https://c.l3n.co/i/dkBzKo.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkBLYC.jpeg"><img src="https://a.l3n.co/i/dkBLYC.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/dkBn02.jpeg"><img src="https://a.l3n.co/i/dkBn02.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/dkBvqv.jpeg"><img src="https://b.l3n.co/i/dkBvqv.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/dkBMh5.jpeg"><img src="https://b.l3n.co/i/dkBMh5.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/dkBoCz.jpeg"><img src="https://a.l3n.co/i/dkBoCz.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/dkBDwb.jpeg"><img src="https://b.l3n.co/i/dkBDwb.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/dkBuST.jpeg"><img src="https://c.l3n.co/i/dkBuST.jpeg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkBc03.jpeg"><img src="https://b.l3n.co/i/dkBc03.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/dkBfpr.jpeg"><img src="https://b.l3n.co/i/dkBfpr.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/dkBP17.jpeg"><img src="https://a.l3n.co/i/dkBP17.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkBbYD.jpeg"><img src="https://b.l3n.co/i/dkBbYD.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkBXB0.jpeg"><img src="https://a.l3n.co/i/dkBXB0.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkBx2q.jpeg"><img src="https://c.l3n.co/i/dkBx2q.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkByJA.jpeg"><img src="https://a.l3n.co/i/dkByJA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkB5SM.jpeg"><img src="https://c.l3n.co/i/dkB5SM.jpeg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkBGxQ.jpeg"><img src="https://b.l3n.co/i/dkBGxQ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkBh1a.jpeg"><img src="https://a.l3n.co/i/dkBh1a.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dkm2pe.jpeg"><img src="https://c.l3n.co/i/dkm2pe.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/dkm8Fk.jpeg"><img src="https://a.l3n.co/i/dkm8Fk.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/dkmW0x.jpeg"><img src="https://c.l3n.co/i/dkmW0x.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkmjo1.jpeg"><img src="https://a.l3n.co/i/dkmjo1.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/dkmiBH.jpeg"><img src="https://b.l3n.co/i/dkmiBH.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/dkmI2c.jpeg"><img src="https://c.l3n.co/i/dkmI2c.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkmZJK.jpeg"><img src="https://a.l3n.co/i/dkmZJK.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkmgeZ.jpeg"><img src="https://c.l3n.co/i/dkmgeZ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkmrxP.jpeg"><img src="https://a.l3n.co/i/dkmrxP.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dkmR7i.jpeg"><img src="https://c.l3n.co/i/dkmR7i.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/dkmTFo.jpeg"><img src="https://a.l3n.co/i/dkmTFo.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>The photos for this midsummer celebration were taken at Fredriksdal's Manor in Helsingborg, 2022.
+				The manor was built in 1787.
+				In 1918 the manor was donated to the city by the last private owner with the request that the area would be turned into an open-air-museum with a botanical garden.<sup><abbr class="ref" title="Fredriksdal">ref</abbr></sup>
+				As a result, to this day the old buildings have been preserved and inside old furniture, beds and weaving machines remain on display.
+				There are still cows and pigs in the old pastures.
+				Furthermore, every now and then horses pass by with a wagon with visitors.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkmBRb.jpeg"><img src="https://b.l3n.co/i/dkmBRb.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkm9ez.jpeg"><img src="https://a.l3n.co/i/dkm9ez.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkmCov.jpeg"><img src="https://b.l3n.co/i/dkmCov.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dkmdyT.jpeg"><img src="https://c.l3n.co/i/dkmdyT.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/dkmkI9.jpeg"><img src="https://b.l3n.co/i/dkmkI9.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkm6m2.jpeg"><img src="https://a.l3n.co/i/dkm6m2.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkmVJ5.jpeg"><img src="https://b.l3n.co/i/dkmVJ5.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkmQ8C.jpeg"><img src="https://c.l3n.co/i/dkmQ8C.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkmsUr.jpeg"><img src="https://a.l3n.co/i/dkmsUr.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkmm77.jpeg"><img src="https://c.l3n.co/i/dkmm77.jpeg"></a></div></div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkm4IF.jpeg"><img src="https://b.l3n.co/i/dkm4IF.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkmO8D.jpeg"><img src="https://c.l3n.co/i/dkmO8D.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dkmKm3.jpeg"><img src="https://c.l3n.co/i/dkmKm3.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/dkmlnA.jpeg"><img src="https://b.l3n.co/i/dkmlnA.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dkmeTQ.jpeg"><img src="https://a.l3n.co/i/dkmeTQ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkmMZk.jpeg"><img src="https://c.l3n.co/i/dkmMZk.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkmYmx.jpeg"><img src="https://b.l3n.co/i/dkmYmx.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkmf5Z.jpeg"><img src="https://c.l3n.co/i/dkmf5Z.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>On that day there was also a mime performance downtown.
+				The artist who came from France shut himself into a giant bubble for his performance.
+				Inside he swam around the bubble in an amusing way and drew the faces of participants on the transparent walls of the bubble.
+				As he performed some children ran around the bubble and giggled at the show.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dkmDA1.jpeg"><img src="https://c.l3n.co/i/dkmDA1.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/dkmNQc.jpeg"><img src="https://b.l3n.co/i/dkmNQc.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkmcOm.jpeg"><img src="https://b.l3n.co/i/dkmcOm.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/dkmwZo.jpeg"><img src="https://a.l3n.co/i/dkmwZo.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/dkmGAv.jpeg"><img src="https://b.l3n.co/i/dkmGAv.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkmaVC.jpeg"><img src="https://c.l3n.co/i/dkmaVC.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dkmhn5.jpeg"><img src="https://b.l3n.co/i/dkmhn5.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dks25z.jpeg"><img src="https://c.l3n.co/i/dks25z.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dksAET.jpeg"><img src="https://a.l3n.co/i/dksAET.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dksWOb.jpeg"><img src="https://c.l3n.co/i/dksWOb.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/dksic7.jpeg"><img src="https://b.l3n.co/i/dksic7.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>The sun crawled low onto the sea-side city.
+				There were still people out on the beach.
+				Music could be heard from a wooden deck and the eye quickly captured a pair dancing.
+				The sun set behind the scenery and the day was concluded.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dksZD3.jpeg"><img src="https://c.l3n.co/i/dksZD3.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dks0gr.jpeg"><img src="https://c.l3n.co/i/dks0gr.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/dksIsF.jpeg"><img src="https://a.l3n.co/i/dksIsF.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dksRGA.jpeg"><img src="https://b.l3n.co/i/dksRGA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/dkstVD.jpeg"><img src="https://c.l3n.co/i/dkstVD.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dks1vq.jpeg"><img src="https://a.l3n.co/i/dks1vq.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/dksrW0.jpeg"><img src="https://b.l3n.co/i/dksrW0.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/dksEEM.jpeg"><img src="https://a.l3n.co/i/dksEEM.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/dkskHQ.jpeg"><img src="https://c.l3n.co/i/dkskHQ.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/dks6ca.jpeg"><img src="https://a.l3n.co/i/dks6ca.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>Photographer</td>
+					<td>Crasy Wolfang</td>
+				</tr>
+				
+			
+				<tr>
+					<td>Sessions</td>
+					<td>1 session</td>
+				</tr>
+				
+			
+				<tr>
+					<td>Destination</td>
+					<td>
+						Helsingborg
+						<ol>
+							<li>Fredirksdal</li>
+							
+			
+							<li>Kärnan</li>
+							
+			
+							<li>Gröningen</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td>References</td>
+					<td><ol><li>Fredriksdal. <i>Herrgården</i>. Url: <a href="https://fredriksdal.se/om-fredriksdal/hus-och-gardar/herrgarden">https://fredriksdal.se/om-fredriksdal/hus-och-gardar/herrgarden</a> (Swe)[acc 2023-09-20]</li></ol></td>
+				</tr>
+			</table>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
 </html>

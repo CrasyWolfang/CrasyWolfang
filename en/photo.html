@@ -1,413 +1,427 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CWOLF </title>
-<meta charset="utf-8">
-<style>
-body{background-color: black;}
-a{
-color: lightgrey;
-text-decoration: none;
-}
-a:hover{background-color: #e0c068;}
-#container{
-color: white;
-max-width: 1200px;
-min-width: 800px;
-margin-left: auto;
-margin-right: auto;
-}
-#top{width: 100%;}
-#topLang{float: right;}
-#topLang a{
-color: white;
-text-decoration: none;
-}
-#header img{
-display: block;
-width: 100%;
-}
-#topMenu{background-color: black;}
-#topMenu ul{
-margin: 0em;
-padding: 0em;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-}
-#topMenu li{
-display: inline;
-padding: 0em;
-font-size: 1.3em;
-border: 2px solid grey;
-}
-#topMenu a{
-padding-top: 0em;
-padding-bottom: 0em;
-padding-left: 2em;
-padding-right: 2em;
-color: white;
-}
-#bottom{
-color: grey;
-background-color: black;
-}
-
-.flowcard{
-margin: 0.5em;
-padding: 1em;
-border: solid #101010;
-}
-
-.center{
-text-align: center;
-text-decoration: underline;
-}
-
-.catCard{
-list-style: none;
-padding-left: 0;
-text-align: center;
-font-size: 1.3em;
-}
-.catCard li{
-margin: 0.3em;
-display: inline-block;
-border: 2px solid grey;
-padding: 0.5em;
-}
-.catCard li:hover{background-color: #e0c068;}
-.catCard img{
-width: 240px;
-display: block;
-}
-.catCard a{
-color: white;
-display: block;
-}
-
-.title{
-margin-left: auto;
-margin-right: auto;
-max-width: 800px;
-padding: 1em;
-padding-bottom: 2em;
-}
-.title h1{
-border-bottom: 1px solid;
-width: 100%;
-margin: 0px;
-}
-.title-left{float: left;}
-.title-right{
-float: right;
-text-align: right;
-}
-
-.ref{
-color: lightgrey;
-text-decoration: none;
-font-size: 0.8em;
-}
-.ref::before{content: '[';}
-.ref::after{content: ']';}
-
-.sec{padding-bottom: 1em;}
-
-.photoCard{
-border: 2px solid grey;
-margin-top: 1em;
-padding-bottom: 2em;
-}
-.photoCard:hover{background-color: #e0c068;}
-.photoCard a{
-color: white;
-}
-.photoCard h1{
-margin: 0px;
-padding-left: 0.15em;
-}
-.card-incipit{
-font-weight: bold;
-padding-left: 0.4em;
-}
-.card-left{
-float: left;
-padding-left: 0.4em;
-}
-.card-right{
-float: right;
-text-align: right;
-padding-right: 0.4em;
-}
-.photoCard img{
-width: 100%;
-display: block;
-}
-
-.photoParagraph{
-padding: 1em;
-text-indent: 2em;
-}
-.imgWrap{
-display: flex;
-flex-direction: row;
-width: 100%;
-gap: 0.5em;
-padding-bottom: 0.25em;
-padding-top: 0.25em;
-}
-.imgWrap img{
-display: block;
-max-width: 100%;
-gap: 0.5em;
-}
-.neatPhoto{padding: 1em;}
-.neatPhoto a{width: 60%;}
-.neatPhoto img{width: 100%;}
-.neatPhoto img,
-.neatPhoto a{
-display: block;
-margin: 0 auto;
-}
-
-.bibliography ul{
-list-style-type: none;
-text-indent: 0em;
-}
-.bibliography li:not(:last-child) {
-margin-bottom: 0.5em;
-}
-
-.largePhoto{
-border: 1px solid white;
-margin-bottom: 1em;
-}
-.largePhoto p{
-text-indent: 2em;
-padding-left: 1em;
-padding-right: 1em;
-}
-.largePhotoTop{
-text-indent: 1em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-}
-.largePhotoTitle{
-font-size: 1.3em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-text-indent: 2em;
-}
-.largePhoto img{display: block;}
-.largeformat p{
-padding-left: 1em;
-padding-right: 1em;
-}
-
-.credits{width: 100%;}
-.credits td{
-border: 1px solid white;
-padding: 0.3em;
-}
-</style>
-</head>
-<body>
-
-<div id="container">
-<div id="top">
-<small style="color: grey;">CWOLF WEB PROJECT</small>
-<div id="topLang">
-🌎
-<a href="https://CrasyWolfang.com/en/photo">English</a>
-|
-<a href="https://CrasyWolfang.com/jp/photo">日本語</a>
-</div>
-</div>
-<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-<nav id="topMenu">
-<ul>
-<li><a href="https://CrasyWolfang.com/en/home">Home</a></li>
-<li><a href="https://CrasyWolfang.com/en/photo">Photography</a></li>
-<!---<li><a href="https://CrasyWolfang.com/en/video">Video Production</a></li>--->
-<li><a href="https://CrasyWolfang.com/en/about">About</a></li>
-</ul>
-</nav>
-
-<div style="text-align:center">
-<h1>Photography</h1>
-<p>These photos are of memories<br>
-They represent us - <br>
-the places we visit, the people we meet and the things we see</p>
-
-<p>Hopefully the viewer can appreciate the collages at hand<br>
-and further carry the appreciation to their own visual world</p>
-</div>
-
-<ul class="catCard">
-<li><a href="https://CrasyWolfang.com/en/photo/nature"><img src="https://b.l3n.co/i/Bhs9cx.jpeg"><span>Nature</span></a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/water"><img src="https://c.l3n.co/i/BhsVHk.jpeg"><span>Waters</span></a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/urban"><img src="https://c.l3n.co/i/BhsEWA.jpeg"><span>Urban</span></a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/exhibition"><img src="https://i.lensdump.com/i/CHCzjA.jpeg"><span>Exhibitions</span></a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/religious"><img src="https://b.l3n.co/i/Bhs6vQ.jpeg"><span>Religious</span></a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/seasons"><img src="https://i2.lensdump.com/i/CHCMzk.jpeg"><span>Seasons</span></a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/events"><img src="https://i1.lensdump.com/i/6lb8qc.jpeg"><span>Events</span></a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/photowall"><img src="https://b.l3n.co/i/B4O6iz.jpeg"><span>The Photowall</span></a></li>
-</ul>
-
-<h2 style="text-align: center;">Photography techniques</h2>
-<div style="margin-left: auto; margin-right: auto; width: 60%; border: 1px solid gray;">
-<ul>
-<li><a href="https://CrasyWolfang.com/en/photo/largeformat">Large format photography</a></li>
-<li><a href="https://CrasyWolfang.com/en/photo/focusstack">Focus stacking</a></li>
-</ul>
-</div>
-
-<h2 style="text-align: center;">Recently released</h2>
-
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2206lubo">
-
-<h1>Lund Botanical Garden</h1>
-<span class="card-left">Plant photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2024-06-22</span>
-<img src="https://b.l3n.co/i/zHZj3o.jpeg">
-<span class="card-right">Lund, June 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2205kybo">
-
-<h1>Kyoto Botanical Garden</h1>
-<span class="card-left">Plant photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2024-06-22</span>
-<img src="https://a.l3n.co/i/lDYLG5.jpeg">
-<span class="card-right">Kyoto, May 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2208skdp">
-
-<h1>Skånes Djurpark</h1>
-<span class="card-left">Animal photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2024-06-22</span>
-<img src="https://c.l3n.co/i/lDYYkz.jpeg">
-<span class="card-right">Höör, August 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2206otzo">
-
-<h1>Tennoji Zoo</h1>
-<span class="card-left">Animal photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2024-06-22</span>
-<img src="https://c.l3n.co/i/lDYvLC.jpeg">
-<span class="card-right">Osaka, June 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2204kamo">
-
-<h1>Kamo River</h1>
-<span class="card-left">Environmental photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-11-08</span>
-<img src="https://b.l3n.co/i/B5Tz32.jpeg">
-<span class="card-right">Kyoto, April-May 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2204katu">
-
-<h1>Katsura River</h1>
-<span class="card-left">Environmental photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-11-08</span>
-<img src="https://b.l3n.co/i/Bcybne.jpeg">
-<span class="card-right">Kyoto, April-May 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2204kiss">
-
-<h1>Kisshoin</h1>
-<span class="card-left">City photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-11-08</span>
-<img src="https://b.l3n.co/i/BoMrlK.jpeg">
-<span class="card-right">Kyoto, April-May 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2307summ">
-
-<h1>Summer '23</h1>
-<span class="card-left">Season photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-11-08</span>
-<img src="https://b.l3n.co/i/ByEHnT.jpeg">
-<span class="card-right">Lund, July 2023</span>
-</a></div>
-
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2206sush">
-<span class="card-incipit">The Photowall 2022</span>
-<h1>Summer Shots</h1>
-<span class="card-left">Mixed photos </span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-11-08</span>
-<img src="https://b.l3n.co/i/B4I2Hc.jpeg">
-<span class="card-right">Scania, June-August 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2206scni">
-
-<h1>Scanian Nights</h1>
-<span class="card-left">Night photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-11-08</span>
-<img src="https://b.l3n.co/i/BCoFq7.jpeg">
-<span class="card-right">Lund, July-June 2022/2023</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2209park">
-
-<h1>Autumn Animals</h1>
-<span class="card-left">Park photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-10-15</span>
-<img src="https://b.l3n.co/i/qMBFZq.jpeg">
-<span class="card-right">Lund, September-October 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/1910umek">
-
-<h1>Umekoji Sunset</h1>
-<span class="card-left">Park photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-09-28</span>
-<img src="https://c.l3n.co/i/dD5buC.jpeg">
-<span class="card-right">Kyoto, October 2019</span>
-</a></div>
-
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2206mids">
-
-<h1>Midsummer</h1>
-<span class="card-left">Event photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-09-26</span>
-<img src="https://b.l3n.co/i/dvtLlM.jpeg">
-<span class="card-right">Helsingborg, June 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2205fuit">
-
-<h1>Inari Mountain Shadow</h1>
-<span class="card-left">Shrine photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-08-25</span>
-<img src="https://c.l3n.co/i/VoQ7l0.jpeg">
-<span class="card-right">Kyoto, May 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2210luau">
-
-<h1>Lund Autumn</h1>
-<span class="card-left">Season photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2023-08-25</span>
-<img src="https://c.l3n.co/i/V7kCjm.jpeg">
-<span class="card-right">Lund, October 2022</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/en/post/2208wafo">
-
-<h1>Drain Water Fowl</h1>
-<span class="card-left">Environmental photography</span>
-<span class="card-right"><span style="color: LightGray;">published: </span>2022-10-22</span>
-<img src="https://a.l3n.co/i/QHDkX5.jpeg">
-<span class="card-right">Lund, August-September 2022</span>
-</a></div>
-
-<div id="bottom">
-<hr>
-©CrasyWolfang 2014-2024
-✉ <adress>forwardtowolf@gmail.com</adress>
-<a href="#top" style="float: right; color: grey;">top ↑</a>
-</div>
-</div>
-
-</body>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-incipit{
+			font-weight: bold;
+			padding-left: 0.4em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/photo">English</a> | <a href="https://www.CrasyWolfang.com/jp/photo">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/video">Video Production</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
+				</ul>
+			</nav>
+			<h1 class="center">Photography</h1>
+			<p class="center">
+				These photos are of memories<br>
+				They represent us -<br>
+				the places we visit, the people we meet and the things we see<br>
+				<br>
+				Hopefully the viewer can appreciate the collages at hand<br>
+				and further carry the appreciation to their own visual world
+			</p>
+			<ul class="catCard">
+				<li><a href="https://www.CrasyWolfang.com/en/photo/forest"><img src="https://c.l3n.co/i/MaEJNm.jpg"><span>Forest</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/meadows"><img src="https://a.l3n.co/i/MaEC3P.jpg"><span>Meadows</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/waters"><img src="https://c.l3n.co/i/BhsVHk.jpeg"><span>Waters</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/urban"><img src="https://c.l3n.co/i/BhsEWA.jpeg"><span>Urban</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/religious"><img src="https://b.l3n.co/i/Bhs6vQ.jpeg"><span>Religious</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/plants"><img src="https://b.l3n.co/i/MaE6rZ.jpg"><span>Plants</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/animals"><img src="https://c.l3n.co/i/MaEEXK.jpg"><span>Animals</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/seasons"><img src="https://i2.lensdump.com/i/CHCMzk.jpeg"><span>Seasons</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/en/photo/events"><img src="https://i1.lensdump.com/i/6lb8qc.jpeg"><span>Events</span></a></li>
+			</ul>
+			
+			<h2 class="center">Recently released</h2>
+			
+			<a href="https://crasywolfang.com/en/post/2210boau">
+				<div class="photoCard">
+					<h1>Botanical Garden Autumn</h1>
+					<span class="card-left">Season photography</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://c.l3n.co/i/YIOQHa.jpg">
+					
+					<span class="card-right">Lund, Oktober 2022</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2310boma">
+				<div class="photoCard">
+					<h1>Change of Season</h1>
+					<span class="card-left">Botanic photography</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://a.l3n.co/i/YIGXh0.jpg">
+					
+					<span class="card-right">Lund, October 2023</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2309nobb">
+				<div class="photoCard">
+					<h1>Nöbbelöv's Marshland</h1>
+					<span class="card-left">Meadow photography</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://b.l3n.co/i/Map1BF.jpg">
+					
+					<span class="card-right">Lund, September 2023</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2308rinb">
+				<div class="photoCard">
+					<h1>Rinnebäck</h1>
+					<span class="card-left">Waterway photography</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://a.l3n.co/i/S7HoAc.jpg">
+					
+					<span class="card-right">Lund, August 2023</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2404cphs">
+				<div class="photoCard">
+					<h1>Copenhagen Sakura Festival</h1>
+					<span class="card-left">Event photography</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://c.l3n.co/i/Smtqmi.jpg">
+					
+					<span class="card-right">Copenhagen, April 2024</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2206lubo">
+				<div class="photoCard">
+					<h1>Lund Botanical Garden</h1>
+					<span class="card-left">Botanic photography</span>
+					<span class="card-right">2024-06-22</span>
+					<img src="https://b.l3n.co/i/zHZj3o.jpeg">
+					
+					<span class="card-right">Lund, June 2022</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2205kybo">
+				<div class="photoCard">
+					<h1>Kyoto Botanical Garden</h1>
+					<span class="card-left">Botanic photography</span>
+					<span class="card-right">2024-06-22</span>
+					<img src="https://a.l3n.co/i/lDYLG5.jpeg">
+					
+					<span class="card-right">Kyoto, May 2022</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2208skdp">
+				<div class="photoCard">
+					<h1>Skånes Djurpark</h1>
+					<span class="card-left">Zoo photography</span>
+					<span class="card-right">2024-06-22</span>
+					<img src="https://c.l3n.co/i/lDYYkz.jpeg">
+					
+					<span class="card-right">Höör, August 2022</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2206otzo">
+				<div class="photoCard">
+					<h1>Tennoji Zoo</h1>
+					<span class="card-left">Zoo photography</span>
+					<span class="card-right">2024-06-22</span>
+					<img src="https://c.l3n.co/i/lDYvLC.jpeg">
+					
+					<span class="card-right">Osaka, June 2022</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
 </html>

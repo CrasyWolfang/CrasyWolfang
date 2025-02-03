@@ -1,833 +1,1023 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CWOLF </title>
-<meta charset="utf-8">
-<style>
-body{background-color: black;}
-a{
-color: lightgrey;
-text-decoration: none;
-}
-a:hover{background-color: #e0c068;}
-#container{
-color: white;
-max-width: 1200px;
-min-width: 800px;
-margin-left: auto;
-margin-right: auto;
-}
-#top{width: 100%;}
-#topLang{float: right;}
-#topLang a{
-color: white;
-text-decoration: none;
-}
-#header img{
-display: block;
-width: 100%;
-}
-#topMenu{background-color: black;}
-#topMenu ul{
-margin: 0em;
-padding: 0em;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-}
-#topMenu li{
-display: inline;
-padding: 0em;
-font-size: 1.3em;
-border: 2px solid grey;
-}
-#topMenu a{
-padding-top: 0em;
-padding-bottom: 0em;
-padding-left: 2em;
-padding-right: 2em;
-color: white;
-}
-#bottom{
-color: grey;
-background-color: black;
-}
-
-.flowcard{
-margin: 0.5em;
-padding: 1em;
-border: solid #101010;
-}
-
-.center{
-text-align: center;
-text-decoration: underline;
-}
-
-.catCard{
-list-style: none;
-padding-left: 0;
-text-align: center;
-font-size: 1.3em;
-}
-.catCard li{
-margin: 0.3em;
-display: inline-block;
-border: 2px solid grey;
-padding: 0.5em;
-}
-.catCard li:hover{background-color: #e0c068;}
-.catCard img{
-width: 240px;
-display: block;
-}
-.catCard a{
-color: white;
-display: block;
-}
-
-.title{
-margin-left: auto;
-margin-right: auto;
-max-width: 800px;
-padding: 1em;
-padding-bottom: 2em;
-}
-.title h1{
-border-bottom: 1px solid;
-width: 100%;
-margin: 0px;
-}
-.title-left{float: left;}
-.title-right{
-float: right;
-text-align: right;
-}
-
-.ref{
-color: lightgrey;
-text-decoration: none;
-font-size: 0.8em;
-}
-.ref::before{content: '[';}
-.ref::after{content: ']';}
-
-.sec{padding-bottom: 1em;}
-
-.photoCard{
-border: 2px solid grey;
-margin-top: 1em;
-padding-bottom: 2em;
-}
-.photoCard:hover{background-color: #e0c068;}
-.photoCard a{
-color: white;
-}
-.photoCard h1{
-margin: 0px;
-padding-left: 0.15em;
-}
-.card-incipit{
-font-weight: bold;
-padding-left: 0.4em;
-}
-.card-left{
-float: left;
-padding-left: 0.4em;
-}
-.card-right{
-float: right;
-text-align: right;
-padding-right: 0.4em;
-}
-.photoCard img{
-width: 100%;
-display: block;
-}
-
-.photoParagraph{
-padding: 1em;
-text-indent: 2em;
-}
-.imgWrap{
-display: flex;
-flex-direction: row;
-width: 100%;
-gap: 0.5em;
-padding-bottom: 0.25em;
-padding-top: 0.25em;
-}
-.imgWrap img{
-display: block;
-max-width: 100%;
-gap: 0.5em;
-}
-.neatPhoto{padding: 1em;}
-.neatPhoto a{width: 60%;}
-.neatPhoto img{width: 100%;}
-.neatPhoto img,
-.neatPhoto a{
-display: block;
-margin: 0 auto;
-}
-
-.bibliography ul{
-list-style-type: none;
-text-indent: 0em;
-}
-.bibliography li:not(:last-child) {
-margin-bottom: 0.5em;
-}
-
-.largePhoto{
-border: 1px solid white;
-margin-bottom: 1em;
-}
-.largePhoto p{
-text-indent: 2em;
-padding-left: 1em;
-padding-right: 1em;
-}
-.largePhotoTop{
-text-indent: 1em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-}
-.largePhotoTitle{
-font-size: 1.3em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-text-indent: 2em;
-}
-.largePhoto img{display: block;}
-.largeformat p{
-padding-left: 1em;
-padding-right: 1em;
-}
-
-.credits{width: 100%;}
-.credits td{
-border: 1px solid white;
-padding: 0.3em;
-}
-</style>
-</head>
-<body>
-
-<div id="container">
-<div id="top">
-<small style="color: grey;">CWOLF WEB PROJECT</small>
-<div id="topLang">
-🌎
-<a href="https://CrasyWolfang.com/en/post/2205fuit">English</a>
-|
-<a href="https://CrasyWolfang.com/jp/post/2205fuit">日本語</a>
-</div>
-</div>
-<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-<nav id="topMenu">
-<ul>
-<li><a href="https://CrasyWolfang.com/en/home">Home</a></li>
-<li><a href="https://CrasyWolfang.com/en/photo">Photography</a></li>
-<!---<li><a href="https://CrasyWolfang.com/en/video">Video Production</a></li>--->
-<li><a href="https://CrasyWolfang.com/en/about">About</a></li>
-</ul>
-</nav>
-
-<div class="title">
-
-<h1>Inari Mountain Shadow</h1>
-<span class="title-left">Shrine photography</span>
-<span class="title-right"><span style="color: LightGray;">published: </span>2023-08-25</span>
-</div>
-
-<section class="photoParagraph"><p>A visit to Inari Shrine in 2022.
-The reason behind this visit was not one for sightseeing nor was it religious, rather the motivation was a few particular photos.
-This year tourism to Kyoto increased.
-As soon as the photographer stepped in view of the vermilion buildings, a foreigner called on him.</p>
-<p>"You look like a professional. Would you mind taking my picture?" he asked the photographer and handed him a Nikon camera.</p>
-<p>After the photo the man headed to Kiyomizu-dera and the photographer went to climb Mt.Inari.</p></section>
-
-<section class="sec" id="entry">
-<div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMiopD.jpeg"><img src="https://a.l3n.co/i/VMiopD.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMiPBM.jpeg"><img src="https://c.l3n.co/i/VMiPBM.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMiNIA.jpeg"><img width="1200" src="https://b.l3n.co/i/VMiNIA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMifoQ.jpeg"><img width="1200" src="https://b.l3n.co/i/VMifoQ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMiU2a.jpeg"><img src="https://a.l3n.co/i/VMiU2a.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMicJe.jpeg"><img src="https://c.l3n.co/i/VMicJe.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMiXek.jpeg"><img width="1200" src="https://a.l3n.co/i/VMiXek.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMixRH.jpeg"><img width="1200" src="https://a.l3n.co/i/VMixRH.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/VMibxx.jpeg"><img src="https://c.l3n.co/i/VMibxx.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VMiy71.jpeg"><img src="https://b.l3n.co/i/VMiy71.jpeg"></a></div>
-
-</div>
-
-
-</section><section class="photoParagraph"><p>The crowd of visitors walked past two foreigners who were digging a hole for a new shrine gate.
-Further up the road a man painted a newly built gate.
-Meanwhile a few cats walked around on the path.
-Some high school students patted the cats before they continued on their climb.
-While the photographer was taking pictures of one of the cats a tourist from Kanto began to talk with him.</p>
-<p>"Did you get any good photos of the cat?" he asked.</p>
-<p>"I did," the photographer replied.</p>
-<p>The tourist wore a white T-shirt and held a camera in his hand.
-He said that he was interested in photography and asked the photographer if he could follow him.
-The photographer agreed and explained the current target photos.
-They then proceeded up the mountain together.</p></section>
-
-<section class="sec" id="entry-2">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMi5Fc.jpeg"><img width="1200" src="https://c.l3n.co/i/VMi5Fc.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VMiaIK.jpeg"><img src="https://b.l3n.co/i/VMiaIK.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VMihmZ.jpeg"><img src="https://a.l3n.co/i/VMihmZ.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMj2oP.jpeg"><img width="1200" src="https://c.l3n.co/i/VMj2oP.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMjieo.jpeg"><img width="1200" src="https://b.l3n.co/i/VMjieo.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMjWQi.jpeg"><img src="https://a.l3n.co/i/VMjWQi.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VMjjy9.jpeg"><img src="https://a.l3n.co/i/VMjjy9.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMjgUC.jpeg"><img width="1200" src="https://a.l3n.co/i/VMjgUC.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/VMjIT2.jpeg"><img src="https://c.l3n.co/i/VMjIT2.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VMj1mz.jpeg"><img src="https://a.l3n.co/i/VMj1mz.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMjtI5.jpeg"><img width="1200" src="https://c.l3n.co/i/VMjtI5.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>Along the way a cat strolled along the path and drank from a water purification basin.
-When the photographer and Kanto visitor stepped out of the shadow of the mountain, the sky shined in from above the trees and leaves danced down so beautifully it could not be captured by a camera.
-From here the Kanto visitor and photographer climbed the last set of stairs to which they arrived at their destination.</p></section>
-
-<section class="sec" id="entry-3">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMjRuT.jpeg"><img width="1200" src="https://c.l3n.co/i/VMjRuT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMjE8b.jpeg"><img src="https://a.l3n.co/i/VMjE8b.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VMj6nr.jpeg"><img src="https://a.l3n.co/i/VMj6nr.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMjkQ7.jpeg"><img width="1200" src="https://b.l3n.co/i/VMjkQ7.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMjQT3.jpeg"><img src="https://a.l3n.co/i/VMjQT3.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VMjCyF.jpeg"><img src="https://b.l3n.co/i/VMjCyF.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMjVO0.jpeg"><img width="1200" src="https://b.l3n.co/i/VMjVO0.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMj9UD.jpeg"><img width="1200" src="https://c.l3n.co/i/VMj9UD.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMjqZq.jpeg"><img width="1200" src="https://a.l3n.co/i/VMjqZq.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/VMjBsA.jpeg"><img src="https://c.l3n.co/i/VMjBsA.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VMjmuM.jpeg"><img src="https://a.l3n.co/i/VMjmuM.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMj3AQ.jpeg"><img width="1200" src="https://c.l3n.co/i/VMj3AQ.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph">The destination was a quiet shrine that resembled a graveyard on the side of the mountain.
-Because this area doesn't lead further on the trail it is not visited by many tourists.
-Moreover, since the Kanto visitor would only be in Kyoto for a few days the two parted ways here and he went to visit other famous locations.
-A tripod was prepared and from here large format photos were taken under the low sun.</section>
-
-<section class="sec" id="graveyard">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMjp5k.jpeg"><img width="1200" src="https://b.l3n.co/i/VMjp5k.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMjOTx.jpeg"><img width="1200" src="https://c.l3n.co/i/VMjOTx.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMjHOH.jpeg"><img width="1200" src="https://b.l3n.co/i/VMjHOH.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMj4Qa.jpeg"><img width="1200" src="https://b.l3n.co/i/VMj4Qa.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VMjSZc.jpeg"><img src="https://b.l3n.co/i/VMjSZc.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMjlc1.jpeg"><img src="https://c.l3n.co/i/VMjlc1.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMjKne.jpeg"><img width="1200" src="https://c.l3n.co/i/VMjKne.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<div class="largePhoto" id="P003">
-<a class="largePhotoTop" href="https://a.l3n.co/i/VDPMD3.jpeg">Large Format (127 MP)</a>
-<a href="https://a.l3n.co/i/VDPMD3.jpeg"><img width="100%" src="https://b.l3n.co/i/Vok7Ib.jpeg"></a>
-<a class="largePhotoTitle" href="https://a.l3n.co/i/VDPMD3.jpeg">Inner Shrine Grounds</a>
-<p>The camera was placed in depths of the premises with the lens facing North to which the sunlight reflected warmth in the background.
-The area is surrounded by forest, and the right side of the picture consists of bright shrines.
-Above and beyond the vermilion shrine gates branches blew with the wind.
-In contrast, the left side consists of one dimly lit shrine placed in the shadow.
-From the perspective the left shrine is cut off vertically by two pines.
-It's so dark that at a quick glance only the red cloth of the foxes will be caught by the eye.
-However, the bright green leaves of the left background separate out the dark and create strong contrast.
-Right in between the right part and the left part is a road.
-The road leads the eye to the bright parts of the area which the viewer will have to image themselves as it's concealed by the foreground.</p>
-</div><div class="largePhoto" id="P004">
-<a class="largePhotoTop" href="https://c.l3n.co/i/VDPoW0.jpeg">Large Format (64 MP)</a>
-<a href="https://c.l3n.co/i/VDPoW0.jpeg"><img width="100%" src="https://c.l3n.co/i/VokOm7.jpeg"></a>
-<a class="largePhotoTitle" href="https://c.l3n.co/i/VDPoW0.jpeg">Ishimiya</a>
-<p>At the front of the shrine, subordinate shrines were lined up.
-The sub-shrine that was picked as a subject had "Ishimiya" written on it.
-In the middle were 3 small shrine gates neatly placed, and on each side fox statues stood.
-Moss grew on both the rocks and the foxes to which the right fox' face was covered in moss.
-The shrine pillars created a frame for the scenery, and the vermilion and red colors together with the deep green moss created a wonderful combination on top of the stone texture.</p>
-</div><div class="largePhoto" id="P007">
-<a class="largePhotoTop" href="https://b.l3n.co/i/VDPuVD.jpeg">Large Format/Focus Stack (23 MP)</a>
-<a href="https://b.l3n.co/i/VDPuVD.jpeg"><img width="100%" src="https://b.l3n.co/i/VokHur.jpeg"></a>
-<a class="largePhotoTitle" href="https://b.l3n.co/i/VDPuVD.jpeg">Divine stones</a>
-<p>In the middle of the shrine there were a few small divine stones.
-The stones were covered in moss to the extent that the front was hard to read.
-There was some cracked porcelain in front and spiders had left spiderwebs in the moss below.</p>
-</div>
-
-<section class="sec" id="graveyard-02">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMIlBK.jpeg"><img width="1200" src="https://b.l3n.co/i/VMIlBK.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VMjMVm.jpeg"><img src="https://b.l3n.co/i/VMjMVm.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMjesK.jpeg"><img src="https://c.l3n.co/i/VMjesK.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMjnDZ.jpeg"><img width="1200" src="https://a.l3n.co/i/VMjnDZ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMjYvi.jpeg"><img width="1200" src="https://a.l3n.co/i/VMjYvi.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMjo5o.jpeg"><img width="1200" src="https://c.l3n.co/i/VMjo5o.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMjFgC.jpeg"><img width="1200" src="https://c.l3n.co/i/VMjFgC.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMjNH2.jpeg"><img width="1200" src="https://b.l3n.co/i/VMjNH2.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMjDE9.jpeg"><img width="1200" src="https://a.l3n.co/i/VMjDE9.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="graveyard-03">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMjbWT.jpeg"><img width="1200" src="https://b.l3n.co/i/VMjbWT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMjcDz.jpeg"><img src="https://a.l3n.co/i/VMjcDz.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VMjwVb.jpeg"><img src="https://a.l3n.co/i/VMjwVb.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VMjyGr.jpeg"><img src="https://b.l3n.co/i/VMjyGr.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMjGEF.jpeg"><img src="https://c.l3n.co/i/VMjGEF.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMjxv7.jpeg"><img src="https://c.l3n.co/i/VMjxv7.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VMjhX0.jpeg"><img src="https://b.l3n.co/i/VMjhX0.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VM08gD.jpeg"><img src="https://a.l3n.co/i/VM08gD.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0A3q.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0A3q.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="graveyard-04">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMIzoZ.jpeg"><img width="1200" src="https://a.l3n.co/i/VMIzoZ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMIe2P.jpeg"><img width="1200" src="https://b.l3n.co/i/VMIe2P.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMInJm.jpeg"><img width="1200" src="https://a.l3n.co/i/VMInJm.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="graveyard-05">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0WNA.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0WNA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VM0Iva.jpeg"><img src="https://a.l3n.co/i/VM0Iva.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VM0rkk.jpeg"><img src="https://b.l3n.co/i/VM0rkk.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM01XH.jpeg"><img width="1200" src="https://c.l3n.co/i/VM01XH.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VM0Tr1.jpeg"><img src="https://b.l3n.co/i/VM0Tr1.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VM0kNK.jpeg"><img src="https://a.l3n.co/i/VM0kNK.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0E3c.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0E3c.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0J9P.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0J9P.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="graveyard-06">
-<div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VM0srv.jpeg"><img src="https://a.l3n.co/i/VM0srv.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VM0QLm.jpeg"><img src="https://c.l3n.co/i/VM0QLm.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VM0Vai.jpeg"><img width="1200" src="https://a.l3n.co/i/VM0Vai.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM034C.jpeg"><img width="1200" src="https://b.l3n.co/i/VM034C.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VM0Bb2.jpeg"><img src="https://b.l3n.co/i/VM0Bb2.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VM0dko.jpeg"><img src="https://b.l3n.co/i/VM0dko.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0ql9.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0ql9.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VM0L4D.jpeg"><img src="https://a.l3n.co/i/VM0L4D.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VM0OLb.jpeg"><img src="https://b.l3n.co/i/VM0OLb.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM04N5.jpeg"><img width="1200" src="https://c.l3n.co/i/VM04N5.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM07dT.jpeg"><img width="1200" src="https://c.l3n.co/i/VM07dT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0piz.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0piz.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0Ha7.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0Ha7.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0z6r.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0z6r.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VM0SlF.jpeg"><img src="https://a.l3n.co/i/VM0SlF.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VM0vt0.jpeg"><img src="https://b.l3n.co/i/VM0vt0.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0eb3.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0eb3.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>As a lonely pigeon walked in a circle around the photographer the sun set.
-The path back from here is under the blue sky.
-The road turned dark and the lights turned on.
-A road sign attached to a guardian dog pointed towards the exit.
-It had become silent and the high school students were no longer anywhere to be seen.</p></section>
-
-<section class="sec" id="decend">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0MPq.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0MPq.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0ojA.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0ojA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VM0udM.jpeg"><img src="https://b.l3n.co/i/VM0udM.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VM0DMQ.jpeg"><img src="https://a.l3n.co/i/VM0DMQ.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0Naa.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0Naa.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VM0f6e.jpeg"><img src="https://a.l3n.co/i/VM0f6e.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VM0Fzk.jpeg"><img src="https://b.l3n.co/i/VM0Fzk.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VM0Ubx.jpeg"><img width="1200" src="https://a.l3n.co/i/VM0Ubx.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0XtH.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0XtH.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VM0bK1.jpeg"><img width="1200" src="https://a.l3n.co/i/VM0bK1.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0wPc.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0wPc.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>Upon arrival at the viewing platform an opportunity to take a large format photo over Kyoto city appeared as the sky was burning yellow.
-However, as the camera prepared an old man shouted with an angry voice from a staircase above.</p>
-<p>"You! I already have this spot!"</p>
-<p>"Sorry. How long will it take?" the photographer asked the old man.</p>
-<p>"I will be here for a long time!" the old man said.</p>
-<p>"If that is the case I will take my photo and leave if that's fine with you," the photographer said.</p>
-<p>"Absolutely not! This is my photo! Leave!" he shouted from above the stairs.</p>
-<p>Since the target photo was already achieved the photographer left and continued down the stairs.</p></section>
-
-<section class="sec" id="view">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0yjK.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0yjK.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM05qZ.jpeg"><img width="1200" src="https://c.l3n.co/i/VM05qZ.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>After sunset cats came out onto the road.
-A man came walking with a white plastic bag with cat food which he gave to the cats as he walked down the stairs.
-Upon hearing the man's voice more cats appeared out of the dark to sit next to gates and munch on food.
-A bunch of cats gathered on top of a subordinate shrine and waited for the man with food.
-The man gave them food and then continued down the road to the next cat.</p></section>
-
-<section class="sec" id="cat-01">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VM0GMP.jpeg"><img width="1200" src="https://b.l3n.co/i/VM0GMP.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VM0ahm.jpeg"><img width="1200" src="https://c.l3n.co/i/VM0ahm.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMI2Ci.jpeg"><img width="1200" src="https://a.l3n.co/i/VMI2Ci.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMI8zo.jpeg"><img width="1200" src="https://b.l3n.co/i/VMI8zo.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMIAw9.jpeg"><img src="https://a.l3n.co/i/VMIAw9.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMIi12.jpeg"><img src="https://c.l3n.co/i/VMIi12.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="cat-02">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMIjKv.jpeg"><img width="1200" src="https://a.l3n.co/i/VMIjKv.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMIthb.jpeg"><img width="1200" src="https://b.l3n.co/i/VMIthb.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/VMIRC7.jpeg"><img src="https://c.l3n.co/i/VMIRC7.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMIZj5.jpeg"><img src="https://c.l3n.co/i/VMIZj5.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMIgqz.jpeg"><img width="1200" src="https://b.l3n.co/i/VMIgqz.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMIEwF.jpeg"><img width="1200" src="https://a.l3n.co/i/VMIEwF.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMIrYT.jpeg"><img width="1200" src="https://a.l3n.co/i/VMIrYT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VMITSr.jpeg"><img src="https://b.l3n.co/i/VMITSr.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMI613.jpeg"><img src="https://c.l3n.co/i/VMI613.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMI9BA.jpeg"><img width="1200" src="https://b.l3n.co/i/VMI9BA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/VMICp0.jpeg"><img src="https://b.l3n.co/i/VMICp0.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/VMIdYM.jpeg"><img src="https://c.l3n.co/i/VMIdYM.jpeg"></a></div>
-
-</div>
-
-
-</section><section class="photoParagraph">On the thousand gate path electric hanging lanterns illuminated the tunnel.
-The feeling of solitude was broken by the beam of a flashlight and two priests who came walking.
-By the entrance, all of the shops were closed yet a few people still entered the shrine.
-A lonely guardman came walking up the main path to which the photo shoot was concluded.</section>
-
-<section class="sec" id="exit">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/VMIB2Q.jpeg"><img width="1200" src="https://b.l3n.co/i/VMIB2Q.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/VMIsSe.jpeg"><img width="1200" src="https://c.l3n.co/i/VMIsSe.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/VMImCa.jpeg"><img src="https://a.l3n.co/i/VMImCa.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/VMI3xk.jpeg"><img src="https://a.l3n.co/i/VMI3xk.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/VMI7F1.jpeg"><img src="https://c.l3n.co/i/VMI7F1.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/VMIK1x.jpeg"><img src="https://b.l3n.co/i/VMIK1x.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/VMIH0c.jpeg"><img width="1200" src="https://a.l3n.co/i/VMIH0c.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<table class="credits">
-<tr><td colspan="2">Summary</td></tr>
-<tr>
-<td>Photographer</td>
-<td>Crasy Wolfang</td>
-</tr>
-<tr>
-<td>Sessions</td>
-<td>1 session</td>
-</tr>
-<tr>
-<td>Destination</td>
-<td>
-Fushimi Inari Taisha, Kyoto (京都市 伏見稲荷大社)
-</td>
-</tr>
-</table>
-
-<div id="bottom">
-<hr>
-©CrasyWolfang 2014-2024
-✉ <adress>forwardtowolf@gmail.com</adress>
-<a href="#top" style="float: right; color: grey;">top ↑</a>
-</div>
-</div>
-
-</body>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-incipit{
+			font-weight: bold;
+			padding-left: 0.4em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2205fuit">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2205fuit">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/video">Video Production</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
+				</ul>
+			</nav>
+			<div class="title">
+				<h1>Inari Mountain Shadow</h1>
+				
+				<span class="title-left">Religious photography</span>
+				
+				<span class="title-right"><span style="color: LightGray;">published: </span>2023年08月25日</span>
+			</div>
+			<div class="photo-content">
+				<p>A visit to Inari Shrine in 2022.
+				The reason behind this visit was not one for sightseeing nor was it religious, rather the motivation was a few particular photos.
+				This year tourism to Kyoto increased.
+				As soon as the photographer stepped in view of the vermilion buildings, a foreigner called on him.</p><p>"You look like a professional. Would you mind taking my picture?" he asked the photographer and handed him a Nikon camera.</p><p>After the photo the man headed to Kiyomizu-dera and the photographer went to climb Mt.Inari.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMiopD.jpeg"><img src="https://a.l3n.co/i/VMiopD.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMiPBM.jpeg"><img src="https://c.l3n.co/i/VMiPBM.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMiNIA.jpeg"><img src="https://b.l3n.co/i/VMiNIA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMifoQ.jpeg"><img src="https://b.l3n.co/i/VMifoQ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMiU2a.jpeg"><img src="https://a.l3n.co/i/VMiU2a.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMicJe.jpeg"><img src="https://c.l3n.co/i/VMicJe.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMiXek.jpeg"><img src="https://a.l3n.co/i/VMiXek.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMixRH.jpeg"><img src="https://a.l3n.co/i/VMixRH.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/VMibxx.jpeg"><img src="https://c.l3n.co/i/VMibxx.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VMiy71.jpeg"><img src="https://b.l3n.co/i/VMiy71.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>The crowd of visitors walked past two foreigners who were digging a hole for a new shrine gate.
+				Further up the road a man painted a newly built gate.
+				Meanwhile a few cats walked around on the path.
+				Some high school students patted the cats before they continued on their climb.
+				While the photographer was taking pictures of one of the cats a tourist from Kanto began to talk with him.</p><p>"Did you get any good photos of the cat?" he asked.</p><p>"I did," the photographer replied.</p><p>The tourist wore a white T-shirt and held a camera in his hand.
+				He said that he was interested in photography and asked the photographer if he could follow him.
+				The photographer agreed and explained the current target photos.
+				They then proceeded up the mountain together.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMi5Fc.jpeg"><img src="https://c.l3n.co/i/VMi5Fc.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VMiaIK.jpeg"><img src="https://b.l3n.co/i/VMiaIK.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VMihmZ.jpeg"><img src="https://a.l3n.co/i/VMihmZ.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMj2oP.jpeg"><img src="https://c.l3n.co/i/VMj2oP.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMjieo.jpeg"><img src="https://b.l3n.co/i/VMjieo.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMjWQi.jpeg"><img src="https://a.l3n.co/i/VMjWQi.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VMjjy9.jpeg"><img src="https://a.l3n.co/i/VMjjy9.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMjgUC.jpeg"><img src="https://a.l3n.co/i/VMjgUC.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/VMjIT2.jpeg"><img src="https://c.l3n.co/i/VMjIT2.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VMj1mz.jpeg"><img src="https://a.l3n.co/i/VMj1mz.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMjtI5.jpeg"><img src="https://c.l3n.co/i/VMjtI5.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>Along the way a cat strolled along the path and drank from a water purification basin.
+				When the photographer and Kanto visitor stepped out of the shadow of the mountain, the sky shined in from above the trees and leaves danced down so beautifully it could not be captured by a camera.
+				From here the Kanto visitor and photographer climbed the last set of stairs to which they arrived at their destination.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMjRuT.jpeg"><img src="https://c.l3n.co/i/VMjRuT.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMjE8b.jpeg"><img src="https://a.l3n.co/i/VMjE8b.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VMj6nr.jpeg"><img src="https://a.l3n.co/i/VMj6nr.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMjkQ7.jpeg"><img src="https://b.l3n.co/i/VMjkQ7.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMjQT3.jpeg"><img src="https://a.l3n.co/i/VMjQT3.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VMjCyF.jpeg"><img src="https://b.l3n.co/i/VMjCyF.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMjVO0.jpeg"><img src="https://b.l3n.co/i/VMjVO0.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMj9UD.jpeg"><img src="https://c.l3n.co/i/VMj9UD.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMjqZq.jpeg"><img src="https://a.l3n.co/i/VMjqZq.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/VMjBsA.jpeg"><img src="https://c.l3n.co/i/VMjBsA.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VMjmuM.jpeg"><img src="https://a.l3n.co/i/VMjmuM.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMj3AQ.jpeg"><img src="https://c.l3n.co/i/VMj3AQ.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>The destination was a quiet shrine that resembled a graveyard on the side of the mountain.
+				Because this area doesn't lead further on the trail it is not visited by many tourists.
+				Moreover, since the Kanto visitor would only be in Kyoto for a few days the two parted ways here and he went to visit other famous locations.
+				A tripod was prepared and from here large format photos were taken under the low sun.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMjp5k.jpeg"><img src="https://b.l3n.co/i/VMjp5k.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMjOTx.jpeg"><img src="https://c.l3n.co/i/VMjOTx.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMjHOH.jpeg"><img src="https://b.l3n.co/i/VMjHOH.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMj4Qa.jpeg"><img src="https://b.l3n.co/i/VMj4Qa.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VMjSZc.jpeg"><img src="https://b.l3n.co/i/VMjSZc.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMjlc1.jpeg"><img src="https://c.l3n.co/i/VMjlc1.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMjKne.jpeg"><img src="https://c.l3n.co/i/VMjKne.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				<div class="largePhoto">
+					<a class="largePhotoUrl" href="https://a.l3n.co/i/VDPMD3.jpeg">
+						<div>
+							<span class="largePhotoTop">Large format (127 MP)</span>
+							<img width="100%" src="https://b.l3n.co/i/Vok7Ib.jpeg">
+							<span class="largePhotoTitle">Inner Shrine Grounds</span>
+						</div>
+					</a>
+					<p>The camera was placed in depths of the premises with the lens facing North to which the sunlight reflected warmth in the background.
+					The area is surrounded by forest, and the right side of the picture consists of bright shrines.
+					Above and beyond the vermilion shrine gates branches blew with the wind.
+					In contrast, the left side consists of one dimly lit shrine placed in the shadow.
+					From the perspective the left shrine is cut off vertically by two pines.
+					It's so dark that at a quick glance only the red cloth of the foxes will be caught by the eye.
+					However, the bright green leaves of the left background separate out the dark and create strong contrast.
+					Right in between the right part and the left part is a road.
+					The road leads the eye to the bright parts of the area which the viewer will have to image themselves as it's concealed by the foreground.</p>
+				</div>
+				
+			
+				
+				
+				
+				
+				<div class="largePhoto">
+					<a class="largePhotoUrl" href="https://c.l3n.co/i/VDPoW0.jpeg">
+						<div>
+							<span class="largePhotoTop">Large format (64 MP)</span>
+							<img width="100%" src="https://c.l3n.co/i/VokOm7.jpeg">
+							<span class="largePhotoTitle">Ishimiya</span>
+						</div>
+					</a>
+					<p>At the front of the shrine, subordinate shrines were lined up.
+					The sub-shrine that was picked as a subject had "Ishimiya" written on it.
+					In the middle were 3 small shrine gates neatly placed, and on each side fox statues stood.
+					Moss grew on both the rocks and the foxes to which the right fox' face was covered in moss.
+					The shrine pillars created a frame for the scenery, and the vermilion and red colors together with the deep green moss created a wonderful combination on top of the stone texture.</p>
+				</div>
+				
+			
+				
+				
+				
+				
+				<div class="largePhoto">
+					<a class="largePhotoUrl" href="https://b.l3n.co/i/VDPuVD.jpeg">
+						<div>
+							<span class="largePhotoTop">Large format (23 MP)</span>
+							<img width="100%" src="https://b.l3n.co/i/VokHur.jpeg">
+							<span class="largePhotoTitle">Divine stones</span>
+						</div>
+					</a>
+					<p>In the middle of the shrine there were a few small divine stones.
+					The stones were covered in moss to the extent that the front was hard to read.
+					There was some cracked porcelain in front and spiders had left spiderwebs in the moss below.</p>
+				</div>
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMIlBK.jpeg"><img src="https://b.l3n.co/i/VMIlBK.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VMjMVm.jpeg"><img src="https://b.l3n.co/i/VMjMVm.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMjesK.jpeg"><img src="https://c.l3n.co/i/VMjesK.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMjnDZ.jpeg"><img src="https://a.l3n.co/i/VMjnDZ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMjYvi.jpeg"><img src="https://a.l3n.co/i/VMjYvi.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMjo5o.jpeg"><img src="https://c.l3n.co/i/VMjo5o.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMjFgC.jpeg"><img src="https://c.l3n.co/i/VMjFgC.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMjNH2.jpeg"><img src="https://b.l3n.co/i/VMjNH2.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMjDE9.jpeg"><img src="https://a.l3n.co/i/VMjDE9.jpeg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMjbWT.jpeg"><img src="https://b.l3n.co/i/VMjbWT.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMjcDz.jpeg"><img src="https://a.l3n.co/i/VMjcDz.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VMjwVb.jpeg"><img src="https://a.l3n.co/i/VMjwVb.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VMjyGr.jpeg"><img src="https://b.l3n.co/i/VMjyGr.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMjGEF.jpeg"><img src="https://c.l3n.co/i/VMjGEF.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMjxv7.jpeg"><img src="https://c.l3n.co/i/VMjxv7.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VMjhX0.jpeg"><img src="https://b.l3n.co/i/VMjhX0.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VM08gD.jpeg"><img src="https://a.l3n.co/i/VM08gD.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0A3q.jpeg"><img src="https://b.l3n.co/i/VM0A3q.jpeg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMIzoZ.jpeg"><img src="https://a.l3n.co/i/VMIzoZ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMIe2P.jpeg"><img src="https://b.l3n.co/i/VMIe2P.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMInJm.jpeg"><img src="https://a.l3n.co/i/VMInJm.jpeg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0WNA.jpeg"><img src="https://c.l3n.co/i/VM0WNA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VM0Iva.jpeg"><img src="https://a.l3n.co/i/VM0Iva.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VM0rkk.jpeg"><img src="https://b.l3n.co/i/VM0rkk.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM01XH.jpeg"><img src="https://c.l3n.co/i/VM01XH.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VM0Tr1.jpeg"><img src="https://b.l3n.co/i/VM0Tr1.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VM0kNK.jpeg"><img src="https://a.l3n.co/i/VM0kNK.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0E3c.jpeg"><img src="https://c.l3n.co/i/VM0E3c.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0J9P.jpeg"><img src="https://b.l3n.co/i/VM0J9P.jpeg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VM0srv.jpeg"><img src="https://a.l3n.co/i/VM0srv.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VM0QLm.jpeg"><img src="https://c.l3n.co/i/VM0QLm.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VM0Vai.jpeg"><img src="https://a.l3n.co/i/VM0Vai.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM034C.jpeg"><img src="https://b.l3n.co/i/VM034C.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VM0Bb2.jpeg"><img src="https://b.l3n.co/i/VM0Bb2.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VM0dko.jpeg"><img src="https://b.l3n.co/i/VM0dko.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0ql9.jpeg"><img src="https://c.l3n.co/i/VM0ql9.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VM0L4D.jpeg"><img src="https://a.l3n.co/i/VM0L4D.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VM0OLb.jpeg"><img src="https://b.l3n.co/i/VM0OLb.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM04N5.jpeg"><img src="https://c.l3n.co/i/VM04N5.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM07dT.jpeg"><img src="https://c.l3n.co/i/VM07dT.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0piz.jpeg"><img src="https://b.l3n.co/i/VM0piz.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0Ha7.jpeg"><img src="https://c.l3n.co/i/VM0Ha7.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0z6r.jpeg"><img src="https://b.l3n.co/i/VM0z6r.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VM0SlF.jpeg"><img src="https://a.l3n.co/i/VM0SlF.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VM0vt0.jpeg"><img src="https://b.l3n.co/i/VM0vt0.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0eb3.jpeg"><img src="https://c.l3n.co/i/VM0eb3.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>As a lonely pigeon walked in a circle around the photographer the sun set.
+				The path back from here is under the blue sky.
+				The road turned dark and the lights turned on.
+				A road sign attached to a guardian dog pointed towards the exit.
+				It had become silent and the high school students were no longer anywhere to be seen.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0MPq.jpeg"><img src="https://b.l3n.co/i/VM0MPq.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0ojA.jpeg"><img src="https://c.l3n.co/i/VM0ojA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VM0udM.jpeg"><img src="https://b.l3n.co/i/VM0udM.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VM0DMQ.jpeg"><img src="https://a.l3n.co/i/VM0DMQ.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0Naa.jpeg"><img src="https://b.l3n.co/i/VM0Naa.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VM0f6e.jpeg"><img src="https://a.l3n.co/i/VM0f6e.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VM0Fzk.jpeg"><img src="https://b.l3n.co/i/VM0Fzk.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VM0Ubx.jpeg"><img src="https://a.l3n.co/i/VM0Ubx.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0XtH.jpeg"><img src="https://c.l3n.co/i/VM0XtH.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VM0bK1.jpeg"><img src="https://a.l3n.co/i/VM0bK1.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0wPc.jpeg"><img src="https://c.l3n.co/i/VM0wPc.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>Upon arrival at the viewing platform an opportunity to take a large format photo over Kyoto city appeared as the sky was burning yellow.
+				However, as the camera prepared an old man shouted with an angry voice from a staircase above.</p></p><p>"You! I already have this spot!"</p><p>"Sorry. How long will it take?" the photographer asked the old man.</p><p>"I will be here for a long time!" the old man said.</p><p>"If that is the case I will take my photo and leave if that's fine with you," the photographer said.</p><p>"Absolutely not! This is my photo! Leave!" he shouted from above the stairs.</p><p>Since the target photo was already achieved the photographer left and continued down the stairs.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0yjK.jpeg"><img src="https://b.l3n.co/i/VM0yjK.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM05qZ.jpeg"><img src="https://c.l3n.co/i/VM05qZ.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>After sunset cats came out onto the road.
+				A man came walking with a white plastic bag with cat food which he gave to the cats as he walked down the stairs.
+				Upon hearing the man's voice more cats appeared out of the dark to sit next to gates and munch on food.
+				A bunch of cats gathered on top of a subordinate shrine and waited for the man with food.
+				The man gave them food and then continued down the road to the next cat.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VM0GMP.jpeg"><img src="https://b.l3n.co/i/VM0GMP.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VM0ahm.jpeg"><img src="https://c.l3n.co/i/VM0ahm.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMI2Ci.jpeg"><img src="https://a.l3n.co/i/VMI2Ci.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMI8zo.jpeg"><img src="https://b.l3n.co/i/VMI8zo.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMIAw9.jpeg"><img src="https://a.l3n.co/i/VMIAw9.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMIi12.jpeg"><img src="https://c.l3n.co/i/VMIi12.jpeg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMIjKv.jpeg"><img src="https://a.l3n.co/i/VMIjKv.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMIthb.jpeg"><img src="https://b.l3n.co/i/VMIthb.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/VMIRC7.jpeg"><img src="https://c.l3n.co/i/VMIRC7.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMIZj5.jpeg"><img src="https://c.l3n.co/i/VMIZj5.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMIgqz.jpeg"><img src="https://b.l3n.co/i/VMIgqz.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMIEwF.jpeg"><img src="https://a.l3n.co/i/VMIEwF.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMIrYT.jpeg"><img src="https://a.l3n.co/i/VMIrYT.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VMITSr.jpeg"><img src="https://b.l3n.co/i/VMITSr.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMI613.jpeg"><img src="https://c.l3n.co/i/VMI613.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMI9BA.jpeg"><img src="https://b.l3n.co/i/VMI9BA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/VMICp0.jpeg"><img src="https://b.l3n.co/i/VMICp0.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/VMIdYM.jpeg"><img src="https://c.l3n.co/i/VMIdYM.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>On the thousand gate path electric hanging lanterns illuminated the tunnel.
+				The feeling of solitude was broken by the beam of a flashlight and two priests who came walking.
+				By the entrance, all of the shops were closed yet a few people still entered the shrine.
+				A lonely guardsman came walking up the main path to which the photo shoot was concluded.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/VMIB2Q.jpeg"><img src="https://b.l3n.co/i/VMIB2Q.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/VMIsSe.jpeg"><img src="https://c.l3n.co/i/VMIsSe.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/VMImCa.jpeg"><img src="https://a.l3n.co/i/VMImCa.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/VMI3xk.jpeg"><img src="https://a.l3n.co/i/VMI3xk.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/VMI7F1.jpeg"><img src="https://c.l3n.co/i/VMI7F1.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/VMIK1x.jpeg"><img src="https://b.l3n.co/i/VMIK1x.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/VMIH0c.jpeg"><img src="https://a.l3n.co/i/VMIH0c.jpeg"></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>Photographer</td>
+					<td>Crasy Wolfang</td>
+				</tr>
+				
+			
+				<tr>
+					<td>Sessions</td>
+					<td>1 session</td>
+				</tr>
+				
+			
+				<tr>
+					<td>Destination</td>
+					<td>
+						Kyoto (京都)
+						<ol><li>Fushimi Inari Taisha (伏見稲荷大社)</li></ol>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<a href="https://crasywolfang.com/en/post/2108fuit">
+				<div class="photoCard">
+					<h1>The Fox Gates</h1>
+					<span class="card-left">Religious photography</span>
+					<span class="card-right">2023-07-20</span>
+					<img src="https://i1.lensdump.com/i/CwBTxx.jpeg">
+					
+					<span class="card-right">Kyoto, April 2021</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
 </html>

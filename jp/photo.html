@@ -1,413 +1,427 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CWOLF </title>
-<meta charset="utf-8">
-<style>
-body{background-color: black;}
-a{
-color: lightgrey;
-text-decoration: none;
-}
-a:hover{background-color: #e0c068;}
-#container{
-color: white;
-max-width: 1200px;
-min-width: 800px;
-margin-left: auto;
-margin-right: auto;
-}
-#top{width: 100%;}
-#topLang{float: right;}
-#topLang a{
-color: white;
-text-decoration: none;
-}
-#header img{
-display: block;
-width: 100%;
-}
-#topMenu{background-color: black;}
-#topMenu ul{
-margin: 0em;
-padding: 0em;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-}
-#topMenu li{
-display: inline;
-padding: 0em;
-font-size: 1.3em;
-border: 2px solid grey;
-}
-#topMenu a{
-padding-top: 0em;
-padding-bottom: 0em;
-padding-left: 2em;
-padding-right: 2em;
-color: white;
-}
-#bottom{
-color: grey;
-background-color: black;
-}
-
-.flowcard{
-margin: 0.5em;
-padding: 1em;
-border: solid #101010;
-}
-
-.center{
-text-align: center;
-text-decoration: underline;
-}
-
-.catCard{
-list-style: none;
-padding-left: 0;
-text-align: center;
-font-size: 1.3em;
-}
-.catCard li{
-margin: 0.3em;
-display: inline-block;
-border: 2px solid grey;
-padding: 0.5em;
-}
-.catCard li:hover{background-color: #e0c068;}
-.catCard img{
-width: 240px;
-display: block;
-}
-.catCard a{
-color: white;
-display: block;
-}
-
-.title{
-margin-left: auto;
-margin-right: auto;
-max-width: 800px;
-padding: 1em;
-padding-bottom: 2em;
-}
-.title h1{
-border-bottom: 1px solid;
-width: 100%;
-margin: 0px;
-}
-.title-left{float: left;}
-.title-right{
-float: right;
-text-align: right;
-}
-
-.ref{
-color: lightgrey;
-text-decoration: none;
-font-size: 0.8em;
-}
-.ref::before{content: '[';}
-.ref::after{content: ']';}
-
-.sec{padding-bottom: 1em;}
-
-.photoCard{
-border: 2px solid grey;
-margin-top: 1em;
-padding-bottom: 2em;
-}
-.photoCard:hover{background-color: #e0c068;}
-.photoCard a{
-color: white;
-}
-.photoCard h1{
-margin: 0px;
-padding-left: 0.15em;
-}
-.card-incipit{
-font-weight: bold;
-padding-left: 0.4em;
-}
-.card-left{
-float: left;
-padding-left: 0.4em;
-}
-.card-right{
-float: right;
-text-align: right;
-padding-right: 0.4em;
-}
-.photoCard img{
-width: 100%;
-display: block;
-}
-
-.photoParagraph{
-padding: 1em;
-text-indent: 2em;
-}
-.imgWrap{
-display: flex;
-flex-direction: row;
-width: 100%;
-gap: 0.5em;
-padding-bottom: 0.25em;
-padding-top: 0.25em;
-}
-.imgWrap img{
-display: block;
-max-width: 100%;
-gap: 0.5em;
-}
-.neatPhoto{padding: 1em;}
-.neatPhoto a{width: 60%;}
-.neatPhoto img{width: 100%;}
-.neatPhoto img,
-.neatPhoto a{
-display: block;
-margin: 0 auto;
-}
-
-.bibliography ul{
-list-style-type: none;
-text-indent: 0em;
-}
-.bibliography li:not(:last-child) {
-margin-bottom: 0.5em;
-}
-
-.largePhoto{
-border: 1px solid white;
-margin-bottom: 1em;
-}
-.largePhoto p{
-text-indent: 2em;
-padding-left: 1em;
-padding-right: 1em;
-}
-.largePhotoTop{
-text-indent: 1em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-}
-.largePhotoTitle{
-font-size: 1.3em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-text-indent: 2em;
-}
-.largePhoto img{display: block;}
-.largeformat p{
-padding-left: 1em;
-padding-right: 1em;
-}
-
-.credits{width: 100%;}
-.credits td{
-border: 1px solid white;
-padding: 0.3em;
-}
-</style>
-</head>
-<body>
-
-<div id="container">
-<div id="top">
-<small style="color: grey;">CWOLF WEB PROJECT</small>
-<div id="topLang">
-🌎
-<a href="https://CrasyWolfang.com/en/photo">English</a>
-|
-<a href="https://CrasyWolfang.com/jp/photo">日本語</a>
-</div>
-</div>
-<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-<nav id="topMenu">
-<ul>
-<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
-<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
-<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
-</ul>
-</nav>
-
-<div style="text-align:center">
-<h1>写真撮影</h1>
-<p>この写真は記憶である<br>
-人間のことを表す<br>
-行った所　会った人　見た物事</p>
-
-<p>うまくいけば　視聴者はコラージュを鑑賞して<br>
-自分の視覚的世界へ導いてくれる</p>
-</div>
-
-<ul class="catCard">
-<li><a href="https://CrasyWolfang.com/jp/photo/nature"><img src="https://b.l3n.co/i/Bhs9cx.jpeg"><span>自然</span></a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/water"><img src="https://c.l3n.co/i/BhsVHk.jpeg"><span>水域</span></a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/urban"><img src="https://c.l3n.co/i/BhsEWA.jpeg"><span>都会</span></a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/exhibition"><img src="https://i.lensdump.com/i/CHCzjA.jpeg"><span>展覧</span></a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/religious"><img src="https://b.l3n.co/i/Bhs6vQ.jpeg"><span>神殿</span></a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/seasons"><img src="https://i2.lensdump.com/i/CHCMzk.jpeg"><span>季節</span></a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/events"><img src="https://i1.lensdump.com/i/6lb8qc.jpeg"><span>イベント</span></a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/photowall"><img src="https://b.l3n.co/i/B4O6iz.jpeg"><span>ザ・フォトワル</span></a></li>
-</ul>
-
-<h2 style="text-align: center;">撮影技術</h2>
-<div style="margin-left: auto; margin-right: auto; width: 60%; border: 1px solid gray;">
-<ul>
-<li><a href="https://CrasyWolfang.com/jp/photo/largeformat">大型写真</a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo/focusstack">焦点合成</a></li>
-</ul>
-</div>
-
-<h2 style="text-align: center;">最近発行</h2>
-
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2206lubo">
-
-<h1>ルンド植物園</h1>
-<span class="card-left">植物撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2024年06月22日</span>
-<img src="https://b.l3n.co/i/zHZj3o.jpeg">
-<span class="card-right">ルンド、2022年06月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2205kybo">
-
-<h1>京都植物園</h1>
-<span class="card-left">植物撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2024年06月22日</span>
-<img src="https://a.l3n.co/i/lDYLG5.jpeg">
-<span class="card-right">京都市、2022年05月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2208skdp">
-
-<h1>スコーネ動物園</h1>
-<span class="card-left">動物撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2024年06月22日</span>
-<img src="https://c.l3n.co/i/lDYYkz.jpeg">
-<span class="card-right">ヘール、2022年08月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2206otzo">
-
-<h1>天王寺動物園</h1>
-<span class="card-left">植物撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2024年06月22日</span>
-<img src="https://c.l3n.co/i/lDYvLC.jpeg">
-<span class="card-right">大阪市、2022年06月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2204kamo">
-
-<h1>鴨川</h1>
-<span class="card-left">環境撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年11月08日</span>
-<img src="https://b.l3n.co/i/B5Tz32.jpeg">
-<span class="card-right">京都市、2022年04月・05月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2204katu">
-
-<h1>桂川</h1>
-<span class="card-left">環境撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年11月08日</span>
-<img src="https://b.l3n.co/i/Bcybne.jpeg">
-<span class="card-right">京都市、2022年04月・05月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2204kiss">
-
-<h1>吉祥院</h1>
-<span class="card-left">都市撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年11月08日</span>
-<img src="https://b.l3n.co/i/BoMrlK.jpeg">
-<span class="card-right">京都市、2022年04月・05月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2307summ">
-
-<h1>23の夏</h1>
-<span class="card-left">季節撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年11月08日</span>
-<img src="https://b.l3n.co/i/ByEHnT.jpeg">
-<span class="card-right">ルンド、2023年07月</span>
-</a></div>
-
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2206sush">
-<span class="card-incipit">ザ・フォトワル　2022年</span>
-<h1>サマー・ショット</h1>
-<span class="card-left">雑多写真</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年11月08日</span>
-<img src="https://b.l3n.co/i/B4I2Hc.jpeg">
-<span class="card-right">スコーネ、2022年06月～08月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2206scni">
-
-<h1>スコーネ・ナイト</h1>
-<span class="card-left">夜間撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年11月08日</span>
-<img src="https://b.l3n.co/i/BCoFq7.jpeg">
-<span class="card-right">ルンド、2022年07月～2023年06月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2209park">
-
-<h1>動物の秋</h1>
-<span class="card-left">公園撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年10月15日</span>
-<img src="https://b.l3n.co/i/qMBFZq.jpeg">
-<span class="card-right">ルンド、2022年09月・10月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/1910umek">
-
-<h1>梅小路の日暮れ</h1>
-<span class="card-left">公園撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年09月28日</span>
-<img src="https://c.l3n.co/i/dD5buC.jpeg">
-<span class="card-right">京都市、2019年10月</span>
-</a></div>
-
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2206mids">
-
-<h1>夏至祭り</h1>
-<span class="card-left">イベント撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年09月26日</span>
-<img src="https://b.l3n.co/i/dvtLlM.jpeg">
-<span class="card-right">ヘルシンボリ、2023年10月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2205fuit">
-
-<h1>稲荷山陰</h1>
-<span class="card-left">大社撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年08月25日</span>
-<img src="https://c.l3n.co/i/VoQ7l0.jpeg">
-<span class="card-right">京都市、2023年05月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2210luau">
-
-<h1>ルンド秋</h1>
-<span class="card-left">季節撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2023年08月25日</span>
-<img src="https://c.l3n.co/i/V7kCjm.jpeg">
-<span class="card-right">ルンド、2022年10月</span>
-</a></div>
-<div class="photoCard"><a href="https://CrasyWolfang.com/jp/post/2208wafo">
-
-<h1>排水の鳥</h1>
-<span class="card-left">環境撮影</span>
-<span class="card-right"><span style="color: LightGray;">発行日　</span>2022年10月22日</span>
-<img src="https://a.l3n.co/i/QHDkX5.jpeg">
-<span class="card-right">ルンド、2023年08月・09日</span>
-</a></div>
-
-<div id="bottom">
-<hr>
-©CrasyWolfang 2014-2024
-✉ <adress>forwardtowolf@gmail.com</adress>
-<a href="#top" style="float: right; color: grey;">top ↑</a>
-</div>
-</div>
-
-</body>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-incipit{
+			font-weight: bold;
+			padding-left: 0.4em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/photo">English</a> | <a href="https://www.CrasyWolfang.com/jp/photo">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/video">動画制作</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
+				</ul>
+			</nav>
+			<h1 class="center">写真撮影</h1>
+			<p class="center">
+				この写真は記憶である<br>
+				人間のことを表す<br>
+				行った所　会った人　見た物事<br>
+				<br>
+				うまくいけば　視聴者はコラージュを鑑賞して<br>
+				自分の視覚的世界へ導いてくれる
+			</p>
+			<ul class="catCard">
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/forest"><img src="https://c.l3n.co/i/MaEJNm.jpg"><span>森林</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/meadows"><img src="https://a.l3n.co/i/MaEC3P.jpg"><span>草原</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/waters"><img src="https://c.l3n.co/i/BhsVHk.jpeg"><span>水域</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/urban"><img src="https://c.l3n.co/i/BhsEWA.jpeg"><span>都会</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/religious"><img src="https://b.l3n.co/i/Bhs6vQ.jpeg"><span>神殿</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/plants"><img src="https://b.l3n.co/i/MaE6rZ.jpg"><span>植物</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/animals"><img src="https://c.l3n.co/i/MaEEXK.jpg"><span>動物</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/seasons"><img src="https://i2.lensdump.com/i/CHCMzk.jpeg"><span>季節</span></a></li>
+				
+			
+				<li><a href="https://www.CrasyWolfang.com/jp/photo/events"><img src="https://i1.lensdump.com/i/6lb8qc.jpeg"><span>イベント</span></a></li>
+			</ul>
+			
+			<h2 class="center">最近発行</h2>
+			
+			<a href="https://crasywolfang.com/jp/post/2210boau">
+				<div class="photoCard">
+					<h1>秋の植物園</h1>
+					<span class="card-left">季節撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://c.l3n.co/i/YIOQHa.jpg">
+					
+					<span class="card-right">ルンド、2022年10月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2310boma">
+				<div class="photoCard">
+					<h1>季節の変化</h1>
+					<span class="card-left">植物撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://a.l3n.co/i/YIGXh0.jpg">
+					
+					<span class="card-right">ルンド、2023年10月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2309nobb">
+				<div class="photoCard">
+					<h1>ノッベレーブ湿原</h1>
+					<span class="card-left">草原撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://b.l3n.co/i/Map1BF.jpg">
+					
+					<span class="card-right">ルンド、2023年09月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2308rinb">
+				<div class="photoCard">
+					<h1>リネベック</h1>
+					<span class="card-left">水域撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://a.l3n.co/i/S7HoAc.jpg">
+					
+					<span class="card-right">ルンド、2023年08月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2404cphs">
+				<div class="photoCard">
+					<h1>コペンハーゲン桜祭り</h1>
+					<span class="card-left">イベント撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://c.l3n.co/i/Smtqmi.jpg">
+					
+					<span class="card-right">コペンハーゲン、2024年04月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2206lubo">
+				<div class="photoCard">
+					<h1>ルンド植物園</h1>
+					<span class="card-left">植物撮影</span>
+					<span class="card-right">2024年06月22日</span>
+					<img src="https://b.l3n.co/i/zHZj3o.jpeg">
+					
+					<span class="card-right">ルンド、2022年06月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2205kybo">
+				<div class="photoCard">
+					<h1>京都植物園</h1>
+					<span class="card-left">植物撮影</span>
+					<span class="card-right">2024年06月22日</span>
+					<img src="https://a.l3n.co/i/lDYLG5.jpeg">
+					
+					<span class="card-right">京都市、2022年05月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2208skdp">
+				<div class="photoCard">
+					<h1>スコーネ動物園</h1>
+					<span class="card-left">動物撮影</span>
+					<span class="card-right">2024年06月22日</span>
+					<img src="https://c.l3n.co/i/lDYYkz.jpeg">
+					
+					<span class="card-right">ヘール、2022年08月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2206otzo">
+				<div class="photoCard">
+					<h1>天王寺動物園</h1>
+					<span class="card-left">動物撮影</span>
+					<span class="card-right">2024年06月22日</span>
+					<img src="https://c.l3n.co/i/lDYvLC.jpeg">
+					
+					<span class="card-right">大阪市、2022年06月</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
 </html>

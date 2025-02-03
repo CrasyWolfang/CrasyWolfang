@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-incipit{
+			font-weight: bold;
+			padding-left: 0.4em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2309nobb">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2309nobb">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/video">動画制作</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
+				</ul>
+			</nav>
+			<div class="title">
+				<h1>ノッベレーブ湿原</h1>
+				
+				<span class="title-left">草原撮影</span>
+				
+				<span class="title-right">TO COME</span>
+			</div>
+			<div class="photo-content">
+				<div class="photosec"><div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://b.l3n.co/i/M5nibc.jpg"><img src="https://b.l3n.co/i/M5nibc.jpg"></a></div></div></div></div>
+				
+				
+			
+				
+				<p>ルンドの西北にはノッベレーブという町がある。
+				中心の8階のマンション以外に地区には2階以上の建物は少なく、教会の赤い塔は青空にたいして見やすい。
+				教会の珍しく赤い煉瓦から作られた形が基準に合わない。
+				（北欧の協会が普通に白いモルタルに塗られる。）
+				12世紀に小さい村に設立されたが、1899年に元々の協会が破壊されて新しい建物が1901年に再建てられた<sup><abbr class="ref" title="Norra Nobbelövs Församling, 1997">参考</abbr></sup>。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5nVfT.jpg"><img src="https://a.l3n.co/i/M5nVfT.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/M5nQKz.jpg"><img src="https://b.l3n.co/i/M5nQKz.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5ntqi.jpg"><img src="https://b.l3n.co/i/M5ntqi.jpg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>教会の室内には誰もいない。
+				灯りが赤色・緑色・青色の窓から漏れて、薄暗い室の中にろうそくが一本ついている。
+				正面にはイエス・キリストの像が明るい部分に立って、テーブルの端には黄色い花である。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5n2ax.jpg"><img src="https://c.l3n.co/i/M5n2ax.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/M5n6wC.jpg"><img src="https://b.l3n.co/i/M5n6wC.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/M5nkzv.jpg"><img src="https://a.l3n.co/i/M5nkzv.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/M5nJt5.jpg"><img src="https://a.l3n.co/i/M5nJt5.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/M5nEC2.jpg"><img src="https://c.l3n.co/i/M5nEC2.jpg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5ehMk.jpg"><img src="https://b.l3n.co/i/M5ehMk.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5n1Mo.jpg"><img src="https://c.l3n.co/i/M5n1Mo.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5nRh9.jpg"><img src="https://b.l3n.co/i/M5nRh9.jpg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>外には誰もいないし。
+				秋の枯れた葉っぱが地面に散らされている。
+				教会にある子供の遊び場にも色鮮やかなおもちゃが残されている。
+				この小さな教会の地下に秘密が埋まっていることは90年代まで知られていなかった。
+				給水線を引くために穴を開けているところにカール11世の兵士が現れた<sup><abbr class="ref" title="Norra Nobbelövs Församling, 1997">参考</abbr></sup>。
+				その時、死体の行き先は300年間知られていなかった。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5nBYr.jpg"><img src="https://b.l3n.co/i/M5nBYr.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5nrjm.jpg"><img src="https://c.l3n.co/i/M5nrjm.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5nZPP.jpg"><img src="https://b.l3n.co/i/M5nZPP.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5nmhF.jpg"><img src="https://a.l3n.co/i/M5nmhF.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5nIKZ.jpg"><img src="https://a.l3n.co/i/M5nIKZ.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5ndjb.jpg"><img src="https://c.l3n.co/i/M5ndjb.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/M5nqq7.jpg"><img src="https://a.l3n.co/i/M5nqq7.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/M5nA6H.jpg"><img src="https://a.l3n.co/i/M5nA6H.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/M5nWz1.jpg"><img src="https://c.l3n.co/i/M5nWz1.jpg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>1676年スウェーデン対デンマークの決戦が北の凍り付いた平野で行われた。
+				あの戦闘で兵隊が8・9千人死んでしまい<sup><abbr class="ref" title="Norra Nobbelövs Församling, 1997">参考</abbr></sup><sup><abbr class="ref" title="Länsstyrelsen">参考</abbr></sup>、スウェーデンが勝ちである。
+				現在あの平野を眺めるだけでここでその大切な戦争が起こったことが分かることが出来ない。</p><p>平野の西南は湿原である。
+				湿地が垣根に囲まれ、内にチョウが集まって草を食っている
+				道の隣に小川が流れ、柳が並んでいて、女の人が犬と2匹散歩している。
+				この場所は散歩と野鳥観察だけに人気だらしい。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5n4S0.jpg"><img src="https://c.l3n.co/i/M5n4S0.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5n0tK.jpg"><img src="https://c.l3n.co/i/M5n0tK.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5n3C3.jpg"><img src="https://b.l3n.co/i/M5n3C3.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/M5nKwD.jpg"><img src="https://a.l3n.co/i/M5nKwD.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5nHfM.jpg"><img src="https://b.l3n.co/i/M5nHfM.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5n71q.jpg"><img src="https://b.l3n.co/i/M5n71q.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5nOpA.jpg"><img src="https://c.l3n.co/i/M5nOpA.jpg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5neYe.jpg"><img src="https://a.l3n.co/i/M5neYe.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5nz0Q.jpg"><img src="https://c.l3n.co/i/M5nz0Q.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5nSqa.jpg"><img src="https://b.l3n.co/i/M5nSqa.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5nv2k.jpg"><img src="https://b.l3n.co/i/M5nv2k.jpg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>湿原の西に水が流れ出し、北部に牛が野飼いである。
+				この湿原は昔平野にも広がったが19世紀に湿原が農耕のために乾かして<sup><abbr class="ref" title="Lunds Komun">参考</abbr></sup>、現在西南部分しか残っていない。
+				北へ大きな田舎家が見え、西に国道に車が道を流れて上で電線が垂れて背景に風車がクルクルしている。
+				2・3百年が渡ってここが変わったはずだ。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow"><div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5nLCx.jpg"><img src="https://c.l3n.co/i/M5nLCx.jpg"></a></div></div></div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5nFBm.jpg"><img src="https://c.l3n.co/i/M5nFBm.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/M5nDpK.jpg"><img src="https://b.l3n.co/i/M5nDpK.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/M5nUoi.jpg"><img src="https://a.l3n.co/i/M5nUoi.jpg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5nYx1.jpg"><img src="https://b.l3n.co/i/M5nYx1.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5nu1c.jpg"><img src="https://c.l3n.co/i/M5nu1c.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/M5nNFZ.jpg"><img src="https://a.l3n.co/i/M5nNFZ.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/M5nMSH.jpg"><img src="https://a.l3n.co/i/M5nMSH.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/M5nf0P.jpg"><img src="https://b.l3n.co/i/M5nf0P.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5nX2o.jpg"><img src="https://b.l3n.co/i/M5nX2o.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/M5nwe2.jpg"><img src="https://b.l3n.co/i/M5nwe2.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/M5nxxv.jpg"><img src="https://c.l3n.co/i/M5nxxv.jpg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/M5nbJ9.jpg"><img src="https://a.l3n.co/i/M5nbJ9.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/M5nGp5.jpg"><img src="https://a.l3n.co/i/M5nGp5.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/M5naFz.jpg"><img src="https://c.l3n.co/i/M5naFz.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5v8Bb.jpg"><img src="https://c.l3n.co/i/M5v8Bb.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/M5vAo7.jpg"><img src="https://a.l3n.co/i/M5vAo7.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5vr7q.jpg"><img src="https://b.l3n.co/i/M5vr7q.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/M5v0e3.jpg"><img src="https://b.l3n.co/i/M5v0e3.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/M5v2IT.jpg"><img src="https://b.l3n.co/i/M5v2IT.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5vIy0.jpg"><img src="https://a.l3n.co/i/M5vIy0.jpg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5vjJF.jpg"><img src="https://a.l3n.co/i/M5vjJF.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5n5RC.jpg"><img src="https://b.l3n.co/i/M5n5RC.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/M5vtUA.jpg"><img src="https://c.l3n.co/i/M5vtUA.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/M5vgRD.jpg"><img src="https://c.l3n.co/i/M5vgRD.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/M5vRIM.jpg"><img src="https://b.l3n.co/i/M5vRIM.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/M5vi8r.jpg"><img src="https://c.l3n.co/i/M5vi8r.jpg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>湿原の東にはヨーテボリへの線路がある。
+				線路を越える場所がないが、足元に注意すれば変な小川のために作られた隧道を通れる。
+				鉄路の東に林があり、緑のトンネルのように道に木が別れさせられる。
+				そのトンネルを出ると右側に牧草地が目に入り、牛の群が自分の方へ向いて目につく。
+				辺りには池と公衆小屋（スウェーデンで防風所と呼ばれている）がある。
+				小屋に泊まってバーベキューをすることもいい。それから道が小川を渡れ、北には畑がある。</p><p>太陽が垂れて畑の地平線にある木が金色に照らされている。
+				その景色を見たらこちらで戦争中に人が亡くなったことが頭にも浮かない。</p>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>撮影者</td>
+					<td>狼牙クレシ</td>
+				</tr>
+				
+			
+				<tr>
+					<td>撮影回</td>
+					<td>1回</td>
+				</tr>
+				
+			
+				<tr>
+					<td>行き先</td>
+					<td>
+						ルンド (Lund)
+						<ol>
+							<li>ノッベレーブの北の協会 （Norra Nöbbelövs kyrka）</li>
+							
+			
+							<li>ノッベレーブ湿原 （Nöbbelövs Mosse）</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td>参考資料</td>
+					<td>
+						<ol>
+							<li>Norra Nobbelövs Församling (1997年). 『Norra Nobbelövs Kyrka』. 小冊子</li>
+							
+			
+							<li>Länsstyrelsen. 『Nöbbelövs mosse』. HP. 入手先<a href="https://www.lansstyrelsen.se/skane/besoksmal/naturreservat/lund/nobbelovs-mosse">https://www.lansstyrelsen.se/skane/besoksmal/naturreservat/lund/nobbelovs-mosse</a>, (典語)(2024年11月28日)</li>
+							
+			
+							<li>Lunds Komun. 『Uteklassrum Nöbbelövs mosse』. HP. 入手先<a href="https://lund.se/personalingangen/for-dig-som-arbetar-inom-forskola-och-skola/naturskolan/uteklassrum/nobbelovs-mosse">https://lund.se/personalingangen/for-dig-som-arbetar-inom-forskola-och-skola/naturskolan/uteklassrum/nobbelovs-mosse</a>, (典語)(2024年11月28日)</li>
+						</ol>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<a href="https://crasywolfang.com/jp/post/2308rinb">
+				<div class="photoCard">
+					<h1>リネベック</h1>
+					<span class="card-left">水域撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://a.l3n.co/i/S7HoAc.jpg">
+					
+					<span class="card-right">ルンド、2023年08月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2310boma">
+				<div class="photoCard">
+					<h1>季節の変化</h1>
+					<span class="card-left">植物撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://a.l3n.co/i/YIGXh0.jpg">
+					
+					<span class="card-right">ルンド、2023年10月</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>

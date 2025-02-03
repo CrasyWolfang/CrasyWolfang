@@ -1,972 +1,1244 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CWOLF </title>
-<meta charset="utf-8">
-<style>
-body{background-color: black;}
-a{
-color: lightgrey;
-text-decoration: none;
-}
-a:hover{background-color: #e0c068;}
-#container{
-color: white;
-max-width: 1200px;
-min-width: 800px;
-margin-left: auto;
-margin-right: auto;
-}
-#top{width: 100%;}
-#topLang{float: right;}
-#topLang a{
-color: white;
-text-decoration: none;
-}
-#header img{
-display: block;
-width: 100%;
-}
-#topMenu{background-color: black;}
-#topMenu ul{
-margin: 0em;
-padding: 0em;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-}
-#topMenu li{
-display: inline;
-padding: 0em;
-font-size: 1.3em;
-border: 2px solid grey;
-}
-#topMenu a{
-padding-top: 0em;
-padding-bottom: 0em;
-padding-left: 2em;
-padding-right: 2em;
-color: white;
-}
-#bottom{
-color: grey;
-background-color: black;
-}
-
-.flowcard{
-margin: 0.5em;
-padding: 1em;
-border: solid #101010;
-}
-
-.center{
-text-align: center;
-text-decoration: underline;
-}
-
-.catCard{
-list-style: none;
-padding-left: 0;
-text-align: center;
-font-size: 1.3em;
-}
-.catCard li{
-margin: 0.3em;
-display: inline-block;
-border: 2px solid grey;
-padding: 0.5em;
-}
-.catCard li:hover{background-color: #e0c068;}
-.catCard img{
-width: 240px;
-display: block;
-}
-.catCard a{
-color: white;
-display: block;
-}
-
-.title{
-margin-left: auto;
-margin-right: auto;
-max-width: 800px;
-padding: 1em;
-padding-bottom: 2em;
-}
-.title h1{
-border-bottom: 1px solid;
-width: 100%;
-margin: 0px;
-}
-.title-left{float: left;}
-.title-right{
-float: right;
-text-align: right;
-}
-
-.ref{
-color: lightgrey;
-text-decoration: none;
-font-size: 0.8em;
-}
-.ref::before{content: '[';}
-.ref::after{content: ']';}
-
-.sec{padding-bottom: 1em;}
-
-.photoCard{
-border: 2px solid grey;
-margin-top: 1em;
-padding-bottom: 2em;
-}
-.photoCard:hover{background-color: #e0c068;}
-.photoCard a{
-color: white;
-}
-.photoCard h1{
-margin: 0px;
-padding-left: 0.15em;
-}
-.card-incipit{
-font-weight: bold;
-padding-left: 0.4em;
-}
-.card-left{
-float: left;
-padding-left: 0.4em;
-}
-.card-right{
-float: right;
-text-align: right;
-padding-right: 0.4em;
-}
-.photoCard img{
-width: 100%;
-display: block;
-}
-
-.photoParagraph{
-padding: 1em;
-text-indent: 2em;
-}
-.imgWrap{
-display: flex;
-flex-direction: row;
-width: 100%;
-gap: 0.5em;
-padding-bottom: 0.25em;
-padding-top: 0.25em;
-}
-.imgWrap img{
-display: block;
-max-width: 100%;
-gap: 0.5em;
-}
-.neatPhoto{padding: 1em;}
-.neatPhoto a{width: 60%;}
-.neatPhoto img{width: 100%;}
-.neatPhoto img,
-.neatPhoto a{
-display: block;
-margin: 0 auto;
-}
-
-.bibliography ul{
-list-style-type: none;
-text-indent: 0em;
-}
-.bibliography li:not(:last-child) {
-margin-bottom: 0.5em;
-}
-
-.largePhoto{
-border: 1px solid white;
-margin-bottom: 1em;
-}
-.largePhoto p{
-text-indent: 2em;
-padding-left: 1em;
-padding-right: 1em;
-}
-.largePhotoTop{
-text-indent: 1em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-}
-.largePhotoTitle{
-font-size: 1.3em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-text-indent: 2em;
-}
-.largePhoto img{display: block;}
-.largeformat p{
-padding-left: 1em;
-padding-right: 1em;
-}
-
-.credits{width: 100%;}
-.credits td{
-border: 1px solid white;
-padding: 0.3em;
-}
-</style>
-</head>
-<body>
-
-<div id="container">
-<div id="top">
-<small style="color: grey;">CWOLF WEB PROJECT</small>
-<div id="topLang">
-🌎
-<a href="https://CrasyWolfang.com/en/post/2208skdp">English</a>
-|
-<a href="https://CrasyWolfang.com/jp/post/2208skdp">日本語</a>
-</div>
-</div>
-<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-<nav id="topMenu">
-<ul>
-<li><a href="https://CrasyWolfang.com/en/home">Home</a></li>
-<li><a href="https://CrasyWolfang.com/en/photo">Photography</a></li>
-<!---<li><a href="https://CrasyWolfang.com/en/video">Video Production</a></li>--->
-<li><a href="https://CrasyWolfang.com/en/about">About</a></li>
-</ul>
-</nav>
-
-<div class="title">
-
-<h1>Skånes Djurpark</h1>
-<span class="title-left">Animal photography</span>
-<span class="title-right"><span style="color: LightGray;">published: </span>2024-06-22</span>
-</div>
-
-<section class="photoParagraph"><p>In the middle of Scania outside a town called Höör is Skånes Djurpark (Scania Animal Park).
-It's situated about 3 km from the town's train station and only has a bus stop outside.
-The bus makes a stop on a quiet country road where nothing is especially noticeable in the surroundings.
-Once the bus leaves a large sign behind is revealed with the text "Skånes Djurpark."</p>
-<p>The entrance to the animal park reminds of a red vacation hut.
-Entrance tickets can be bought either at the entrance or online.
-The entrance admission will differ between the seasons, and during high seasons it can cost as much as 350 SEK.</p></section>
-
-<section class="sec" id="skull">
-
-<div class="neatPhoto"><a href="https://b.l3n.co/i/lef6sC.jpeg"><img src="https://b.l3n.co/i/lef6sC.jpeg"></a></div>
-
-</section><section class="photoParagraph"><p>The first enclosure is marked out with a soft wooden fence and inside some goats rest in the shade.
-This is a petting zoo and as the morning visitors enter the enclosure the goats get up to welcome the visitors.
-Among the goats one walked out to a corner, stuck a tree branch onto itself and began to gnaw on the tree bark.
-Meanwhile the goat kids approached the enclosure's visitors to receive some scratches.</p></section>
-
-<section class="sec" id="intro">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lefsc3.jpeg"><img width="1200" src="https://b.l3n.co/i/lefsc3.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leNGKv.jpeg"><img width="1200" src="https://b.l3n.co/i/leNGKv.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/leNafC.jpeg"><img src="https://c.l3n.co/i/leNafC.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/leP2j5.jpeg"><img src="https://b.l3n.co/i/leP2j5.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leP8qz.jpeg"><img width="1200" src="https://a.l3n.co/i/leP8qz.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lePAYT.jpeg"><img width="1200" src="https://c.l3n.co/i/lePAYT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePWhb.jpeg"><img width="1200" src="https://b.l3n.co/i/lePWhb.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>Once one exit the back of the enclosure they'll find yet another petting zoo.
-This part of the petting zoo contain sheep.
-There are also some small enclosures within and inside of those are rabbits and chickens.
-Here one of the black sheep approached the photographer and flickered its tongue into the air as it received some back good scratches.</p></section>
-
-<section class="sec" id="rabbit-small">
-
-<div class="neatPhoto"><a href="https://a.l3n.co/i/lef4g0.jpeg"><img src="https://a.l3n.co/i/lef4g0.jpeg"></a></div>
-
-</section>
-<section class="sec" id="chicken-rabbit">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefz5a.jpeg"><img width="1200" src="https://a.l3n.co/i/lefz5a.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/lePIwF.jpeg"><img src="https://b.l3n.co/i/lePIwF.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lePg13.jpeg"><img src="https://a.l3n.co/i/lePg13.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lePrp0.jpeg"><img width="1200" src="https://c.l3n.co/i/lePrp0.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="sheep">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leP0Sr.jpeg"><img width="1200" src="https://c.l3n.co/i/leP0Sr.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lefpDq.jpeg"><img width="1200" src="https://c.l3n.co/i/lefpDq.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/lefHVM.jpeg"><img src="https://c.l3n.co/i/lefHVM.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/leflvQ.jpeg"><img src="https://b.l3n.co/i/leflvQ.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lefOWA.jpeg"><img src="https://a.l3n.co/i/lefOWA.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/lefKsD.jpeg"><img src="https://b.l3n.co/i/lefKsD.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="pet">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lePtfD.jpeg"><img width="1200" src="https://a.l3n.co/i/lePtfD.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lePjC7.jpeg"><img src="https://a.l3n.co/i/lePjC7.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/lefeEe.jpeg"><img src="https://b.l3n.co/i/lefeEe.jpeg"></a></div>
-
-</div>
-
-
-</section><section class="photoParagraph"><p>Next up is a playground.
-However, from here the park gives a feeling that it was built for children.
-The next enclosure has figures from a children's TV show which move up and down as a tractor is pulled alongside a rail.
-Down the track a few figures of pigs with water guns squirt water onto the amusement park passengers.
-At least there are two storks that have built a nest on top of the ride entrance from which they watch down onto the visitors.</p></section>
-
-<section class="sec" id="ride">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePTBA.jpeg"><img width="1200" src="https://b.l3n.co/i/lePTBA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lePR0q.jpeg"><img width="1200" src="https://c.l3n.co/i/lePR0q.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/lefvcx.jpeg"><img src="https://c.l3n.co/i/lefvcx.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lefMgH.jpeg"><img src="https://a.l3n.co/i/lefMgH.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefnHk.jpeg"><img width="1200" src="https://a.l3n.co/i/lefnHk.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lefY31.jpeg"><img width="1200" src="https://c.l3n.co/i/lefY31.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>When you leave the playground and get back onto the main road there will be an enclosure for domestic pigs and inside a pale piglet played and ran around in the green grass.
-After the pig pen is a pond with seals.
-The surface of the pond moves in a mesmerizing fashion.
-Then the water surface is broken by a seal who swims around for a short while before it dives back under water.</p></section>
-
-<section class="sec" id="pig">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefN9Z.jpeg"><img width="1200" src="https://a.l3n.co/i/lefN9Z.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefoDc.jpeg"><img width="1200" src="https://a.l3n.co/i/lefoDc.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/leP62Q.jpeg"><img src="https://b.l3n.co/i/leP62Q.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/lefPvP.jpeg"><img src="https://b.l3n.co/i/lefPvP.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lePEYM.jpeg"><img width="1200" src="https://c.l3n.co/i/lePEYM.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="pig-seal">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lefDWK.jpeg"><img width="1200" src="https://b.l3n.co/i/lefDWK.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lePCCa.jpeg"><img width="1200" src="https://a.l3n.co/i/lePCCa.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/lePJSe.jpeg"><img src="https://c.l3n.co/i/lePJSe.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/lefUki.jpeg"><img src="https://c.l3n.co/i/lefUki.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lefcHo.jpeg"><img width="1200" src="https://b.l3n.co/i/lefcHo.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="seal">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefXX9.jpeg"><img width="1200" src="https://a.l3n.co/i/lefXX9.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lefwr2.jpeg"><img width="1200" src="https://b.l3n.co/i/lefwr2.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lefx3v.jpeg"><img width="1200" src="https://c.l3n.co/i/lefx3v.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>If one crosses the pond they'll get to the badger enclosure and the wild cat enclosure.
-However, neither of these animals were out and visible that day.
-Further up the road is the red fox enclosure.
-The fox ran around and played, and then gnawed on a piece of meat for a short while before laying itself down in a little hut.
-Regular fox behavior if anything.</p></section>
-
-<section class="sec" id="fox">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lefa9z.jpeg"><img width="1200" src="https://c.l3n.co/i/lefa9z.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lefyNC.jpeg"><img src="https://a.l3n.co/i/lefyNC.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/lefGW5.jpeg"><img src="https://b.l3n.co/i/lefGW5.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFAk7.jpeg"><img width="1200" src="https://b.l3n.co/i/leFAk7.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/lefhLT.jpeg"><img src="https://b.l3n.co/i/lefhLT.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/leF2Gb.jpeg"><img src="https://c.l3n.co/i/leF2Gb.jpeg"></a></div>
-
-</div>
-
-
-</section><section class="photoParagraph"><p>After that there is a dinosaur park behind the red fox enclosure.
-Hold on a minute... dinosaurs?
-Along the road are dinosaurs animatronics.
-Brontosaurus, pterodactyl, tyrannosaurus rex...
-At the exit of the road is even a dinosaur souvenir shop.</p></section>
-
-<section class="sec" id="dino01">
-<div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/lePQxk.jpeg"><img src="https://b.l3n.co/i/lePQxk.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/leP91x.jpeg"><img src="https://c.l3n.co/i/leP91x.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFWlr.jpeg"><img width="1200" src="https://a.l3n.co/i/leFWlr.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/lePdpH.jpeg"><img src="https://b.l3n.co/i/lePdpH.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/leP3oZ.jpeg"><img src="https://a.l3n.co/i/leP3oZ.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="dino02">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lePqF1.jpeg"><img width="1200" src="https://c.l3n.co/i/lePqF1.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/lePSFv.jpeg"><img src="https://c.l3n.co/i/lePSFv.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/lePK2P.jpeg"><img src="https://b.l3n.co/i/lePK2P.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="dino03">
-<div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lePpJm.jpeg"><img src="https://a.l3n.co/i/lePpJm.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lePOxo.jpeg"><img src="https://a.l3n.co/i/lePOxo.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lePm0c.jpeg"><img src="https://a.l3n.co/i/lePm0c.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/lePsBK.jpeg"><img src="https://b.l3n.co/i/lePsBK.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="dino04">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lePlR9.jpeg"><img width="1200" src="https://c.l3n.co/i/lePlR9.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/leP7ei.jpeg"><img src="https://c.l3n.co/i/leP7ei.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/lePz72.jpeg"><img src="https://b.l3n.co/i/lePz72.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="dino05">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePoJb.jpeg"><img width="1200" src="https://b.l3n.co/i/lePoJb.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePLoz.jpeg"><img width="1200" src="https://b.l3n.co/i/lePLoz.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/lePnIC.jpeg"><img src="https://b.l3n.co/i/lePnIC.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/lePY8T.jpeg"><img src="https://c.l3n.co/i/lePY8T.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lePvB5.jpeg"><img src="https://a.l3n.co/i/lePvB5.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lePue7.jpeg"><img src="https://a.l3n.co/i/lePue7.jpeg"></a></div>
-
-</div>
-
-
-</section><section class="photoParagraph"><p>East of the red foxes and dinosaurs are wolves and wolverines.
-However, these animals are known to be hard to spot.
-The wolf enclosure has a viewing tower that one can enter, however, even from here the wolves are nowhere to be seen.</p>
-<p>South of the wolves are skyways tied between the trees.
-This skywalk connects the East road with the West road, however you may only walk on it from East to West.</p></section>
-
-<section class="sec" id="wolf-tower">
-
-<div class="neatPhoto"><a href="https://a.l3n.co/i/lefkZv.jpeg"><img src="https://a.l3n.co/i/lefkZv.jpeg"></a></div>
-
-</section>
-<section class="sec" id="skyway">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leFDK3.jpeg"><img width="1200" src="https://c.l3n.co/i/leFDK3.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lefr5i.jpeg"><img src="https://a.l3n.co/i/lefr5i.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/leFNf0.jpeg"><img src="https://b.l3n.co/i/leFNf0.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lefRO9.jpeg"><img src="https://a.l3n.co/i/lefRO9.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/lef1To.jpeg"><img src="https://c.l3n.co/i/lef1To.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lefTc2.jpeg"><img width="1200" src="https://c.l3n.co/i/lefTc2.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>To the North of the wolves is a brown bear.
-Unlike the wolves the bear is hard to miss.
-Every now and then a caretaker throws in some apples and the bear munches on them as a quick snack before it lies down to relax by the pool.</p></section>
-
-<section class="sec" id="bear">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePDyr.jpeg"><img width="1200" src="https://b.l3n.co/i/lePDyr.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFiXF.jpeg"><img width="1200" src="https://b.l3n.co/i/leFiXF.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/leFI40.jpeg"><img src="https://c.l3n.co/i/leFI40.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/leF0r3.jpeg"><img src="https://a.l3n.co/i/leF0r3.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFZND.jpeg"><img width="1200" src="https://a.l3n.co/i/leFZND.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>Next to the bear enclosure is a restaurant.
-To the north of that is owl, lynx, raccoon and arctic fox enclosures, however, only the owls could be spotted for the current post.
-Further East are wild boar.
-The boars have plowed up all the ground in their enclosure to which they like to lay in the wet mud.</p></section>
-
-<section class="sec" id="restourant">
-
-<div class="neatPhoto"><a href="https://a.l3n.co/i/lePFU0.jpeg"><img src="https://a.l3n.co/i/lePFU0.jpeg"></a></div>
-
-</section>
-<section class="sec" id="owl">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFEka.jpeg"><img width="1200" src="https://a.l3n.co/i/leFEka.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leFJrx.jpeg"><img width="1200" src="https://c.l3n.co/i/leFJrx.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFQ4H.jpeg"><img width="1200" src="https://b.l3n.co/i/leFQ4H.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFRaQ.jpeg"><img width="1200" src="https://a.l3n.co/i/leFRaQ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lePPRF.jpeg"><img src="https://a.l3n.co/i/lePPRF.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/leFriq.jpeg"><img src="https://c.l3n.co/i/leFriq.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFVP1.jpeg"><img width="1200" src="https://a.l3n.co/i/leFVP1.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePf73.jpeg"><img width="1200" src="https://b.l3n.co/i/lePf73.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="boar">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePbuA.jpeg"><img width="1200" src="https://b.l3n.co/i/lePbuA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/lePx8M.jpeg"><img width="1200" src="https://c.l3n.co/i/lePx8M.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/lePcID.jpeg"><img src="https://c.l3n.co/i/lePcID.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lePXmq.jpeg"><img src="https://a.l3n.co/i/lePXmq.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFdic.jpeg"><img width="1200" src="https://b.l3n.co/i/leFdic.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>After that, if one follows the road North, passes yet another playground, turns on the road and then passes yet some more playful goats they'll arrive at the moose enclosure.
-The moose here are friendly and sometimes the children can get apples from the caretaker to feed directly to the moose.
-Next to the enclosure is also some European Bison.
-These species of bison are near-threatened which makes them a spectacle to see up front.</p></section>
-
-<section class="sec" id="goat">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leFBMZ.jpeg"><img width="1200" src="https://c.l3n.co/i/leFBMZ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFmaP.jpeg"><img width="1200" src="https://a.l3n.co/i/leFmaP.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/leF36m.jpeg"><img src="https://b.l3n.co/i/leF36m.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/leFqdK.jpeg"><img src="https://a.l3n.co/i/leFqdK.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="moose">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leF4zi.jpeg"><img width="1200" src="https://c.l3n.co/i/leF4zi.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFKbo.jpeg"><img width="1200" src="https://b.l3n.co/i/leFKbo.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leFOK2.jpeg"><img width="1200" src="https://c.l3n.co/i/leFOK2.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/leFHPv.jpeg"><img src="https://b.l3n.co/i/leFHPv.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/leFzjC.jpeg"><img src="https://a.l3n.co/i/leFzjC.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="bison">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leF7t9.jpeg"><img width="1200" src="https://a.l3n.co/i/leF7t9.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>The next enclosure contains a golden eagle.
-While the eagles photos were taken some fallow deers watched the photographer from the shade of a tree.
-Further down are aurochs and muskox.
-In reality the auroch has gone extinct, however, a new species of cattle was bred to look like aurochs.
-This human made species is the one visible in the park today.</p></section>
-
-<section class="sec" id="eagle">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leFSd5.jpeg"><img width="1200" src="https://c.l3n.co/i/leFSd5.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="fallow-deer">
-<div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFeMz.jpeg"><img width="1200" src="https://a.l3n.co/i/leFeMz.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFnhT.jpeg"><img width="1200" src="https://b.l3n.co/i/leFnhT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leFL6b.jpeg"><img width="1200" src="https://c.l3n.co/i/leFL6b.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="auroch">
-
-<div class="neatPhoto"><a href="https://c.l3n.co/i/leP5ea.jpeg"><img src="https://c.l3n.co/i/leP5ea.jpeg"></a></div>
-
-</section>
-<section class="sec" id="muskox">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFMz7.jpeg"><img width="1200" src="https://b.l3n.co/i/leFMz7.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leFYwr.jpeg"><img width="1200" src="https://c.l3n.co/i/leFYwr.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>In the corner of the forest are reindeer.
-Some young reindeer paced back and forward alongside the fence.
-Reindeer are native to North Scandinavia and Russia, and they gather in large herds, however, these 3 reindeer are in the Southern landscape of Scania.
-Inside a shed there was an adult reindeer, however it was difficult to see from the outside.</p></section>
-
-<section class="sec" id="rain">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lePyQQ.jpeg"><img width="1200" src="https://b.l3n.co/i/lePyQQ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/lePGye.jpeg"><img src="https://b.l3n.co/i/lePGye.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lePhTk.jpeg"><img src="https://a.l3n.co/i/lePhTk.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lef8UH.jpeg"><img width="1200" src="https://b.l3n.co/i/lef8UH.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/lef27x.jpeg"><img src="https://c.l3n.co/i/lef27x.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lefjuK.jpeg"><img src="https://a.l3n.co/i/lefjuK.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefIAZ.jpeg"><img width="1200" src="https://a.l3n.co/i/lefIAZ.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>The last enclosure contains red deer which graze the grass of their large field.
-Red deer exist in large populations in Southern Sweden and across Europe.
-While the male deers keeps a watch out on the herd, the fowls play around, and once they get thirsty they stroll down for some puddle water.</p></section>
-
-<section class="sec" id="deer-interlude">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFutF.jpeg"><img width="1200" src="https://b.l3n.co/i/leFutF.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFfjD.jpeg"><img width="1200" src="https://a.l3n.co/i/leFfjD.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="red-deer">
-<div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leUi2Z.jpeg"><img width="1200" src="https://c.l3n.co/i/leUi2Z.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leUAYK.jpeg"><img width="1200" src="https://b.l3n.co/i/leUAYK.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/leF51k.jpeg"><img src="https://b.l3n.co/i/leF51k.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/leFwza.jpeg"><img src="https://b.l3n.co/i/leFwza.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFchM.jpeg"><img width="1200" src="https://b.l3n.co/i/leFchM.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFUYA.jpeg"><img width="1200" src="https://a.l3n.co/i/leFUYA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://c.l3n.co/i/leFFqq.jpeg"><img src="https://c.l3n.co/i/leFFqq.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/leFxwe.jpeg"><img src="https://c.l3n.co/i/leFxwe.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFbCQ.jpeg"><img width="1200" src="https://a.l3n.co/i/leFbCQ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/leFafH.jpeg"><img width="1200" src="https://b.l3n.co/i/leFafH.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/leU201.jpeg"><img src="https://a.l3n.co/i/leU201.jpeg"></a></div>
-<div class="img"><a href="https://b.l3n.co/i/leU0Sm.jpeg"><img src="https://b.l3n.co/i/leU0Sm.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://c.l3n.co/i/leU8qc.jpeg"><img width="1200" src="https://c.l3n.co/i/leU8qc.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leFGKx.jpeg"><img width="1200" src="https://a.l3n.co/i/leFGKx.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/leUjCP.jpeg"><img width="1200" src="https://a.l3n.co/i/leUjCP.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>And so a full lap around Skånes Djurpark has been completed.
-In the park there are animals in full view and animals who you'd mostly never see.
-Probably it's better for the animals to get well rested when they take a midday nap rather than to get woken up by some noisy children who visit the park.
-After all, the park makes you feel like it was built for children.
-Not only because there are plenty of playgrounds scattered around, but also because there are things unrelated to animals like the dinosaur path and the sky walk.
-Even on the way out of the park children showering under a small water tower could be seen.
-Was the park built as a big amusement park, or is there another reason for its establishment?
-One may wonder.</p></section>
-
-<section class="sec" id="outro">
-<div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lefgnm.jpeg"><img width="1200" src="https://b.l3n.co/i/lefgnm.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://a.l3n.co/i/lefCu5.jpeg"><img src="https://a.l3n.co/i/lefCu5.jpeg"></a></div>
-<div class="img"><a href="https://c.l3n.co/i/leN512.jpeg"><img src="https://c.l3n.co/i/leN512.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lefQAz.jpeg"><img width="1200" src="https://b.l3n.co/i/lefQAz.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefVVT.jpeg"><img width="1200" src="https://a.l3n.co/i/lefVVT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://b.l3n.co/i/lef9nb.jpeg"><img src="https://b.l3n.co/i/lef9nb.jpeg"></a></div>
-<div class="img"><a href="https://a.l3n.co/i/lefmOF.jpeg"><img src="https://a.l3n.co/i/lefmOF.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://a.l3n.co/i/lefd57.jpeg"><img width="1200" src="https://a.l3n.co/i/lefd57.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://b.l3n.co/i/lefBEr.jpeg"><img width="1200" src="https://b.l3n.co/i/lefBEr.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<table class="credits">
-<tr><td colspan="2">Summary</td></tr>
-<tr>
-<td>Photographer</td>
-<td>Crasy Wolfang</td>
-</tr>
-<tr>
-<td>Sessions</td>
-<td>1 session</td>
-</tr>
-<tr>
-<td>Destination</td>
-<td>
-Skånes Djurpark, Höör
-</td>
-</tr>
-</table>
-
-<div id="bottom">
-<hr>
-©CrasyWolfang 2014-2024
-✉ <adress>forwardtowolf@gmail.com</adress>
-<a href="#top" style="float: right; color: grey;">top ↑</a>
-</div>
-</div>
-
-</body>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-incipit{
+			font-weight: bold;
+			padding-left: 0.4em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2208skdp">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2208skdp">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/video">Video Production</a></li>
+					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
+				</ul>
+			</nav>
+			<div class="title">
+				<h1>Skånes Djurpark</h1>
+				
+				<span class="title-left">Zoo photography</span>
+				
+				<span class="title-right"><span style="color: LightGray;">published: </span>2024年06月22日</span>
+			</div>
+			<div class="photo-content">
+				<p>In the middle of Scania outside a town called Höör is Skånes Djurpark (Scania Animal Park).
+				It's situated about 3 km from the town's train station and only has a bus stop outside.
+				The bus makes a stop on a quiet country road where nothing is especially noticeable in the surroundings.
+				Once the bus leaves a large sign behind is revealed with the text "Skånes Djurpark."</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec"><div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://b.l3n.co/i/lef6sC.jpeg"><img src="https://b.l3n.co/i/lef6sC.jpeg"></a></div></div></div></div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>The first enclosure is marked out with a soft wooden fence and inside some goats rest in the shade.
+				This is a petting zoo and as the morning visitors enter the enclosure the goats get up to welcome the visitors.
+				Among the goats one walked out to a corner, stuck a tree branch onto itself and began to gnaw on the tree bark.
+				Meanwhile the goat kids approached the enclosure's visitors to receive some scratches.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lefsc3.jpeg"><img src="https://b.l3n.co/i/lefsc3.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leNGKv.jpeg"><img src="https://b.l3n.co/i/leNGKv.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/leNafC.jpeg"><img src="https://c.l3n.co/i/leNafC.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/leP2j5.jpeg"><img src="https://b.l3n.co/i/leP2j5.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leP8qz.jpeg"><img src="https://a.l3n.co/i/leP8qz.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lePAYT.jpeg"><img src="https://c.l3n.co/i/lePAYT.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePWhb.jpeg"><img src="https://b.l3n.co/i/lePWhb.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>Once one exit the back of the enclosure they'll find yet another petting zoo.
+				This part of the petting zoo contain sheep.
+				There are also some small enclosures within and inside of those are rabbits and chickens.
+				Here one of the black sheep approached the photographer and flickered its tongue into the air as it received some back good scratches.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://a.l3n.co/i/lef4g0.jpeg"><img src="https://a.l3n.co/i/lef4g0.jpeg"></a></div></div></div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefz5a.jpeg"><img src="https://a.l3n.co/i/lefz5a.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/lePIwF.jpeg"><img src="https://b.l3n.co/i/lePIwF.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lePg13.jpeg"><img src="https://a.l3n.co/i/lePg13.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lePrp0.jpeg"><img src="https://c.l3n.co/i/lePrp0.jpeg"></a></div></div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leP0Sr.jpeg"><img src="https://c.l3n.co/i/leP0Sr.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lefpDq.jpeg"><img src="https://c.l3n.co/i/lefpDq.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/lefHVM.jpeg"><img src="https://c.l3n.co/i/lefHVM.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/leflvQ.jpeg"><img src="https://b.l3n.co/i/leflvQ.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lefOWA.jpeg"><img src="https://a.l3n.co/i/lefOWA.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/lefKsD.jpeg"><img src="https://b.l3n.co/i/lefKsD.jpeg"></a></div>
+						</div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lePtfD.jpeg"><img src="https://a.l3n.co/i/lePtfD.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lePjC7.jpeg"><img src="https://a.l3n.co/i/lePjC7.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/lefeEe.jpeg"><img src="https://b.l3n.co/i/lefeEe.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>Next up is a playground.
+				However, from here the park gives a feeling that it was built for children.
+				The next enclosure has figures from a children's TV show which move up and down as a tractor is pulled alongside a rail.
+				Down the track a few figures of pigs with water guns squirt water onto the amusement park passengers.
+				At least there are two storks that have built a nest on top of the ride entrance from which they watch down onto the visitors.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePTBA.jpeg"><img src="https://b.l3n.co/i/lePTBA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lePR0q.jpeg"><img src="https://c.l3n.co/i/lePR0q.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/lefvcx.jpeg"><img src="https://c.l3n.co/i/lefvcx.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lefMgH.jpeg"><img src="https://a.l3n.co/i/lefMgH.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefnHk.jpeg"><img src="https://a.l3n.co/i/lefnHk.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lefY31.jpeg"><img src="https://c.l3n.co/i/lefY31.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>When you leave the playground and get back onto the main road there will be an enclosure for domestic pigs and inside a pale piglet played and ran around in the green grass.
+				After the pig pen is a pond with seals.
+				The surface of the pond moves in a mesmerizing fashion.
+				Then the water surface is broken by a seal who swims around for a short while before it dives back under water.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefN9Z.jpeg"><img src="https://a.l3n.co/i/lefN9Z.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefoDc.jpeg"><img src="https://a.l3n.co/i/lefoDc.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/leP62Q.jpeg"><img src="https://b.l3n.co/i/leP62Q.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/lefPvP.jpeg"><img src="https://b.l3n.co/i/lefPvP.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lePEYM.jpeg"><img src="https://c.l3n.co/i/lePEYM.jpeg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lefDWK.jpeg"><img src="https://b.l3n.co/i/lefDWK.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lePCCa.jpeg"><img src="https://a.l3n.co/i/lePCCa.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/lePJSe.jpeg"><img src="https://c.l3n.co/i/lePJSe.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/lefUki.jpeg"><img src="https://c.l3n.co/i/lefUki.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lefcHo.jpeg"><img src="https://b.l3n.co/i/lefcHo.jpeg"></a></div></div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefXX9.jpeg"><img src="https://a.l3n.co/i/lefXX9.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lefwr2.jpeg"><img src="https://b.l3n.co/i/lefwr2.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lefx3v.jpeg"><img src="https://c.l3n.co/i/lefx3v.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>If one crosses the pond they'll get to the badger enclosure and the wild cat enclosure.
+				However, neither of these animals were out and visible that day.
+				Further up the road is the red fox enclosure.
+				The fox ran around and played, and then gnawed on a piece of meat for a short while before laying itself down in a little hut.
+				Regular fox behavior if anything.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lefa9z.jpeg"><img src="https://c.l3n.co/i/lefa9z.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lefyNC.jpeg"><img src="https://a.l3n.co/i/lefyNC.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/lefGW5.jpeg"><img src="https://b.l3n.co/i/lefGW5.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFAk7.jpeg"><img src="https://b.l3n.co/i/leFAk7.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/lefhLT.jpeg"><img src="https://b.l3n.co/i/lefhLT.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/leF2Gb.jpeg"><img src="https://c.l3n.co/i/leF2Gb.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>After that there is a dinosaur park behind the red fox enclosure.
+				Hold on a minute... dinosaurs?
+				Along the road are dinosaurs animatronics.
+				Brontosaurus, pterodactyl, tyrannosaurus rex...
+				At the exit of the road is even a dinosaur souvenir shop.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/lePQxk.jpeg"><img src="https://b.l3n.co/i/lePQxk.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/leP91x.jpeg"><img src="https://c.l3n.co/i/leP91x.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFWlr.jpeg"><img src="https://a.l3n.co/i/leFWlr.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/lePdpH.jpeg"><img src="https://b.l3n.co/i/lePdpH.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/leP3oZ.jpeg"><img src="https://a.l3n.co/i/leP3oZ.jpeg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lePqF1.jpeg"><img src="https://c.l3n.co/i/lePqF1.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/lePSFv.jpeg"><img src="https://c.l3n.co/i/lePSFv.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/lePK2P.jpeg"><img src="https://b.l3n.co/i/lePK2P.jpeg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lePpJm.jpeg"><img src="https://a.l3n.co/i/lePpJm.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lePOxo.jpeg"><img src="https://a.l3n.co/i/lePOxo.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lePm0c.jpeg"><img src="https://a.l3n.co/i/lePm0c.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/lePsBK.jpeg"><img src="https://b.l3n.co/i/lePsBK.jpeg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lePlR9.jpeg"><img src="https://c.l3n.co/i/lePlR9.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/leP7ei.jpeg"><img src="https://c.l3n.co/i/leP7ei.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/lePz72.jpeg"><img src="https://b.l3n.co/i/lePz72.jpeg"></a></div>
+						</div>
+					</div>
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePoJb.jpeg"><img src="https://b.l3n.co/i/lePoJb.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePLoz.jpeg"><img src="https://b.l3n.co/i/lePLoz.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/lePnIC.jpeg"><img src="https://b.l3n.co/i/lePnIC.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/lePY8T.jpeg"><img src="https://c.l3n.co/i/lePY8T.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lePvB5.jpeg"><img src="https://a.l3n.co/i/lePvB5.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lePue7.jpeg"><img src="https://a.l3n.co/i/lePue7.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>East of the red foxes and dinosaurs are wolves and wolverines.
+				However, these animals are known to be hard to spot.
+				The wolf enclosure has a viewing tower that one can enter, however, even from here the wolves are nowhere to be seen.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://a.l3n.co/i/lefkZv.jpeg"><img src="https://a.l3n.co/i/lefkZv.jpeg"></a></div></div></div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leFDK3.jpeg"><img src="https://c.l3n.co/i/leFDK3.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lefr5i.jpeg"><img src="https://a.l3n.co/i/lefr5i.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/leFNf0.jpeg"><img src="https://b.l3n.co/i/leFNf0.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lefRO9.jpeg"><img src="https://a.l3n.co/i/lefRO9.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/lef1To.jpeg"><img src="https://c.l3n.co/i/lef1To.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lefTc2.jpeg"><img src="https://c.l3n.co/i/lefTc2.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>To the North of the wolves is a brown bear.
+				Unlike the wolves the bear is hard to miss.
+				Every now and then a caretaker throws in some apples and the bear munches on them as a quick snack before it lies down to relax by the pool.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePDyr.jpeg"><img src="https://b.l3n.co/i/lePDyr.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFiXF.jpeg"><img src="https://b.l3n.co/i/leFiXF.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/leFI40.jpeg"><img src="https://c.l3n.co/i/leFI40.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/leF0r3.jpeg"><img src="https://a.l3n.co/i/leF0r3.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFZND.jpeg"><img src="https://a.l3n.co/i/leFZND.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>Next to the bear enclosure is a restaurant.
+				To the north of that is owl, lynx, raccoon and arctic fox enclosures, however, only the owls could be spotted for the current post.
+				Further East are wild boar.
+				The boars have plowed up all the ground in their enclosure to which they like to lay in the wet mud.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://a.l3n.co/i/lePFU0.jpeg"><img src="https://a.l3n.co/i/lePFU0.jpeg"></a></div></div></div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFEka.jpeg"><img src="https://a.l3n.co/i/leFEka.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leFJrx.jpeg"><img src="https://c.l3n.co/i/leFJrx.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFQ4H.jpeg"><img src="https://b.l3n.co/i/leFQ4H.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFRaQ.jpeg"><img src="https://a.l3n.co/i/leFRaQ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lePPRF.jpeg"><img src="https://a.l3n.co/i/lePPRF.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/leFriq.jpeg"><img src="https://c.l3n.co/i/leFriq.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFVP1.jpeg"><img src="https://a.l3n.co/i/leFVP1.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePf73.jpeg"><img src="https://b.l3n.co/i/lePf73.jpeg"></a></div></div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePbuA.jpeg"><img src="https://b.l3n.co/i/lePbuA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lePx8M.jpeg"><img src="https://c.l3n.co/i/lePx8M.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/lePcID.jpeg"><img src="https://c.l3n.co/i/lePcID.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lePXmq.jpeg"><img src="https://a.l3n.co/i/lePXmq.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFdic.jpeg"><img src="https://b.l3n.co/i/leFdic.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>After that, if one follows the road North, passes yet another playground, turns on the road and then passes yet some more playful goats they'll arrive at the moose enclosure.
+				The moose here are friendly and sometimes the children can get apples from the caretaker to feed directly to the moose.
+				Next to the enclosure is also some European Bison.
+				These species of bison are near-threatened which makes them a spectacle to see up front.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leFBMZ.jpeg"><img src="https://c.l3n.co/i/leFBMZ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFmaP.jpeg"><img src="https://a.l3n.co/i/leFmaP.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/leF36m.jpeg"><img src="https://b.l3n.co/i/leF36m.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/leFqdK.jpeg"><img src="https://a.l3n.co/i/leFqdK.jpeg"></a></div>
+						</div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leF4zi.jpeg"><img src="https://c.l3n.co/i/leF4zi.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFKbo.jpeg"><img src="https://b.l3n.co/i/leFKbo.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leFOK2.jpeg"><img src="https://c.l3n.co/i/leFOK2.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/leFHPv.jpeg"><img src="https://b.l3n.co/i/leFHPv.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/leFzjC.jpeg"><img src="https://a.l3n.co/i/leFzjC.jpeg"></a></div>
+						</div>
+					</div>
+					
+					
+			
+					<div class="photorow"><div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leF7t9.jpeg"><img src="https://a.l3n.co/i/leF7t9.jpeg"></a></div></div></div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>The next enclosure contains a golden eagle.
+				While the eagles photos were taken some fallow deers watched the photographer from the shade of a tree.
+				Further down are aurochs and muskox.
+				In reality the auroch has gone extinct, however, a new species of cattle was bred to look like aurochs.
+				This human made species is the one visible in the park today.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow"><div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leFSd5.jpeg"><img src="https://c.l3n.co/i/leFSd5.jpeg"></a></div></div></div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFeMz.jpeg"><img src="https://a.l3n.co/i/leFeMz.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFnhT.jpeg"><img src="https://b.l3n.co/i/leFnhT.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leFL6b.jpeg"><img src="https://c.l3n.co/i/leFL6b.jpeg"></a></div></div>
+					</div>
+					
+					
+			
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://c.l3n.co/i/leP5ea.jpeg"><img src="https://c.l3n.co/i/leP5ea.jpeg"></a></div></div></div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFMz7.jpeg"><img src="https://b.l3n.co/i/leFMz7.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leFYwr.jpeg"><img src="https://c.l3n.co/i/leFYwr.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>In the corner of the forest are reindeer.
+				Some young reindeer paced back and forward alongside the fence.
+				Reindeer are native to North Scandinavia and Russia, and they gather in large herds, however, these 3 reindeer are in the Southern landscape of Scania.
+				Inside a shed there was an adult reindeer, however it was difficult to see from the outside.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lePyQQ.jpeg"><img src="https://b.l3n.co/i/lePyQQ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/lePGye.jpeg"><img src="https://b.l3n.co/i/lePGye.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lePhTk.jpeg"><img src="https://a.l3n.co/i/lePhTk.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lef8UH.jpeg"><img src="https://b.l3n.co/i/lef8UH.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/lef27x.jpeg"><img src="https://c.l3n.co/i/lef27x.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lefjuK.jpeg"><img src="https://a.l3n.co/i/lefjuK.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefIAZ.jpeg"><img src="https://a.l3n.co/i/lefIAZ.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>The last enclosure contains red deer which graze the grass of their large field.
+				Red deer exist in large populations in Southern Sweden and across Europe.
+				While the male deers keeps a watch out on the herd, the fowls play around, and once they get thirsty they stroll down for some puddle water.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFutF.jpeg"><img src="https://b.l3n.co/i/leFutF.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFfjD.jpeg"><img src="https://a.l3n.co/i/leFfjD.jpeg"></a></div></div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leUi2Z.jpeg"><img src="https://c.l3n.co/i/leUi2Z.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leUAYK.jpeg"><img src="https://b.l3n.co/i/leUAYK.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/leF51k.jpeg"><img src="https://b.l3n.co/i/leF51k.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/leFwza.jpeg"><img src="https://b.l3n.co/i/leFwza.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFchM.jpeg"><img src="https://b.l3n.co/i/leFchM.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFUYA.jpeg"><img src="https://a.l3n.co/i/leFUYA.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/leFFqq.jpeg"><img src="https://c.l3n.co/i/leFFqq.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/leFxwe.jpeg"><img src="https://c.l3n.co/i/leFxwe.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFbCQ.jpeg"><img src="https://a.l3n.co/i/leFbCQ.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/leFafH.jpeg"><img src="https://b.l3n.co/i/leFafH.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/leU201.jpeg"><img src="https://a.l3n.co/i/leU201.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/leU0Sm.jpeg"><img src="https://b.l3n.co/i/leU0Sm.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/leU8qc.jpeg"><img src="https://c.l3n.co/i/leU8qc.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leFGKx.jpeg"><img src="https://a.l3n.co/i/leFGKx.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/leUjCP.jpeg"><img src="https://a.l3n.co/i/leUjCP.jpeg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				<p>And so a full lap around Skånes Djurpark has been completed.
+				In the park there are animals in full view and animals who you'd mostly never see.
+				Probably it's better for the animals to get well rested when they take a midday nap rather than to get woken up by some noisy children who visit the park.
+				After all, the park makes you feel like it was built for children.
+				Not only because there are plenty of playgrounds scattered around, but also because there are things unrelated to animals like the dinosaur path and the sky walk.
+				Even on the way out of the park children showering under a small water tower could be seen.
+				Was the park built as a big amusement park, or is there another reason for its establishment?
+				One may wonder.</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lefgnm.jpeg"><img src="https://b.l3n.co/i/lefgnm.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/lefCu5.jpeg"><img src="https://a.l3n.co/i/lefCu5.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/leN512.jpeg"><img src="https://c.l3n.co/i/leN512.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lefQAz.jpeg"><img src="https://b.l3n.co/i/lefQAz.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefVVT.jpeg"><img src="https://a.l3n.co/i/lefVVT.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/lef9nb.jpeg"><img src="https://b.l3n.co/i/lef9nb.jpeg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/lefmOF.jpeg"><img src="https://a.l3n.co/i/lefmOF.jpeg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lefd57.jpeg"><img src="https://a.l3n.co/i/lefd57.jpeg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lefBEr.jpeg"><img src="https://b.l3n.co/i/lefBEr.jpeg"></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>Photographer</td>
+					<td>Crasy Wolfang</td>
+				</tr>
+				
+			
+				<tr>
+					<td>Sessions</td>
+					<td>1 session</td>
+				</tr>
+				
+			
+				<tr>
+					<td>Destination</td>
+					<td>
+						Höör
+						<ol><li>Skånes Djurpark</li></ol>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<a href="https://crasywolfang.com/en/post/2205kybo">
+				<div class="photoCard">
+					<h1>Kyoto Botanical Garden</h1>
+					<span class="card-left">Botanic photography</span>
+					<span class="card-right">2024-06-22</span>
+					<img src="https://a.l3n.co/i/lDYLG5.jpeg">
+					
+					<span class="card-right">Kyoto, May 2022</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2206lubo">
+				<div class="photoCard">
+					<h1>Lund Botanical Garden</h1>
+					<span class="card-left">Botanic photography</span>
+					<span class="card-right">2024-06-22</span>
+					<img src="https://b.l3n.co/i/zHZj3o.jpeg">
+					
+					<span class="card-right">Lund, June 2022</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/en/post/2206otzo">
+				<div class="photoCard">
+					<h1>Tennoji Zoo</h1>
+					<span class="card-left">Zoo photography</span>
+					<span class="card-right">2024-06-22</span>
+					<img src="https://c.l3n.co/i/lDYvLC.jpeg">
+					
+					<span class="card-right">Osaka, June 2022</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
 </html>

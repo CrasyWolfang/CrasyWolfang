@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-incipit{
+			font-weight: bold;
+			padding-left: 0.4em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2308rinb">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2308rinb">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/video">動画制作</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
+				</ul>
+			</nav>
+			<div class="title">
+				<h1>リネベック</h1>
+				
+				<span class="title-left">水域撮影</span>
+				
+				<span class="title-right">TO COME</span>
+			</div>
+			<div class="photo-content">
+				<p>スウェーデンのルンドの地図に目を通せれば街の西にリネベックの谷というマークがおかしく書いてある。
+				マークは家屋とゴルフコースの間にあるが、インターネットにアップした写真を見るとここに広い谷があるそうである。
+				ですから、谷へ行って調べようと思った。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec"><div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://c.l3n.co/i/S7ORYA.jpg"><img src="https://c.l3n.co/i/S7ORYA.jpg"></a></div></div></div></div>
+				
+				
+			
+				
+				<p>地図では谷が小川みたいである。
+				ここまで乗って谷に沿っての舗装道を歩き、隣には趣味の畑だけがある。
+				自転車を停め、谷へ寄せると青々とした谷が目線に不思議に入る。
+				底で小川がコンクリートのパイプから流れる。
+				上の背景で風車がグルグル回る。
+				この景色はルンドの街中ではないことは間違いない。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/S7OThM.jpg"><img src="https://b.l3n.co/i/S7OThM.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/S7OkCQ.jpg"><img src="https://c.l3n.co/i/S7OkCQ.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/S7OVKx.jpg"><img src="https://c.l3n.co/i/S7OVKx.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/S7O9fH.jpg"><img src="https://a.l3n.co/i/S7O9fH.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/S7OBqc.jpg"><img src="https://b.l3n.co/i/S7OBqc.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/S7Oq01.jpg"><img src="https://c.l3n.co/i/S7Oq01.jpg"></a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>谷は入れるが坂道はつらく草木が道を遮ってしまうので進みたえば小川を何回も越えなければならない。
+				最初に目に入る木は小川の隣の小さいリンゴの木。
+				また、谷に沿っては梅の木と桜の木も立つ。
+				八月は梅の旬から届く果物を欲しいだけ食べられる。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/S7OQ1k.jpg"><img src="https://b.l3n.co/i/S7OQ1k.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/S7O32Z.jpg"><img src="https://b.l3n.co/i/S7O32Z.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/S7O6za.jpg"><img src="https://b.l3n.co/i/S7O6za.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/S7OmYK.jpg"><img src="https://a.l3n.co/i/S7OmYK.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7ODRr.jpg"><img src="https://a.l3n.co/i/S7ODRr.jpg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>スズメの群れが木に隠れている。
+				頭に木草を突っ込むとデンデンムシも見える。
+				実に、デンデンムシはたくのでよく見える。
+				そして、上を向くと牛が見える。
+				谷を進むとまた牛の群くれと出会って、牛がゆっくり退いてくれる。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7HIeP.jpg"><img src="https://a.l3n.co/i/S7HIeP.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/S7OKSm.jpg"><img src="https://c.l3n.co/i/S7OKSm.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/S7OCwe.jpg"><img src="https://c.l3n.co/i/S7OCwe.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/S7Opxi.jpg"><img src="https://a.l3n.co/i/S7Opxi.jpg"></a></div>
+						</div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/S7OO1o.jpg"><img src="https://b.l3n.co/i/S7OO1o.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/S7OHp9.jpg"><img src="https://c.l3n.co/i/S7OHp9.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/S7OlF2.jpg"><img src="https://a.l3n.co/i/S7OlF2.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/S7OS0v.jpg"><img src="https://c.l3n.co/i/S7OS0v.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/S7OeBC.jpg"><img src="https://b.l3n.co/i/S7OeBC.jpg"></a></div>
+						</div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7O4CP.jpg"><img src="https://a.l3n.co/i/S7O4CP.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/S7OnY5.jpg"><img src="https://c.l3n.co/i/S7OnY5.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7OL2z.jpg"><img src="https://a.l3n.co/i/S7OL2z.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/S7OYSb.jpg"><img src="https://b.l3n.co/i/S7OYSb.jpg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>谷の端に木の日陰がある。
+				上に大きなオークが広がり、道に柳が並ぶ。
+				それから丘を登って谷を出て谷を全部歩いた。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/S7OPF3.jpg"><img src="https://b.l3n.co/i/S7OPF3.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7OxeQ.jpg"><img src="https://a.l3n.co/i/S7OxeQ.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/S7OUBD.jpg"><img src="https://c.l3n.co/i/S7OUBD.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/S7Oyxa.jpg"><img src="https://c.l3n.co/i/S7Oyxa.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/S7H1U9.jpg"><img src="https://c.l3n.co/i/S7H1U9.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/S7Ob8A.jpg"><img src="https://b.l3n.co/i/S7Ob8A.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/S7OGRe.jpg"><img src="https://a.l3n.co/i/S7OGRe.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/S7Oa7k.jpg"><img src="https://c.l3n.co/i/S7Oa7k.jpg"></a></div></div>
+					</div>
+				</div>
+				
+				
+			
+				
+				<p>駐輪場へ戻る道だって谷の両側を歩ける。
+				北の側を歩くと畑の景色が見られる。
+				結論として、近くにいて穏やかな散歩をするなら行き先に加えたらいいと思う。
+				谷の歩きは一時間以内である。
+				そして、よかったらレイ麦の畑の道も歩いていい。</p>
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7OhFx.jpg"><img src="https://a.l3n.co/i/S7OhFx.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7Hj8K.jpg"><img src="https://a.l3n.co/i/S7Hj8K.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/S7H0QZ.jpg"><img src="https://c.l3n.co/i/S7H0QZ.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://c.l3n.co/i/S7H8IH.jpg"><img src="https://c.l3n.co/i/S7H8IH.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/S7HAm1.jpg"><img src="https://b.l3n.co/i/S7HAm1.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/S7HWoc.jpg"><img src="https://c.l3n.co/i/S7HWoc.jpg"></a></div></div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7Ht7o.jpg"><img src="https://a.l3n.co/i/S7Ht7o.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/S7HZym.jpg"><img src="https://b.l3n.co/i/S7HZym.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://c.l3n.co/i/S7HrTi.jpg"><img src="https://c.l3n.co/i/S7HrTi.jpg"></a></div>
+						</div>
+					</div>
+					
+					
+			
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/S7HTZ2.jpg"><img src="https://a.l3n.co/i/S7HTZ2.jpg"></a></div></div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://b.l3n.co/i/S7HC85.jpg"><img src="https://b.l3n.co/i/S7HC85.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/S7HQnT.jpg"><img src="https://b.l3n.co/i/S7HQnT.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/S7HkuC.jpg"><img src="https://a.l3n.co/i/S7HkuC.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://a.l3n.co/i/S7HVyb.jpg"><img src="https://a.l3n.co/i/S7HVyb.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://a.l3n.co/i/S7HJQz.jpg"><img src="https://a.l3n.co/i/S7HJQz.jpg"></a></div>
+							
+			
+							<div class="img"><a href="https://b.l3n.co/i/S7HdT7.jpg"><img src="https://b.l3n.co/i/S7HdT7.jpg"></a></div>
+						</div>
+						
+			
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/S7HEmv.jpg"><img src="https://b.l3n.co/i/S7HEmv.jpg"></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>撮影者</td>
+					<td>狼牙クレシ</td>
+				</tr>
+				
+			
+				<tr>
+					<td>撮影回</td>
+					<td>1回</td>
+				</tr>
+				
+			
+				<tr>
+					<td>行き先</td>
+					<td>
+						ルンド （Lund）
+						<ol><li>リネベックの谷 （Rinnebäcksravinen）</li></ol>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<a href="https://crasywolfang.com/jp/post/2309nobb">
+				<div class="photoCard">
+					<h1>ノッベレーブ湿原</h1>
+					<span class="card-left">草原撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://b.l3n.co/i/Map1BF.jpg">
+					
+					<span class="card-right">ルンド、2023年09月</span>
+				</div>
+			</a>
+			
+			
+			<a href="https://crasywolfang.com/jp/post/2310boma">
+				<div class="photoCard">
+					<h1>季節の変化</h1>
+					<span class="card-left">植物撮影</span>
+					<span class="card-right">TO COME</span>
+					<img src="https://a.l3n.co/i/YIGXh0.jpg">
+					
+					<span class="card-right">ルンド、2023年10月</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>
