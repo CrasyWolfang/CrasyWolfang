@@ -1,787 +1,714 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
-		<style>
-			body{background-color: #000000;}
-			a{
-			color: #D3D3D3;
-			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
-			color: #ffffff;
-			max-width: 1200px;
-			min-width: 640px;
-			margin-left: auto;
-			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
-			color: #ffffff;
-			text-decoration: none;
-			}
-			#header img{
-			display: block;
-			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
-			margin: 0em;
-			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
-			display: inline;
-			padding: 0em;
-			font-size: 1.3em;
-			border: 2px solid #808080;
-			}
-			#topMenu a{
-			padding-top: 0em;
-			padding-bottom: 0em;
-			padding-left: 2em;
-			padding-right: 2em;
-			color: #ffffff;
-			}
-			#bottom{
-			color: #808080;
-			background-color: #000000;
-			}
-			
-			.update{
-			margin: 0.5em;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			padding-left: 2em;
-			padding-right: 2em;
-			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
-			max-width: 80%;
-			max-height: 800px;
-			}
-			.updatePosts img{
-			max-height: 800px;
-			}
-			.updatePosts ul{
-			max-width: 600px;
-			margin-right: auto;
-			margin-left: auto;
-			}
-			.flowbutton {
-			padding: 1em;
-			gap: 1em;
-			}
-			.flowbutton li{
-			list-style-type: none;
-			margin-top: 0.5em;
-			color: #ffffff;
-			border: 1px solid #ffffff;
-			text-align: center;
-			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			
-			.catCard{
-			list-style: none;
-			padding-left: 0;
-			text-align: center;
-			font-size: 1.3em;
-			}
-			.catCard li{
-			margin: 0.3em;
-			display: inline-block;
-			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
-			width: 240px;
-			display: block;
-			}
-			.catCard a{
-			color: #ffffff;
-			display: block;
-			}
-			
-			.title{
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 800px;
-			padding: 1em;
-			padding-bottom: 2em;
-			}
-			.title h1{
-			border-bottom: 1px solid;
-			width: 100%;
-			margin: 0px;
-			}
-			.title-left{float: left;}
-			.title-right{
-			float: right;
-			text-align: right;
-			}
-			
-			.photo-content p{
-			padding-left: 1em;
-			padding-right: 1em;
-			text-indent: 2em;
-			}
-			.note {
-			margin: 1em;
-			border: 1px solid #ffffff;
-			}
-			
-			.ref{
-			color: #D3D3D3;
-			text-decoration: none;
-			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			
-			.photoCard{
-			color: #ffffff;
-			border: 2px solid #808080;
-			margin-top: 1em;
-			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
-			margin: 0px;
-			padding-left: 0.15em;
-			}
-			.card-incipit{
-			font-weight: bold;
-			padding-left: 0.4em;
-			}
-			.card-left{
-			float: left;
-			padding-left: 0.4em;
-			}
-			.card-right{
-			float: right;
-			text-align: right;
-			padding-right: 0.4em;
-			}
-			.photoCard img{
-			width: 100%;
-			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			
-			.imgWrap{
-			display: flex;
-			flex-direction: row;
-			gap: 0.5em;
-			padding-bottom: 0.25em;
-			padding-top: 0.25em;
-			margin-left: auto;
-			margin-right: auto;
-			justify-content: center;
-			}
-			.imgWrap img{
-			display: block;
-			max-width: 100%;
-			gap: 0.5em;
-			}
-			
-			.bibliography ul{
-			list-style-type: none;
-			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
-			margin-bottom: 0.5em;
-			}
-			
-			.largePhoto{
-			border: 1px solid #ffffff;
-			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
-			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
-			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
-			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
-			text-indent: 1em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
-			font-size: 1.3em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			text-indent: 2em;
-			}
-			.largePhoto p{
-			text-indent: 2em;
-			padding-left: 1em;
-			padding-right: 1em;
-			}
-			
-			.credits{
-			width: 100%;
-			border-collapse: collapse;
-			}
-			.credits td{
-			border: 1px solid #ffffff;
-			padding: 0.3em;
-			padding-left: 1em;
-			}
-			.credits td:first-child {
-			width: 12%;
-			white-space: nowrap;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2304meos">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2304meos">日本語</a></div>
-			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-			<nav id="topMenu">
-				<ul>
-					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/video">動画制作</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
-				</ul>
-			</nav>
-			<div class="title">
-				<h1>春の記憶</h1>
-				
-				<span class="title-left">季節撮影</span>
-				
-				<span class="title-right"><span style="color: LightGray;">発行日　</span>2023年07月20日</span>
-			</div>
-			<div class="photo-content">
-				<p>下記の写真は春の記憶である。
-				記憶の中、花・桜・芽があり、鳥は木・道・日光を楽しむ。
-				結局、記憶が霞んでしまうが、写真はずっと残るね。</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wkSDP.jpeg"><img src="https://i3.lensdump.com/i/6wkSDP.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6wkv9i.jpeg"><img src="https://i2.lensdump.com/i/6wkv9i.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6wkMG9.jpeg"><img src="https://i3.lensdump.com/i/6wkMG9.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wkuHv.jpeg"><img src="https://i.lensdump.com/i/6wkuHv.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://i2.lensdump.com/i/6w6vfA.jpeg"><img src="https://i2.lensdump.com/i/6w6vfA.jpeg"></a></div></div></div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wkcWb.jpeg"><img src="https://i2.lensdump.com/i/6wkcWb.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/6wkwGF.jpeg"><img src="https://i.lensdump.com/i/6wkwGF.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6w6WiQ.jpeg"><img src="https://i1.lensdump.com/i/6w6WiQ.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w6jLe.jpeg"><img src="https://i3.lensdump.com/i/6w6jLe.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/6wk5l0.jpeg"><img src="https://i3.lensdump.com/i/6wk5l0.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6wkX97.jpeg"><img src="https://i3.lensdump.com/i/6wkX97.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wkGXD.jpeg"><img src="https://i.lensdump.com/i/6wkGXD.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w624A.jpeg"><img src="https://i3.lensdump.com/i/6w624A.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w60ak.jpeg"><img src="https://i1.lensdump.com/i/6w60ak.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w6Zkx.jpeg"><img src="https://i3.lensdump.com/i/6w6Zkx.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w6glH.jpeg"><img src="https://i2.lensdump.com/i/6w6glH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/6wkf3z.jpeg"><img src="https://i3.lensdump.com/i/6wkf3z.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6w6rb1.jpeg"><img src="https://i3.lensdump.com/i/6w6rb1.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w61rc.jpeg"><img src="https://i2.lensdump.com/i/6w61rc.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/6w6R4K.jpeg"><img src="https://i.lensdump.com/i/6w6R4K.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6w6Jao.jpeg"><img src="https://i3.lensdump.com/i/6w6Jao.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w6TPZ.jpeg"><img src="https://i2.lensdump.com/i/6w6TPZ.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w6kiP.jpeg"><img src="https://i.lensdump.com/i/6w6kiP.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w66dm.jpeg"><img src="https://i3.lensdump.com/i/6w66dm.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w6CMi.jpeg"><img src="https://i1.lensdump.com/i/6w6CMi.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6w6V69.jpeg"><img src="https://i2.lensdump.com/i/6w6V69.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/6w69z2.jpeg"><img src="https://i.lensdump.com/i/6w69z2.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w6dbv.jpeg"><img src="https://i1.lensdump.com/i/6w6dbv.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/6w6BtC.jpeg"><img src="https://i.lensdump.com/i/6w6BtC.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6w6sPz.jpeg"><img src="https://i1.lensdump.com/i/6w6sPz.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w6m45.jpeg"><img src="https://i3.lensdump.com/i/6w6m45.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6w6Kdb.jpeg"><img src="https://i2.lensdump.com/i/6w6Kdb.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6w64jT.jpeg"><img src="https://i3.lensdump.com/i/6w64jT.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w6pM7.jpeg"><img src="https://i.lensdump.com/i/6w6pM7.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w67hr.jpeg"><img src="https://i3.lensdump.com/i/6w67hr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w6H6F.jpeg"><img src="https://i2.lensdump.com/i/6w6H6F.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/6w6lz3.jpeg"><img src="https://i3.lensdump.com/i/6w6lz3.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/6w6etD.jpeg"><img src="https://i2.lensdump.com/i/6w6etD.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w6zw0.jpeg"><img src="https://i.lensdump.com/i/6w6zw0.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w6nKq.jpeg"><img src="https://i3.lensdump.com/i/6w6nKq.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w6MjM.jpeg"><img src="https://i.lensdump.com/i/6w6MjM.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6w6NCk.jpeg"><img src="https://i2.lensdump.com/i/6w6NCk.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6w6YqQ.jpeg"><img src="https://i1.lensdump.com/i/6w6YqQ.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wQ6dM.jpeg"><img src="https://i.lensdump.com/i/6wQ6dM.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w6oMa.jpeg"><img src="https://i3.lensdump.com/i/6w6oMa.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w6uhe.jpeg"><img src="https://i.lensdump.com/i/6w6uhe.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/6wJuHx.jpeg"><img src="https://i3.lensdump.com/i/6wJuHx.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/6wJciZ.jpeg"><img src="https://i2.lensdump.com/i/6wJciZ.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wJyko.jpeg"><img src="https://i2.lensdump.com/i/6wJyko.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wJwai.jpeg"><img src="https://i.lensdump.com/i/6wJwai.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6wJMGe.jpeg"><img src="https://i2.lensdump.com/i/6wJMGe.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/6wJPr1.jpeg"><img src="https://i.lensdump.com/i/6wJPr1.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wJf3c.jpeg"><img src="https://i1.lensdump.com/i/6wJf3c.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w6fwH.jpeg"><img src="https://i3.lensdump.com/i/6w6fwH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/6w6w0Z.jpeg"><img src="https://i1.lensdump.com/i/6w6w0Z.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6wJbLm.jpeg"><img src="https://i1.lensdump.com/i/6wJbLm.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w6U11.jpeg"><img src="https://i.lensdump.com/i/6w6U11.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6w6cKc.jpeg"><img src="https://i2.lensdump.com/i/6w6cKc.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/6w6XfK.jpeg"><img src="https://i.lensdump.com/i/6w6XfK.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w6Pzx.jpeg"><img src="https://i1.lensdump.com/i/6w6Pzx.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6w6yYm.jpeg"><img src="https://i2.lensdump.com/i/6w6yYm.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6w6G2i.jpeg"><img src="https://i3.lensdump.com/i/6w6G2i.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6w6xqP.jpeg"><img src="https://i3.lensdump.com/i/6w6xqP.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w6hS9.jpeg"><img src="https://i2.lensdump.com/i/6w6hS9.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wCif5.jpeg"><img src="https://i2.lensdump.com/i/6wCif5.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/6wCA1v.jpeg"><img src="https://i1.lensdump.com/i/6wCA1v.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/6wC00z.jpeg"><img src="https://i.lensdump.com/i/6wC00z.jpeg"></a></div>
-						</div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wJ5l9.jpeg"><img src="https://i.lensdump.com/i/6wJ5l9.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wCr27.jpeg"><img src="https://i3.lensdump.com/i/6wCr27.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wCtJr.jpeg"><img src="https://i.lensdump.com/i/6wCtJr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/6wCRx3.jpeg"><img src="https://i1.lensdump.com/i/6wCRx3.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6wC6Fq.jpeg"><img src="https://i3.lensdump.com/i/6wC6Fq.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wCkpD.jpeg"><img src="https://i2.lensdump.com/i/6wCkpD.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6wCVoQ.jpeg"><img src="https://i2.lensdump.com/i/6wCVoQ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/6wCJIA.jpeg"><img src="https://i.lensdump.com/i/6wCJIA.jpeg"></a></div>
-						</div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6wCmxx.jpeg"><img src="https://i2.lensdump.com/i/6wCmxx.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6wCqJe.jpeg"><img src="https://i1.lensdump.com/i/6wCqJe.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wQWiz.jpeg"><img src="https://i.lensdump.com/i/6wQWiz.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/6wCOmZ.jpeg"><img src="https://i3.lensdump.com/i/6wCOmZ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/6wCz8m.jpeg"><img src="https://i2.lensdump.com/i/6wCz8m.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wQ24C.jpeg"><img src="https://i2.lensdump.com/i/6wQ24C.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wCKFc.jpeg"><img src="https://i1.lensdump.com/i/6wCKFc.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/6wCeeo.jpeg"><img src="https://i.lensdump.com/i/6wCeeo.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6wCny9.jpeg"><img src="https://i1.lensdump.com/i/6wCny9.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/6wCYUC.jpeg"><img src="https://i.lensdump.com/i/6wCYUC.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/6wCuI5.jpeg"><img src="https://i3.lensdump.com/i/6wCuI5.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wCf8b.jpeg"><img src="https://i2.lensdump.com/i/6wCf8b.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wQrb3.jpeg"><img src="https://i3.lensdump.com/i/6wQrb3.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/6wCUnr.jpeg"><img src="https://i1.lensdump.com/i/6wCUnr.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/6wCbT3.jpeg"><img src="https://i.lensdump.com/i/6wCbT3.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wCGsA.jpeg"><img src="https://i.lensdump.com/i/6wCGsA.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wCxUD.jpeg"><img src="https://i3.lensdump.com/i/6wCxUD.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wQjLb.jpeg"><img src="https://i3.lensdump.com/i/6wQjLb.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wQglF.jpeg"><img src="https://i1.lensdump.com/i/6wQglF.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wQ0a7.jpeg"><img src="https://i.lensdump.com/i/6wQ0a7.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wJAne.jpeg"><img src="https://i2.lensdump.com/i/6wJAne.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wJW5k.jpeg"><img src="https://i3.lensdump.com/i/6wJW5k.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wJIc1.jpeg"><img src="https://i1.lensdump.com/i/6wJIc1.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wQR4D.jpeg"><img src="https://i2.lensdump.com/i/6wQR4D.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/6wJ2AQ.jpeg"><img src="https://i1.lensdump.com/i/6wJ2AQ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6wQTPq.jpeg"><img src="https://i1.lensdump.com/i/6wQTPq.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wJrsK.jpeg"><img src="https://i1.lensdump.com/i/6wJrsK.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/6wJgZc.jpeg"><img src="https://i2.lensdump.com/i/6wJgZc.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/6wJtDZ.jpeg"><img src="https://i.lensdump.com/i/6wJtDZ.jpeg"></a></div>
-						</div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wQkjA.jpeg"><img src="https://i2.lensdump.com/i/6wQkjA.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/6wJmWT.jpeg"><img src="https://i3.lensdump.com/i/6wJmWT.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6wJTVm.jpeg"><img src="https://i1.lensdump.com/i/6wJTVm.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wJEvi.jpeg"><img src="https://i2.lensdump.com/i/6wJEvi.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wJk5o.jpeg"><img src="https://i.lensdump.com/i/6wJk5o.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/6wJJH2.jpeg"><img src="https://i3.lensdump.com/i/6wJJH2.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/6wJ9gC.jpeg"><img src="https://i2.lensdump.com/i/6wJ9gC.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/6wJ7H3.jpeg"><img src="https://i1.lensdump.com/i/6wJ7H3.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wJz3q.jpeg"><img src="https://i2.lensdump.com/i/6wJz3q.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wJv9Q.jpeg"><img src="https://i.lensdump.com/i/6wJv9Q.jpeg"></a></div></div>
-					</div>
-				</div>
-			</div>
-			<table class="credits">
-				<tr>
-					<td>撮影者</td>
-					<td>狼牙クレシ</td>
-				</tr>
-				
-			
-				<tr>
-					<td>撮影回</td>
-					<td>2回</td>
-				</tr>
-				
-			
-				<tr>
-					<td>行き先</td>
-					<td>
-						ルンド （Lund）
-						<ol>
-							<li>植物園 （Botaniska trädgården）</li>
-							
-			
-							<li> パラダイス （Paradis）</li>
-						</ol>
-					</td>
-				</tr>
-			</table>
-			<hr>
-			<a href="https://crasywolfang.com/jp/post/2212lust">
-				<div class="photoCard">
-					<h1>中央公園冬集</h1>
-					<span class="card-left">季節撮影</span>
-					<span class="card-right">2023年07月20日</span>
-					<img src="https://i3.lensdump.com/i/CwoztD.jpeg">
-					
-					<span class="card-right">ルンド、2022年12月～2023年03月</span>
-				</div>
-			</a>
-			
-			
-			<a href="https://crasywolfang.com/jp/post/2206scni">
-				<div class="photoCard">
-					<h1>スコーネ・ナイト</h1>
-					<span class="card-left">都会撮影</span>
-					<span class="card-right">2023年11月08日</span>
-					<img src="https://b.l3n.co/i/BCoFq7.jpeg">
-					
-					<span class="card-right">ルンド、2022年07月～2023年06月</span>
-				</div>
-			</a>
-			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
-				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
-			</div>
-		</div>
-	</body>
+<head>
+<title>CWOLF </title>
+<meta charset="utf-8">
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0em;
+padding: 0em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0em;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0em;
+padding-bottom: 0em;
+padding-left: 2em;
+padding-right: 2em;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{
+float: right;
+text-align: right;
+}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+font-size: 0.8em;
+}
+.ref::before{content: '[';}
+.ref::after{content: ']';}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.15em;
+}
+.card-incipit{
+font-weight: bold;
+padding-left: 0.4em;
+}
+.card-left{
+float: left;
+padding-left: 0.4em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.4em;
+}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+margin-bottom: 0.5em;
+}
+
+.largePhoto{
+border: 1px solid white;
+margin-bottom: 1em;
+}
+.largePhoto p{
+text-indent: 2em;
+padding-left: 1em;
+padding-right: 1em;
+}
+.largePhotoTop{
+text-indent: 1em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+}
+.largePhotoTitle{
+font-size: 1.3em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+text-indent: 2em;
+}
+.largePhoto img{display: block;}
+.largeformat p{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.credits{width: 100%;}
+.credits td{
+border: 1px solid white;
+padding: 0.3em;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/post/2304meos">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/post/2304meos">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
+<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
+<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
+<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
+</ul>
+</nav>
+
+<div class="title">
+
+<h1>春の記憶</h1>
+<span class="title-left">季節撮影</span>
+<span class="title-right"><span style="color: LightGray;">発行日　</span>2023年07月20日</span>
+</div>
+
+<section class="photoParagraph"><p>下記の写真は春の記憶である。
+記憶の中、花・桜・芽があり、鳥は木・道・日光を楽しむ。
+結局、記憶が霞んでしまうが、写真はずっと残るね。</p></section>
+
+<section class="sec" id="corvid">
+<div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6wkSDP.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wkSDP.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6wkv9i.jpeg"><img src="https://i2.lensdump.com/i/6wkv9i.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6wkMG9.jpeg"><img src="https://i3.lensdump.com/i/6wkMG9.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wkuHv.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wkuHv.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="corvid-2">
+
+<div class="neatPhoto"><a href="https://i2.lensdump.com/i/6w6vfA.jpeg"><img src="https://i2.lensdump.com/i/6w6vfA.jpeg"></a></div>
+
+</section>
+<section class="sec" id="birds">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wkcWb.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wkcWb.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/6wkwGF.jpeg"><img src="https://i.lensdump.com/i/6wkwGF.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6w6WiQ.jpeg"><img src="https://i1.lensdump.com/i/6w6WiQ.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w6jLe.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w6jLe.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/6wk5l0.jpeg"><img src="https://i3.lensdump.com/i/6wk5l0.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6wkX97.jpeg"><img src="https://i3.lensdump.com/i/6wkX97.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wkGXD.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wkGXD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w624A.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w624A.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6w60ak.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w60ak.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w6Zkx.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w6Zkx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6w6glH.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w6glH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/6wkf3z.jpeg"><img src="https://i3.lensdump.com/i/6wkf3z.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6w6rb1.jpeg"><img src="https://i3.lensdump.com/i/6w6rb1.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6w61rc.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w61rc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/6w6R4K.jpeg"><img src="https://i.lensdump.com/i/6w6R4K.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6w6Jao.jpeg"><img src="https://i3.lensdump.com/i/6w6Jao.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6w6TPZ.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w6TPZ.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="corvid-3">
+<div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6w6kiP.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w6kiP.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w66dm.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w66dm.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6w6CMi.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w6CMi.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="sakura">
+<div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6w6V69.jpeg"><img src="https://i2.lensdump.com/i/6w6V69.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/6w69z2.jpeg"><img src="https://i.lensdump.com/i/6w69z2.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6w6dbv.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w6dbv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/6w6BtC.jpeg"><img src="https://i.lensdump.com/i/6w6BtC.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6w6sPz.jpeg"><img src="https://i1.lensdump.com/i/6w6sPz.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w6m45.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w6m45.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6w6Kdb.jpeg"><img src="https://i2.lensdump.com/i/6w6Kdb.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6w64jT.jpeg"><img src="https://i3.lensdump.com/i/6w64jT.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6w6pM7.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w6pM7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w67hr.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w67hr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6w6H6F.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w6H6F.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/6w6lz3.jpeg"><img src="https://i3.lensdump.com/i/6w6lz3.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/6w6etD.jpeg"><img src="https://i2.lensdump.com/i/6w6etD.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6w6zw0.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w6zw0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w6nKq.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w6nKq.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="walk">
+<div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6w6MjM.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w6MjM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6w6NCk.jpeg"><img src="https://i2.lensdump.com/i/6w6NCk.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6w6YqQ.jpeg"><img src="https://i1.lensdump.com/i/6w6YqQ.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wQ6dM.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wQ6dM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w6oMa.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w6oMa.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6w6uhe.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w6uhe.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/6wJuHx.jpeg"><img src="https://i3.lensdump.com/i/6wJuHx.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/6wJciZ.jpeg"><img src="https://i2.lensdump.com/i/6wJciZ.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wJyko.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wJyko.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="tree01">
+<div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wJwai.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wJwai.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6wJMGe.jpeg"><img src="https://i2.lensdump.com/i/6wJMGe.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/6wJPr1.jpeg"><img src="https://i.lensdump.com/i/6wJPr1.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6wJf3c.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wJf3c.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="walk-2">
+<div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6w6fwH.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w6fwH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/6w6w0Z.jpeg"><img src="https://i1.lensdump.com/i/6w6w0Z.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6wJbLm.jpeg"><img src="https://i1.lensdump.com/i/6wJbLm.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6w6U11.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w6U11.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6w6cKc.jpeg"><img src="https://i2.lensdump.com/i/6w6cKc.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/6w6XfK.jpeg"><img src="https://i.lensdump.com/i/6w6XfK.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6w6Pzx.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w6Pzx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6w6yYm.jpeg"><img src="https://i2.lensdump.com/i/6w6yYm.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6w6G2i.jpeg"><img src="https://i3.lensdump.com/i/6w6G2i.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6w6xqP.jpeg"><img src="https://i3.lensdump.com/i/6w6xqP.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6w6hS9.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w6hS9.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="tree02">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wCif5.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wCif5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/6wCA1v.jpeg"><img src="https://i1.lensdump.com/i/6wCA1v.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/6wC00z.jpeg"><img src="https://i.lensdump.com/i/6wC00z.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="botan">
+<div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wJ5l9.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wJ5l9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6wCr27.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wCr27.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wCtJr.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wCtJr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/6wCRx3.jpeg"><img src="https://i1.lensdump.com/i/6wCRx3.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6wC6Fq.jpeg"><img src="https://i3.lensdump.com/i/6wC6Fq.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wCkpD.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wCkpD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6wCVoQ.jpeg"><img src="https://i2.lensdump.com/i/6wCVoQ.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/6wCJIA.jpeg"><img src="https://i.lensdump.com/i/6wCJIA.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="botan-2">
+<div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6wCmxx.jpeg"><img src="https://i2.lensdump.com/i/6wCmxx.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6wCqJe.jpeg"><img src="https://i1.lensdump.com/i/6wCqJe.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wQWiz.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wQWiz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/6wCOmZ.jpeg"><img src="https://i3.lensdump.com/i/6wCOmZ.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/6wCz8m.jpeg"><img src="https://i2.lensdump.com/i/6wCz8m.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wQ24C.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wQ24C.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6wCKFc.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wCKFc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/6wCeeo.jpeg"><img src="https://i.lensdump.com/i/6wCeeo.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6wCny9.jpeg"><img src="https://i1.lensdump.com/i/6wCny9.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/6wCYUC.jpeg"><img src="https://i.lensdump.com/i/6wCYUC.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/6wCuI5.jpeg"><img src="https://i3.lensdump.com/i/6wCuI5.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wCf8b.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wCf8b.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6wQrb3.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wQrb3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/6wCUnr.jpeg"><img src="https://i1.lensdump.com/i/6wCUnr.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/6wCbT3.jpeg"><img src="https://i.lensdump.com/i/6wCbT3.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wCGsA.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wCGsA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6wCxUD.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wCxUD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6wQjLb.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wQjLb.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6wQglF.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wQglF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wQ0a7.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wQ0a7.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="botan-3">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wJAne.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wJAne.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/6wJW5k.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wJW5k.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6wJIc1.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wJIc1.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wQR4D.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wQR4D.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/6wJ2AQ.jpeg"><img src="https://i1.lensdump.com/i/6wJ2AQ.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6wQTPq.jpeg"><img src="https://i1.lensdump.com/i/6wQTPq.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/6wJrsK.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wJrsK.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/6wJgZc.jpeg"><img src="https://i2.lensdump.com/i/6wJgZc.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/6wJtDZ.jpeg"><img src="https://i.lensdump.com/i/6wJtDZ.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="tree03">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wQkjA.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wQkjA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/6wJmWT.jpeg"><img src="https://i3.lensdump.com/i/6wJmWT.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6wJTVm.jpeg"><img src="https://i1.lensdump.com/i/6wJTVm.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wJEvi.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wJEvi.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wJk5o.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wJk5o.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/6wJJH2.jpeg"><img src="https://i3.lensdump.com/i/6wJJH2.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/6wJ9gC.jpeg"><img src="https://i2.lensdump.com/i/6wJ9gC.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/6wJ7H3.jpeg"><img src="https://i1.lensdump.com/i/6wJ7H3.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/6wJz3q.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wJz3q.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/6wJv9Q.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wJv9Q.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<table class="credits">
+<tr><td colspan="2">情報表</td></tr>
+<tr>
+<td>撮影者</td>
+<td>狼牙クレシ</td>
+</tr>
+<tr>
+<td>撮影回</td>
+<td>2回</td>
+</tr>
+<tr>
+<td>行き先</td>
+<td>
+ルンド（Lund）
+<ol>
+<li>植物園（Botaniska trädgården）</li>
+<li> パラダイス （Paradis）</li>
+</ol>
+</td>
+</tr>
+</table>
+
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2024
+✉ <adress>forwardtowolf@gmail.com</adress>
+<a href="#top" style="float: right; color: grey;">top ↑</a>
+</div>
+</div>
+
+</body>
 </html>

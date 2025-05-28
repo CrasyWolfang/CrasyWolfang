@@ -1,1393 +1,1165 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
-		<style>
-			body{background-color: #000000;}
-			a{
-			color: #D3D3D3;
-			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
-			color: #ffffff;
-			max-width: 1200px;
-			min-width: 640px;
-			margin-left: auto;
-			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
-			color: #ffffff;
-			text-decoration: none;
-			}
-			#header img{
-			display: block;
-			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
-			margin: 0em;
-			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
-			display: inline;
-			padding: 0em;
-			font-size: 1.3em;
-			border: 2px solid #808080;
-			}
-			#topMenu a{
-			padding-top: 0em;
-			padding-bottom: 0em;
-			padding-left: 2em;
-			padding-right: 2em;
-			color: #ffffff;
-			}
-			#bottom{
-			color: #808080;
-			background-color: #000000;
-			}
-			
-			.update{
-			margin: 0.5em;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			padding-left: 2em;
-			padding-right: 2em;
-			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
-			max-width: 80%;
-			max-height: 800px;
-			}
-			.updatePosts img{
-			max-height: 800px;
-			}
-			.updatePosts ul{
-			max-width: 600px;
-			margin-right: auto;
-			margin-left: auto;
-			}
-			.flowbutton {
-			padding: 1em;
-			gap: 1em;
-			}
-			.flowbutton li{
-			list-style-type: none;
-			margin-top: 0.5em;
-			color: #ffffff;
-			border: 1px solid #ffffff;
-			text-align: center;
-			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			
-			.catCard{
-			list-style: none;
-			padding-left: 0;
-			text-align: center;
-			font-size: 1.3em;
-			}
-			.catCard li{
-			margin: 0.3em;
-			display: inline-block;
-			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
-			width: 240px;
-			display: block;
-			}
-			.catCard a{
-			color: #ffffff;
-			display: block;
-			}
-			
-			.title{
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 800px;
-			padding: 1em;
-			padding-bottom: 2em;
-			}
-			.title h1{
-			border-bottom: 1px solid;
-			width: 100%;
-			margin: 0px;
-			}
-			.title-left{float: left;}
-			.title-right{
-			float: right;
-			text-align: right;
-			}
-			
-			.photo-content p{
-			padding-left: 1em;
-			padding-right: 1em;
-			text-indent: 2em;
-			}
-			.note {
-			margin: 1em;
-			border: 1px solid #ffffff;
-			}
-			
-			.ref{
-			color: #D3D3D3;
-			text-decoration: none;
-			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			
-			.photoCard{
-			color: #ffffff;
-			border: 2px solid #808080;
-			margin-top: 1em;
-			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
-			margin: 0px;
-			padding-left: 0.15em;
-			}
-			.card-incipit{
-			font-weight: bold;
-			padding-left: 0.4em;
-			}
-			.card-left{
-			float: left;
-			padding-left: 0.4em;
-			}
-			.card-right{
-			float: right;
-			text-align: right;
-			padding-right: 0.4em;
-			}
-			.photoCard img{
-			width: 100%;
-			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			
-			.imgWrap{
-			display: flex;
-			flex-direction: row;
-			gap: 0.5em;
-			padding-bottom: 0.25em;
-			padding-top: 0.25em;
-			margin-left: auto;
-			margin-right: auto;
-			justify-content: center;
-			}
-			.imgWrap img{
-			display: block;
-			max-width: 100%;
-			gap: 0.5em;
-			}
-			
-			.bibliography ul{
-			list-style-type: none;
-			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
-			margin-bottom: 0.5em;
-			}
-			
-			.largePhoto{
-			border: 1px solid #ffffff;
-			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
-			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
-			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
-			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
-			text-indent: 1em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
-			font-size: 1.3em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			text-indent: 2em;
-			}
-			.largePhoto p{
-			text-indent: 2em;
-			padding-left: 1em;
-			padding-right: 1em;
-			}
-			
-			.credits{
-			width: 100%;
-			border-collapse: collapse;
-			}
-			.credits td{
-			border: 1px solid #ffffff;
-			padding: 0.3em;
-			padding-left: 1em;
-			}
-			.credits td:first-child {
-			width: 12%;
-			white-space: nowrap;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2108fuit">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2108fuit">日本語</a></div>
-			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-			<nav id="topMenu">
-				<ul>
-					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/video">Video Production</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
-				</ul>
-			</nav>
-			<div class="title">
-				<h1>The Fox Gates</h1>
-				
-				<span class="title-left">Religious photography</span>
-				
-				<span class="title-right"><span style="color: LightGray;">published: </span>2023年07月20日</span>
-			</div>
-			<div class="photo-content">
-				<p>When you think of Japanese scenery an image of tall bamboo and vermilion shrine gates probably pop into mind.
-				Those images are the <i>Arashiyama/Sagano Bamboo Grove</i> and <i>Fushimi Inari Taisha</i> which are oftentimes seen in tourist guide books or as desktop backgrounds.
-				Fushimi Inari Taisha (formerly known as <i>Inari Shrine</i>) is famous for its uncountable shrine gates.
-				The shrine was founded in the year 711.<sup><abbr class="ref" title="Kenji 2016:71">ref</abbr></sup>
-				During the Edo period it became popular to donate gates to the shrine.
-				Consequently ten thousand gates were added and the path known as the <i>thousand gates</i> was created.</p><p>The following photos were taken during a visit to Fushimi Inari Taisha.
-				On this August day it was raining, and since it was during the covid19 outbreak there were few visitors at the shrine.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwgxjC.jpeg"><img src="https://i2.lensdump.com/i/CwgxjC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwgs40.jpeg"><img src="https://i2.lensdump.com/i/Cwgs40.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/Cwg5Mz.jpeg"><img src="https://i2.lensdump.com/i/Cwg5Mz.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwrZqq.jpeg"><img src="https://i.lensdump.com/i/CwrZqq.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/Cwrk1k.jpeg"><img src="https://i1.lensdump.com/i/Cwrk1k.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cwr6Kx.jpeg"><img src="https://i3.lensdump.com/i/Cwr6Kx.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwr1CQ.jpeg"><img src="https://i2.lensdump.com/i/Cwr1CQ.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwrWtF.jpeg"><img src="https://i3.lensdump.com/i/CwrWtF.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwriK3.jpeg"><img src="https://i2.lensdump.com/i/CwriK3.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwgh6b.jpeg"><img src="https://i2.lensdump.com/i/Cwgh6b.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cwg7LM.jpeg"><img src="https://i.lensdump.com/i/Cwg7LM.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/Cwr9YK.jpeg"><img src="https://i2.lensdump.com/i/Cwr9YK.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwrQ01.jpeg"><img src="https://i1.lensdump.com/i/CwrQ01.jpeg"></a></div>
-						</div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>About 10 minutes away from the main shrine is a pathway with gates placed so tight that it feels like entering a tunnel.
-				This is the famous <i>thousand gates pathway</i>.
-				According to a <abbr title="National Diet Library of Japan, 2013">2013 survey</abbr> there are about 800 shrines along this path.
-				Since this is the highlight of Fushimi, there seem to be a lot of tourists who walk down the path, take a few photos and then leave the shrine.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cwgzle.jpeg"><img src="https://i3.lensdump.com/i/Cwgzle.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cwgv4H.jpeg"><img src="https://i3.lensdump.com/i/Cwgv4H.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwgodK.jpeg"><img src="https://i2.lensdump.com/i/CwgodK.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/Cwrq2Z.jpeg"><img src="https://i3.lensdump.com/i/Cwrq2Z.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/Cwrsxi.jpeg"><img src="https://i2.lensdump.com/i/Cwrsxi.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwrBCP.jpeg"><img src="https://i2.lensdump.com/i/CwrBCP.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwrmSm.jpeg"><img src="https://i.lensdump.com/i/CwrmSm.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cwr41o.jpeg"><img src="https://i3.lensdump.com/i/Cwr41o.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>Once you get through the thousand there you arrive at another shrine in the back.
-				Here they sell votive tablets in the shape of a fox head.
-				A face is filled in on the front of the tablet, and a wish is written on the back before it's hung.
-				Among the drawn and hung tablets are not only foxes but amusingly also anime characters and a man with a goatee.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwrKp9.jpeg"><img src="https://i1.lensdump.com/i/CwrKp9.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwrpF2.jpeg"><img src="https://i.lensdump.com/i/CwrpF2.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwreJT.jpeg"><img src="https://i1.lensdump.com/i/CwreJT.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwrO0v.jpeg"><img src="https://i3.lensdump.com/i/CwrO0v.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwrlY5.jpeg"><img src="https://i1.lensdump.com/i/CwrlY5.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwrHBC.jpeg"><img src="https://i2.lensdump.com/i/CwrHBC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwrnSb.jpeg"><img src="https://i3.lensdump.com/i/CwrnSb.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwrS2z.jpeg"><img src="https://i3.lensdump.com/i/CwrS2z.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwrMRr.jpeg"><img src="https://i2.lensdump.com/i/CwrMRr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cwrvx7.jpeg"><img src="https://i.lensdump.com/i/Cwrvx7.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>In between the gates there are statues of foxes.
-				After walking for a little while you'll realize that there are foxes no matter where you look.
-				This is because foxes are the divine messengers of Inari.
-				Next to the shrine in the back is a small yard and even here there are statues of foxes.
-				Here one unusual western garden fox statue can be spotted.
-				In front of every subordinate shrine there are at least 2 or 4 foxes.
-				Maybe it would not be wrong to call this place <i>the fox gates</i> and people would still understand where it is.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwrDI0.jpeg"><img src="https://i1.lensdump.com/i/CwrDI0.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwroF3.jpeg"><img src="https://i.lensdump.com/i/CwroF3.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwrF8A.jpeg"><img src="https://i1.lensdump.com/i/CwrF8A.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwrUJM.jpeg"><img src="https://i2.lensdump.com/i/CwrUJM.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwrPoq.jpeg"><img src="https://i3.lensdump.com/i/CwrPoq.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/Cwrx7k.jpeg"><img src="https://i2.lensdump.com/i/Cwrx7k.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwrXxa.jpeg"><img src="https://i.lensdump.com/i/CwrXxa.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwrwRe.jpeg"><img src="https://i3.lensdump.com/i/CwrwRe.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwrNBD.jpeg"><img src="https://i2.lensdump.com/i/CwrNBD.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwrGIH.jpeg"><img src="https://i.lensdump.com/i/CwrGIH.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/Cwram1.jpeg"><img src="https://i3.lensdump.com/i/Cwram1.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/Cwt88K.jpeg"><img src="https://i2.lensdump.com/i/Cwt88K.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cwrhoc.jpeg"><img src="https://i.lensdump.com/i/Cwrhoc.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwtWeP.jpeg"><img src="https://i3.lensdump.com/i/CwtWeP.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwtZU9.jpeg"><img src="https://i2.lensdump.com/i/CwtZU9.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwtI7o.jpeg"><img src="https://i.lensdump.com/i/CwtI7o.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cwtiym.jpeg"><img src="https://i.lensdump.com/i/Cwtiym.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwt0Ti.jpeg"><img src="https://i2.lensdump.com/i/Cwt0Ti.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwtrZ2.jpeg"><img src="https://i1.lensdump.com/i/CwtrZ2.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>From here we have finally walked across the foot of the mountain and will now embark on a climb.
-				Up the first flights of stairs is a dimly lit area surrounded by small shrines and connected with narrow steps.
-				The sound of rain echo from a pond closeby and every-now-and then a person appears and walks down the narrow shrine corridors in the rain.
-				From left to right there are foxes that look right back at you and a look around reveals snails on an ascent on various objects.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/Cwt1uC.jpeg"><img src="https://i1.lensdump.com/i/Cwt1uC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwttmv.jpeg"><img src="https://i2.lensdump.com/i/Cwttmv.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwtT85.jpeg"><img src="https://i.lensdump.com/i/CwtT85.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwtEQz.jpeg"><img src="https://i2.lensdump.com/i/CwtEQz.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwtknT.jpeg"><img src="https://i.lensdump.com/i/CwtknT.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwtsAq.jpeg"><img src="https://i2.lensdump.com/i/CwtsAq.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwt6yb.jpeg"><img src="https://i2.lensdump.com/i/Cwt6yb.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwtVUF.jpeg"><img src="https://i1.lensdump.com/i/CwtVUF.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwtJT7.jpeg"><img src="https://i3.lensdump.com/i/CwtJT7.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwtdZ3.jpeg"><img src="https://i.lensdump.com/i/CwtdZ3.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/Cwtqs0.jpeg"><img src="https://i3.lensdump.com/i/Cwtqs0.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/Cwt7Ta.jpeg"><img src="https://i1.lensdump.com/i/Cwt7Ta.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/Cwt4nM.jpeg"><img src="https://i.lensdump.com/i/Cwt4nM.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwtzZx.jpeg"><img src="https://i.lensdump.com/i/CwtzZx.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwteD1.jpeg"><img src="https://i1.lensdump.com/i/CwteD1.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwtLVK.jpeg"><img src="https://i2.lensdump.com/i/CwtLVK.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwtDHi.jpeg"><img src="https://i.lensdump.com/i/CwtDHi.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwtUDv.jpeg"><img src="https://i1.lensdump.com/i/CwtUDv.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwtY5P.jpeg"><img src="https://i3.lensdump.com/i/CwtY5P.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cwtfg9.jpeg"><img src="https://i3.lensdump.com/i/Cwtfg9.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwtbV5.jpeg"><img src="https://i3.lensdump.com/i/CwtbV5.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwtxGT.jpeg"><img src="https://i1.lensdump.com/i/CwtxGT.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cw10LA.jpeg"><img src="https://i3.lensdump.com/i/Cw10LA.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/Cw1AN0.jpeg"><img src="https://i.lensdump.com/i/Cw1AN0.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/Cw1j9q.jpeg"><img src="https://i3.lensdump.com/i/Cw1j9q.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cw1gkQ.jpeg"><img src="https://i2.lensdump.com/i/Cw1gkQ.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwtGH7.jpeg"><img src="https://i3.lensdump.com/i/CwtGH7.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cw1tXe.jpeg"><img src="https://i.lensdump.com/i/Cw1tXe.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwRKpe.jpeg"><img src="https://i1.lensdump.com/i/CwRKpe.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwRHBH.jpeg"><img src="https://i1.lensdump.com/i/CwRHBH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwRS2c.jpeg"><img src="https://i.lensdump.com/i/CwRS2c.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwRneZ.jpeg"><img src="https://i1.lensdump.com/i/CwRneZ.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwRDI9.jpeg"><img src="https://i3.lensdump.com/i/CwRDI9.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwRXyT.jpeg"><img src="https://i.lensdump.com/i/CwRXyT.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwRwRb.jpeg"><img src="https://i3.lensdump.com/i/CwRwRb.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwRx77.jpeg"><img src="https://i1.lensdump.com/i/CwRx77.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwRyUr.jpeg"><img src="https://i.lensdump.com/i/CwRyUr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwRGIF.jpeg"><img src="https://i1.lensdump.com/i/CwRGIF.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwRam3.jpeg"><img src="https://i3.lensdump.com/i/CwRam3.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwT88D.jpeg"><img src="https://i1.lensdump.com/i/CwT88D.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwRhu0.jpeg"><img src="https://i.lensdump.com/i/CwRhu0.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwTWnA.jpeg"><img src="https://i1.lensdump.com/i/CwTWnA.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwtBuD.jpeg"><img src="https://i1.lensdump.com/i/CwtBuD.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwTAQq.jpeg"><img src="https://i3.lensdump.com/i/CwTAQq.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwT0TQ.jpeg"><img src="https://i.lensdump.com/i/CwT0TQ.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwTZUe.jpeg"><img src="https://i1.lensdump.com/i/CwTZUe.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwTrZk.jpeg"><img src="https://i.lensdump.com/i/CwTrZk.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwTtmx.jpeg"><img src="https://i2.lensdump.com/i/CwTtmx.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwT1uH.jpeg"><img src="https://i.lensdump.com/i/CwT1uH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwTTA1.jpeg"><img src="https://i2.lensdump.com/i/CwTTA1.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwTEQc.jpeg"><img src="https://i.lensdump.com/i/CwTEQc.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwTknK.jpeg"><img src="https://i2.lensdump.com/i/CwTknK.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwTJTP.jpeg"><img src="https://i1.lensdump.com/i/CwTJTP.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwTQOm.jpeg"><img src="https://i2.lensdump.com/i/CwTQOm.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwTdZo.jpeg"><img src="https://i3.lensdump.com/i/CwTdZo.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwTVci.jpeg"><img src="https://i.lensdump.com/i/CwTVci.jpeg"></a></div>
-						</div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>Before arriving at the mountain pass we reach a viewing platform.
-				From here the south part of Kyoto can be seen and in the distance - Muko City.
-				Another flight up is a vending machine with cool drinks.
-				"Oh man, I am thirsty!" you could hear a young university student say in front of the machine as he reached down for some coins.
-				From here one can sit down on a bench, drink and enjoy the view.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwTqs9.jpeg"><img src="https://i2.lensdump.com/i/CwTqs9.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/Cwgct9.jpeg"><img src="https://i.lensdump.com/i/Cwgct9.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwkNmk.jpeg"><img src="https://i3.lensdump.com/i/CwkNmk.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwkDIe.jpeg"><img src="https://i1.lensdump.com/i/CwkDIe.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwkPox.jpeg"><img src="https://i1.lensdump.com/i/CwkPox.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwkUQ1.jpeg"><img src="https://i1.lensdump.com/i/CwkUQ1.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkF8H.jpeg"><img src="https://i3.lensdump.com/i/CwkF8H.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>Mt.Inari consists of three mountain passes.
-				At the foot of the mountain they sell small portable shrine gates that visitors may place around the shrine.
-				As can be seen throughout the pictures these small gates have been placed around and in places they have piled up in such a large amount that workers have gathered them up to be stowed away in the back.
-				They can even be found up at the top.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwTsAv.jpeg"><img src="https://i2.lensdump.com/i/CwTsAv.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwTBD2.jpeg"><img src="https://i3.lensdump.com/i/CwTBD2.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwT3VC.jpeg"><img src="https://i.lensdump.com/i/CwT3VC.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwT4n5.jpeg"><img src="https://i2.lensdump.com/i/CwT4n5.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwTK5z.jpeg"><img src="https://i1.lensdump.com/i/CwTK5z.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwT7ET.jpeg"><img src="https://i2.lensdump.com/i/CwT7ET.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwTvW0.jpeg"><img src="https://i1.lensdump.com/i/CwTvW0.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwTOOb.jpeg"><img src="https://i.lensdump.com/i/CwTOOb.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwTSsF.jpeg"><img src="https://i3.lensdump.com/i/CwTSsF.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwTLVD.jpeg"><img src="https://i3.lensdump.com/i/CwTLVD.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwTMvq.jpeg"><img src="https://i.lensdump.com/i/CwTMvq.jpeg"></a></div>
-						</div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwTuEM.jpeg"><img src="https://i2.lensdump.com/i/CwTuEM.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwTDHQ.jpeg"><img src="https://i3.lensdump.com/i/CwTDHQ.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwTNca.jpeg"><img src="https://i2.lensdump.com/i/CwTNca.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwTfge.jpeg"><img src="https://i1.lensdump.com/i/CwTfge.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwTUDx.jpeg"><img src="https://i1.lensdump.com/i/CwTUDx.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwTF3k.jpeg"><img src="https://i3.lensdump.com/i/CwTF3k.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwTXWH.jpeg"><img src="https://i3.lensdump.com/i/CwTXWH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwTwvc.jpeg"><img src="https://i3.lensdump.com/i/CwTwvc.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwTxGK.jpeg"><img src="https://i1.lensdump.com/i/CwTxGK.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>And finally we have reached the top where we find yet another subordinate shrine.
-				Here the color of the vermilion gates stick out among the gray stones and statues.
-				On this day the mountain top was covered in a white mist which made the surrounding view appear as nothing but a white page.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwTGHP.jpeg"><img src="https://i1.lensdump.com/i/CwTGHP.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwTaXm.jpeg"><img src="https://i2.lensdump.com/i/CwTaXm.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwE0LC.jpeg"><img src="https://i2.lensdump.com/i/CwE0LC.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwgDaP.jpeg"><img src="https://i3.lensdump.com/i/CwgDaP.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwEIG5.jpeg"><img src="https://i.lensdump.com/i/CwEIG5.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwEgkz.jpeg"><img src="https://i3.lensdump.com/i/CwEgkz.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwErlT.jpeg"><img src="https://i.lensdump.com/i/CwErlT.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwEtXb.jpeg"><img src="https://i2.lensdump.com/i/CwEtXb.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/CwE6i3.jpeg"><img src="https://i2.lensdump.com/i/CwE6i3.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwET4r.jpeg"><img src="https://i.lensdump.com/i/CwET4r.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwECd0.jpeg"><img src="https://i.lensdump.com/i/CwECd0.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwEJLD.jpeg"><img src="https://i2.lensdump.com/i/CwEJLD.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwEQaq.jpeg"><img src="https://i3.lensdump.com/i/CwEQaq.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwE96A.jpeg"><img src="https://i1.lensdump.com/i/CwE96A.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwEdlM.jpeg"><img src="https://i2.lensdump.com/i/CwEdlM.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwEqbQ.jpeg"><img src="https://i.lensdump.com/i/CwEqbQ.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwEmra.jpeg"><img src="https://i3.lensdump.com/i/CwEmra.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwT5kZ.jpeg"><img src="https://i.lensdump.com/i/CwT5kZ.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwE2ri.jpeg"><img src="https://i1.lensdump.com/i/CwE2ri.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwE83o.jpeg"><img src="https://i.lensdump.com/i/CwE83o.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEAN9.jpeg"><img src="https://i1.lensdump.com/i/CwEAN9.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwEj9v.jpeg"><img src="https://i3.lensdump.com/i/CwEj9v.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwEii2.jpeg"><img src="https://i.lensdump.com/i/CwEii2.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwgFbo.jpeg"><img src="https://i2.lensdump.com/i/CwgFbo.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEENF.jpeg"><img src="https://i1.lensdump.com/i/CwEENF.jpeg"></a></div>
-						</div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>As one climbed down the stairs, silhouettes of other visitors disappeared behind the mist.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwEs4e.jpeg"><img src="https://i1.lensdump.com/i/CwEs4e.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwE3Pk.jpeg"><img src="https://i.lensdump.com/i/CwE3Pk.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwEKix.jpeg"><img src="https://i3.lensdump.com/i/CwEKix.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwEpdH.jpeg"><img src="https://i2.lensdump.com/i/CwEpdH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwE7M1.jpeg"><img src="https://i.lensdump.com/i/CwE7M1.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEOac.jpeg"><img src="https://i1.lensdump.com/i/CwEOac.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwEl6K.jpeg"><img src="https://i.lensdump.com/i/CwEl6K.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwEntm.jpeg"><img src="https://i3.lensdump.com/i/CwEntm.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEzzZ.jpeg"><img src="https://i1.lensdump.com/i/CwEzzZ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwESbP.jpeg"><img src="https://i.lensdump.com/i/CwESbP.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEYj9.jpeg"><img src="https://i1.lensdump.com/i/CwEYj9.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwEvKi.jpeg"><img src="https://i.lensdump.com/i/CwEvKi.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwELPo.jpeg"><img src="https://i3.lensdump.com/i/CwELPo.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwEoq2.jpeg"><img src="https://i3.lensdump.com/i/CwEoq2.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEuMv.jpeg"><img src="https://i1.lensdump.com/i/CwEuMv.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEP65.jpeg"><img src="https://i1.lensdump.com/i/CwEP65.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwEDhC.jpeg"><img src="https://i3.lensdump.com/i/CwEDhC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwEfzz.jpeg"><img src="https://i2.lensdump.com/i/CwEfzz.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEctb.jpeg"><img src="https://i1.lensdump.com/i/CwEctb.jpeg"></a></div>
-						</div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>Along the descending path is a creek pouring out from the mountain.
-				Downstream is a small artificial waterfall with a road leading up to it that makes it possible for one to enter the waterfall.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwExjF.jpeg"><img src="https://i2.lensdump.com/i/CwExjF.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwEbfr.jpeg"><img src="https://i3.lensdump.com/i/CwEbfr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwEyq3.jpeg"><img src="https://i1.lensdump.com/i/CwEyq3.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwEXK7.jpeg"><img src="https://i2.lensdump.com/i/CwEXK7.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwEGhD.jpeg"><img src="https://i1.lensdump.com/i/CwEGhD.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwE5Y0.jpeg"><img src="https://i3.lensdump.com/i/CwE5Y0.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwk2SA.jpeg"><img src="https://i2.lensdump.com/i/Cwk2SA.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwkW1Q.jpeg"><img src="https://i.lensdump.com/i/CwkW1Q.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/CwkiKa.jpeg"><img src="https://i1.lensdump.com/i/CwkiKa.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cwk8wM.jpeg"><img src="https://i3.lensdump.com/i/Cwk8wM.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwkjfe.jpeg"><img src="https://i2.lensdump.com/i/Cwkjfe.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkI0k.jpeg"><img src="https://i3.lensdump.com/i/CwkI0k.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwkZqx.jpeg"><img src="https://i2.lensdump.com/i/CwkZqx.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwkgYH.jpeg"><img src="https://i.lensdump.com/i/CwkgYH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/Cwkt21.jpeg"><img src="https://i1.lensdump.com/i/Cwkt21.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkRSK.jpeg"><img src="https://i3.lensdump.com/i/CwkRSK.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwkTxZ.jpeg"><img src="https://i.lensdump.com/i/CwkTxZ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/Cwkk1P.jpeg"><img src="https://i3.lensdump.com/i/Cwkk1P.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkCFi.jpeg"><img src="https://i3.lensdump.com/i/CwkCFi.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwk6pm.jpeg"><img src="https://i2.lensdump.com/i/Cwk6pm.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i.lensdump.com/i/CwkQ0o.jpeg"><img src="https://i.lensdump.com/i/CwkQ0o.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwkVB9.jpeg"><img src="https://i3.lensdump.com/i/CwkVB9.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cwk9o2.jpeg"><img src="https://i.lensdump.com/i/Cwk9o2.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cwkq2v.jpeg"><img src="https://i2.lensdump.com/i/Cwkq2v.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwkBJC.jpeg"><img src="https://i.lensdump.com/i/CwkBJC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwkmS5.jpeg"><img src="https://i2.lensdump.com/i/CwkmS5.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cwksxz.jpeg"><img src="https://i.lensdump.com/i/Cwksxz.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cwk4RT.jpeg"><img src="https://i3.lensdump.com/i/Cwk4RT.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/CwkpF7.jpeg"><img src="https://i3.lensdump.com/i/CwkpF7.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i.lensdump.com/i/CwkKpb.jpeg"><img src="https://i.lensdump.com/i/CwkKpb.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/CwkOIr.jpeg"><img src="https://i1.lensdump.com/i/CwkOIr.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/CwkHBF.jpeg"><img src="https://i2.lensdump.com/i/CwkHBF.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/Cwklo3.jpeg"><img src="https://i1.lensdump.com/i/Cwklo3.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkeJD.jpeg"><img src="https://i3.lensdump.com/i/CwkeJD.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkvyA.jpeg"><img src="https://i3.lensdump.com/i/CwkvyA.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/Cwkneq.jpeg"><img src="https://i.lensdump.com/i/Cwkneq.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwkMRM.jpeg"><img src="https://i2.lensdump.com/i/CwkMRM.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/CwkY7Q.jpeg"><img src="https://i.lensdump.com/i/CwkY7Q.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkoFa.jpeg"><img src="https://i3.lensdump.com/i/CwkoFa.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i2.lensdump.com/i/Cwkcec.jpeg"><img src="https://i2.lensdump.com/i/Cwkcec.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i3.lensdump.com/i/CwkXyK.jpeg"><img src="https://i3.lensdump.com/i/CwkXyK.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i1.lensdump.com/i/CwkwTZ.jpeg"><img src="https://i1.lensdump.com/i/CwkwTZ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i2.lensdump.com/i/Cwkx7P.jpeg"><img src="https://i2.lensdump.com/i/Cwkx7P.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/CwkyUm.jpeg"><img src="https://i3.lensdump.com/i/CwkyUm.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>Finally we have returned to the bottom from where we leave Fushimi Inari Taisha.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/CwkGZi.jpeg"><img src="https://i2.lensdump.com/i/CwkGZi.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/Cwkamo.jpeg"><img src="https://i1.lensdump.com/i/Cwkamo.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://i3.lensdump.com/i/Cwkhu9.jpeg"><img src="https://i3.lensdump.com/i/Cwkhu9.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://i1.lensdump.com/i/Cw68A2.jpeg"><img src="https://i1.lensdump.com/i/Cw68A2.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/Cw6AQv.jpeg"><img src="https://i2.lensdump.com/i/Cw6AQv.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/Cw6WnC.jpeg"><img src="https://i3.lensdump.com/i/Cw6WnC.jpeg"></a></div></div>
-					</div>
-				</div>
-			</div>
-			<table class="credits">
-				<tr>
-					<td>Photographer</td>
-					<td>Crasy Wolfang</td>
-				</tr>
-				
-			
-				<tr>
-					<td>Sessions</td>
-					<td>1 session</td>
-				</tr>
-				
-			
-				<tr>
-					<td>Destination</td>
-					<td>
-						Kyoto (京都)
-						<ol><li>Fushimi Inari Taisha (伏見稲荷大社)</li></ol>
-					</td>
-				</tr>
-				<tr>
-					<td>References</td>
-					<td>
-						<ol>
-							<li>National Diet Library of Japan Collaborative Reference Database. 2013. 伏見稲荷大社にある千本鳥居の由来と数を知りたい (<i>Fushimi Inari-Taisha ni aru senbontorii no yurai to kazu wo shiritai</i> tr: <i>I want to know the origin and number of the thousand gates at Fushimi Inari</i>).</li>
-							
-			
-							<li>Kato, Kenji. 2016. <i>Bilingual Guide to Japan: Shinto Shrine</i>. Shogakukan: Japan</li>
-						</ol>
-					</td>
-				</tr>
-			</table>
-			<hr>
-			<a href="https://crasywolfang.com/en/post/2205fuit">
-				<div class="photoCard">
-					<h1>Inari Mountain Shadow</h1>
-					<span class="card-left">Religious photography</span>
-					<span class="card-right">2023-08-25</span>
-					<img src="https://c.l3n.co/i/VoQ7l0.jpeg">
-					
-					<span class="card-right">Kyoto, May 2022</span>
-				</div>
-			</a>
-			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
-				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
-			</div>
-		</div>
-	</body>
+<head>
+<title>CWOLF </title>
+<meta charset="utf-8">
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0em;
+padding: 0em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0em;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0em;
+padding-bottom: 0em;
+padding-left: 2em;
+padding-right: 2em;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{
+float: right;
+text-align: right;
+}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+font-size: 0.8em;
+}
+.ref::before{content: '[';}
+.ref::after{content: ']';}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.15em;
+}
+.card-incipit{
+font-weight: bold;
+padding-left: 0.4em;
+}
+.card-left{
+float: left;
+padding-left: 0.4em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.4em;
+}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+margin-bottom: 0.5em;
+}
+
+.largePhoto{
+border: 1px solid white;
+margin-bottom: 1em;
+}
+.largePhoto p{
+text-indent: 2em;
+padding-left: 1em;
+padding-right: 1em;
+}
+.largePhotoTop{
+text-indent: 1em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+}
+.largePhotoTitle{
+font-size: 1.3em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+text-indent: 2em;
+}
+.largePhoto img{display: block;}
+.largeformat p{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.credits{width: 100%;}
+.credits td{
+border: 1px solid white;
+padding: 0.3em;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/post/2108fuit">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/post/2108fuit">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/en/home">Home</a></li>
+<li><a href="https://CrasyWolfang.com/en/photo">Photography</a></li>
+<!---<li><a href="https://CrasyWolfang.com/en/video">Video Production</a></li>--->
+<li><a href="https://CrasyWolfang.com/en/about">About</a></li>
+</ul>
+</nav>
+
+<div class="title">
+
+<h1>The Fox Gates</h1>
+<span class="title-left">Shrine photography</span>
+<span class="title-right"><span style="color: LightGray;">published: </span>2023-07-20</span>
+</div>
+
+<section class="photoParagraph"><p>When you think of Japanese scenery an image of tall bamboo and vermilion shrine gates probably pop into mind.
+Those images are the <em>Arashiyama/Sagano Bamboo Grove</em> and <em>Fushimi Inari Taisha</em> which are oftentimes seen in tourist guide books or as desktop backgrounds.
+Fushimi Inari Taisha (formerly known as <em>Inari Shrine</em>) is famous for its uncountable shrine gates.
+The shrine was founded in the year 711.<sup><abbr class="ref" title="Kenji 2016:71">ref</abbr></sup>
+During the Edo period it became popular to donate gates to the shrine.
+Consequently ten thousand gates were added and the path known as the <em>thousand gates</em> was created.</p>
+
+<p>The following photos were taken during a visit to Fushimi Inari Taisha.
+On this August day it was raining, and since it was during the covid19 outbreak there were few visitors at the shrine.</p></section>
+
+<section class="sec" id="entry">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwgxjC.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwgxjC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwgs40.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwgs40.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/Cwg5Mz.jpeg"><img src="https://i2.lensdump.com/i/Cwg5Mz.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwrZqq.jpeg"><img src="https://i.lensdump.com/i/CwrZqq.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/Cwrk1k.jpeg"><img width="1200" src="https://i1.lensdump.com/i/Cwrk1k.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cwr6Kx.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cwr6Kx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwr1CQ.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwr1CQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwrWtF.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwrWtF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwriK3.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwriK3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwgh6b.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwgh6b.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cwg7LM.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cwg7LM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/Cwr9YK.jpeg"><img src="https://i2.lensdump.com/i/Cwr9YK.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwrQ01.jpeg"><img src="https://i1.lensdump.com/i/CwrQ01.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph"><p>About 10 minutes away from the main shrine is a pathway with gates placed so tight that it feels like entering a tunnel.
+This is the famous <em>thousand gates pathway</em>.
+According to a <a href="https://crd.ndl.go.jp/reference/modules/d3ndlcrdentry/index.php?page=ref_view&id=1000130073">2013 survey</a> there are about 800 shrines along this path.
+Since this is the highlight of Fushimi, there seem to be a lot of tourists who walk down the path, take a few photos and then leave the shrine.</p></section>
+
+<section class="sec" id="thousandGates">
+<div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cwgzle.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cwgzle.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cwgv4H.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cwgv4H.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwgodK.jpeg"><img src="https://i2.lensdump.com/i/CwgodK.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/Cwrq2Z.jpeg"><img src="https://i3.lensdump.com/i/Cwrq2Z.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/Cwrsxi.jpeg"><img src="https://i2.lensdump.com/i/Cwrsxi.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwrBCP.jpeg"><img src="https://i2.lensdump.com/i/CwrBCP.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwrmSm.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwrmSm.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cwr41o.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cwr41o.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>Once you get through the thousand there you arrive at another shrine in the back.
+Here they sell votive tablets in the shape of a fox head.
+A face is filled in on the front of the tablet, and a wish is written on the back before it's hung.
+Among the drawn and hung tablets are not only foxes but amusingly also anime characters and a man with a goatee.</p></section>
+
+<section class="sec" id="break">
+<div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwrKp9.jpeg"><img src="https://i1.lensdump.com/i/CwrKp9.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwrpF2.jpeg"><img src="https://i.lensdump.com/i/CwrpF2.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwreJT.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwreJT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwrO0v.jpeg"><img src="https://i3.lensdump.com/i/CwrO0v.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwrlY5.jpeg"><img src="https://i1.lensdump.com/i/CwrlY5.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwrHBC.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwrHBC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwrnSb.jpeg"><img src="https://i3.lensdump.com/i/CwrnSb.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwrS2z.jpeg"><img src="https://i3.lensdump.com/i/CwrS2z.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwrMRr.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwrMRr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cwrvx7.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cwrvx7.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>In between the gates there are statues of foxes.
+After walking for a little while you'll realize that there are foxes no matter where you look.
+This is because foxes are the divine messengers of Inari.
+Next to the shrine in the back is a small yard and even here there are statues of foxes.
+Here one unusual western garden fox statue can be spotted.
+In front of every subordinate shrine there are at least 2 or 4 foxes.
+Maybe it would not be wrong to call this place <em>the fox gates</em> and people would still understand where it is.</p></section>
+
+<section class="sec" id="fox">
+<div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwrDI0.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwrDI0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwroF3.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwroF3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwrF8A.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwrF8A.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwrUJM.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwrUJM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwrPoq.jpeg"><img src="https://i3.lensdump.com/i/CwrPoq.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/Cwrx7k.jpeg"><img src="https://i2.lensdump.com/i/Cwrx7k.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwrXxa.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwrXxa.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwrwRe.jpeg"><img src="https://i3.lensdump.com/i/CwrwRe.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwrNBD.jpeg"><img src="https://i2.lensdump.com/i/CwrNBD.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwrGIH.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwrGIH.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="yard">
+<div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/Cwram1.jpeg"><img src="https://i3.lensdump.com/i/Cwram1.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/Cwt88K.jpeg"><img src="https://i2.lensdump.com/i/Cwt88K.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cwrhoc.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cwrhoc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwtWeP.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwtWeP.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwtZU9.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwtZU9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwtI7o.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwtI7o.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cwtiym.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cwtiym.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwt0Ti.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwt0Ti.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwtrZ2.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwtrZ2.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>From here we have finally walked across the foot of the mountain and will now embark on a climb.
+Up the first flights of stairs is a dimly lit area surrounded by small shrines and connected with narrow steps.
+The sound of rain echo from a pond closeby and every-now-and then a person appears and walks down the narrow shrine corridors in the rain.
+From left to right there are foxes that look right back at you and a look around reveals snails on an ascent on various objects.</p></section>
+
+<section class="sec" id="lake">
+<div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/Cwt1uC.jpeg"><img width="1200" src="https://i1.lensdump.com/i/Cwt1uC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwttmv.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwttmv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwtT85.jpeg"><img src="https://i.lensdump.com/i/CwtT85.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwtEQz.jpeg"><img src="https://i2.lensdump.com/i/CwtEQz.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwtknT.jpeg"><img src="https://i.lensdump.com/i/CwtknT.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwtsAq.jpeg"><img src="https://i2.lensdump.com/i/CwtsAq.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwt6yb.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwt6yb.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwtVUF.jpeg"><img src="https://i1.lensdump.com/i/CwtVUF.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwtJT7.jpeg"><img src="https://i3.lensdump.com/i/CwtJT7.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwtdZ3.jpeg"><img src="https://i.lensdump.com/i/CwtdZ3.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/Cwtqs0.jpeg"><img src="https://i3.lensdump.com/i/Cwtqs0.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/Cwt7Ta.jpeg"><img src="https://i1.lensdump.com/i/Cwt7Ta.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/Cwt4nM.jpeg"><img src="https://i.lensdump.com/i/Cwt4nM.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwtzZx.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwtzZx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwteD1.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwteD1.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwtLVK.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwtLVK.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwtDHi.jpeg"><img src="https://i.lensdump.com/i/CwtDHi.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwtUDv.jpeg"><img src="https://i1.lensdump.com/i/CwtUDv.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwtY5P.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwtY5P.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cwtfg9.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cwtfg9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwtbV5.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwtbV5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwtxGT.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwtxGT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cw10LA.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cw10LA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/Cw1AN0.jpeg"><img src="https://i.lensdump.com/i/Cw1AN0.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/Cw1j9q.jpeg"><img src="https://i3.lensdump.com/i/Cw1j9q.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cw1gkQ.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cw1gkQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwtGH7.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwtGH7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cw1tXe.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cw1tXe.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwRKpe.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwRKpe.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwRHBH.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwRHBH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwRS2c.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwRS2c.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwRneZ.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwRneZ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwRDI9.jpeg"><img src="https://i3.lensdump.com/i/CwRDI9.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwRXyT.jpeg"><img src="https://i.lensdump.com/i/CwRXyT.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwRwRb.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwRwRb.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwRx77.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwRx77.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwRyUr.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwRyUr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwRGIF.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwRGIF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwRam3.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwRam3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwT88D.jpeg"><img src="https://i1.lensdump.com/i/CwT88D.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwRhu0.jpeg"><img src="https://i.lensdump.com/i/CwRhu0.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwTWnA.jpeg"><img src="https://i1.lensdump.com/i/CwTWnA.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwtBuD.jpeg"><img src="https://i1.lensdump.com/i/CwtBuD.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwTAQq.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwTAQq.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="mid">
+<div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwT0TQ.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwT0TQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwTZUe.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwTZUe.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwTrZk.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwTrZk.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwTtmx.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwTtmx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwT1uH.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwT1uH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwTTA1.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwTTA1.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwTEQc.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwTEQc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwTknK.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwTknK.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwTJTP.jpeg"><img src="https://i1.lensdump.com/i/CwTJTP.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwTQOm.jpeg"><img src="https://i2.lensdump.com/i/CwTQOm.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwTdZo.jpeg"><img src="https://i3.lensdump.com/i/CwTdZo.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwTVci.jpeg"><img src="https://i.lensdump.com/i/CwTVci.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph"><p>Before arriving at the mountain pass we reach a viewing platform.
+From here the south part of Kyoto can be seen and in the distance - Muko City.
+Another flight up is a vending machine with cool drinks.
+"Oh man, I am thirsty!" you could hear a young university student say in front of the machine as he reached down for some coins.
+From here one can sit down on a bench, drink and enjoy the view.</p></section>
+
+<section class="sec" id="viewpoint">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwTqs9.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwTqs9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/Cwgct9.jpeg"><img src="https://i.lensdump.com/i/Cwgct9.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwkNmk.jpeg"><img src="https://i3.lensdump.com/i/CwkNmk.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwkDIe.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwkDIe.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwkPox.jpeg"><img src="https://i1.lensdump.com/i/CwkPox.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwkUQ1.jpeg"><img src="https://i1.lensdump.com/i/CwkUQ1.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkF8H.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkF8H.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>Mt.Inari consists of three mountain passes.
+At the foot of the mountain they sell small portable shrine gates that visitors may place around the shrine.
+As can be seen throughout the pictures these small gates have been placed around and in places they have piled up in such a large amount that workers have gathered them up to be stowed away in the back.
+They can even be found up at the top.</p></section>
+
+<section class="sec" id="shrine1">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwTsAv.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwTsAv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwTBD2.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwTBD2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwT3VC.jpeg"><img src="https://i.lensdump.com/i/CwT3VC.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwT4n5.jpeg"><img src="https://i2.lensdump.com/i/CwT4n5.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwTK5z.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwTK5z.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwT7ET.jpeg"><img src="https://i2.lensdump.com/i/CwT7ET.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwTvW0.jpeg"><img src="https://i1.lensdump.com/i/CwTvW0.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwTOOb.jpeg"><img src="https://i.lensdump.com/i/CwTOOb.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwTSsF.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwTSsF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwTLVD.jpeg"><img src="https://i3.lensdump.com/i/CwTLVD.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwTMvq.jpeg"><img src="https://i.lensdump.com/i/CwTMvq.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="shrine2">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwTuEM.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwTuEM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwTDHQ.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwTDHQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwTNca.jpeg"><img src="https://i2.lensdump.com/i/CwTNca.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwTfge.jpeg"><img src="https://i1.lensdump.com/i/CwTfge.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwTUDx.jpeg"><img src="https://i1.lensdump.com/i/CwTUDx.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwTF3k.jpeg"><img src="https://i3.lensdump.com/i/CwTF3k.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwTXWH.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwTXWH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwTwvc.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwTwvc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwTxGK.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwTxGK.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>And finally we have reached the top where we find yet another subordinate shrine.
+Here the color of the vermilion gates stick out among the gray stones and statues.
+On this day the mountain top was covered in a white mist which made the surrounding view appear as nothing but a white page.</p></section>
+
+<section class="sec" id="shrine3">
+<div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwTGHP.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwTGHP.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwTaXm.jpeg"><img src="https://i2.lensdump.com/i/CwTaXm.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwE0LC.jpeg"><img src="https://i2.lensdump.com/i/CwE0LC.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwgDaP.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwgDaP.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwEIG5.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwEIG5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwEgkz.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwEgkz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwErlT.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwErlT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwEtXb.jpeg"><img src="https://i2.lensdump.com/i/CwEtXb.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/CwE6i3.jpeg"><img src="https://i2.lensdump.com/i/CwE6i3.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwET4r.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwET4r.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwECd0.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwECd0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwEJLD.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwEJLD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwEQaq.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwEQaq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwE96A.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwE96A.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwEdlM.jpeg"><img src="https://i2.lensdump.com/i/CwEdlM.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwEqbQ.jpeg"><img src="https://i.lensdump.com/i/CwEqbQ.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwEmra.jpeg"><img src="https://i3.lensdump.com/i/CwEmra.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwT5kZ.jpeg"><img src="https://i.lensdump.com/i/CwT5kZ.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwE2ri.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwE2ri.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwE83o.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwE83o.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwEAN9.jpeg"><img src="https://i1.lensdump.com/i/CwEAN9.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwEj9v.jpeg"><img src="https://i3.lensdump.com/i/CwEj9v.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwEii2.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwEii2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwgFbo.jpeg"><img src="https://i2.lensdump.com/i/CwgFbo.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwEENF.jpeg"><img src="https://i1.lensdump.com/i/CwEENF.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph"><p>As one climbed down the stairs, silhouettes of other visitors disappeared behind the mist.</p></section>
+
+<section class="sec" id="decend">
+<div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwEs4e.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwEs4e.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwE3Pk.jpeg"><img src="https://i.lensdump.com/i/CwE3Pk.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwEKix.jpeg"><img src="https://i3.lensdump.com/i/CwEKix.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwEpdH.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwEpdH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwE7M1.jpeg"><img src="https://i.lensdump.com/i/CwE7M1.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwEOac.jpeg"><img src="https://i1.lensdump.com/i/CwEOac.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwEl6K.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwEl6K.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwEntm.jpeg"><img src="https://i3.lensdump.com/i/CwEntm.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwEzzZ.jpeg"><img src="https://i1.lensdump.com/i/CwEzzZ.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwESbP.jpeg"><img src="https://i.lensdump.com/i/CwESbP.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwEYj9.jpeg"><img src="https://i1.lensdump.com/i/CwEYj9.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwEvKi.jpeg"><img src="https://i.lensdump.com/i/CwEvKi.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwELPo.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwELPo.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwEoq2.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwEoq2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwEuMv.jpeg"><img src="https://i1.lensdump.com/i/CwEuMv.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwEP65.jpeg"><img src="https://i1.lensdump.com/i/CwEP65.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwEDhC.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwEDhC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwEfzz.jpeg"><img src="https://i2.lensdump.com/i/CwEfzz.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwEctb.jpeg"><img src="https://i1.lensdump.com/i/CwEctb.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph"><p>Along the descending path is a creek pouring out from the mountain.
+Downstream is a small artificial waterfall with a road leading up to it that makes it possible for one to enter the waterfall.</p></section>
+
+<section class="sec" id="creek">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwExjF.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwExjF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwEbfr.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwEbfr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwEyq3.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwEyq3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwEXK7.jpeg"><img src="https://i2.lensdump.com/i/CwEXK7.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwEGhD.jpeg"><img src="https://i1.lensdump.com/i/CwEGhD.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwE5Y0.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwE5Y0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwk2SA.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwk2SA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwkW1Q.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwkW1Q.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/CwkiKa.jpeg"><img width="1200" src="https://i1.lensdump.com/i/CwkiKa.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cwk8wM.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cwk8wM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwkjfe.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwkjfe.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkI0k.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkI0k.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwkZqx.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwkZqx.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="graveyard">
+<div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwkgYH.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwkgYH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/Cwkt21.jpeg"><img width="1200" src="https://i1.lensdump.com/i/Cwkt21.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkRSK.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkRSK.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwkTxZ.jpeg"><img src="https://i.lensdump.com/i/CwkTxZ.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/Cwkk1P.jpeg"><img src="https://i3.lensdump.com/i/Cwkk1P.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkCFi.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkCFi.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwk6pm.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwk6pm.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i.lensdump.com/i/CwkQ0o.jpeg"><img src="https://i.lensdump.com/i/CwkQ0o.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwkVB9.jpeg"><img src="https://i3.lensdump.com/i/CwkVB9.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cwk9o2.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cwk9o2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cwkq2v.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cwkq2v.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwkBJC.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwkBJC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwkmS5.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwkmS5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cwksxz.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cwksxz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cwk4RT.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cwk4RT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/CwkpF7.jpeg"><img src="https://i3.lensdump.com/i/CwkpF7.jpeg"></a></div>
+<div class="img"><a href="https://i.lensdump.com/i/CwkKpb.jpeg"><img src="https://i.lensdump.com/i/CwkKpb.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/CwkOIr.jpeg"><img src="https://i1.lensdump.com/i/CwkOIr.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/CwkHBF.jpeg"><img src="https://i2.lensdump.com/i/CwkHBF.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/Cwklo3.jpeg"><img src="https://i1.lensdump.com/i/Cwklo3.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkeJD.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkeJD.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="decend-1">
+<div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkvyA.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkvyA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/Cwkneq.jpeg"><img width="1200" src="https://i.lensdump.com/i/Cwkneq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwkMRM.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwkMRM.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i.lensdump.com/i/CwkY7Q.jpeg"><img width="1200" src="https://i.lensdump.com/i/CwkY7Q.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkoFa.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkoFa.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="decent-2">
+<div class="imgWrap">
+
+<div class="img"><a href="https://i2.lensdump.com/i/Cwkcec.jpeg"><img src="https://i2.lensdump.com/i/Cwkcec.jpeg"></a></div>
+<div class="img"><a href="https://i3.lensdump.com/i/CwkXyK.jpeg"><img src="https://i3.lensdump.com/i/CwkXyK.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i1.lensdump.com/i/CwkwTZ.jpeg"><img src="https://i1.lensdump.com/i/CwkwTZ.jpeg"></a></div>
+<div class="img"><a href="https://i2.lensdump.com/i/Cwkx7P.jpeg"><img src="https://i2.lensdump.com/i/Cwkx7P.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/CwkyUm.jpeg"><img width="1200" src="https://i3.lensdump.com/i/CwkyUm.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>Finally we have returned to the bottom from where we leave Fushimi Inari Taisha.</p></section>
+
+<section class="sec" id="exit">
+<div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/CwkGZi.jpeg"><img width="1200" src="https://i2.lensdump.com/i/CwkGZi.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i1.lensdump.com/i/Cwkamo.jpeg"><img width="1200" src="https://i1.lensdump.com/i/Cwkamo.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://i3.lensdump.com/i/Cwkhu9.jpeg"><img src="https://i3.lensdump.com/i/Cwkhu9.jpeg"></a></div>
+<div class="img"><a href="https://i1.lensdump.com/i/Cw68A2.jpeg"><img src="https://i1.lensdump.com/i/Cw68A2.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i2.lensdump.com/i/Cw6AQv.jpeg"><img width="1200" src="https://i2.lensdump.com/i/Cw6AQv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://i3.lensdump.com/i/Cw6WnC.jpeg"><img width="1200" src="https://i3.lensdump.com/i/Cw6WnC.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<table class="credits">
+<tr><td colspan="2">Summary</td></tr>
+<tr>
+<td>Photographer</td>
+<td>Crasy Wolfang</td>
+</tr>
+<tr>
+<td>Sessions</td>
+<td>1 session</td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>
+Fushimi Inari Taisha, Kyoto (京都市 伏見稲荷大社)
+</td>
+</tr>
+</table>
+<details class="bibliography">
+<summary>Bibliography</summary>
+<ul>
+<li>National Diet Library of Japan Collaborative Reference Database. 2013. 伏見稲荷大社にある千本鳥居の由来と数を知りたい (<em>Fushimi Inari-Taisha ni aru senbontorii no yurai to kazu wo shiritai</em> tr: <em>I want to know the origin and number of the thousand gates at Fushimi Inari</em>).</li>
+<li>Kato, Kenji. 2016. <i>Bilingual Guide to Japan: Shinto Shrine</i>. Shogakukan: Japan</li>
+</ul>
+</details>
+
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2024
+✉ <adress>forwardtowolf@gmail.com</adress>
+<a href="#top" style="float: right; color: grey;">top ↑</a>
+</div>
+</div>
+
+</body>
 </html>

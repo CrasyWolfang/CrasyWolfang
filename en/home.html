@@ -1,341 +1,443 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
-		<style>
-			body{background-color: #000000;}
-			a{
-			color: #D3D3D3;
-			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
-			color: #ffffff;
-			max-width: 1200px;
-			min-width: 640px;
-			margin-left: auto;
-			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
-			color: #ffffff;
-			text-decoration: none;
-			}
-			#header img{
-			display: block;
-			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
-			margin: 0em;
-			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
-			display: inline;
-			padding: 0em;
-			font-size: 1.3em;
-			border: 2px solid #808080;
-			}
-			#topMenu a{
-			padding-top: 0em;
-			padding-bottom: 0em;
-			padding-left: 2em;
-			padding-right: 2em;
-			color: #ffffff;
-			}
-			#bottom{
-			color: #808080;
-			background-color: #000000;
-			}
-			
-			.update{
-			margin: 0.5em;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			padding-left: 2em;
-			padding-right: 2em;
-			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
-			max-width: 80%;
-			max-height: 800px;
-			}
-			.updatePosts img{
-			max-height: 800px;
-			}
-			.updatePosts ul{
-			max-width: 600px;
-			margin-right: auto;
-			margin-left: auto;
-			}
-			.flowbutton {
-			padding: 1em;
-			gap: 1em;
-			}
-			.flowbutton li{
-			list-style-type: none;
-			margin-top: 0.5em;
-			color: #ffffff;
-			border: 1px solid #ffffff;
-			text-align: center;
-			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			
-			.catCard{
-			list-style: none;
-			padding-left: 0;
-			text-align: center;
-			font-size: 1.3em;
-			}
-			.catCard li{
-			margin: 0.3em;
-			display: inline-block;
-			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
-			width: 240px;
-			display: block;
-			}
-			.catCard a{
-			color: #ffffff;
-			display: block;
-			}
-			
-			.title{
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 800px;
-			padding: 1em;
-			padding-bottom: 2em;
-			}
-			.title h1{
-			border-bottom: 1px solid;
-			width: 100%;
-			margin: 0px;
-			}
-			.title-left{float: left;}
-			.title-right{
-			float: right;
-			text-align: right;
-			}
-			
-			.photo-content p{
-			padding-left: 1em;
-			padding-right: 1em;
-			text-indent: 2em;
-			}
-			.note {
-			margin: 1em;
-			border: 1px solid #ffffff;
-			}
-			
-			.ref{
-			color: #D3D3D3;
-			text-decoration: none;
-			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			
-			.photoCard{
-			color: #ffffff;
-			border: 2px solid #808080;
-			margin-top: 1em;
-			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
-			margin: 0px;
-			padding-left: 0.15em;
-			}
-			.card-incipit{
-			font-weight: bold;
-			padding-left: 0.4em;
-			}
-			.card-left{
-			float: left;
-			padding-left: 0.4em;
-			}
-			.card-right{
-			float: right;
-			text-align: right;
-			padding-right: 0.4em;
-			}
-			.photoCard img{
-			width: 100%;
-			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			
-			.imgWrap{
-			display: flex;
-			flex-direction: row;
-			gap: 0.5em;
-			padding-bottom: 0.25em;
-			padding-top: 0.25em;
-			margin-left: auto;
-			margin-right: auto;
-			justify-content: center;
-			}
-			.imgWrap img{
-			display: block;
-			max-width: 100%;
-			gap: 0.5em;
-			}
-			
-			.bibliography ul{
-			list-style-type: none;
-			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
-			margin-bottom: 0.5em;
-			}
-			
-			.largePhoto{
-			border: 1px solid #ffffff;
-			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
-			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
-			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
-			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
-			text-indent: 1em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
-			font-size: 1.3em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			text-indent: 2em;
-			}
-			.largePhoto p{
-			text-indent: 2em;
-			padding-left: 1em;
-			padding-right: 1em;
-			}
-			
-			.credits{
-			width: 100%;
-			border-collapse: collapse;
-			}
-			.credits td{
-			border: 1px solid #ffffff;
-			padding: 0.3em;
-			padding-left: 1em;
-			}
-			.credits td:first-child {
-			width: 12%;
-			white-space: nowrap;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/home">English</a> | <a href="https://www.CrasyWolfang.com/jp/home">日本語</a></div>
-			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-			<nav id="topMenu">
-				<ul>
-					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/video">Video Production</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
-				</ul>
-			</nav>
-			<div class="update">
-				<h1>Year 2025</h1>
-				<div class="updateParagraph">
-					<p>It's already 2025.
-					Last year was a busy one.
-					The second impression of Europe has been different from the first one.
-					Therefore time has leaked out into the sand.</p><p>In that time there has been a full ponder on how to sort out (about 10 years) old photos.
-					To be frank, the best way to handle old photos would be to toss them out, but then some precious photos would also be lost.
-					For example, there are still photos in there from the 2018 Lund Carnival which one would certainly not want to forget.
-					However, to be able to reach those photos the photos that come prior need to be registered and corrected.
-					These photos will make it up here at some point.</p><p>At least, some more photos have been taken in that meantime.
-					Here are some photos that remained from previous years.
-					Enjoy.</p>
-				</div>
-				
-				
-				
-			
-				
-				
-				<div class="updatePosts">
-					<div class="imgWrap">
-						<a href="https://www.CrasyWolfang.com/en/post/2404cphs"><img src="https://c.l3n.co/i/YIhh9k.jpg"></a>
-						
-			
-						<a href="https://www.CrasyWolfang.com/en/post/2308rinb"><img src="https://b.l3n.co/i/YIhbXA.jpg"></a>
-						
-			
-						<a href="https://www.CrasyWolfang.com/en/post/2309nobb"><img src="https://a.l3n.co/i/YIhy3Q.jpg"></a>
-						
-			
-						<a href="https://www.CrasyWolfang.com/en/post/2310boma"><img src="https://b.l3n.co/i/YIhaWe.jpg"></a>
-						
-			
-						<a href="https://www.CrasyWolfang.com/en/post/2210boau"><img src="https://c.l3n.co/i/YIhcED.jpg"></a>
-					</div>
-					<ul>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2404cphs">Copenhagen Sakura Festival</a></li>
-						
-			
-						<li><a href="https://www.CrasyWolfang.com/en/post/2308rinb">Rinnebäck</a></li>
-						
-			
-						<li><a href="https://www.CrasyWolfang.com/en/post/2309nobb">Nöbbelöv's Marshland</a></li>
-						
-			
-						<li><a href="https://www.CrasyWolfang.com/en/post/2310boma">Change of Season</a></li>
-						
-			
-						<li><a href="https://www.CrasyWolfang.com/en/post/2210boau">Botanical Garden Autumn</a></li>
-					</ul>
-				</div>
-			</div>
-			<ul class="flowbutton">
-				<a href="https://www.CrasyWolfang.com/en/archive/2024"><li>2024</li></a>
-				
-			
-				<a href="https://www.CrasyWolfang.com/en/archive/2023"><li>2023</li></a>
-			</ul>
-			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
-				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
-			</div>
-		</div>
-	</body>
+<head>
+<title>CWOLF </title>
+<meta charset="utf-8">
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0em;
+padding: 0em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0em;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0em;
+padding-bottom: 0em;
+padding-left: 2em;
+padding-right: 2em;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{
+float: right;
+text-align: right;
+}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+font-size: 0.8em;
+}
+.ref::before{content: '[';}
+.ref::after{content: ']';}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.15em;
+}
+.card-incipit{
+font-weight: bold;
+padding-left: 0.4em;
+}
+.card-left{
+float: left;
+padding-left: 0.4em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.4em;
+}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+margin-bottom: 0.5em;
+}
+
+.largePhoto{
+border: 1px solid white;
+margin-bottom: 1em;
+}
+.largePhoto p{
+text-indent: 2em;
+padding-left: 1em;
+padding-right: 1em;
+}
+.largePhotoTop{
+text-indent: 1em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+}
+.largePhotoTitle{
+font-size: 1.3em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+text-indent: 2em;
+}
+.largePhoto img{display: block;}
+.largeformat p{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.credits{width: 100%;}
+.credits td{
+border: 1px solid white;
+padding: 0.3em;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/home">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/home">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/en/home">Home</a></li>
+<li><a href="https://CrasyWolfang.com/en/photo">Photography</a></li>
+<!---<li><a href="https://CrasyWolfang.com/en/video">Video Production</a></li>--->
+<li><a href="https://CrasyWolfang.com/en/about">About</a></li>
+</ul>
+</nav>
+
+<div style="border: 1px solid; padding: 0.5em; text-align: center; width: 500px; margin-left: auto; margin-top: 1em; margin-bottom: 1em; margin-right: auto;">
+The web-page is currently under revision<br>
+Some older posts may currently not be available.</br>
+Thank you for your understanding.
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">Botanical gardens and animal parks<small> (2024-06-22)</small></h1>
+
+<div style="text-align: left; text-indent: 2em;">
+<p>Two years ago a comparison between Japanese and Scandinavian parks was made.
+These comparisons were made between Kyoto Botanical Garden and Lund Botanical Garden, and between Tennoji Zoo and Scania Animal Park.
+A day was spent with photos at each animal park.
+In the botanical gardens one finds themselves so surrounded by vegetation that multiple trips were made.</p>
+
+<p>Results are that the botanical gardens feel the same for someone who doesn't know anything about plants.
+It seems that the flowers you see in the Japanese garden also appear in the Scandinavian one.
+The difference lies in that you have to pay an entrance fee for the Kyoto Botanical Garden.
+Inside the artist sits under trees and paints the landscape.
+In Lund the entrance is free and the garden is filled with students who like to use the area for picnics.</p>
+
+<p>On the other hand, the animal parks are a world apart.
+At Tennoji Zoo they have a wide variety of animal species and the entrance was cheap, however, the enclosures are small and the animals look worried as they try to run in their enclosure.
+In Scania Animal Park they have collected a bunch of European animals, and those animals look happy, however, entrance fee is high and the park feels like it was made for children.</p>
+</div>
+
+<div class="imgWrap" style="width: 80%; margin-left: auto; margin-right: auto;">
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2205kybo"><img src="https://c.l3n.co/i/zHJb4C.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2206lubo"><img src="https://a.l3n.co/i/zHJXrv.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2206otzo"><img src="https://b.l3n.co/i/zHJwN5.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2208skdp"><img src="https://a.l3n.co/i/zHJyiz.jpeg"></a></div>
+</div>
+
+<div style="text-align; margin-left: auto; margin-right: auto; width: 60%;">
+<ul style="text-align: left; margin-left: auto; margin-right: auto;">
+<li><a href="https://CrasyWolfang.com/en/post/2205kybo">Kyoto Botanical Garden</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2206lubo">Lund Botanical Garden</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2206otzo">Tennoji Zoo</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2208skdp">Skånes Djurpark</a></li>
+</ul>
+</div>
+
+<p>With that, here are four albums from two years ago.
+There will be more photos from Lund Botanical garden (since it's free it's a subject to frequent visits).
+Until then, please take your time and enjoy these photos.</p>
+
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">Expanded info etc.<small> (2023-11-08)</small></h1>
+
+<div style="text-align: left; text-indent: 2em;">
+<p>An information sheet has been added to each post and 6 new photo albums have been published.
+Three of the albums were taken in spring in the South Ward of Kyoto and follows the Katsura River and the Kamo River as some showcase of Kisshoin.
+The next three albums were from the following summer in Sweden with one at night.
+The night album is taken from the night shift worker's perspective for a full year.
+Furthermore, the photo album category "location" has been divided into 4 new categories.
+On the top of that "the photowall" which is a mixture of photos have made a reentry on the website.</p>
+
+<p>Unfortunately the amount of photos to review has been immense and portrait photography has been postponed.
+For now photos of plants and photos of animals have been prepared for revision.
+Besides photography, a lot of time has gone into software development.
+Those who know, know about this lengthy project.
+Since the continuation of the software is sporadic there is no telling of when an alpha version will be available.</p>
+</div>
+
+Below are the six recent posts:
+<div class="imgWrap" style="width: 80%; margin-left: auto; margin-right: auto;">
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2204kamo"><img src="https://b.l3n.co/i/m2kJ89.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2204katu"><img src="https://c.l3n.co/i/m2kmUT.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2204kiss"><img src="https://a.l3n.co/i/m2kRFP.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2307summ"><img src="https://c.l3n.co/i/m2kVev.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2206sush"><img src="https://b.l3n.co/i/m2k17Z.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2206scni"><img src="https://c.l3n.co/i/m2kkmi.jpeg"></a></div>
+</div>
+
+<div style="text-align; margin-left: auto; margin-right: auto; width: 60%;">
+<ul style="text-align: left; margin-left: auto; margin-right: auto;">
+<li><a href="https://CrasyWolfang.com/en/post/2204kamo">Kamo River</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2204katu">Katsura River</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2204kiss">Kisshoin</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2307summ">Summer '23</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2206sush">Summer Shots</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2206scni">Scanian Nights</a></li>
+</ul>
+</div>
+
+<p>Please take your time and enjoy.</p>
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">15 October</h1>
+
+
+<p>A prologue to the recent autumn album has been added.<br>
+After this some albums taken in 2022 in both Japan and Sweden will be added,<br>
+and some more information on albums will be available.</p>
+
+<a href="https://CrasyWolfang.com/en/post/2209park"><img src="https://b.l3n.co/i/qMmSHx.jpeg" width="40%" style="display: block; margin-left: auto; margin-right: auto;"></a>
+
+<p><a href="https://CrasyWolfang.com/en/post/2209park">Autumn Animals →</a></p>
+<p>Meanwhile, please take your time and enjoy these photographs.</p>
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">28 September</h1>
+
+<p>Photos from Umekoji park in 2019 have been uploaded.<br>
+On this day there was a market on the square and children played in the park.</p>
+
+<a href="https://CrasyWolfang.com/en/post/1910umek"><img src="https://b.l3n.co/i/dDsKcZ.jpeg" width="80%" style="display: block; margin-left: auto; margin-right: auto;"></a>
+
+<p><a href="https://CrasyWolfang.com/en/post/1910umek">Umekoji Sunset →</a></p>
+
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">26 September</h1>
+
+<p>Under the blue sky<br>
+they leap in circles like frogs</p>
+
+<a href="https://CrasyWolfang.com/en/post/2206mids"><img src="https://b.l3n.co/i/dkBl1i.jpeg" width="40%" style="display: block; margin-left: auto; margin-right: auto;"></a>
+
+<p>That is <a href="https://CrasyWolfang.com/en/post/2206mids">Swedish Midsummer</a></p>
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">25 August</h1>
+
+<p>Two photo albums from 2022 have been added.<br>
+The first album is themed around the autumn season and consists of photos in Lund, Sweden.<br>
+The second album was taken at the famous Fushimi Inari Taisha.<br>
+Both of the albums contain <a href="https://CrasyWolfang.com/en/photo/largeformat">large format photographs</a>.
+Furthermore, the latter album also contains <a href="https://CrasyWolfang.com/en/photo/focusstack">focus stacks.</a></p>
+
+<div class="imgWrap" style="width: 80%; margin-left: auto; margin-right: auto;">
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2210luau"><img src="https://a.l3n.co/i/VNW385.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2205fuit"><img src="https://b.l3n.co/i/VNWmuC.jpeg"></a></div>
+</div>
+
+<div style="text-align; margin-left: auto; margin-right: auto; width: 60%;">
+<ul style="text-align: left; margin-left: auto; margin-right: auto;">
+<li><a href="https://CrasyWolfang.com/en/post/2210luau">Lund Autumn</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2205fuit">Inari Mountain Shadow</a></li>
+</ul>
+</div>
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">31 July</h1>
+
+<p>Summer trips albums from last year (2022) have been posted into the website.<br>
+Four new posts have been uploaded and one has been revised.</p>
+
+<div class="imgWrap" style="width: 60%; margin-left: auto; margin-right: auto;">
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2208wafo"><img src="https://c.l3n.co/i/QHGonK.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2208dege"><img src="https://b.l3n.co/i/QHwwxi.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2208eufo"><img src="https://a.l3n.co/i/QHwXCP.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2207oasf"><img src="https://b.l3n.co/i/QHwc2Z.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2207dbsb"><img src="https://a.l3n.co/i/QHwfqc.jpeg"></a></div>
+</div>
+
+<div style="text-align; margin-left: auto; margin-right: auto; width: 60%;">
+<ul style="text-align: left; margin-left: auto; margin-right: auto;">
+<li><a href="https://CrasyWolfang.com/en/post/2208wafo">Drain Water Fowl</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2208dege">The Valley Forsakar</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2208eufo">A visit to a UFO</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2207oasf">Oasen Flower Shop</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2207dbsb">Dalby Quarry</a></li>
+</ul>
+</div>
+</div><div class="flowcard" style="text-align: center;">
+<h1 style="text-align: center;">2023 site update<small> (July)</small></h1>
+
+<p>The website has been updated.<br>
+The background has been changed for a dark one to give a better photo viewing experience.<br>
+Furthermore, the site has been adapted to fit better on the long narrow screens of smartphones.</p>
+
+<p>For the near future...<br>
+New photos will be posted.<br>
+There are plans on portrait photography from the start of autumn.<br>
+On top of that some of the photos accumulated over the past 8 years will hopefully be uploaded to the site.</p>
+
+Below are five recent posts:
+<div class="imgWrap" style="width: 60%; margin-left: auto; margin-right: auto;">
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2212lust"><img src="https://b.l3n.co/i/JcTnWm.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2108fuit"><img src="https://i1.lensdump.com/i/JcTok2.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2304meos"><img src="https://i2.lensdump.com/i/JcTuHv.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2303hist"><img src="https://i3.lensdump.com/i/JcTLvo.jpeg"></a></div>
+<div class="img"><a href="https://CrasyWolfang.com/en/post/2304cphs"><img src="https://i.lensdump.com/i/JcTDXC.jpeg"></a></div>
+</div>
+
+<div style="text-align; margin-left: auto; margin-right: auto; width: 60%;">
+<ul style="text-align: left; margin-left: auto; margin-right: auto;">
+<li><a href="https://CrasyWolfang.com/en/post/2212lust">Park Winter Collection</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2108fuit">The Fox Gates</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2304meos">Memories of Spring</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2303hist">Malmö Museum of History</a></li>
+<li><a href="https://CrasyWolfang.com/en/post/2304cphs">Copenhagen Sakura Festival</a></li>
+</ul>
+</div>
+
+<p>Please take your time and enjoy these photographs.</p>
+</div>
+
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2024
+✉ <adress>forwardtowolf@gmail.com</adress>
+<a href="#top" style="float: right; color: grey;">top ↑</a>
+</div>
+</div>
+
+</body>
 </html>

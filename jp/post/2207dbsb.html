@@ -1,527 +1,454 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
-		<style>
-			body{background-color: #000000;}
-			a{
-			color: #D3D3D3;
-			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
-			color: #ffffff;
-			max-width: 1200px;
-			min-width: 640px;
-			margin-left: auto;
-			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
-			color: #ffffff;
-			text-decoration: none;
-			}
-			#header img{
-			display: block;
-			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
-			margin: 0em;
-			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
-			display: inline;
-			padding: 0em;
-			font-size: 1.3em;
-			border: 2px solid #808080;
-			}
-			#topMenu a{
-			padding-top: 0em;
-			padding-bottom: 0em;
-			padding-left: 2em;
-			padding-right: 2em;
-			color: #ffffff;
-			}
-			#bottom{
-			color: #808080;
-			background-color: #000000;
-			}
-			
-			.update{
-			margin: 0.5em;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			padding-left: 2em;
-			padding-right: 2em;
-			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
-			max-width: 80%;
-			max-height: 800px;
-			}
-			.updatePosts img{
-			max-height: 800px;
-			}
-			.updatePosts ul{
-			max-width: 600px;
-			margin-right: auto;
-			margin-left: auto;
-			}
-			.flowbutton {
-			padding: 1em;
-			gap: 1em;
-			}
-			.flowbutton li{
-			list-style-type: none;
-			margin-top: 0.5em;
-			color: #ffffff;
-			border: 1px solid #ffffff;
-			text-align: center;
-			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			
-			.catCard{
-			list-style: none;
-			padding-left: 0;
-			text-align: center;
-			font-size: 1.3em;
-			}
-			.catCard li{
-			margin: 0.3em;
-			display: inline-block;
-			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
-			width: 240px;
-			display: block;
-			}
-			.catCard a{
-			color: #ffffff;
-			display: block;
-			}
-			
-			.title{
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 800px;
-			padding: 1em;
-			padding-bottom: 2em;
-			}
-			.title h1{
-			border-bottom: 1px solid;
-			width: 100%;
-			margin: 0px;
-			}
-			.title-left{float: left;}
-			.title-right{
-			float: right;
-			text-align: right;
-			}
-			
-			.photo-content p{
-			padding-left: 1em;
-			padding-right: 1em;
-			text-indent: 2em;
-			}
-			.note {
-			margin: 1em;
-			border: 1px solid #ffffff;
-			}
-			
-			.ref{
-			color: #D3D3D3;
-			text-decoration: none;
-			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			
-			.photoCard{
-			color: #ffffff;
-			border: 2px solid #808080;
-			margin-top: 1em;
-			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
-			margin: 0px;
-			padding-left: 0.15em;
-			}
-			.card-incipit{
-			font-weight: bold;
-			padding-left: 0.4em;
-			}
-			.card-left{
-			float: left;
-			padding-left: 0.4em;
-			}
-			.card-right{
-			float: right;
-			text-align: right;
-			padding-right: 0.4em;
-			}
-			.photoCard img{
-			width: 100%;
-			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			
-			.imgWrap{
-			display: flex;
-			flex-direction: row;
-			gap: 0.5em;
-			padding-bottom: 0.25em;
-			padding-top: 0.25em;
-			margin-left: auto;
-			margin-right: auto;
-			justify-content: center;
-			}
-			.imgWrap img{
-			display: block;
-			max-width: 100%;
-			gap: 0.5em;
-			}
-			
-			.bibliography ul{
-			list-style-type: none;
-			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
-			margin-bottom: 0.5em;
-			}
-			
-			.largePhoto{
-			border: 1px solid #ffffff;
-			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
-			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
-			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
-			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
-			text-indent: 1em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
-			font-size: 1.3em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			text-indent: 2em;
-			}
-			.largePhoto p{
-			text-indent: 2em;
-			padding-left: 1em;
-			padding-right: 1em;
-			}
-			
-			.credits{
-			width: 100%;
-			border-collapse: collapse;
-			}
-			.credits td{
-			border: 1px solid #ffffff;
-			padding: 0.3em;
-			padding-left: 1em;
-			}
-			.credits td:first-child {
-			width: 12%;
-			white-space: nowrap;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2207dbsb">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2207dbsb">日本語</a></div>
-			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-			<nav id="topMenu">
-				<ul>
-					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/video">動画制作</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
-				</ul>
-			</nav>
-			<div class="title">
-				<h1>ダルビ採石場</h1>
-				
-				<span class="title-left">草原撮影</span>
-				
-				<span class="title-right"><span style="color: LightGray;">発行日　</span>2023年07月31日</span>
-			</div>
-			<div class="photo-content">
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGernD.jpeg"><img src="https://a.l3n.co/i/JGernD.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/JGegV0.jpeg"><img src="https://c.l3n.co/i/JGegV0.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/JGeREA.jpeg"><img src="https://b.l3n.co/i/JGeREA.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/JGet5q.jpeg"><img src="https://c.l3n.co/i/JGet5q.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				<p>この写真はスウェーデンのダルビの昔の採石場への短い旅行中に撮られた。
-				採石場はクニブオーセン（本名：Knivsåsen）という地域にあり、歩いてバス停から十分くらいである。
-				雨がやんでから元気な子が水に飛び出すことで、人気の水泳場であることがわかる。
-				ラズベリーは草木の間に生えていて、岩登りが上手になれば、崖に生える果物を採れる。
-				さらに、水に手で取りやすいザリガニがいる。
-				にぎやかな水泳場の一方、周りの東の黄色い野原と西・北のブナの林は両方が穏やかで静かであった。</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/JGeEcQ.jpeg"><img src="https://c.l3n.co/i/JGeEcQ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/JGe6Za.jpeg"><img src="https://b.l3n.co/i/JGe6Za.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/JGedv1.jpeg"><img src="https://b.l3n.co/i/JGedv1.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGemEK.jpeg"><img src="https://a.l3n.co/i/JGemEK.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/JGep3i.jpeg"><img src="https://c.l3n.co/i/JGep3i.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/JGesHZ.jpeg"><img src="https://c.l3n.co/i/JGesHZ.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGe3cP.jpeg"><img src="https://a.l3n.co/i/JGe3cP.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/JGeKgm.jpeg"><img src="https://b.l3n.co/i/JGeKgm.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/JGeq5c.jpeg"><img src="https://c.l3n.co/i/JGeq5c.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/JGeVAx.jpeg"><img src="https://b.l3n.co/i/JGeVAx.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGe9VH.jpeg"><img src="https://a.l3n.co/i/JGe9VH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGeCse.jpeg"><img src="https://a.l3n.co/i/JGeCse.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGeHW9.jpeg"><img src="https://a.l3n.co/i/JGeHW9.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/JGe7Do.jpeg"><img src="https://b.l3n.co/i/JGe7Do.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/JGeJDk.jpeg"><img src="https://c.l3n.co/i/JGeJDk.jpeg"></a></div>
-						</div>
-					</div>
-				</div>
-				
-				
-			
-				
-				<p>採石場を離れると広い夏野原に入れる。
-				この草に茂った野原は牧草に使用されていて、奥に牛の群れが見出せる。
-				歩きながら、昆虫の鳴き声が聞こえ、バッタの声がする地面に見える小さな紫の花もある。</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGeSGC.jpeg"><img src="https://a.l3n.co/i/JGeSGC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/JGezvv.jpeg"><img src="https://c.l3n.co/i/JGezvv.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/JGel92.jpeg"><img src="https://b.l3n.co/i/JGel92.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/JGeo37.jpeg"><img src="https://b.l3n.co/i/JGeo37.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGevHz.jpeg"><img src="https://a.l3n.co/i/JGevHz.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/JGeLXT.jpeg"><img src="https://b.l3n.co/i/JGeLXT.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/JGeYgb.jpeg"><img src="https://c.l3n.co/i/JGeYgb.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/JGenE5.jpeg"><img src="https://c.l3n.co/i/JGenE5.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/JGeuNr.jpeg"><img src="https://c.l3n.co/i/JGeuNr.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/JGeNWF.jpeg"><img src="https://b.l3n.co/i/JGeNWF.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/JGefL0.jpeg"><img src="https://b.l3n.co/i/JGefL0.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/JGeP93.jpeg"><img src="https://c.l3n.co/i/JGeP93.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/JGeFGD.jpeg"><img src="https://c.l3n.co/i/JGeFGD.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/JGeckq.jpeg"><img src="https://b.l3n.co/i/JGeckq.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/JGeXlA.jpeg"><img src="https://c.l3n.co/i/JGeXlA.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/JGebXM.jpeg"><img src="https://b.l3n.co/i/JGebXM.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://a.l3n.co/i/JGey3a.jpeg"><img src="https://a.l3n.co/i/JGey3a.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/JGexrQ.jpeg"><img src="https://c.l3n.co/i/JGexrQ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/JGe5Ne.jpeg"><img src="https://c.l3n.co/i/JGe5Ne.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://a.l3n.co/i/JGeaik.jpeg"><img src="https://a.l3n.co/i/JGeaik.jpeg"></a></div>
-						</div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/JGeh9x.jpeg"><img src="https://b.l3n.co/i/JGeh9x.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/JGn2LH.jpeg"><img src="https://a.l3n.co/i/JGn2LH.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/JGnWkc.jpeg"><img src="https://b.l3n.co/i/JGnWkc.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/JGnjbZ.jpeg"><img src="https://b.l3n.co/i/JGnjbZ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://a.l3n.co/i/JGnilK.jpeg"><img src="https://a.l3n.co/i/JGnilK.jpeg"></a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<table class="credits">
-				<tr>
-					<td>撮影者</td>
-					<td>狼牙クレシ</td>
-				</tr>
-				
-			
-				<tr>
-					<td>撮影回</td>
-					<td>1回</td>
-				</tr>
-				
-			
-				<tr>
-					<td>行き先</td>
-					<td>
-						ダルビ （Dalby）
-						<ol><li>クニブ尾根 （Knivsåsen）</li></ol>
-					</td>
-				</tr>
-			</table>
-			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
-				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
-			</div>
-		</div>
-	</body>
+<head>
+<title>CWOLF </title>
+<meta charset="utf-8">
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0em;
+padding: 0em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0em;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0em;
+padding-bottom: 0em;
+padding-left: 2em;
+padding-right: 2em;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{
+float: right;
+text-align: right;
+}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+font-size: 0.8em;
+}
+.ref::before{content: '[';}
+.ref::after{content: ']';}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.15em;
+}
+.card-incipit{
+font-weight: bold;
+padding-left: 0.4em;
+}
+.card-left{
+float: left;
+padding-left: 0.4em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.4em;
+}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+margin-bottom: 0.5em;
+}
+
+.largePhoto{
+border: 1px solid white;
+margin-bottom: 1em;
+}
+.largePhoto p{
+text-indent: 2em;
+padding-left: 1em;
+padding-right: 1em;
+}
+.largePhotoTop{
+text-indent: 1em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+}
+.largePhotoTitle{
+font-size: 1.3em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+text-indent: 2em;
+}
+.largePhoto img{display: block;}
+.largeformat p{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.credits{width: 100%;}
+.credits td{
+border: 1px solid white;
+padding: 0.3em;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/post/2207dbsb">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/post/2207dbsb">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
+<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
+<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
+<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
+</ul>
+</nav>
+
+<div class="title">
+
+<h1>ダルビ採石場</h1>
+<span class="title-left">環境撮影</span>
+<span class="title-right"><span style="color: LightGray;">発行日　</span>2023年07月31日</span>
+</div>
+
+
+<section class="sec" id="entry">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGernD.jpeg"><img width="1200" src="https://a.l3n.co/i/JGernD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/JGegV0.jpeg"><img src="https://c.l3n.co/i/JGegV0.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/JGeREA.jpeg"><img src="https://b.l3n.co/i/JGeREA.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/JGet5q.jpeg"><img width="1200" src="https://c.l3n.co/i/JGet5q.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph">この写真はスウェーデンのダルビの昔の採石場への短い旅行中に撮られた。
+採石場はクニブオーセン（本名：Knivsåsen）という地域にあり、歩いてバス停から十分くらいである。
+雨がやんでから元気な子が水に飛び出すことで、人気の水泳場であることがわかる。
+ラズベリーは草木の間に生えていて、岩登りが上手になれば、崖に生える果物を採れる。
+さらに、水に手で取りやすいザリガニがいる。
+にぎやかな水泳場の一方、周りの東の黄色い野原と西・北のブナの林は両方が穏やかで静かであった。</section>
+
+<section class="sec" id="quarry">
+<div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/JGeEcQ.jpeg"><img src="https://c.l3n.co/i/JGeEcQ.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/JGe6Za.jpeg"><img src="https://b.l3n.co/i/JGe6Za.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/JGedv1.jpeg"><img width="1200" src="https://b.l3n.co/i/JGedv1.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGemEK.jpeg"><img width="1200" src="https://a.l3n.co/i/JGemEK.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/JGep3i.jpeg"><img src="https://c.l3n.co/i/JGep3i.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/JGesHZ.jpeg"><img src="https://c.l3n.co/i/JGesHZ.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGe3cP.jpeg"><img width="1200" src="https://a.l3n.co/i/JGe3cP.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/JGeKgm.jpeg"><img width="1200" src="https://b.l3n.co/i/JGeKgm.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/JGeq5c.jpeg"><img width="1200" src="https://c.l3n.co/i/JGeq5c.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="quarry-2">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/JGeVAx.jpeg"><img width="1200" src="https://b.l3n.co/i/JGeVAx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGe9VH.jpeg"><img width="1200" src="https://a.l3n.co/i/JGe9VH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGeCse.jpeg"><img width="1200" src="https://a.l3n.co/i/JGeCse.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGeHW9.jpeg"><img width="1200" src="https://a.l3n.co/i/JGeHW9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/JGe7Do.jpeg"><img src="https://b.l3n.co/i/JGe7Do.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/JGeJDk.jpeg"><img src="https://c.l3n.co/i/JGeJDk.jpeg"></a></div>
+
+</div>
+
+
+</section><section class="photoParagraph">採石場を離れると広い夏野原に入れる。
+この草に茂った野原は牧草に使用されていて、奥に牛の群れが見出せる。
+歩きながら、昆虫の鳴き声が聞こえ、バッタの声がする地面に見える小さな紫の花もある。</section>
+
+<section class="sec" id="cows">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGeSGC.jpeg"><img width="1200" src="https://a.l3n.co/i/JGeSGC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/JGezvv.jpeg"><img width="1200" src="https://c.l3n.co/i/JGezvv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/JGel92.jpeg"><img src="https://b.l3n.co/i/JGel92.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/JGeo37.jpeg"><img src="https://b.l3n.co/i/JGeo37.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGevHz.jpeg"><img width="1200" src="https://a.l3n.co/i/JGevHz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/JGeLXT.jpeg"><img src="https://b.l3n.co/i/JGeLXT.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/JGeYgb.jpeg"><img src="https://c.l3n.co/i/JGeYgb.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/JGenE5.jpeg"><img width="1200" src="https://c.l3n.co/i/JGenE5.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id=" insects">
+<div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/JGeuNr.jpeg"><img src="https://c.l3n.co/i/JGeuNr.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/JGeNWF.jpeg"><img src="https://b.l3n.co/i/JGeNWF.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/JGefL0.jpeg"><img src="https://b.l3n.co/i/JGefL0.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/JGeP93.jpeg"><img src="https://c.l3n.co/i/JGeP93.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/JGeFGD.jpeg"><img width="1200" src="https://c.l3n.co/i/JGeFGD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/JGeckq.jpeg"><img width="1200" src="https://b.l3n.co/i/JGeckq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/JGeXlA.jpeg"><img width="1200" src="https://c.l3n.co/i/JGeXlA.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/JGebXM.jpeg"><img src="https://b.l3n.co/i/JGebXM.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/JGey3a.jpeg"><img src="https://a.l3n.co/i/JGey3a.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/JGexrQ.jpeg"><img src="https://c.l3n.co/i/JGexrQ.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/JGe5Ne.jpeg"><img src="https://c.l3n.co/i/JGe5Ne.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/JGeaik.jpeg"><img src="https://a.l3n.co/i/JGeaik.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="exit">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/JGeh9x.jpeg"><img width="1200" src="https://b.l3n.co/i/JGeh9x.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/JGn2LH.jpeg"><img width="1200" src="https://a.l3n.co/i/JGn2LH.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/JGnWkc.jpeg"><img width="1200" src="https://b.l3n.co/i/JGnWkc.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/JGnjbZ.jpeg"><img src="https://b.l3n.co/i/JGnjbZ.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/JGnilK.jpeg"><img src="https://a.l3n.co/i/JGnilK.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<table class="credits">
+<tr><td colspan="2">情報表</td></tr>
+<tr>
+<td>撮影者</td>
+<td>狼牙クレシ</td>
+</tr>
+<tr>
+<td>撮影回</td>
+<td>1回</td>
+</tr>
+<tr>
+<td>行き先</td>
+<td>ダルビ　クニブ尾根（Knivsåsen, Dalby）</td>
+</tr>
+</table>
+
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2024
+✉ <adress>forwardtowolf@gmail.com</adress>
+<a href="#top" style="float: right; color: grey;">top ↑</a>
+</div>
+</div>
+
+</body>
 </html>

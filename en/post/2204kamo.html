@@ -1,701 +1,613 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
-		<style>
-			body{background-color: #000000;}
-			a{
-			color: #D3D3D3;
-			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
-			color: #ffffff;
-			max-width: 1200px;
-			min-width: 640px;
-			margin-left: auto;
-			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
-			color: #ffffff;
-			text-decoration: none;
-			}
-			#header img{
-			display: block;
-			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
-			margin: 0em;
-			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
-			display: inline;
-			padding: 0em;
-			font-size: 1.3em;
-			border: 2px solid #808080;
-			}
-			#topMenu a{
-			padding-top: 0em;
-			padding-bottom: 0em;
-			padding-left: 2em;
-			padding-right: 2em;
-			color: #ffffff;
-			}
-			#bottom{
-			color: #808080;
-			background-color: #000000;
-			}
-			
-			.update{
-			margin: 0.5em;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			padding-left: 2em;
-			padding-right: 2em;
-			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
-			max-width: 80%;
-			max-height: 800px;
-			}
-			.updatePosts img{
-			max-height: 800px;
-			}
-			.updatePosts ul{
-			max-width: 600px;
-			margin-right: auto;
-			margin-left: auto;
-			}
-			.flowbutton {
-			padding: 1em;
-			gap: 1em;
-			}
-			.flowbutton li{
-			list-style-type: none;
-			margin-top: 0.5em;
-			color: #ffffff;
-			border: 1px solid #ffffff;
-			text-align: center;
-			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			
-			.catCard{
-			list-style: none;
-			padding-left: 0;
-			text-align: center;
-			font-size: 1.3em;
-			}
-			.catCard li{
-			margin: 0.3em;
-			display: inline-block;
-			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
-			width: 240px;
-			display: block;
-			}
-			.catCard a{
-			color: #ffffff;
-			display: block;
-			}
-			
-			.title{
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 800px;
-			padding: 1em;
-			padding-bottom: 2em;
-			}
-			.title h1{
-			border-bottom: 1px solid;
-			width: 100%;
-			margin: 0px;
-			}
-			.title-left{float: left;}
-			.title-right{
-			float: right;
-			text-align: right;
-			}
-			
-			.photo-content p{
-			padding-left: 1em;
-			padding-right: 1em;
-			text-indent: 2em;
-			}
-			.note {
-			margin: 1em;
-			border: 1px solid #ffffff;
-			}
-			
-			.ref{
-			color: #D3D3D3;
-			text-decoration: none;
-			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			
-			.photoCard{
-			color: #ffffff;
-			border: 2px solid #808080;
-			margin-top: 1em;
-			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
-			margin: 0px;
-			padding-left: 0.15em;
-			}
-			.card-incipit{
-			font-weight: bold;
-			padding-left: 0.4em;
-			}
-			.card-left{
-			float: left;
-			padding-left: 0.4em;
-			}
-			.card-right{
-			float: right;
-			text-align: right;
-			padding-right: 0.4em;
-			}
-			.photoCard img{
-			width: 100%;
-			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			
-			.imgWrap{
-			display: flex;
-			flex-direction: row;
-			gap: 0.5em;
-			padding-bottom: 0.25em;
-			padding-top: 0.25em;
-			margin-left: auto;
-			margin-right: auto;
-			justify-content: center;
-			}
-			.imgWrap img{
-			display: block;
-			max-width: 100%;
-			gap: 0.5em;
-			}
-			
-			.bibliography ul{
-			list-style-type: none;
-			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
-			margin-bottom: 0.5em;
-			}
-			
-			.largePhoto{
-			border: 1px solid #ffffff;
-			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
-			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
-			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
-			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
-			text-indent: 1em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
-			font-size: 1.3em;
-			font-weight: bold;
-			color: #000000;
-			display: inline-block;
-			width: 100%;
-			text-indent: 2em;
-			}
-			.largePhoto p{
-			text-indent: 2em;
-			padding-left: 1em;
-			padding-right: 1em;
-			}
-			
-			.credits{
-			width: 100%;
-			border-collapse: collapse;
-			}
-			.credits td{
-			border: 1px solid #ffffff;
-			padding: 0.3em;
-			padding-left: 1em;
-			}
-			.credits td:first-child {
-			width: 12%;
-			white-space: nowrap;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2204kamo">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2204kamo">日本語</a></div>
-			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-			<nav id="topMenu">
-				<ul>
-					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/video">Video Production</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
-				</ul>
-			</nav>
-			<div class="title">
-				<h1>Kamo River</h1>
-				
-				<span class="title-left">Waterway photography</span>
-				
-				<span class="title-right"><span style="color: LightGray;">published: </span>2023年11月08日</span>
-			</div>
-			<div class="photo-content">
-				<p> There are two main rivers in Kyoto.
-				On the East side the Kamo River flows while the Katsura River flows in the West.
-				Among the two Kamo River is the famous.
-				Kamo river flows from the mountain range in the North and if one followed the stream on a bicycle they would eventually find themselves in the mountain forest.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/Bbv6yb.jpeg"><img src="https://a.l3n.co/i/Bbv6yb.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BbvJT7.jpeg"><img src="https://b.l3n.co/i/BbvJT7.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/BbvHck.jpeg"><img src="https://c.l3n.co/i/BbvHck.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/BbvSsH.jpeg"><img src="https://c.l3n.co/i/BbvSsH.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/BbvOOe.jpeg"><img src="https://b.l3n.co/i/BbvOOe.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/BbvzZx.jpeg"><img src="https://b.l3n.co/i/BbvzZx.jpeg"></a></div>
-						</div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/Bbvqs0.jpeg"><img src="https://b.l3n.co/i/Bbvqs0.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/BbvQOr.jpeg"><img src="https://c.l3n.co/i/BbvQOr.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/BbvVUF.jpeg"><img src="https://b.l3n.co/i/BbvVUF.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/BbvdZ3.jpeg"><img src="https://c.l3n.co/i/BbvdZ3.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/BbvBuD.jpeg"><img src="https://c.l3n.co/i/BbvBuD.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/BbveD1.jpeg"><img src="https://b.l3n.co/i/BbveD1.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/BbvvAc.jpeg"><img src="https://c.l3n.co/i/BbvvAc.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbvLVK.jpeg"><img src="https://a.l3n.co/i/BbvLVK.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbvsAq.jpeg"><img src="https://a.l3n.co/i/BbvsAq.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/Bbv4nM.jpeg"><img src="https://b.l3n.co/i/Bbv4nM.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>The water flows South into Kyoto and runs in a straight line next to Kawaramachi.
-				Likely what people remember of this river is sitting next to the shore while eating from a lunch box.
-				North of Kawaramachi where Kamo River and Takano River conjoin there is a park.
-				People gather in the park and practice sports and instruments, enjoy picnics and play in the water.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/Bbv1uC.jpeg"><img src="https://c.l3n.co/i/Bbv1uC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbvZU9.jpeg"><img src="https://a.l3n.co/i/BbvZU9.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BbvrZ2.jpeg"><img src="https://b.l3n.co/i/BbvrZ2.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/Bbvtmv.jpeg"><img src="https://a.l3n.co/i/Bbvtmv.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/BbvI7o.jpeg"><img src="https://b.l3n.co/i/BbvI7o.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/Bbv0Ti.jpeg"><img src="https://a.l3n.co/i/Bbv0Ti.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbvT85.jpeg"><img src="https://a.l3n.co/i/BbvT85.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/Bbv7Ta.jpeg"><img src="https://a.l3n.co/i/Bbv7Ta.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>Kites soar in the sky above and on a given opportunity they will dive down and snatch food from unsuspecting girls.
-				A flock of black crows also gather in the park to eat leftover food, however, they have to be quick as kites will take food from other birds too.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/Bbnx7k.jpeg"><img src="https://b.l3n.co/i/Bbnx7k.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbnyFx.jpeg"><img src="https://a.l3n.co/i/BbnyFx.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/BbnGIH.jpeg"><img src="https://b.l3n.co/i/BbnGIH.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/Bbnhoc.jpeg"><img src="https://c.l3n.co/i/Bbnhoc.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/Bbnam1.jpeg"><img src="https://a.l3n.co/i/Bbnam1.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbnMRr.jpeg"><img src="https://c.l3n.co/i/BbnMRr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbnDI0.jpeg"><img src="https://c.l3n.co/i/BbnDI0.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BbnYpF.jpeg"><img src="https://b.l3n.co/i/BbnYpF.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbnoF3.jpeg"><img src="https://a.l3n.co/i/BbnoF3.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbnNBD.jpeg"><img src="https://a.l3n.co/i/BbnNBD.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BbnF8A.jpeg"><img src="https://b.l3n.co/i/BbnF8A.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbnXxa.jpeg"><img src="https://c.l3n.co/i/BbnXxa.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/BbnwRe.jpeg"><img src="https://a.l3n.co/i/BbnwRe.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/BbnUJM.jpeg"><img src="https://c.l3n.co/i/BbnUJM.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BbnceQ.jpeg"><img src="https://b.l3n.co/i/BbnceQ.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbnPoq.jpeg"><img src="https://c.l3n.co/i/BbnPoq.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/Bbv88K.jpeg"><img src="https://a.l3n.co/i/Bbv88K.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow"><div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbvK5Q.jpeg"><img src="https://c.l3n.co/i/BbvK5Q.jpeg"></a></div></div></div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BbnO0v.jpeg"><img src="https://b.l3n.co/i/BbnO0v.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbneJT.jpeg"><img src="https://a.l3n.co/i/BbneJT.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbnlY5.jpeg"><img src="https://c.l3n.co/i/BbnlY5.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/BbnnSb.jpeg"><img src="https://c.l3n.co/i/BbnnSb.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://a.l3n.co/i/Bbn41o.jpeg"><img src="https://a.l3n.co/i/Bbn41o.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/Bbnvx7.jpeg"><img src="https://b.l3n.co/i/Bbnvx7.jpeg"></a></div></div>
-					</div>
-					
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/BbvWeP.jpeg"><img src="https://a.l3n.co/i/BbvWeP.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/Bbviym.jpeg"><img src="https://c.l3n.co/i/Bbviym.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/BbvAQZ.jpeg"><img src="https://c.l3n.co/i/BbvAQZ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://b.l3n.co/i/BbvknT.jpeg"><img src="https://b.l3n.co/i/BbvknT.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/Bbv3VA.jpeg"><img src="https://c.l3n.co/i/Bbv3VA.jpeg"></a></div></div>
-					</div>
-				</div>
-				
-				
-			
-				
-				
-				
-				
-				
-				
-			
-				
-				<p>South of Kyoto Station the river will start to twist and turn again and the atmosphere is more similar to a town.
-				The inhabitants use this path when they want to take a walk and children alongside the cherry trees next to the river.
-				Around here the highway and railway cross over the river.
-				Under the bridge there are more children playing with the NTT communication tower standing in the background.
-				Here Kamo River and Katsura River are only separated by 200-300 meters.
-				In between the rivers is Nishitakase river which flows out into Kamo River before Kamo River flows out into Katsura River.</p>
-				
-				
-				
-				
-			
-				
-				
-				
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbvY5P.jpeg"><img src="https://c.l3n.co/i/BbvY5P.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/BbvMvZ.jpeg"><img src="https://b.l3n.co/i/BbvMvZ.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://a.l3n.co/i/BbvuEm.jpeg"><img src="https://a.l3n.co/i/BbvuEm.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BbvaXr.jpeg"><img src="https://a.l3n.co/i/BbvaXr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/BbL833.jpeg"><img src="https://a.l3n.co/i/BbL833.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/BbL2gF.jpeg"><img src="https://c.l3n.co/i/BbL2gF.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbvGH7.jpeg"><img src="https://c.l3n.co/i/BbvGH7.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/Bbvfg9.jpeg"><img src="https://b.l3n.co/i/Bbvfg9.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/BbvDHi.jpeg"><img src="https://b.l3n.co/i/BbvDHi.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://a.l3n.co/i/BbvF32.jpeg"><img src="https://a.l3n.co/i/BbvF32.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbvUDv.jpeg"><img src="https://c.l3n.co/i/BbvUDv.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BbvXWC.jpeg"><img src="https://b.l3n.co/i/BbvXWC.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BbvxGT.jpeg"><img src="https://c.l3n.co/i/BbvxGT.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/BbvNco.jpeg"><img src="https://c.l3n.co/i/BbvNco.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://a.l3n.co/i/Bbvwvz.jpeg"><img src="https://a.l3n.co/i/Bbvwvz.jpeg"></a></div>
-						</div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/Bbv5Eb.jpeg"><img src="https://a.l3n.co/i/Bbv5Eb.jpeg"></a></div></div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BPn8dr.jpeg"><img src="https://c.l3n.co/i/BPn8dr.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/BPnALF.jpeg"><img src="https://a.l3n.co/i/BPnALF.jpeg"></a></div>
-							
-			
-							<div class="img"><a href="https://c.l3n.co/i/BPnWa3.jpeg"><img src="https://c.l3n.co/i/BPnWa3.jpeg"></a></div>
-						</div>
-					</div>
-					
-			
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/BPe5rz.jpeg"><img src="https://a.l3n.co/i/BPe5rz.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/BPexX5.jpeg"><img src="https://c.l3n.co/i/BPexX5.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BPn2i7.jpeg"><img src="https://b.l3n.co/i/BPn2i7.jpeg"></a></div></div>
-						
-			
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/BPeG4T.jpeg"><img src="https://b.l3n.co/i/BPeG4T.jpeg"></a></div></div>
-					</div>
-				</div>
-			</div>
-			<table class="credits">
-				<tr>
-					<td>Photographer</td>
-					<td>Crasy Wolfang</td>
-				</tr>
-				
-			
-				<tr>
-					<td>Sessions</td>
-					<td>5 sessions</td>
-				</tr>
-				
-			
-				<tr>
-					<td>Destination</td>
-					<td>
-						Kyoto (京都市)
-						<ol><li>Kyoto (鴨川)</li></ol>
-					</td>
-				</tr>
-			</table>
-			<hr>
-			<a href="https://crasywolfang.com/en/post/2204katu">
-				<div class="photoCard">
-					<h1>Katsura River</h1>
-					<span class="card-left">Waterway photography</span>
-					<span class="card-right">2023-11-08</span>
-					<img src="https://b.l3n.co/i/Bcybne.jpeg">
-					
-					<span class="card-right">Kyoto, April-May 2022</span>
-				</div>
-			</a>
-			
-			
-			<a href="https://crasywolfang.com/en/post/2204kiss">
-				<div class="photoCard">
-					<h1>Kisshoin</h1>
-					<span class="card-left">Urban photography</span>
-					<span class="card-right">2023-11-08</span>
-					<img src="https://b.l3n.co/i/BoMrlK.jpeg">
-					
-					<span class="card-right">Kyoto, April-May 2022</span>
-				</div>
-			</a>
-			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
-				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
-			</div>
-		</div>
-	</body>
+<head>
+<title>CWOLF </title>
+<meta charset="utf-8">
+<style>
+body{background-color: black;}
+a{
+color: lightgrey;
+text-decoration: none;
+}
+a:hover{background-color: #e0c068;}
+#container{
+color: white;
+max-width: 1200px;
+min-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+#top{width: 100%;}
+#topLang{float: right;}
+#topLang a{
+color: white;
+text-decoration: none;
+}
+#header img{
+display: block;
+width: 100%;
+}
+#topMenu{background-color: black;}
+#topMenu ul{
+margin: 0em;
+padding: 0em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+#topMenu li{
+display: inline;
+padding: 0em;
+font-size: 1.3em;
+border: 2px solid grey;
+}
+#topMenu a{
+padding-top: 0em;
+padding-bottom: 0em;
+padding-left: 2em;
+padding-right: 2em;
+color: white;
+}
+#bottom{
+color: grey;
+background-color: black;
+}
+
+.flowcard{
+margin: 0.5em;
+padding: 1em;
+border: solid #101010;
+}
+
+.center{
+text-align: center;
+text-decoration: underline;
+}
+
+.catCard{
+list-style: none;
+padding-left: 0;
+text-align: center;
+font-size: 1.3em;
+}
+.catCard li{
+margin: 0.3em;
+display: inline-block;
+border: 2px solid grey;
+padding: 0.5em;
+}
+.catCard li:hover{background-color: #e0c068;}
+.catCard img{
+width: 240px;
+display: block;
+}
+.catCard a{
+color: white;
+display: block;
+}
+
+.title{
+margin-left: auto;
+margin-right: auto;
+max-width: 800px;
+padding: 1em;
+padding-bottom: 2em;
+}
+.title h1{
+border-bottom: 1px solid;
+width: 100%;
+margin: 0px;
+}
+.title-left{float: left;}
+.title-right{
+float: right;
+text-align: right;
+}
+
+.ref{
+color: lightgrey;
+text-decoration: none;
+font-size: 0.8em;
+}
+.ref::before{content: '[';}
+.ref::after{content: ']';}
+
+.sec{padding-bottom: 1em;}
+
+.photoCard{
+border: 2px solid grey;
+margin-top: 1em;
+padding-bottom: 2em;
+}
+.photoCard:hover{background-color: #e0c068;}
+.photoCard a{
+color: white;
+}
+.photoCard h1{
+margin: 0px;
+padding-left: 0.15em;
+}
+.card-incipit{
+font-weight: bold;
+padding-left: 0.4em;
+}
+.card-left{
+float: left;
+padding-left: 0.4em;
+}
+.card-right{
+float: right;
+text-align: right;
+padding-right: 0.4em;
+}
+.photoCard img{
+width: 100%;
+display: block;
+}
+
+.photoParagraph{
+padding: 1em;
+text-indent: 2em;
+}
+.imgWrap{
+display: flex;
+flex-direction: row;
+width: 100%;
+gap: 0.5em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+.imgWrap img{
+display: block;
+max-width: 100%;
+gap: 0.5em;
+}
+.neatPhoto{padding: 1em;}
+.neatPhoto a{width: 60%;}
+.neatPhoto img{width: 100%;}
+.neatPhoto img,
+.neatPhoto a{
+display: block;
+margin: 0 auto;
+}
+
+.bibliography ul{
+list-style-type: none;
+text-indent: 0em;
+}
+.bibliography li:not(:last-child) {
+margin-bottom: 0.5em;
+}
+
+.largePhoto{
+border: 1px solid white;
+margin-bottom: 1em;
+}
+.largePhoto p{
+text-indent: 2em;
+padding-left: 1em;
+padding-right: 1em;
+}
+.largePhotoTop{
+text-indent: 1em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+}
+.largePhotoTitle{
+font-size: 1.3em;
+font-weight: bold;
+background-color: white;
+color: black;
+display: inline-block;
+width: 100%;
+text-indent: 2em;
+}
+.largePhoto img{display: block;}
+.largeformat p{
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.credits{width: 100%;}
+.credits td{
+border: 1px solid white;
+padding: 0.3em;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+<div id="top">
+<small style="color: grey;">CWOLF WEB PROJECT</small>
+<div id="topLang">
+🌎
+<a href="https://CrasyWolfang.com/en/post/2204kamo">English</a>
+|
+<a href="https://CrasyWolfang.com/jp/post/2204kamo">日本語</a>
+</div>
+</div>
+<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+<nav id="topMenu">
+<ul>
+<li><a href="https://CrasyWolfang.com/en/home">Home</a></li>
+<li><a href="https://CrasyWolfang.com/en/photo">Photography</a></li>
+<!---<li><a href="https://CrasyWolfang.com/en/video">Video Production</a></li>--->
+<li><a href="https://CrasyWolfang.com/en/about">About</a></li>
+</ul>
+</nav>
+
+<div class="title">
+
+<h1>Kamo River</h1>
+<span class="title-left">Environmental photography</span>
+<span class="title-right"><span style="color: LightGray;">published: </span>2023-11-08</span>
+</div>
+
+<section class="photoParagraph"><p> There are two main rivers in Kyoto.
+On the East side the Kamo River flows while the Katsura River flows in the West.
+Among the two Kamo River is the famous.
+Kamo river flows from the mountain range in the North and if one followed the stream on a bicycle they would eventually find themselves in the mountain forest.</p></section>
+
+<section class="sec" id="text-01">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv6yb.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv6yb.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbvJT7.jpeg"><img width="1200" src="https://b.l3n.co/i/BbvJT7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvHck.jpeg"><img src="https://c.l3n.co/i/BbvHck.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbvSsH.jpeg"><img src="https://c.l3n.co/i/BbvSsH.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbvOOe.jpeg"><img src="https://b.l3n.co/i/BbvOOe.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvzZx.jpeg"><img src="https://b.l3n.co/i/BbvzZx.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="north02">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbvqs0.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbvqs0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvQOr.jpeg"><img src="https://c.l3n.co/i/BbvQOr.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvVUF.jpeg"><img src="https://b.l3n.co/i/BbvVUF.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvdZ3.jpeg"><img src="https://c.l3n.co/i/BbvdZ3.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbvBuD.jpeg"><img src="https://c.l3n.co/i/BbvBuD.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbveD1.jpeg"><img src="https://b.l3n.co/i/BbveD1.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbvvAc.jpeg"><img src="https://c.l3n.co/i/BbvvAc.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvLVK.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvLVK.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="north03">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvsAq.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvsAq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbv4nM.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbv4nM.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>The water flows South into Kyoto and runs in a straight line next to Kawaramachi.
+Likely what people remember of this river is sitting next to the shore while eating from a lunch box.
+North of Kawaramachi where Kamo River and Takano River conjoin there is a park.
+People gather in the park and practice sports and instruments, enjoy picnics and play in the water.</p></section>
+
+<section class="sec" id="park01">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/Bbv1uC.jpeg"><img width="1200" src="https://c.l3n.co/i/Bbv1uC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvZU9.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvZU9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbvrZ2.jpeg"><img width="1200" src="https://b.l3n.co/i/BbvrZ2.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/Bbvtmv.jpeg"><img src="https://a.l3n.co/i/Bbvtmv.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvI7o.jpeg"><img src="https://b.l3n.co/i/BbvI7o.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv0Ti.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv0Ti.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvT85.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvT85.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv7Ta.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv7Ta.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>Kites soar in the sky above and on a given opportunity they will dive down and snatch food from unsuspecting girls.
+A flock of black crows also gather in the park to eat leftover food, however, they have to be quick as kites will take food from other birds too.</p></section>
+
+<section class="sec" id="bird01">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbnx7k.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbnx7k.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbnyFx.jpeg"><img width="1200" src="https://a.l3n.co/i/BbnyFx.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbnGIH.jpeg"><img src="https://b.l3n.co/i/BbnGIH.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/Bbnhoc.jpeg"><img src="https://c.l3n.co/i/Bbnhoc.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbnam1.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbnam1.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="bird02">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnMRr.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnMRr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnDI0.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnDI0.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnYpF.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnYpF.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbnoF3.jpeg"><img width="1200" src="https://a.l3n.co/i/BbnoF3.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbnNBD.jpeg"><img width="1200" src="https://a.l3n.co/i/BbnNBD.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnF8A.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnF8A.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnXxa.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnXxa.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BbnwRe.jpeg"><img src="https://a.l3n.co/i/BbnwRe.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbnUJM.jpeg"><img src="https://c.l3n.co/i/BbnUJM.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnceQ.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnceQ.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnPoq.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnPoq.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv88K.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv88K.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="bird03">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvK5Q.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvK5Q.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="bird04">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbnO0v.jpeg"><img width="1200" src="https://b.l3n.co/i/BbnO0v.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbneJT.jpeg"><img width="1200" src="https://a.l3n.co/i/BbneJT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbnlY5.jpeg"><img width="1200" src="https://c.l3n.co/i/BbnlY5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbnnSb.jpeg"><img src="https://c.l3n.co/i/BbnnSb.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/Bbn41o.jpeg"><img src="https://a.l3n.co/i/Bbn41o.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbnvx7.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbnvx7.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="mid01">
+<div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BbvWeP.jpeg"><img src="https://a.l3n.co/i/BbvWeP.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/Bbviym.jpeg"><img src="https://c.l3n.co/i/Bbviym.jpeg"></a></div>
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvAQZ.jpeg"><img src="https://c.l3n.co/i/BbvAQZ.jpeg"></a></div>
+<div class="img"><a href="https://b.l3n.co/i/BbvknT.jpeg"><img src="https://b.l3n.co/i/BbvknT.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/Bbv3VA.jpeg"><img width="1200" src="https://c.l3n.co/i/Bbv3VA.jpeg"></a></div>
+
+
+</div>
+
+
+</section><section class="photoParagraph"><p>South of Kyoto Station the river will start to twist and turn again and the atmosphere is more similar to a town.
+The inhabitants use this path when they want to take a walk and children alongside the cherry trees next to the river.
+Around here the highway and railway cross over the river.
+Under the bridge there are more children playing with the NTT communication tower standing in the background.
+Here Kamo River and Katsura River are only separated by 200-300 meters.
+In between the rivers is Nishitakase river which flows out into Kamo River before Kamo River flows out into Katsura River.</p></section>
+
+<section class="sec" id="south01">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvY5P.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvY5P.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbvMvZ.jpeg"><img src="https://b.l3n.co/i/BbvMvZ.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/BbvuEm.jpeg"><img src="https://a.l3n.co/i/BbvuEm.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BbvaXr.jpeg"><img width="1200" src="https://a.l3n.co/i/BbvaXr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BbL833.jpeg"><img src="https://a.l3n.co/i/BbL833.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BbL2gF.jpeg"><img src="https://c.l3n.co/i/BbL2gF.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvGH7.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvGH7.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="south02">
+<div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/Bbvfg9.jpeg"><img width="1200" src="https://b.l3n.co/i/Bbvfg9.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://b.l3n.co/i/BbvDHi.jpeg"><img src="https://b.l3n.co/i/BbvDHi.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/BbvF32.jpeg"><img src="https://a.l3n.co/i/BbvF32.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvUDv.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvUDv.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BbvXWC.jpeg"><img width="1200" src="https://b.l3n.co/i/BbvXWC.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BbvxGT.jpeg"><img width="1200" src="https://c.l3n.co/i/BbvxGT.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://c.l3n.co/i/BbvNco.jpeg"><img src="https://c.l3n.co/i/BbvNco.jpeg"></a></div>
+<div class="img"><a href="https://a.l3n.co/i/Bbvwvz.jpeg"><img src="https://a.l3n.co/i/Bbvwvz.jpeg"></a></div>
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/Bbv5Eb.jpeg"><img width="1200" src="https://a.l3n.co/i/Bbv5Eb.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<section class="sec" id="south03">
+<div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BPn8dr.jpeg"><img width="1200" src="https://c.l3n.co/i/BPn8dr.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+
+<div class="img"><a href="https://a.l3n.co/i/BPnALF.jpeg"><img src="https://a.l3n.co/i/BPnALF.jpeg"></a></div>
+<div class="img"><a href="https://c.l3n.co/i/BPnWa3.jpeg"><img src="https://c.l3n.co/i/BPnWa3.jpeg"></a></div>
+
+</div>
+
+
+</section>
+<section class="sec" id="south04">
+<div class="imgWrap">
+<div class="img"><a href="https://a.l3n.co/i/BPe5rz.jpeg"><img width="1200" src="https://a.l3n.co/i/BPe5rz.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://c.l3n.co/i/BPexX5.jpeg"><img width="1200" src="https://c.l3n.co/i/BPexX5.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BPn2i7.jpeg"><img width="1200" src="https://b.l3n.co/i/BPn2i7.jpeg"></a></div>
+
+
+</div><div class="imgWrap">
+<div class="img"><a href="https://b.l3n.co/i/BPeG4T.jpeg"><img width="1200" src="https://b.l3n.co/i/BPeG4T.jpeg"></a></div>
+
+
+</div>
+
+
+</section>
+<table class="credits">
+<tr><td colspan="2">Summary</td></tr>
+<tr>
+<td>Photographer</td>
+<td>Crasy Wolfang</td>
+</tr>
+<tr>
+<td>Sessions</td>
+<td>5 rounds​</td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>Kamo River, Kyoto (京都市鴨川)
+</td>
+</tr>
+</table>
+
+<div id="bottom">
+<hr>
+©CrasyWolfang 2014-2024
+✉ <adress>forwardtowolf@gmail.com</adress>
+<a href="#top" style="float: right; color: grey;">top ↑</a>
+</div>
+</div>
+
+</body>
 </html>
