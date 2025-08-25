@@ -1,668 +1,536 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CWOLF </title>
-<meta charset="utf-8">
-<style>
-body{background-color: black;}
-a{
-color: lightgrey;
-text-decoration: none;
-}
-a:hover{background-color: #e0c068;}
-#container{
-color: white;
-max-width: 1200px;
-min-width: 800px;
-margin-left: auto;
-margin-right: auto;
-}
-#top{width: 100%;}
-#topLang{float: right;}
-#topLang a{
-color: white;
-text-decoration: none;
-}
-#header img{
-display: block;
-width: 100%;
-}
-#topMenu{background-color: black;}
-#topMenu ul{
-margin: 0em;
-padding: 0em;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-}
-#topMenu li{
-display: inline;
-padding: 0em;
-font-size: 1.3em;
-border: 2px solid grey;
-}
-#topMenu a{
-padding-top: 0em;
-padding-bottom: 0em;
-padding-left: 2em;
-padding-right: 2em;
-color: white;
-}
-#bottom{
-color: grey;
-background-color: black;
-}
-
-.flowcard{
-margin: 0.5em;
-padding: 1em;
-border: solid #101010;
-}
-
-.center{
-text-align: center;
-text-decoration: underline;
-}
-
-.catCard{
-list-style: none;
-padding-left: 0;
-text-align: center;
-font-size: 1.3em;
-}
-.catCard li{
-margin: 0.3em;
-display: inline-block;
-border: 2px solid grey;
-padding: 0.5em;
-}
-.catCard li:hover{background-color: #e0c068;}
-.catCard img{
-width: 240px;
-display: block;
-}
-.catCard a{
-color: white;
-display: block;
-}
-
-.title{
-margin-left: auto;
-margin-right: auto;
-max-width: 800px;
-padding: 1em;
-padding-bottom: 2em;
-}
-.title h1{
-border-bottom: 1px solid;
-width: 100%;
-margin: 0px;
-}
-.title-left{float: left;}
-.title-right{
-float: right;
-text-align: right;
-}
-
-.ref{
-color: lightgrey;
-text-decoration: none;
-font-size: 0.8em;
-}
-.ref::before{content: '[';}
-.ref::after{content: ']';}
-
-.sec{padding-bottom: 1em;}
-
-.photoCard{
-border: 2px solid grey;
-margin-top: 1em;
-padding-bottom: 2em;
-}
-.photoCard:hover{background-color: #e0c068;}
-.photoCard a{
-color: white;
-}
-.photoCard h1{
-margin: 0px;
-padding-left: 0.15em;
-}
-.card-incipit{
-font-weight: bold;
-padding-left: 0.4em;
-}
-.card-left{
-float: left;
-padding-left: 0.4em;
-}
-.card-right{
-float: right;
-text-align: right;
-padding-right: 0.4em;
-}
-.photoCard img{
-width: 100%;
-display: block;
-}
-
-.photoParagraph{
-padding: 1em;
-text-indent: 2em;
-}
-.imgWrap{
-display: flex;
-flex-direction: row;
-width: 100%;
-gap: 0.5em;
-padding-bottom: 0.25em;
-padding-top: 0.25em;
-}
-.imgWrap img{
-display: block;
-max-width: 100%;
-gap: 0.5em;
-}
-.neatPhoto{padding: 1em;}
-.neatPhoto a{width: 60%;}
-.neatPhoto img{width: 100%;}
-.neatPhoto img,
-.neatPhoto a{
-display: block;
-margin: 0 auto;
-}
-
-.bibliography ul{
-list-style-type: none;
-text-indent: 0em;
-}
-.bibliography li:not(:last-child) {
-margin-bottom: 0.5em;
-}
-
-.largePhoto{
-border: 1px solid white;
-margin-bottom: 1em;
-}
-.largePhoto p{
-text-indent: 2em;
-padding-left: 1em;
-padding-right: 1em;
-}
-.largePhotoTop{
-text-indent: 1em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-}
-.largePhotoTitle{
-font-size: 1.3em;
-font-weight: bold;
-background-color: white;
-color: black;
-display: inline-block;
-width: 100%;
-text-indent: 2em;
-}
-.largePhoto img{display: block;}
-.largeformat p{
-padding-left: 1em;
-padding-right: 1em;
-}
-
-.credits{width: 100%;}
-.credits td{
-border: 1px solid white;
-padding: 0.3em;
-}
-</style>
-</head>
-<body>
-
-<div id="container">
-<div id="top">
-<small style="color: grey;">CWOLF WEB PROJECT</small>
-<div id="topLang">
-🌎
-<a href="https://CrasyWolfang.com/en/post/2304cphs">English</a>
-|
-<a href="https://CrasyWolfang.com/jp/post/2304cphs">日本語</a>
-</div>
-</div>
-<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
-<nav id="topMenu">
-<ul>
-<li><a href="https://CrasyWolfang.com/jp/home">ホーム</a></li>
-<li><a href="https://CrasyWolfang.com/jp/photo">写真撮影</a></li>
-<!---<li><a href="https://CrasyWolfang.com/jp/video">動画制作</a></li>--->
-<li><a href="https://CrasyWolfang.com/jp/about">について</a></li>
-</ul>
-</nav>
-
-<div class="title">
-
-<h1>コペンハーゲン桜祭り</h1>
-<span class="title-left">イベント撮影</span>
-<span class="title-right"><span style="color: LightGray;">発行日　</span>2023年07月20日</span>
-</div>
-
-
-<section class="sec" id="intro">
-<div class="imgWrap">
-
-<div class="img"><a href="https://i3.lensdump.com/i/6wsk77.jpeg"><img src="https://i3.lensdump.com/i/6wsk77.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6wsJIF.jpeg"><img src="https://i2.lensdump.com/i/6wsJIF.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6wsDs9.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wsDs9.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i1.lensdump.com/i/6wsVu0.jpeg"><img src="https://i1.lensdump.com/i/6wsVu0.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6wsc5z.jpeg"><img src="https://i2.lensdump.com/i/6wsc5z.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6wsGsF.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wsGsF.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6wsaD3.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wsaD3.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6w32W0.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w32W0.jpeg"></a></div>
-
-
-</div>
-
-
-</section><section class="photoParagraph"><p>コペンハーゲン港北東部。
-桜が満開の晴れた日で、木漏れ日に人ごみは流れる。
-ランゲルニエ公園はハンス・クリスチャン・アンデルセンの人魚姫の象に有名してるが、今日の人ごみはコペンハーゲンの桜まつりを観に来た。</p>
-<p>イベントは毎年日本大使館によって行われる。
-踊り場で着物の着方を見せたり、日本武道を説明したりしてくれた。
-<abbr title="みつね">密音</abbr>って津軽三味線バンドが演奏するためにドイツから来て、弦が切れてしまったように引いてくれた。
-最後に、みんなで盆踊りを一緒に踊らせた。</p></section>
-
-<section class="sec" id="kimono">
-<div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6w3jEM.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w3jEM.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i3.lensdump.com/i/6w38VD.jpeg"><img src="https://i3.lensdump.com/i/6w38VD.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6w3Avq.jpeg"><img src="https://i1.lensdump.com/i/6w3Avq.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i2.lensdump.com/i/6w3WGA.jpeg"><img src="https://i2.lensdump.com/i/6w3WGA.jpeg"></a></div>
-<div class="img"><a href="https://i.lensdump.com/i/6w3Ica.jpeg"><img src="https://i.lensdump.com/i/6w3Ica.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6w30HQ.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w30HQ.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i2.lensdump.com/i/6w3RWH.jpeg"><img src="https://i2.lensdump.com/i/6w3RWH.jpeg"></a></div>
-<div class="img"><a href="https://i3.lensdump.com/i/6w3T91.jpeg"><img src="https://i3.lensdump.com/i/6w3T91.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i3.lensdump.com/i/6w3tDx.jpeg"><img src="https://i3.lensdump.com/i/6w3tDx.jpeg"></a></div>
-<div class="img"><a href="https://i.lensdump.com/i/6w3Evc.jpeg"><img src="https://i.lensdump.com/i/6w3Evc.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<section class="sec" id="kimono-2">
-
-<div class="neatPhoto"><a href="https://i1.lensdump.com/i/6w3r3k.jpeg"><img src="https://i1.lensdump.com/i/6w3r3k.jpeg"></a></div>
-<b>着物の着方</b>: 演者　Kimono Klub Danmark
-</section>
-<section class="sec" id="koto and shakuhachi">
-<div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6w3QXm.jpeg"><img src="https://i.lensdump.com/i/6w3QXm.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6w3CkZ.jpeg"><img src="https://i1.lensdump.com/i/6w3CkZ.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6w39ri.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w39ri.jpeg"></a></div>
-
-
-</div>
-
-<b><abbr title="こと">箏</abbr>と<abbr title="しゃくはち">尺八</b>: 演者　<a href="https://shimonoto.jp/"><abbr title="しものと あゆみ">下野戸 亜弓</abbr></a>（下）、ゆか さくら（左）、<a href="http://www.kikuday.com/">だい きく</a>（右）
-</section>
-<section class="sec" id="tsugaru shamisen">
-<div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6wsd8D.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wsd8D.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6w3mi2.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w3mi2.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6w33LC.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w33LC.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6w34G5.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w34G5.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i1.lensdump.com/i/6w3Maq.jpeg"><img src="https://i1.lensdump.com/i/6w3Maq.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6w3SNF.jpeg"><img src="https://i2.lensdump.com/i/6w3SNF.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6w3OXb.jpeg"><img src="https://i2.lensdump.com/i/6w3OXb.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6w3f4e.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w3f4e.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6w3vd0.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w3vd0.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="tsugaru shamisen-2">
-
-<div class="neatPhoto"><a href="https://i3.lensdump.com/i/6w3DbQ.jpeg"><img src="https://i3.lensdump.com/i/6w3DbQ.jpeg"></a></div>
-<b><abbr title="つがるじゃみせん">津軽三味線</abbr></b>: 演者　<a href="https://www.mitsune.de/shamisen-trio"><abbr title="みつね">蜜音</abbr></a>
-</section>
-<section class="sec" id="cosplay">
-<div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6w3cix.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w3cix.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i1.lensdump.com/i/6w3bM1.jpeg"><img src="https://i1.lensdump.com/i/6w3bM1.jpeg"></a></div>
-<div class="img"><a href="https://i.lensdump.com/i/6w35zZ.jpeg"><img src="https://i.lensdump.com/i/6w35zZ.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6w3htm.jpeg"><img src="https://i.lensdump.com/i/6w3htm.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6w48Po.jpeg"><img src="https://i1.lensdump.com/i/6w48Po.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6w4iq2.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w4iq2.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6w4Z65.jpeg"><img src="https://i.lensdump.com/i/6w4Z65.jpeg"></a></div>
-<div class="img"><a href="https://i.lensdump.com/i/6w4Wj9.jpeg"><img src="https://i.lensdump.com/i/6w4Wj9.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6w4rwT.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w4rwT.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="cosplay-2">
-
-<div class="neatPhoto"><a href="https://i2.lensdump.com/i/6w4Tfr.jpeg"><img src="https://i2.lensdump.com/i/6w4Tfr.jpeg"></a></div>
-<b>コスプレ</b>: 演者　<a href="https://j-popcon.dk/en/">J-Pop Con</a>
-</section>
-<section class="sec" id="souranbushi">
-<div class="imgWrap">
-
-<div class="img"><a href="https://i3.lensdump.com/i/6w4sfe.jpeg"><img src="https://i3.lensdump.com/i/6w4sfe.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6w4mKa.jpeg"><img src="https://i2.lensdump.com/i/6w4mKa.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i1.lensdump.com/i/6wsmyM.jpeg"><img src="https://i1.lensdump.com/i/6wsmyM.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6ws47a.jpeg"><img src="https://i2.lensdump.com/i/6ws47a.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6w46q3.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w46q3.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6w4dwM.jpeg"><img src="https://i.lensdump.com/i/6w4dwM.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6w4JhD.jpeg"><img src="https://i2.lensdump.com/i/6w4JhD.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6w440k.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w440k.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6w4O21.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w4O21.jpeg"></a></div>
-
-
-</div>
-
-<b>ソーラン節</b>: 演者　Odense Mochi Team
-</section>
-<section class="sec" id="kendo">
-<div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6ws7Zk.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6ws7Zk.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i2.lensdump.com/i/6w4lSK.jpeg"><img src="https://i2.lensdump.com/i/6w4lSK.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6w4npm.jpeg"><img src="https://i1.lensdump.com/i/6w4npm.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6w4NJC.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w4NJC.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6w4PS5.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w4PS5.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6w4URT.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w4URT.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6w4xBF.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6w4xBF.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i2.lensdump.com/i/6w4wIr.jpeg"><img src="https://i2.lensdump.com/i/6w4wIr.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6w4cpb.jpeg"><img src="https://i1.lensdump.com/i/6w4cpb.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6w4yo3.jpeg"><img width="1200" src="https://i.lensdump.com/i/6w4yo3.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6w4G80.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6w4G80.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6w4aJD.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6w4aJD.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="kendo-2">
-
-<div class="neatPhoto"><a href="https://i2.lensdump.com/i/6w4YB9.jpeg"><img src="https://i2.lensdump.com/i/6w4YB9.jpeg"></a></div>
-<b><abbr title="けんどう">剣道</abbr></b>: 演者　<a href="https://www.kenseikai.dk/"><abbr title="けんせいかい">剣誠会</abbr></a>
-</section>
-<section class="sec" id="wadaiko">
-<div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6wK2yA.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wK2yA.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6wKARM.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wKARM.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6wKW7Q.jpeg"><img src="https://i.lensdump.com/i/6wKW7Q.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6wKiFa.jpeg"><img src="https://i1.lensdump.com/i/6wKiFa.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6wK0Ie.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wK0Ie.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6wKr8H.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wKr8H.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6wKtQ1.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wKtQ1.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6wK1ec.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wK1ec.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6wKZox.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wKZox.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6w4heq.jpeg"><img src="https://i.lensdump.com/i/6w4heq.jpeg"></a></div>
-<div class="img"><a href="https://i3.lensdump.com/i/6wKRyK.jpeg"><img src="https://i3.lensdump.com/i/6wKRyK.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6wKETZ.jpeg"><img src="https://i2.lensdump.com/i/6wKETZ.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6wKk7P.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wKk7P.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i3.lensdump.com/i/6wKJZi.jpeg"><img src="https://i3.lensdump.com/i/6wKJZi.jpeg"></a></div>
-<div class="img"><a href="https://i.lensdump.com/i/6wKQmo.jpeg"><img src="https://i.lensdump.com/i/6wKQmo.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6wKdA2.jpeg"><img src="https://i2.lensdump.com/i/6wKdA2.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6wKImk.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wKImk.jpeg"></a></div>
-
-
-</div>
-
-
-</section>
-<section class="sec" id="wadaiko-2">
-
-<div class="neatPhoto"><a href="https://i2.lensdump.com/i/6wszA1.jpeg"><img src="https://i2.lensdump.com/i/6wszA1.jpeg"></a></div>
-<b><abbr title="わだいこ">和太鼓</abbr></b>: 演者　<a href="https://seidokan.dk/om-seidokan/"><abbr title="せいどうたいこ">生動太鼓</abbr></a>
-</section>
-<section class="sec" id="bonodori">
-<div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6wKqQv.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wKqQv.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6wK3Tz.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wK3Tz.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6wKmy5.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wKmy5.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6wK4OT.jpeg"><img src="https://i.lensdump.com/i/6wK4OT.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6wKBnC.jpeg"><img src="https://i1.lensdump.com/i/6wKBnC.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i1.lensdump.com/i/6wsn5Z.jpeg"><img width="1200" src="https://i1.lensdump.com/i/6wsn5Z.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i2.lensdump.com/i/6wKHuF.jpeg"><img src="https://i2.lensdump.com/i/6wKHuF.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6wKKUb.jpeg"><img src="https://i1.lensdump.com/i/6wKKUb.jpeg"></a></div>
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i3.lensdump.com/i/6wKOsr.jpeg"><img src="https://i3.lensdump.com/i/6wKOsr.jpeg"></a></div>
-<div class="img"><a href="https://i.lensdump.com/i/6wK7Z7.jpeg"><img src="https://i.lensdump.com/i/6wK7Z7.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i3.lensdump.com/i/6wKzA3.jpeg"><img width="1200" src="https://i3.lensdump.com/i/6wKzA3.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i1.lensdump.com/i/6wKenD.jpeg"><img src="https://i1.lensdump.com/i/6wKenD.jpeg"></a></div>
-<div class="img"><a href="https://i2.lensdump.com/i/6wKn5q.jpeg"><img src="https://i2.lensdump.com/i/6wKn5q.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6wKSV0.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wKSV0.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i.lensdump.com/i/6wKMOM.jpeg"><img src="https://i.lensdump.com/i/6wKMOM.jpeg"></a></div>
-<div class="img"><a href="https://i3.lensdump.com/i/6wKLEA.jpeg"><img src="https://i3.lensdump.com/i/6wKLEA.jpeg"></a></div>
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6wsYci.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wsYci.jpeg"></a></div>
-
-
-</div>
-
-<b><abbr title="ぼんおどり">盆踊り</abbr></b>: 演者　<a href="http://www.jdnet.dk/">日本人会</a>
-</section>
-<section class="sec" id="outro">
-<div class="imgWrap">
-<div class="img"><a href="https://i2.lensdump.com/i/6wsMOm.jpeg"><img width="1200" src="https://i2.lensdump.com/i/6wsMOm.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-<div class="img"><a href="https://i.lensdump.com/i/6wsfAv.jpeg"><img width="1200" src="https://i.lensdump.com/i/6wsfAv.jpeg"></a></div>
-
-
-</div><div class="imgWrap">
-
-<div class="img"><a href="https://i1.lensdump.com/i/6ws5gr.jpeg"><img src="https://i1.lensdump.com/i/6ws5gr.jpeg"></a></div>
-<div class="img"><a href="https://i1.lensdump.com/i/6wsND2.jpeg"><img src="https://i1.lensdump.com/i/6wsND2.jpeg"></a></div>
-<div class="img"><a href="https://i3.lensdump.com/i/6wswOb.jpeg"><img src="https://i3.lensdump.com/i/6wswOb.jpeg"></a></div>
-
-</div>
-
-
-</section>
-<table class="credits">
-<tr><td colspan="2">情報表</td></tr>
-<tr>
-<td>撮影者</td>
-<td>狼牙クレシ</td>
-</tr>
-<tr>
-<td>撮影回</td>
-<td>1回</td>
-</tr>
-<tr>
-<td>行き先</td>
-<td>
-コペンハーゲン　ランゲルニエ公園（Langeliniepark, København）
-</td>
-</tr>
-</table>
-
-<div id="bottom">
-<hr>
-©CrasyWolfang 2014-2024
-✉ <adress>forwardtowolf@gmail.com</adress>
-<a href="#top" style="float: right; color: grey;">top ↑</a>
-</div>
-</div>
-
-</body>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			.update .date{
+			color: #808080;
+			text-align: right;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+			}
+			.title .grey {color: #808080;}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2304cphs">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2304cphs">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
+				</ul>
+			</nav>
+			<div class="title">
+				<h1>コペンハーゲン桜祭り</h1>
+				<span class="title-left">イベント撮影</span>
+				<span class="title-right">
+					<span class="grey">発行日　</span>
+					2023年07月20日
+					<br>
+					<span class="grey">編集版　</span>
+					2023年07月31日
+				</span>
+			</div>
+			<div class="photo-content">
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i3.lensdump.com/i/6wsk77.jpeg"><img src="https://i3.lensdump.com/i/6wsk77.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6wsJIF.jpeg"><img src="https://i2.lensdump.com/i/6wsJIF.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wsDs9.jpeg"><img src="https://i3.lensdump.com/i/6wsDs9.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i1.lensdump.com/i/6wsVu0.jpeg"><img src="https://i1.lensdump.com/i/6wsVu0.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6wsc5z.jpeg"><img src="https://i2.lensdump.com/i/6wsc5z.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wsGsF.jpeg"><img src="https://i2.lensdump.com/i/6wsGsF.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wsaD3.jpeg"><img src="https://i.lensdump.com/i/6wsaD3.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w32W0.jpeg"><img src="https://i1.lensdump.com/i/6w32W0.jpeg"></a></div></div>
+					</div>
+				</div>
+				<p>コペンハーゲン港北東部。
+				桜が満開の晴れた日で、木漏れ日に人ごみは流れる。
+				ランゲルニエ公園はハンス・クリスチャン・アンデルセンの人魚姫の象に有名してるが、今日の人ごみはコペンハーゲンの桜まつりを観に来た。</p><p>イベントは毎年日本大使館によって行われる。
+				踊り場で着物の着方を見せたり、日本武道を説明したりしてくれた。
+				<ruby>密音<rt>みつね</rt></ruby>って津軽三味線バンドが演奏するためにドイツから来て、弦が切れてしまったように引いてくれた。
+				最後に、みんなで盆踊りを一緒に踊らせた。</p>
+				<div class="photosec">
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w3jEM.jpeg"><img src="https://i3.lensdump.com/i/6w3jEM.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i3.lensdump.com/i/6w38VD.jpeg"><img src="https://i3.lensdump.com/i/6w38VD.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6w3Avq.jpeg"><img src="https://i1.lensdump.com/i/6w3Avq.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i2.lensdump.com/i/6w3WGA.jpeg"><img src="https://i2.lensdump.com/i/6w3WGA.jpeg"></a></div>
+							<div class="img"><a href="https://i.lensdump.com/i/6w3Ica.jpeg"><img src="https://i.lensdump.com/i/6w3Ica.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w30HQ.jpeg"><img src="https://i2.lensdump.com/i/6w30HQ.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i2.lensdump.com/i/6w3RWH.jpeg"><img src="https://i2.lensdump.com/i/6w3RWH.jpeg"></a></div>
+							<div class="img"><a href="https://i3.lensdump.com/i/6w3T91.jpeg"><img src="https://i3.lensdump.com/i/6w3T91.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i3.lensdump.com/i/6w3tDx.jpeg"><img src="https://i3.lensdump.com/i/6w3tDx.jpeg"></a></div>
+							<div class="img"><a href="https://i.lensdump.com/i/6w3Evc.jpeg"><img src="https://i.lensdump.com/i/6w3Evc.jpeg"></a></div>
+						</div>
+					</div>
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://i1.lensdump.com/i/6w3r3k.jpeg"><img src="https://i1.lensdump.com/i/6w3r3k.jpeg"></a></div></div></div>
+					<div class="imgdesc">
+						<b>着物の着方: </b>
+						演者　Kimono Klub Danmark
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6w3QXm.jpeg"><img src="https://i.lensdump.com/i/6w3QXm.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6w3CkZ.jpeg"><img src="https://i1.lensdump.com/i/6w3CkZ.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w39ri.jpeg"><img src="https://i3.lensdump.com/i/6w39ri.jpeg"></a></div></div>
+					</div>
+					<div class="imgdesc">
+						<b><ruby>箏<rt>こと</rt></ruby>と<ruby>尺八<rt>しゃくはち</rt></ruby>: </b>
+						演者　<a href="https://shimonoto.jp/"><ruby>下野戸 亜弓<rt>しものと あゆみ</rt></ruby></a>（下）、ゆか さくら（左）、<a href="http://www.kikuday.com/">だい きく</a>（右）
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wsd8D.jpeg"><img src="https://i3.lensdump.com/i/6wsd8D.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w3mi2.jpeg"><img src="https://i1.lensdump.com/i/6w3mi2.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w33LC.jpeg"><img src="https://i3.lensdump.com/i/6w33LC.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w34G5.jpeg"><img src="https://i.lensdump.com/i/6w34G5.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i1.lensdump.com/i/6w3Maq.jpeg"><img src="https://i1.lensdump.com/i/6w3Maq.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6w3SNF.jpeg"><img src="https://i2.lensdump.com/i/6w3SNF.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6w3OXb.jpeg"><img src="https://i2.lensdump.com/i/6w3OXb.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w3f4e.jpeg"><img src="https://i2.lensdump.com/i/6w3f4e.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w3vd0.jpeg"><img src="https://i2.lensdump.com/i/6w3vd0.jpeg"></a></div></div>
+					</div>
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://i3.lensdump.com/i/6w3DbQ.jpeg"><img src="https://i3.lensdump.com/i/6w3DbQ.jpeg"></a></div></div></div>
+					<div class="imgdesc">
+						<b><ruby>津軽三味線<rt>つがるじゃみせん</rt></ruby>: </b>
+						演者　<a href="https://www.mitsune.de/shamisen-trio"><ruby>蜜音<rt>みつね</rt></ruby></a>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w3cix.jpeg"><img src="https://i3.lensdump.com/i/6w3cix.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i1.lensdump.com/i/6w3bM1.jpeg"><img src="https://i1.lensdump.com/i/6w3bM1.jpeg"></a></div>
+							<div class="img"><a href="https://i.lensdump.com/i/6w35zZ.jpeg"><img src="https://i.lensdump.com/i/6w35zZ.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6w3htm.jpeg"><img src="https://i.lensdump.com/i/6w3htm.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6w48Po.jpeg"><img src="https://i1.lensdump.com/i/6w48Po.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w4iq2.jpeg"><img src="https://i3.lensdump.com/i/6w4iq2.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6w4Z65.jpeg"><img src="https://i.lensdump.com/i/6w4Z65.jpeg"></a></div>
+							<div class="img"><a href="https://i.lensdump.com/i/6w4Wj9.jpeg"><img src="https://i.lensdump.com/i/6w4Wj9.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w4rwT.jpeg"><img src="https://i.lensdump.com/i/6w4rwT.jpeg"></a></div></div>
+					</div>
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://i2.lensdump.com/i/6w4Tfr.jpeg"><img src="https://i2.lensdump.com/i/6w4Tfr.jpeg"></a></div></div></div>
+					<div class="imgdesc">
+						<b>コスプレ: </b>
+						演者　<a href="https://j-popcon.dk/en/">J-Pop Con</a>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i3.lensdump.com/i/6w4sfe.jpeg"><img src="https://i3.lensdump.com/i/6w4sfe.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6w4mKa.jpeg"><img src="https://i2.lensdump.com/i/6w4mKa.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i1.lensdump.com/i/6wsmyM.jpeg"><img src="https://i1.lensdump.com/i/6wsmyM.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6ws47a.jpeg"><img src="https://i2.lensdump.com/i/6ws47a.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w46q3.jpeg"><img src="https://i.lensdump.com/i/6w46q3.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6w4dwM.jpeg"><img src="https://i.lensdump.com/i/6w4dwM.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6w4JhD.jpeg"><img src="https://i2.lensdump.com/i/6w4JhD.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w440k.jpeg"><img src="https://i1.lensdump.com/i/6w440k.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w4O21.jpeg"><img src="https://i1.lensdump.com/i/6w4O21.jpeg"></a></div></div>
+					</div>
+					<div class="imgdesc">
+						<b>ソーラン節: </b>
+						演者　Odense Mochi Team
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6ws7Zk.jpeg"><img src="https://i3.lensdump.com/i/6ws7Zk.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i2.lensdump.com/i/6w4lSK.jpeg"><img src="https://i2.lensdump.com/i/6w4lSK.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6w4npm.jpeg"><img src="https://i1.lensdump.com/i/6w4npm.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w4NJC.jpeg"><img src="https://i3.lensdump.com/i/6w4NJC.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w4PS5.jpeg"><img src="https://i1.lensdump.com/i/6w4PS5.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w4URT.jpeg"><img src="https://i2.lensdump.com/i/6w4URT.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6w4xBF.jpeg"><img src="https://i3.lensdump.com/i/6w4xBF.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i2.lensdump.com/i/6w4wIr.jpeg"><img src="https://i2.lensdump.com/i/6w4wIr.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6w4cpb.jpeg"><img src="https://i1.lensdump.com/i/6w4cpb.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6w4yo3.jpeg"><img src="https://i.lensdump.com/i/6w4yo3.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6w4G80.jpeg"><img src="https://i2.lensdump.com/i/6w4G80.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6w4aJD.jpeg"><img src="https://i1.lensdump.com/i/6w4aJD.jpeg"></a></div></div>
+					</div>
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://i2.lensdump.com/i/6w4YB9.jpeg"><img src="https://i2.lensdump.com/i/6w4YB9.jpeg"></a></div></div></div>
+					<div class="imgdesc">
+						<b><ruby>剣道<rt>けんどう</rt></ruby>: </b>
+						演者　<a href="https://www.kenseikai.dk/"><ruby>剣誠会<rt>けんせいかい</rt></ruby></a>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wK2yA.jpeg"><img src="https://i2.lensdump.com/i/6wK2yA.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wKARM.jpeg"><img src="https://i3.lensdump.com/i/6wKARM.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6wKW7Q.jpeg"><img src="https://i.lensdump.com/i/6wKW7Q.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6wKiFa.jpeg"><img src="https://i1.lensdump.com/i/6wKiFa.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wK0Ie.jpeg"><img src="https://i2.lensdump.com/i/6wK0Ie.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wKr8H.jpeg"><img src="https://i.lensdump.com/i/6wKr8H.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wKtQ1.jpeg"><img src="https://i1.lensdump.com/i/6wKtQ1.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wK1ec.jpeg"><img src="https://i2.lensdump.com/i/6wK1ec.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wKZox.jpeg"><img src="https://i3.lensdump.com/i/6wKZox.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6w4heq.jpeg"><img src="https://i.lensdump.com/i/6w4heq.jpeg"></a></div>
+							<div class="img"><a href="https://i3.lensdump.com/i/6wKRyK.jpeg"><img src="https://i3.lensdump.com/i/6wKRyK.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6wKETZ.jpeg"><img src="https://i2.lensdump.com/i/6wKETZ.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wKk7P.jpeg"><img src="https://i.lensdump.com/i/6wKk7P.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i3.lensdump.com/i/6wKJZi.jpeg"><img src="https://i3.lensdump.com/i/6wKJZi.jpeg"></a></div>
+							<div class="img"><a href="https://i.lensdump.com/i/6wKQmo.jpeg"><img src="https://i.lensdump.com/i/6wKQmo.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6wKdA2.jpeg"><img src="https://i2.lensdump.com/i/6wKdA2.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wKImk.jpeg"><img src="https://i1.lensdump.com/i/6wKImk.jpeg"></a></div></div>
+					</div>
+					<div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://i2.lensdump.com/i/6wszA1.jpeg"><img src="https://i2.lensdump.com/i/6wszA1.jpeg"></a></div></div></div>
+					<div class="imgdesc">
+						<b><ruby>和太鼓<rt>わだいこ</rt></ruby>: </b>
+						演者　<a href="https://seidokan.dk/om-seidokan/"><ruby>生動太鼓<rt>せいどうたいこ</rt></ruby></a>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wKqQv.jpeg"><img src="https://i1.lensdump.com/i/6wKqQv.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wK3Tz.jpeg"><img src="https://i2.lensdump.com/i/6wK3Tz.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wKmy5.jpeg"><img src="https://i3.lensdump.com/i/6wKmy5.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6wK4OT.jpeg"><img src="https://i.lensdump.com/i/6wK4OT.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6wKBnC.jpeg"><img src="https://i1.lensdump.com/i/6wKBnC.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i1.lensdump.com/i/6wsn5Z.jpeg"><img src="https://i1.lensdump.com/i/6wsn5Z.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i2.lensdump.com/i/6wKHuF.jpeg"><img src="https://i2.lensdump.com/i/6wKHuF.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6wKKUb.jpeg"><img src="https://i1.lensdump.com/i/6wKKUb.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i3.lensdump.com/i/6wKOsr.jpeg"><img src="https://i3.lensdump.com/i/6wKOsr.jpeg"></a></div>
+							<div class="img"><a href="https://i.lensdump.com/i/6wK7Z7.jpeg"><img src="https://i.lensdump.com/i/6wK7Z7.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i3.lensdump.com/i/6wKzA3.jpeg"><img src="https://i3.lensdump.com/i/6wKzA3.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i1.lensdump.com/i/6wKenD.jpeg"><img src="https://i1.lensdump.com/i/6wKenD.jpeg"></a></div>
+							<div class="img"><a href="https://i2.lensdump.com/i/6wKn5q.jpeg"><img src="https://i2.lensdump.com/i/6wKn5q.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wKSV0.jpeg"><img src="https://i.lensdump.com/i/6wKSV0.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i.lensdump.com/i/6wKMOM.jpeg"><img src="https://i.lensdump.com/i/6wKMOM.jpeg"></a></div>
+							<div class="img"><a href="https://i3.lensdump.com/i/6wKLEA.jpeg"><img src="https://i3.lensdump.com/i/6wKLEA.jpeg"></a></div>
+						</div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wsYci.jpeg"><img src="https://i.lensdump.com/i/6wsYci.jpeg"></a></div></div>
+					</div>
+					<div class="imgdesc">
+						<b><ruby>盆踊り<rt>ぼんおどり</rt></ruby>: </b>
+						演者　<a href="http://www.jdnet.dk/">日本人会</a>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i2.lensdump.com/i/6wsMOm.jpeg"><img src="https://i2.lensdump.com/i/6wsMOm.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://i.lensdump.com/i/6wsfAv.jpeg"><img src="https://i.lensdump.com/i/6wsfAv.jpeg"></a></div></div>
+						<div class="imgWrap" style="width: 100%">
+							<div class="img"><a href="https://i1.lensdump.com/i/6ws5gr.jpeg"><img src="https://i1.lensdump.com/i/6ws5gr.jpeg"></a></div>
+							<div class="img"><a href="https://i1.lensdump.com/i/6wsND2.jpeg"><img src="https://i1.lensdump.com/i/6wsND2.jpeg"></a></div>
+							<div class="img"><a href="https://i3.lensdump.com/i/6wswOb.jpeg"><img src="https://i3.lensdump.com/i/6wswOb.jpeg"></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>撮影者</td>
+					<td>狼牙クレシ</td>
+				</tr>
+				<tr>
+					<td>撮影回</td>
+					<td>1回</td>
+				</tr>
+				<tr>
+					<td>行き先</td>
+					<td>
+						コペンハーゲン (København)
+						<ol><li>ランゲルニエ公園 （Langeliniepark） </li></ol>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<a href="https://crasywolfang.com/jp/post/2404cphs">
+				<div class="photoCard">
+					<h1>コペンハーゲン桜祭り</h1>
+					<span class="card-left">イベント撮影</span>
+					<span class="card-right">2025年02月03日</span>
+					<img src="https://c.l3n.co/i/Smtqmi.jpg">
+					<span class="card-right">コペンハーゲン、2024年04月</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
 </html>

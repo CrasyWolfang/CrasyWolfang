@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CWOLF </title>
+		<meta charset="utf-8">
+		<style>
+			body{background-color: #000000;}
+			a{
+			color: #D3D3D3;
+			text-decoration: none;
+			}
+			a:hover{background-color: #e0c068;}
+			#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			#top{width: 100%;}
+			#topLang{float: right;}
+			#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+			}
+			#header img{
+			display: block;
+			width: 100%;
+			}
+			#topMenu{background-color: #000000;}
+			#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			}
+			#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+			}
+			#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+			}
+			#bottom{
+			color: #808080;
+			background-color: #000000;
+			}
+			.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+			}
+			.update h1{text-align: center;}
+			.updateParagraph{text-indent: 2em;}
+			.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			}
+			.updatePosts img{
+			max-height: 800px;
+			}
+			.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			.update .date{
+			color: #808080;
+			text-align: right;
+			}
+			.flowbutton {
+			padding: 1em;
+			gap: 1em;
+			}
+			.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+			}
+			.flowbutton li:hover{background-color: #e0c068;}
+			.center{text-align: center;}
+			h1.center{text-decoration: underline;}
+			.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+			}
+			.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+			padding: 0.5em;
+			}
+			.catCard li:hover{background-color: #e0c068;}
+			.catCard img{
+			width: 240px;
+			display: block;
+			}
+			.catCard a{
+			color: #ffffff;
+			display: block;
+			}
+			.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+			}
+			.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+			}
+			.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+			}
+			.title .grey {color: #808080;}
+			.title-left{float: left;}
+			.title-right{
+			float: right;
+			text-align: right;
+			}
+			.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+			}
+			.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+			}
+			.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+			}
+			.ref::before{content: '[';}
+			.ref::after{content: ']';}
+			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
+			.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+			}
+			.photoCard:hover{background-color: #e0c068;}
+			.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+			}
+			.card-left{
+			float: left;
+			padding-left: 0.4em;
+			}
+			.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+			}
+			.photoCard img{
+			width: 100%;
+			display: block;
+			}
+			.imgdesc{
+			padding-top: -30em;
+			}
+			.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			}
+			.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+			}
+			.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+			}
+			.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+			}
+			.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+			}
+			.largePhotoUrl div{
+			background-color: #ffffff;
+			}
+			.largePhotoUrl div:hover{
+			background-color: #e0c068;
+			}
+			.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+			}
+			.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			}
+			.largePhoto img{display: block;}
+			.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+			}
+			.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+			}
+			.credits{
+			width: 100%;
+			border-collapse: collapse;
+			}
+			.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			}
+			.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<small style="color: grey;">CWOLF WEB PROJECT</small>
+				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/archive/2023">English</a> | <a href="https://www.CrasyWolfang.com/jp/archive/2023">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
+					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
+				</ul>
+			</nav>
+			<div class="update">
+				<h1>情報の伸ばしとか</h1>
+				<div class="updateParagraph">
+					<p>それぞれの投稿に情報表がつき、新しい写真集が六冊発行された。
+					三冊は春に京都南区で撮影され、吉祥院を巡らせて鴨川と桂川を辿った。
+					また次の三 冊はそれからのスウェーデンの夏と夜である。
+					夜の写真は夜勤のパースで撮られ、一年間ずっと撮り続けた。
+					さらに、写真投稿の「場所」の範疇が４つに分かれた。
+					その上、「ザ・フォトワル」って混在の写真が再現された。</p><p>改める写真がだんだんたくさんあるので、ポートレートの予定は先送りされた。
+					次に植物の写真と動物の写真が改められる。
+					写真以外、最近の時間はソフトの発展に使用された。
+					知っている人はこんな長々しいプロジェクトをもう知っている。
+					散発的に続いているので、いつアルファ・バージョンの使用可能になるかはわからない。</p>
+				</div>
+				<p class="center">下記、最近の投稿が６つ並んでいる。</p>
+				<div class="updatePosts">
+					<div class="imgWrap">
+						<a href="https://www.CrasyWolfang.com/jp/post/2204kamo"><img src="https://b.l3n.co/i/m2kJ89.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2204katu"><img src="https://c.l3n.co/i/m2kmUT.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2204kiss"><img src="https://a.l3n.co/i/m2kRFP.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2307summ"><img src="https://c.l3n.co/i/m2kVev.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2206sush"><img src="https://b.l3n.co/i/m2k17Z.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2206scni"><img src="https://c.l3n.co/i/m2kkmi.jpeg"></a>
+					</div>
+					<ul>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2204kamo">鴨川</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2204katu">桂川</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2204kiss">吉祥院</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2307summ">23の夏</a></li>
+						<li>
+							<a href="https://www.CrasyWolfang.com/jp/post/2206sush">
+								サマー・ショット
+								（ザ・フォト・ワル2022年02号）
+							</a>
+						</li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2206scni">スコーネ・ナイト</a></li>
+					</ul>
+				</div>
+				<p class="center"></p>
+				<div class="date">2023年11月08日</div>
+			</div>
+			<div class="update">
+				<h1>10月15日</h1>
+				<p class="center">
+					秋のアルバムの序章が付いた。<br>
+					あとで、令和4年に撮られたスウェーデン・日本のアルバムが何冊かアップされたり、<br>
+					アルバム について見える情報が伸びたりする。
+				</p>
+				<div class="updatePosts">
+					<div class="imgWrap"><a href="https://www.CrasyWolfang.com/jp/post/2209park"><img src="https://b.l3n.co/i/qMmSHx.jpeg"></a></div>
+					<ul><li><a href="https://www.CrasyWolfang.com/jp/post/2209park">動物の秋</a></li></ul>
+				</div>
+				<p class="center">ゆっくりご覧ください。</p>
+				<div class="date">2023年10月15日</div>
+			</div>
+			<div class="update">
+				<h1>09月28日</h1>
+				<p class="center">
+					2019年の梅小路公園の写真がアップされた。<br>
+					この日市場が広場にあって、子供は公園で遊んだ。
+				</p>
+				<div class="updatePosts">
+					<div class="imgWrap"><a href="https://www.CrasyWolfang.com/jp/post/1910umek"><img src="https://b.l3n.co/i/dDsKcZ.jpeg"></a></div>
+					<ul><li><a href="https://www.CrasyWolfang.com/jp/post/1910umek">梅小路の日暮れ</a></li></ul>
+				</div>
+				<div class="date">2023年09月29日</div>
+			</div>
+			<div class="update">
+				<h1>09月26日</h1>
+				<p class="center">
+					青空の下で<br>
+					蛙みたいな　跳び踊り<br>
+					それはスウェーデンの夏至祭りということ
+				</p>
+				<div class="updatePosts">
+					<div class="imgWrap"><a href="https://www.CrasyWolfang.com/jp/post/2206mids"><img src="https://b.l3n.co/i/dkBl1i.jpeg"></a></div>
+					<ul><li><a href="https://www.CrasyWolfang.com/jp/post/2206mids">夏至祭り</a></li></ul>
+				</div>
+				<div class="date">2023年09月26日</div>
+			</div>
+			<div class="update">
+				<h1>08月25日</h1>
+				<p class="center">
+					令和４年の写真集が二つ加わった。<br>
+					第一集は秋季に関するスウェーデンのルンドの発見である。<br>
+					第二集は有名な伏見稲荷大社で撮られた写真である。<br>
+					大型写真が両方にアップされる。 その上、神社の写真の中には焦点合成の写真もある。
+				</p>
+				<div class="updatePosts">
+					<div class="imgWrap">
+						<a href="https://www.CrasyWolfang.com/jp/post/2210luau"><img src="https://a.l3n.co/i/VNW385.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2205fuit"><img src="https://b.l3n.co/i/VNWmuC.jpeg"></a>
+					</div>
+					<ul>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2210luau">ルンド秋</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2205fuit">稲荷山陰</a></li>
+					</ul>
+				</div>
+				<div class="date">2023年08月25日</div>
+			</div>
+			<div class="update">
+				<h1>07月31日</h1>
+				<p class="center">
+					去年（2022年）の夏の旅行集がＨＰに押された。<br>
+					新しい投稿が４つ発行され、１つが改められた。
+				</p>
+				<div class="updatePosts">
+					<div class="imgWrap">
+						<a href="https://www.CrasyWolfang.com/jp/post/2208wafo"><img src="https://c.l3n.co/i/QHGonK.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2208dege"><img src="https://b.l3n.co/i/QHwwxi.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2208eufo"><img src="https://a.l3n.co/i/QHwXCP.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2207oasf"><img src="https://b.l3n.co/i/QHwc2Z.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2207dbsb"><img src="https://a.l3n.co/i/QHwfqc.jpeg"></a>
+					</div>
+					<ul>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2208wafo">排水の鳥</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2208dege">谷のフォルサカー</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2208eufo">UFOへのお参り</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2207oasf">オアセン花屋</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2207dbsb">ダルビ採石場</a></li>
+					</ul>
+				</div>
+				<div class="date">2023年07月31日</div>
+			</div>
+			<div class="update">
+				<h1>2023年の更新</h1>
+				<p class="center">
+					HPが新しく更新された。<br>
+					写真は見やすいようなブラックなバックに変わって、<br>
+					さらにサイトはスマホの長細いアスペクトでも使いやすくなった。<br>
+					<br>
+					将来は…<br>
+					新しい写真が投稿される。<br>
+					秋に仕掛けてポートレート撮影を行うことがされている。<br>
+					その上、８年間に重ねてきた写真もアップする予定がある。<br>
+					<br>
+					下記、最近の投稿が５つ並んでいる。
+				</p>
+				<div class="updatePosts">
+					<div class="imgWrap">
+						<a href="https://www.CrasyWolfang.com/jp/post/2212lust"><img src="https://b.l3n.co/i/JcTnWm.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2108fuit"><img src="https://i1.lensdump.com/i/JcTok2.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2304meos"><img src="https://i2.lensdump.com/i/JcTuHv.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2303hist"><img src="https://i3.lensdump.com/i/JcTLvo.jpeg"></a>
+						<a href="https://www.CrasyWolfang.com/jp/post/2304cphs"><img src="https://i.lensdump.com/i/JcTDXC.jpeg"></a>
+					</div>
+					<ul>
+						<li>
+							<a href="https://www.CrasyWolfang.com/jp/post/2212lust">
+								中央公園
+								（22年冬集）
+							</a>
+						</li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2108fuit">狐の鳥居</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2304meos">春の記憶</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2303hist">マルメ歴史博物館</a></li>
+						<li><a href="https://www.CrasyWolfang.com/jp/post/2304cphs">コペンハーゲン桜祭り</a></li>
+					</ul>
+				</div>
+				<p class="center">ゆっくりご覧ください。</p>
+				<div class="date">2023年07月20日</div>
+			</div>
+			<ul class="flowbutton">
+				<a href="https://www.CrasyWolfang.com/jp/archive/2024"><li>2024</li></a>
+				<a href="https://www.CrasyWolfang.com/jp/archive/2023"><li>2023</li></a>
+			</ul>
+			<div id="bottom">
+				<hr>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top" style="float: right; color: grey;">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>
