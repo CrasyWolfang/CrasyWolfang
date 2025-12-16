@@ -1,0 +1,533 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			width: 100%;
+		}
+		.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+		}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="K:/CWOLF/export/en/post/1706engh.html">English</a> | <a href="K:/CWOLF/export/jp/post/1706engh.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="K:/CWOLF/export/en/home.html">Home</a></li>
+					<li><a href="K:/CWOLF/export/en/photo.html">Photography</a></li>
+					
+					<li><a href="K:/CWOLF/export/en/about.html">About</a></li>
+				</ul>
+			</nav>
+			
+			<div class="title">
+				<h1>Engelholm Walk</h1>
+				<span class="title-left">Forest photography</span>
+				<span class="title-right">
+					<div format="single"><span class="grey">published:&ensp;</span>2025-12-16</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<p>
+					The following photos were taken in Engelholm.
+			Engelholm is a town built by the seaside.
+			The town is centered around a river and with plenty of forest still preserved in the area.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpqXJH.jpg"><img src="https://c.l3n.co/fpqXJH.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpqbe1.jpg"><img src="https://b.l3n.co/fpqbe1.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpqwxc.jpg"><img src="https://d.l3n.co/fpqwxc.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/fpqyRK.jpg"><img src="https://b.l3n.co/fpqyRK.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/fpq57Z.jpg"><img src="https://a.l3n.co/fpq57Z.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpqGFP.jpg"><img src="https://b.l3n.co/fpqGFP.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpBnsm.jpg"><img src="https://a.l3n.co/fpBnsm.jpg"/></a></div></div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpqhIm.jpg"><img src="https://a.l3n.co/fpqhIm.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpBzcZ.jpg"><img src="https://a.l3n.co/fpBzcZ.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/fpBeZP.jpg"><img src="https://d.l3n.co/fpBeZP.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/fpBlOK.jpg"><img src="https://b.l3n.co/fpBlOK.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpB2mi.jpg"><img src="https://d.l3n.co/fpB2mi.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/fpB8oo.jpg"><img src="https://b.l3n.co/fpB8oo.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/fpBW89.jpg"><img src="https://a.l3n.co/fpBW89.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/fpBjev.jpg"><img src="https://a.l3n.co/fpBjev.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/fpB0yC.jpg"><img src="https://d.l3n.co/fpB0yC.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpBZR5.jpg"><img src="https://b.l3n.co/fpBZR5.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpBg7z.jpg"><img src="https://d.l3n.co/fpBg7z.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/fpBrUT.jpg"><img src="https://a.l3n.co/fpBrUT.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/fpB1Ib.jpg"><img src="https://d.l3n.co/fpB1Ib.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpBiQ2.jpg"><img src="https://b.l3n.co/fpBiQ2.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpBRm7.jpg"><img src="https://a.l3n.co/fpBRm7.jpg"/></a></div></div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpBTur.jpg"><img src="https://d.l3n.co/fpBTur.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpBk8F.jpg"><img src="https://b.l3n.co/fpBk8F.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpBJyD.jpg"><img src="https://b.l3n.co/fpBJyD.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/fpB6Q3.jpg"><img src="https://d.l3n.co/fpB6Q3.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/fpBCn0.jpg"><img src="https://a.l3n.co/fpBCn0.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/fpBVTq.jpg"><img src="https://a.l3n.co/fpBVTq.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/fpB9OA.jpg"><img src="https://c.l3n.co/fpB9OA.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/fpBdUM.jpg"><img src="https://d.l3n.co/fpBdUM.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/fpBBZQ.jpg"><img src="https://a.l3n.co/fpBBZQ.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpBmma.jpg"><img src="https://d.l3n.co/fpBmma.jpg"/></a></div></div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpBsue.jpg"><img src="https://c.l3n.co/fpBsue.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpB4Ak.jpg"><img src="https://d.l3n.co/fpB4Ak.jpg"/></a></div></div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpBKQx.jpg"><img src="https://c.l3n.co/fpBKQx.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/fpBpnH.jpg"><img src="https://d.l3n.co/fpBpnH.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/fpB751.jpg"><img src="https://c.l3n.co/fpB751.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpBHTc.jpg"><img src="https://a.l3n.co/fpBHTc.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpBvDi.jpg"><img src="https://d.l3n.co/fpBvDi.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/fpBMAo.jpg"><img src="https://c.l3n.co/fpBMAo.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/fpBYV9.jpg"><img src="https://a.l3n.co/fpBYV9.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/fpBov2.jpg"><img src="https://d.l3n.co/fpBov2.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/fpBu5v.jpg"><img src="https://b.l3n.co/fpBu5v.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/fpBNEC.jpg"><img src="https://c.l3n.co/fpBNEC.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/fpBPO5.jpg"><img src="https://a.l3n.co/fpBPO5.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpBXD7.jpg"><img src="https://d.l3n.co/fpBXD7.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpBwWr.jpg"><img src="https://c.l3n.co/fpBwWr.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpBUgT.jpg"><img src="https://a.l3n.co/fpBUgT.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpBfcz.jpg"><img src="https://d.l3n.co/fpBfcz.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpBcsb.jpg"><img src="https://b.l3n.co/fpBcsb.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpBxVF.jpg"><img src="https://b.l3n.co/fpBxVF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpByv3.jpg"><img src="https://c.l3n.co/fpByv3.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpB5G0.jpg"><img src="https://b.l3n.co/fpB5G0.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpBaED.jpg"><img src="https://c.l3n.co/fpBaED.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpBhHq.jpg"><img src="https://a.l3n.co/fpBhHq.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/fpmAgM.jpg"><img src="https://d.l3n.co/fpmAgM.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/fpm2XA.jpg"><img src="https://c.l3n.co/fpm2XA.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpmW3Q.jpg"><img src="https://b.l3n.co/fpmW3Q.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpmiDa.jpg"><img src="https://a.l3n.co/fpmiDa.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpmI9k.jpg"><img src="https://c.l3n.co/fpmI9k.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/fpm0We.jpg"><img src="https://d.l3n.co/fpm0We.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/fpmgGH.jpg"><img src="https://c.l3n.co/fpmgGH.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/fpmZvx.jpg"><img src="https://a.l3n.co/fpmZvx.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/fpmtk1.jpg"><img src="https://d.l3n.co/fpmtk1.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpm1Hc.jpg"><img src="https://b.l3n.co/fpm1Hc.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpmRXK.jpg"><img src="https://a.l3n.co/fpmRXK.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/fpmErZ.jpg"><img src="https://c.l3n.co/fpmErZ.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/fpmk3P.jpg"><img src="https://b.l3n.co/fpmk3P.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/fpm6Nm.jpg"><img src="https://d.l3n.co/fpm6Nm.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpmJii.jpg"><img src="https://a.l3n.co/fpmJii.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpmQ9o.jpg"><img src="https://c.l3n.co/fpmQ9o.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/fpmVL9.jpg"><img src="https://b.l3n.co/fpmVL9.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpm9a2.jpg"><img src="https://a.l3n.co/fpm9a2.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/fpmqkv.jpg"><img src="https://c.l3n.co/fpmqkv.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/fpmBlC.jpg"><img src="https://b.l3n.co/fpmBlC.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/fpmmX5.jpg"><img src="https://c.l3n.co/fpmmX5.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="photoblock"><div class="photorow"><div class="imgWrap"><div class="img"><a href="https://a.l3n.co/fpm3rz.jpg"><img src="https://a.l3n.co/fpm3rz.jpg"/></a></div></div></div></div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>Photographer</td>
+					<td>Crasy Wolfang</td>
+				</tr>
+				<tr>
+					<td>Sessions</td>
+					<td trygrab="session">continuous&ensp;(4&ensp;days)</td>
+				</tr>
+				<tr>
+					<td>Destination</td>
+					<td>Engelholm&ensp;(Ängelholm)</td>
+				</tr>
+				
+				
+			</table>
+			<hr/>
+			<a href="K:/CWOLF/export/en/post/2407stsk.html">
+				<div class="photoCard">
+					<h1 format="single">The beach forest</h1>
+					<span class="card-left" format="single">Forest photography<small> (56 photos)</small></span>
+					<span class="card-right">2025-02-26</span>
+					<img src="https://b.l3n.co/i/YLiTVC.jpg"/>
+					<span class="card-right" format="single">Engelholm,&ensp;July&ensp;2024</span>
+				</div>
+			</a>
+			<a href="K:/CWOLF/export/en/post/2410fabo.html">
+				<div class="photoCard">
+					<h1 format="single">Höllviken/Falsterbo Walk</h1>
+					<span class="card-left" format="single">Waterway photography<small> (31 photos)</small></span>
+					<span class="card-right">2025-12-16</span>
+					<img src="https://b.l3n.co/f7j4jb.jpg"/>
+					<span class="card-right" format="single">Vellinge,&ensp;November&ensp;2024</span>
+				</div>
+			</a>
+			<a href="K:/CWOLF/export/en/post/2408phwa.html">
+				<div class="photoCard">
+					<h1 format="single">The Photowall<span trygrab="subtitle" class="subtitle">&ensp;(2024-2)</span></h1>
+					<span class="card-left" format="single">Mixed photography<small> (138 photos)</small></span>
+					<span class="card-right">2025-12-16</span>
+					<img src="https://d.l3n.co/fO0ofA.jpg"/>
+					<span class="card-right" format="single">,&ensp;August&mdash;December&ensp;2024</span>
+				</div>
+			</a>
+			
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>

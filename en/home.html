@@ -1,191 +1,211 @@
-<!DOCTYPE html>
+<!DOCTYPE>
+
+
 <html>
 	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
 		<style>
 			body{background-color: #000000;}
-			a{
+		a{
 			color: #D3D3D3;
 			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
 			color: #ffffff;
 			max-width: 1200px;
 			min-width: 640px;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
 			color: #ffffff;
 			text-decoration: none;
-			}
-			#header img{
+		}
+		#header img{
 			display: block;
 			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
 			margin: 0em;
 			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
 			display: inline;
 			padding: 0em;
 			font-size: 1.3em;
 			border: 2px solid #808080;
-			}
-			#topMenu a{
+		}
+		#topMenu a{
 			padding-top: 0em;
 			padding-bottom: 0em;
 			padding-left: 2em;
 			padding-right: 2em;
 			color: #ffffff;
-			}
-			#bottom{
+		}
+		#bottom{
 			color: #808080;
 			background-color: #000000;
-			}
-			.update{
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
 			margin: 0.5em;
 			padding-top: 1em;
 			padding-bottom: 1em;
 			padding-left: 2em;
 			padding-right: 2em;
 			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
 			max-width: 80%;
 			max-height: 800px;
-			}
-			.updatePosts img{
+		}
+		.updatePosts img{
 			max-height: 800px;
-			}
-			.updatePosts ul{
+		}
+		.updatePosts ul{
 			max-width: 600px;
 			margin-right: auto;
 			margin-left: auto;
-			}
-			.update .image{
+		}
+		.update .image{
 			width: 80%;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			.update .date{
+		}
+		.update .date{
 			color: #808080;
 			text-align: right;
-			}
-			.flowbutton {
+		}
+		
+		.flowbutton {
 			padding: 1em;
 			gap: 1em;
-			}
-			.flowbutton li{
+		}
+		.flowbutton li{
 			list-style-type: none;
 			margin-top: 0.5em;
 			color: #ffffff;
 			border: 1px solid #ffffff;
 			text-align: center;
 			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			.catCard{
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
 			list-style: none;
 			padding-left: 0;
 			text-align: center;
 			font-size: 1.3em;
-			}
-			.catCard li{
+		}
+		.catCard li{
 			margin: 0.3em;
 			display: inline-block;
 			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
 			width: 240px;
 			display: block;
-			}
-			.catCard a{
+		}
+		.catCard a{
 			color: #ffffff;
 			display: block;
-			}
-			.title{
+			padding: 0.5em;
+		}
+		
+		.title{
 			margin-left: auto;
 			margin-right: auto;
 			max-width: 800px;
 			padding: 1em;
 			padding-bottom: 2em;
-			}
-			.title h1{
+		}
+		.title h1{
 			border-bottom: 1px solid;
 			width: 100%;
 			margin: 0px;
-			}
-			.subtitle{
+		}
+		.subtitle{
 			font-size: 0.8em;
 			color: #808080;
-			}
-			.title .grey {color: #808080;}
-			.title-left{float: left;}
-			.title-right{
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
 			float: right;
 			text-align: right;
-			}
-			.photo-content p{
+		}
+		
+		.photo-content p{
 			padding-left: 1em;
 			padding-right: 1em;
 			text-indent: 2em;
-			}
-			.note {
+		}
+		.note {
 			margin: 1em;
 			border: 1px solid #ffffff;
-			}
-			.ref{
+		}
+		
+		.ref{
 			color: #D3D3D3;
 			text-decoration: none;
 			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			.photoCard{
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
 			color: #ffffff;
 			border: 2px solid #808080;
 			margin-top: 1em;
 			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
 			margin: 0px;
 			padding-left: 0.15em;
-			}
-			.card-left{
+		}
+		.card-left{
 			float: left;
 			padding-left: 0.4em;
-			}
-			.card-right{
+		}
+		.card-right{
 			float: right;
 			text-align: right;
 			padding-right: 0.4em;
-			}
-			.photoCard img{
+		}
+		.photoCard img{
 			width: 100%;
 			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			.imgWrap{
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
 			display: flex;
 			flex-direction: row;
 			gap: 0.5em;
@@ -194,296 +214,324 @@
 			margin-left: auto;
 			margin-right: auto;
 			justify-content: center;
-			}
-			.imgWrap img{
+			width: 100%;
+		}
+		.imgWrap img{
 			display: block;
 			max-width: 100%;
 			gap: 0.5em;
-			}
-			.bibliography ul{
+		}
+		
+		.bibliography ul{
 			list-style-type: none;
 			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
+		}
+		.bibliography li:not(:last-child) {
 			margin-bottom: 0.5em;
-			}
-			.largePhoto{
+		}
+		
+		.largePhoto{
 			border: 1px solid #ffffff;
 			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
+		}
+		.largePhotoUrl div{
 			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
+		}
+		.largePhotoTop{
 			text-indent: 1em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
 			font-size: 1.3em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
 			text-indent: 2em;
-			}
-			.largePhoto p{
+		}
+		.largePhoto p{
 			text-indent: 2em;
 			padding-left: 1em;
 			padding-right: 1em;
-			}
-			.credits{
+		}
+		
+		.credits{
 			width: 100%;
 			border-collapse: collapse;
-			}
-			.credits td{
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
 			border: 1px solid #ffffff;
 			padding: 0.3em;
 			padding-left: 1em;
-			}
-			.credits td:first-child {
+			color: #ffffff;
+		}
+		.credits td:first-child {
 			width: 12%;
 			white-space: nowrap;
-			}
+			padding-right: 1em;
+		}
 		</style>
 	</head>
 	<body>
 		<div id="container">
 			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/home">English</a> | <a href="https://www.CrasyWolfang.com/jp/home">日本語</a></div>
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="K:/CWOLF/export/en/home.html">English</a> | <a href="K:/CWOLF/export/jp/home.html">日本語</a></div>
 			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
 			<nav id="topMenu">
 				<ul>
-					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
+					<li><a href="K:/CWOLF/export/en/home.html">Home</a></li>
+					<li><a href="K:/CWOLF/export/en/photo.html">Photography</a></li>
+					
+					<li><a href="K:/CWOLF/export/en/about.html">About</a></li>
 				</ul>
 			</nav>
+			
+			
 			<div class="update">
-				<h1>City photography release 1</h1>
+				<h1>Scattered photos</h1>
 				<div class="updateParagraph">
-					<p>Below are city photos.
-					These photos were taken in the capital of Berlin of Germany, Moscow of Russia and Tokyo of Japan.
-					The pictures from Moscow and Tokyo were taken before the outbreak of COVID19, however they are old and may lack quality and photography technique.
-					As a bonus an album from Kyoto Gyoen National Garden has also been uploaded.</p>
+					<p>
+						If you carry around your camera everyday you are bound to have some photos pile up that do not belong to any specific album.
+				Below are some of those photos collected.
+				Half of these photos were taken on a longer walk, and the other half were taken at brief photo opportunities.
+					</p>
 				</div>
 				<div class="updatePosts">
 					<div class="imgWrap">
-						<a href="https://www.CrasyWolfang.com/en/post/1911toky"><img src="https://b.l3n.co/i/oJrN60.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2408brln"><img src="https://a.l3n.co/i/NVd9o2.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/1908mosk"><img src="https://b.l3n.co/i/NqY9Hc.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2412trto"><img src="https://c.l3n.co/i/NHB5jr.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2205imga"><img src="https://c.l3n.co/i/NS5OLD.jpg"></a>
+						<a href="K:/CWOLF/export/en/post/1704lust.html" format="single"><img src="https://d.l3n.co/figvl0.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1706phwa.html" format="single"><img src="https://d.l3n.co/fp03lD.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1708phwa.html" format="single"><img src="https://c.l3n.co/fp04bq.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2405phwa.html" format="single"><img src="https://c.l3n.co/oiixdD.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2408phwa.html" format="single"><img src="https://b.l3n.co/fO0NqQ.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1706engh.html" format="single"><img src="https://c.l3n.co/fpnWxQ.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2410fabo.html" format="single"><img src="https://a.l3n.co/f7j7hF.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2411berl.html" format="single"><img src="https://c.l3n.co/f7jHC3.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2503hoha.html" format="single"><img src="https://d.l3n.co/f7jlS0.jpg"/></a>
 					</div>
 					<ul>
-						<li><a href="https://www.CrasyWolfang.com/en/post/1911toky">Tokyo Walk</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2408brln">Die Spree</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/1908mosk">Moscow</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2412trto">Treptow</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2205imga">Kyoto Imperial Garden</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1704lust.html" format="single">The City Park&ensp;(spring/summer 16)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1706phwa.html" format="single">The Photowall&ensp;(2017-2)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1708phwa.html" format="single">The Photowall&ensp;(2017-3)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2405phwa.html" format="single">The Photowall&ensp;(2024-1)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2408phwa.html" format="single">The Photowall&ensp;(2024-2)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1706engh.html" format="single">Engelholm Walk</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2410fabo.html" format="single">Höllviken/Falsterbo Walk</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2411berl.html" format="single">Berlin Snapshots</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2503hoha.html" format="single">Hovs Hallar Evening</a></li>
 					</ul>
 				</div>
 				<p class="center">Please take your time and enjoy these photos.</p>
-				<div class="date">2025-08-25</div>
+				<div class="date" format="single">2025-12-16</div>
+			</div>
+			<div class="update">
+				<h1>City photography release 1</h1>
+				<div class="updateParagraph">
+					<p>
+						Below are city photos.
+				These photos were taken in the capital of Berlin of Germany, Moscow of Russia and Tokyo of Japan.
+				The pictures from Moscow and Tokyo were taken before the outbreak of COVID19, however they are old and may lack quality and photography technique.
+				As a bonus an album from Kyoto Gyoen National Garden has also been uploaded.
+					</p>
+				</div>
+				<div class="updatePosts">
+					<div class="imgWrap">
+						<a href="K:/CWOLF/export/en/post/1911toky.html" format="single"><img src="https://b.l3n.co/i/oJrN60.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2408brln.html" format="single"><img src="https://a.l3n.co/i/NVd9o2.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1908mosk.html" format="single"><img src="https://b.l3n.co/i/NqY9Hc.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2412trto.html" format="single"><img src="https://c.l3n.co/i/NHB5jr.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2205imga.html" format="single"><img src="https://c.l3n.co/i/NS5OLD.jpg"/></a>
+					</div>
+					<ul>
+						<li><a href="K:/CWOLF/export/en/post/1911toky.html" format="single">Tokyo Walk</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2408brln.html" format="single">Die Spree</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1908mosk.html" format="single">Moscow</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2412trto.html" format="single">Treptow</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2205imga.html" format="single">Kyoto Imperial Garden</a></li>
+					</ul>
+				</div>
+				<p class="center">Please take your time and enjoy these photos.</p>
+				<div class="date" format="single">2025-08-25</div>
 			</div>
 			<div class="update">
 				<h1>Summer trips</h1>
 				<div class="updateParagraph">
-					<p>Photos from last year's summer trips have been published.
-					These photos were taken in different nature reserves in Scania.
-					On these trips were different insects, and also edible fruit and berries.
-					Besides the summer trips, seasonal photos have also been published.
-					These consist of photos of flowers in spring and rats in autumn.</p>
+					<p>
+						Photos from last year's summer trips have been published.
+				These photos were taken in different nature reserves in Scania.
+				On these trips were different insects, and also edible fruit and berries.
+				Besides the summer trips, seasonal photos have also been published.
+				These consist of photos of flowers in spring and rats in autumn.
+					</p>
 				</div>
 				<div class="updatePosts">
 					<div class="imgWrap">
-						<a href="https://www.CrasyWolfang.com/en/post/2403sios"><img src="https://b.l3n.co/i/Ye6FG9.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2407sthu"><img src="https://b.l3n.co/i/YLiQc7.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2407skry"><img src="https://a.l3n.co/i/YLiqD3.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2407stsk"><img src="https://c.l3n.co/i/YLi9gr.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2411aura"><img src="https://b.l3n.co/i/YebWJH.jpg"></a>
+						<a href="K:/CWOLF/export/en/post/2403sios.html" format="single"><img src="https://b.l3n.co/i/Ye6FG9.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2407sthu.html" format="single"><img src="https://b.l3n.co/i/YLiQc7.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2407skry.html" format="single"><img src="https://a.l3n.co/i/YLiqD3.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2407stsk.html" format="single"><img src="https://c.l3n.co/i/YLi9gr.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2411aura.html" format="single"><img src="https://b.l3n.co/i/YebWJH.jpg"/></a>
 					</div>
 					<ul>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2403sios">Signs of Spring</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2407sthu">Stenshuvud</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2407skry">Skrylle</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2407stsk">The beach forest</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2411aura">Autumn rats</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2403sios.html" format="single">Signs of Spring</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2407sthu.html" format="single">Stenshuvud</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2407skry.html" format="single">Skrylle</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2407stsk.html" format="single">The beach forest</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2411aura.html" format="single">Autumn rats</a></li>
 					</ul>
 				</div>
 				<p class="center">Please take your time and enjoy these photos.</p>
-				<div class="date">2025-02-26</div>
+				<div class="date" format="single">2025-02-26</div>
 			</div>
 			<div class="update">
 				<h1>Ice</h1>
 				<div class="updateParagraph">
-					<p>February.
-					It began to snow once again.
-					The snow came to gently pile up around.
-					Even though it's soon March the temperature has dropped.
-					An old man who was encountered on the road to a pond said that "Spring as it may be but it for me is winter-spring. There is more winter than spring."
-					The road eventually led over a small bridge and under that bridge was ice frozen onto the river surface.
-					Although this was nothing more than the simple element of ice, the delicate patterns above caught a pair of eyes, and in it a reminder of how beautiful things exist in this world.</p>
+					<p>
+						February.
+				It began to snow once again.
+				The snow came to gently pile up around.
+				Even though it's soon March the temperature has dropped.
+				An old man who was encountered on the road to a pond said that "Spring as it may be but it for me is winter-spring. There is more winter than spring."
+				The road eventually led over a small bridge and under that bridge was ice frozen onto the river surface.
+				Although this was nothing more than the simple element of ice, the delicate patterns above caught a pair of eyes, and in it a reminder of how beautiful things exist in this world.
+					</p>
 				</div>
-				<a href="https://a.l3n.co/i/YOgv0c.jpg"><img src="https://a.l3n.co/i/YOgv0c.jpg" class="image"></a>
-				<div class="date">2025-02-18</div>
+				<a href="https://a.l3n.co/i/YOgv0c.jpg"><img src="https://a.l3n.co/i/YOgv0c.jpg" class="image"/></a>
+				<div class="date" format="single">2025-02-18</div>
 			</div>
 			<div class="update">
 				<h1>The photowall</h1>
 				<div class="updateParagraph">
-					<p><i>The Photowall</i> has been extended with photos from 2022 until 2024.
-					Around 40 of these photos has been added to "<i>Summer Shots</i>".
-					In this period there were also photography projects that were never continued due to the lack of time.
-					These two projects are</p>
+					<p>
+						<i>The Photowall</i> has been extended with photos from 2022 until 2024.
+				Around 40 of these photos has been added to "<i>Summer Shots</i>".
+				In this period there were also photography projects that were never continued due to the lack of time.
+				These two projects are
+					</p>
 				</div>
-				<ol>
-					<li>"<i>Micro Macro</i>" which is a collection of macro photos that use focus stack and</li>
-					<li>"<i>Solitude</i>" in which the feeling of solitude at night is in focus.</li>
-				</ol>
-				<div class="updateParagraph"><p>Maybe these concepts will be brought up again in the near future, but until then these two projects will be left as they are.</p></div>
+				
+				<div class="updateParagraph">
+					<p>
+						Maybe these concepts will be brought up again in the near future, but until then these two projects will be left as they are.
+					</p>
+				</div>
 				<div class="updatePosts">
 					<div class="imgWrap">
-						<a href="https://www.CrasyWolfang.com/en/post/2206sush"><img src="https://b.l3n.co/i/m2k17Z.jpeg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2209phwa"><img src="https://a.l3n.co/i/YCYfYF.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2304phwa"><img src="https://b.l3n.co/i/YCYU23.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2309phwa"><img src="https://c.l3n.co/i/YCYcJ0.jpg"></a>
+						<a href="K:/CWOLF/export/en/post/2206sush.html" format="single"><img src="https://b.l3n.co/i/m2k17Z.jpeg"/></a>
+						<a href="K:/CWOLF/export/en/post/2209phwa.html" format="single"><img src="https://a.l3n.co/i/YCYfYF.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2304phwa.html" format="single"><img src="https://b.l3n.co/i/YCYU23.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2309phwa.html" format="single"><img src="https://c.l3n.co/i/YCYcJ0.jpg"/></a>
 					</div>
 					<ul>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/2206sush">
-								Summer Shots
-								 (The Photowall 2022-2)
-							</a>
-						</li>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/2209phwa">
-								The Photowall
-								 (2022-3)
-							</a>
-						</li>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/2304phwa">
-								The Photowall
-								 (2023-1)
-							</a>
-						</li>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/2309phwa">
-								The Photowall
-								 (2023-2)
-							</a>
-						</li>
+						<li><a href="K:/CWOLF/export/en/post/2206sush.html" format="single">Summer Shots&ensp;(The Photowall 2022-2)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2209phwa.html" format="single">The Photowall&ensp;(2022-3)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2304phwa.html" format="single">The Photowall&ensp;(2023-1)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2309phwa.html" format="single">The Photowall&ensp;(2023-2)</a></li>
 					</ul>
 				</div>
 				<p class="center">Next up are nature photos and seasonal photos from recent times.</p>
-				<div class="date">2025-02-10</div>
+				<div class="date" format="single">2025-02-10</div>
 			</div>
 			<div class="update">
 				<h1>Archive 2016/2017</h1>
 				<div class="updateParagraph">
-					<p>Once again the photowall has made it back onto the website.
-					What is the photowall?
-					Well, for a photographer the important thing is to both take photos and to display them somehow.
-					An easy way to do this is to stick printed photos to a billboard in the neighborhood or a wall at work, hence the name, 'photo-wall.'
-					These would commonly be pictures of the activities of that place.</p><p>Now, it's easy to upload photos to a website on the internet.
-					Therefore, the leftover photos that couldn't make it into a regular post have the chance to be displayed on the photowall.</p>
+					<p>
+						Once again the photowall has made it back onto the website.
+				What is the photowall?
+				Well, for a photographer the important thing is to both take photos and to display them somehow.
+				An easy way to do this is to stick printed photos to a billboard in the neighborhood or a wall at work, hence the name, 'photo-wall.'
+				These would commonly be pictures of the activities of that place.
+</p>
+					<p>
+				Now, it's easy to upload photos to a website on the internet.
+				Therefore, the leftover photos that couldn't make it into a regular post have the chance to be displayed on the photowall.
+					</p>
 				</div>
 				<div class="updatePosts">
 					<div class="imgWrap">
-						<a href="https://www.CrasyWolfang.com/en/post/1604phwa"><img src="https://c.l3n.co/i/Y1gPo2.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/1606lust"><img src="https://a.l3n.co/i/Y1gNB9.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/1609phwa"><img src="https://b.l3n.co/i/Y1gD0o.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/1611phwa"><img src="https://a.l3n.co/i/Y1goFi.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/1703phwa"><img src="https://a.l3n.co/i/YTn3OF.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/1703valb"><img src="https://b.l3n.co/i/YTxtT2.jpg"></a>
+						<a href="K:/CWOLF/export/en/post/1604phwa.html" format="single"><img src="https://c.l3n.co/i/Y1gPo2.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1606lust.html" format="single"><img src="https://a.l3n.co/i/Y1gNB9.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1609phwa.html" format="single"><img src="https://b.l3n.co/i/Y1gD0o.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1611phwa.html" format="single"><img src="https://a.l3n.co/i/Y1goFi.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1703phwa.html" format="single"><img src="https://a.l3n.co/i/YTn3OF.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/1703valb.html" format="single"><img src="https://b.l3n.co/i/YTxtT2.jpg"/></a>
 					</div>
 					<ul>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/1604phwa">
-								The Photowall
-								 (2016-1)
-							</a>
-						</li>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/1606lust">
-								The city park
-								 (summer 16)
-							</a>
-						</li>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/1609phwa">
-								The Photowall
-								 (2016-2)
-							</a>
-						</li>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/1611phwa">
-								The Photowall
-								 (2016-3)
-							</a>
-						</li>
-						<li>
-							<a href="https://www.CrasyWolfang.com/en/post/1703phwa">
-								The Photowall
-								 (2017-1)
-							</a>
-						</li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/1703valb">Valborg</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1604phwa.html" format="single">The Photowall&ensp;(2016-1)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1606lust.html" format="single">The city park&ensp;(summer 16)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1609phwa.html" format="single">The Photowall&ensp;(2016-2)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1611phwa.html" format="single">The Photowall&ensp;(2016-3)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1703phwa.html" format="single">The Photowall&ensp;(2017-1)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/1703valb.html" format="single">Valborg</a></li>
 					</ul>
 				</div>
-				<div class="date">2025-02-08</div>
+				<div class="date" format="single">2025-02-08</div>
 			</div>
 			<div class="update">
 				<h1>Year 2025</h1>
 				<div class="updateParagraph">
-					<p>It's already 2025.
-					Last year was a busy one.
-					The second impression of Europe has been different from the first one.
-					Therefore time has leaked out into the sand.</p><p>In that time there has been a full ponder on how to sort out (about 10 years) old photos.
-					To be frank, the best way to handle old photos would be to toss them out, but then some precious photos would also be lost.
-					For example, there are still photos in there from the 2018 Lund Carnival which one would certainly not want to forget.
-					However, to be able to reach those photos the photos that come prior need to be registered and corrected.
-					These photos will make it up here at some point.</p><p>At least, some more photos have been taken in that meantime.
-					Here are some photos that remained from previous years.
-					Enjoy.</p>
+					<p>
+						It's already 2025.
+				Last year was a busy one.
+				The second impression of Europe has been different from the first one.
+				Therefore time has leaked out into the sand.
+</p>
+					<p>
+				In that time there has been a full ponder on how to sort out (about 10 years) old photos.
+				To be frank, the best way to handle old photos would be to toss them out, but then some precious photos would also be lost.
+				For example, there are still photos in there from the 2018 Lund Carnival which one would certainly not want to forget.
+				However, to be able to reach those photos the photos that come prior need to be registered and corrected.
+				These photos will make it up here at some point.
+</p>
+					<p>
+				At least, some more photos have been taken in that meantime.
+				Here are some photos that remained from previous years.
+				Enjoy.
+					</p>
 				</div>
 				<div class="updatePosts">
 					<div class="imgWrap">
-						<a href="https://www.CrasyWolfang.com/en/post/2404cphs"><img src="https://c.l3n.co/i/YIhh9k.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2308rinb"><img src="https://b.l3n.co/i/YIhbXA.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2309nobb"><img src="https://a.l3n.co/i/YIhy3Q.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2310boma"><img src="https://b.l3n.co/i/YIhaWe.jpg"></a>
-						<a href="https://www.CrasyWolfang.com/en/post/2210boau"><img src="https://c.l3n.co/i/YIhcED.jpg"></a>
+						<a href="K:/CWOLF/export/en/post/2404cphs.html" format="single"><img src="https://c.l3n.co/i/YIhh9k.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2308rinb.html" format="single"><img src="https://b.l3n.co/i/YIhbXA.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2309nobb.html" format="single"><img src="https://a.l3n.co/i/YIhy3Q.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2310boma.html" format="single"><img src="https://b.l3n.co/i/YIhaWe.jpg"/></a>
+						<a href="K:/CWOLF/export/en/post/2210boau.html" format="single"><img src="https://c.l3n.co/i/YIhcED.jpg"/></a>
 					</div>
 					<ul>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2404cphs">Copenhagen Sakura Festival</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2308rinb">Rinnebäck</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2309nobb">Nöbbelöv's Marshland</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2310boma">Change of Season</a></li>
-						<li><a href="https://www.CrasyWolfang.com/en/post/2210boau">Botanical Garden Autumn</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2404cphs.html" format="single">Copenhagen Sakura Festival&ensp;(2024)</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2308rinb.html" format="single">Rinnebäck</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2309nobb.html" format="single">Nöbbelöv's Marshland</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2310boma.html" format="single">Change of Season</a></li>
+						<li><a href="K:/CWOLF/export/en/post/2210boau.html" format="single">Botanical Garden Autumn</a></li>
 					</ul>
 				</div>
-				<div class="date">2025-02-03</div>
+				<div class="date" format="single">2025-02-03</div>
 			</div>
+			
 			<ul class="flowbutton">
-				<a href="https://www.CrasyWolfang.com/en/archive/2024"><li>2024</li></a>
-				<a href="https://www.CrasyWolfang.com/en/archive/2023"><li>2023</li></a>
+				<a href="K:/CWOLF/export/en/archive/2024.html"><li>2024</li></a>
+				<a href="K:/CWOLF/export/en/archive/2023.html"><li>2023</li></a>
 			</ul>
 			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
+				<hr/>©CrasyWolfang 2014-2025
 				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
+				<a href="#top">top ↑</a>
 			</div>
 		</div>
 	</body>

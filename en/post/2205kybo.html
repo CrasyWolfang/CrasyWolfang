@@ -1,191 +1,211 @@
-<!DOCTYPE html>
+<!DOCTYPE>
+
+
 <html>
 	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
 		<style>
 			body{background-color: #000000;}
-			a{
+		a{
 			color: #D3D3D3;
 			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
 			color: #ffffff;
 			max-width: 1200px;
 			min-width: 640px;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
 			color: #ffffff;
 			text-decoration: none;
-			}
-			#header img{
+		}
+		#header img{
 			display: block;
 			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
 			margin: 0em;
 			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
 			display: inline;
 			padding: 0em;
 			font-size: 1.3em;
 			border: 2px solid #808080;
-			}
-			#topMenu a{
+		}
+		#topMenu a{
 			padding-top: 0em;
 			padding-bottom: 0em;
 			padding-left: 2em;
 			padding-right: 2em;
 			color: #ffffff;
-			}
-			#bottom{
+		}
+		#bottom{
 			color: #808080;
 			background-color: #000000;
-			}
-			.update{
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
 			margin: 0.5em;
 			padding-top: 1em;
 			padding-bottom: 1em;
 			padding-left: 2em;
 			padding-right: 2em;
 			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
 			max-width: 80%;
 			max-height: 800px;
-			}
-			.updatePosts img{
+		}
+		.updatePosts img{
 			max-height: 800px;
-			}
-			.updatePosts ul{
+		}
+		.updatePosts ul{
 			max-width: 600px;
 			margin-right: auto;
 			margin-left: auto;
-			}
-			.update .image{
+		}
+		.update .image{
 			width: 80%;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			.update .date{
+		}
+		.update .date{
 			color: #808080;
 			text-align: right;
-			}
-			.flowbutton {
+		}
+		
+		.flowbutton {
 			padding: 1em;
 			gap: 1em;
-			}
-			.flowbutton li{
+		}
+		.flowbutton li{
 			list-style-type: none;
 			margin-top: 0.5em;
 			color: #ffffff;
 			border: 1px solid #ffffff;
 			text-align: center;
 			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			.catCard{
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
 			list-style: none;
 			padding-left: 0;
 			text-align: center;
 			font-size: 1.3em;
-			}
-			.catCard li{
+		}
+		.catCard li{
 			margin: 0.3em;
 			display: inline-block;
 			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
 			width: 240px;
 			display: block;
-			}
-			.catCard a{
+		}
+		.catCard a{
 			color: #ffffff;
 			display: block;
-			}
-			.title{
+			padding: 0.5em;
+		}
+		
+		.title{
 			margin-left: auto;
 			margin-right: auto;
 			max-width: 800px;
 			padding: 1em;
 			padding-bottom: 2em;
-			}
-			.title h1{
+		}
+		.title h1{
 			border-bottom: 1px solid;
 			width: 100%;
 			margin: 0px;
-			}
-			.subtitle{
+		}
+		.subtitle{
 			font-size: 0.8em;
 			color: #808080;
-			}
-			.title .grey {color: #808080;}
-			.title-left{float: left;}
-			.title-right{
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
 			float: right;
 			text-align: right;
-			}
-			.photo-content p{
+		}
+		
+		.photo-content p{
 			padding-left: 1em;
 			padding-right: 1em;
 			text-indent: 2em;
-			}
-			.note {
+		}
+		.note {
 			margin: 1em;
 			border: 1px solid #ffffff;
-			}
-			.ref{
+		}
+		
+		.ref{
 			color: #D3D3D3;
 			text-decoration: none;
 			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			.photoCard{
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
 			color: #ffffff;
 			border: 2px solid #808080;
 			margin-top: 1em;
 			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
 			margin: 0px;
 			padding-left: 0.15em;
-			}
-			.card-left{
+		}
+		.card-left{
 			float: left;
 			padding-left: 0.4em;
-			}
-			.card-right{
+		}
+		.card-right{
 			float: right;
 			text-align: right;
 			padding-right: 0.4em;
-			}
-			.photoCard img{
+		}
+		.photoCard img{
 			width: 100%;
 			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			.imgWrap{
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
 			display: flex;
 			flex-direction: row;
 			gap: 0.5em;
@@ -194,1026 +214,1093 @@
 			margin-left: auto;
 			margin-right: auto;
 			justify-content: center;
-			}
-			.imgWrap img{
+			width: 100%;
+		}
+		.imgWrap img{
 			display: block;
 			max-width: 100%;
 			gap: 0.5em;
-			}
-			.bibliography ul{
+		}
+		
+		.bibliography ul{
 			list-style-type: none;
 			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
+		}
+		.bibliography li:not(:last-child) {
 			margin-bottom: 0.5em;
-			}
-			.largePhoto{
+		}
+		
+		.largePhoto{
 			border: 1px solid #ffffff;
 			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
+		}
+		.largePhotoUrl div{
 			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
+		}
+		.largePhotoTop{
 			text-indent: 1em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
 			font-size: 1.3em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
 			text-indent: 2em;
-			}
-			.largePhoto p{
+		}
+		.largePhoto p{
 			text-indent: 2em;
 			padding-left: 1em;
 			padding-right: 1em;
-			}
-			.credits{
+		}
+		
+		.credits{
 			width: 100%;
 			border-collapse: collapse;
-			}
-			.credits td{
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
 			border: 1px solid #ffffff;
 			padding: 0.3em;
 			padding-left: 1em;
-			}
-			.credits td:first-child {
+			color: #ffffff;
+		}
+		.credits td:first-child {
 			width: 12%;
 			white-space: nowrap;
-			}
+			padding-right: 1em;
+		}
 		</style>
 	</head>
 	<body>
 		<div id="container">
 			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2205kybo">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2205kybo">日本語</a></div>
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="K:/CWOLF/export/en/post/2205kybo.html">English</a> | <a href="K:/CWOLF/export/jp/post/2205kybo.html">日本語</a></div>
 			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
 			<nav id="topMenu">
 				<ul>
-					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
+					<li><a href="K:/CWOLF/export/en/home.html">Home</a></li>
+					<li><a href="K:/CWOLF/export/en/photo.html">Photography</a></li>
+					
+					<li><a href="K:/CWOLF/export/en/about.html">About</a></li>
 				</ul>
 			</nav>
+			
 			<div class="title">
 				<h1>Kyoto Botanical Garden</h1>
 				<span class="title-left">Botanic photography</span>
 				<span class="title-right">
-					<span class="grey"">published: </span>
-					2024-06-22
+					<div format="single"><span class="grey">published:&ensp;</span>2024-06-22</div>
+					
 				</span>
 			</div>
 			<div class="photo-content">
-				<p>Kyoto City, next to the Kamo River is the Kyoto Botanical Garden.
-				The entrance fee is 200 yen, and once one enters the facility the park encompasses the garden covering the whole width of one's field of view and the blue sky stretches above.
-				The main road leads past a playground and a gorilla statue and then to a conservatory with a lily pad pond in front.
-				The admission fee for the conservatory is another 200 yen and once inside one enters the room to the left and follows the road.</p>
-				<div class="photosec">
+				<p>
+					Kyoto City, next to the Kamo River is the Kyoto Botanical Garden.
+			The entrance fee is 200 yen, and once one enters the facility the park encompasses the garden covering the whole width of one's field of view and the blue sky stretches above.
+			The main road leads past a playground and a gorilla statue and then to a conservatory with a lily pad pond in front.
+			The admission fee for the conservatory is another 200 yen and once inside one enters the room to the left and follows the road.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD318F.jpeg"><img src="https://c.l3n.co/i/lD318F.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD3rur.jpeg"><img src="https://b.l3n.co/i/lD3rur.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD318F.jpeg"><img src="https://c.l3n.co/i/lD318F.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD3rur.jpeg"><img src="https://b.l3n.co/i/lD3rur.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD3RQ3.jpeg"><img src="https://a.l3n.co/i/lD3RQ3.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD3Tn0.jpeg"><img src="https://c.l3n.co/i/lD3Tn0.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD3EyD.jpeg"><img src="https://a.l3n.co/i/lD3EyD.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD3RQ3.jpeg"><img src="https://a.l3n.co/i/lD3RQ3.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD3Tn0.jpeg"><img src="https://c.l3n.co/i/lD3Tn0.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD3EyD.jpeg"><img src="https://a.l3n.co/i/lD3EyD.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD36Tq.jpeg"><img src="https://c.l3n.co/i/lD36Tq.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD3COA.jpeg"><img src="https://a.l3n.co/i/lD3COA.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD3due.jpeg"><img src="https://c.l3n.co/i/lD3due.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD3BAk.jpeg"><img src="https://a.l3n.co/i/lD3BAk.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD39ma.jpeg"><img src="https://a.l3n.co/i/lD39ma.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD3VZQ.jpeg"><img src="https://b.l3n.co/i/lD3VZQ.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD3JUM.jpeg"><img src="https://c.l3n.co/i/lD3JUM.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD3mQx.jpeg"><img src="https://b.l3n.co/i/lD3mQx.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDpNgK.jpeg"><img src="https://b.l3n.co/i/lDpNgK.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD3KTc.jpeg"><img src="https://a.l3n.co/i/lD3KTc.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD3snH.jpeg"><img src="https://a.l3n.co/i/lD3snH.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD3HZP.jpeg"><img src="https://c.l3n.co/i/lD3HZP.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD3zDi.jpeg"><img src="https://c.l3n.co/i/lD3zDi.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD3eAo.jpeg"><img src="https://a.l3n.co/i/lD3eAo.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD3nV9.jpeg"><img src="https://c.l3n.co/i/lD3nV9.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD3lsm.jpeg"><img src="https://b.l3n.co/i/lD3lsm.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD3351.jpeg"><img src="https://c.l3n.co/i/lD3351.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD3pOK.jpeg"><img src="https://b.l3n.co/i/lD3pOK.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD37cZ.jpeg"><img src="https://a.l3n.co/i/lD37cZ.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD3YEC.jpeg"><img src="https://c.l3n.co/i/lD3YEC.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD3L5v.jpeg"><img src="https://a.l3n.co/i/lD3L5v.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD3vv2.jpeg"><img src="https://b.l3n.co/i/lD3vv2.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD3oO5.jpeg"><img src="https://b.l3n.co/i/lD3oO5.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD3NgT.jpeg"><img src="https://b.l3n.co/i/lD3NgT.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD3Psb.jpeg"><img src="https://c.l3n.co/i/lD3Psb.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD3fD7.jpeg"><img src="https://a.l3n.co/i/lD3fD7.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD3ucz.jpeg"><img src="https://c.l3n.co/i/lD3ucz.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD3cVF.jpeg"><img src="https://b.l3n.co/i/lD3cVF.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD3UWr.jpeg"><img src="https://c.l3n.co/i/lD3UWr.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD3Xv3.jpeg"><img src="https://c.l3n.co/i/lD3Xv3.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD3bG0.jpeg"><img src="https://b.l3n.co/i/lD3bG0.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD4W9k.jpeg"><img src="https://a.l3n.co/i/lD4W9k.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD4ivx.jpeg"><img src="https://c.l3n.co/i/lD4ivx.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD4ZHc.jpeg"><img src="https://a.l3n.co/i/lD4ZHc.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD3yHq.jpeg"><img src="https://a.l3n.co/i/lD3yHq.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD35XA.jpeg"><img src="https://b.l3n.co/i/lD35XA.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD4Ik1.jpeg"><img src="https://c.l3n.co/i/lD4Ik1.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD4AWe.jpeg"><img src="https://b.l3n.co/i/lD4AWe.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD3xED.jpeg"><img src="https://c.l3n.co/i/lD3xED.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD3h3Q.jpeg"><img src="https://b.l3n.co/i/lD3h3Q.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD3agM.jpeg"><img src="https://c.l3n.co/i/lD3agM.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD4jGH.jpeg"><img src="https://a.l3n.co/i/lD4jGH.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD42Da.jpeg"><img src="https://a.l3n.co/i/lD42Da.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4trZ.jpeg"><img src="https://b.l3n.co/i/lD4trZ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD413P.jpeg"><img src="https://c.l3n.co/i/lD413P.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4k9o.jpeg"><img src="https://b.l3n.co/i/lD4k9o.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD4RNm.jpeg"><img src="https://b.l3n.co/i/lD4RNm.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD4Eii.jpeg"><img src="https://a.l3n.co/i/lD4Eii.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD46L9.jpeg"><img src="https://a.l3n.co/i/lD46L9.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD4Qkv.jpeg"><img src="https://a.l3n.co/i/lD4Qkv.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD4Ca2.jpeg"><img src="https://b.l3n.co/i/lD4Ca2.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD4VlC.jpeg"><img src="https://c.l3n.co/i/lD4VlC.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD4gXK.jpeg"><img src="https://c.l3n.co/i/lD4gXK.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD49X5.jpeg"><img src="https://a.l3n.co/i/lD49X5.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4qrz.jpeg"><img src="https://b.l3n.co/i/lD4qrz.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD36Tq.jpeg"><img src="https://c.l3n.co/i/lD36Tq.jpeg"/></a></div></div>
 					</div>
 				</div>
-				<p>In the middle of the jungle room is a tunnel and in that tunnel are a few aquariums lined up.
-				They contain East Asia, African and other shore environments.
-				In these aquariums are also snails, shrimp, axolotl and some more.</p>
-				<div class="photosec">
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD4B4T.jpeg"><img src="https://a.l3n.co/i/lD4B4T.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4mNb.jpeg"><img src="https://b.l3n.co/i/lD4mNb.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD43i7.jpeg"><img src="https://a.l3n.co/i/lD43i7.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD44dr.jpeg"><img src="https://c.l3n.co/i/lD44dr.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD4KLF.jpeg"><img src="https://a.l3n.co/i/lD4KLF.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD3COA.jpeg"><img src="https://a.l3n.co/i/lD3COA.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD3due.jpeg"><img src="https://c.l3n.co/i/lD3due.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD3BAk.jpeg"><img src="https://a.l3n.co/i/lD3BAk.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDpoH1.jpeg"><img src="https://b.l3n.co/i/lDpoH1.jpeg"></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD39ma.jpeg"><img src="https://a.l3n.co/i/lD39ma.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD3VZQ.jpeg"><img src="https://b.l3n.co/i/lD3VZQ.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD3JUM.jpeg"><img src="https://c.l3n.co/i/lD3JUM.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD3mQx.jpeg"><img src="https://b.l3n.co/i/lD3mQx.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDpNgK.jpeg"><img src="https://b.l3n.co/i/lDpNgK.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD4HlD.jpeg"><img src="https://a.l3n.co/i/lD4HlD.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD4pa3.jpeg"><img src="https://c.l3n.co/i/lD4pa3.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4O60.jpeg"><img src="https://b.l3n.co/i/lD4O60.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD4lbq.jpeg"><img src="https://c.l3n.co/i/lD4lbq.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD4StA.jpeg"><img src="https://b.l3n.co/i/lD4StA.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD4nPQ.jpeg"><img src="https://a.l3n.co/i/lD4nPQ.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD3KTc.jpeg"><img src="https://a.l3n.co/i/lD3KTc.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD3snH.jpeg"><img src="https://a.l3n.co/i/lD3snH.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD3HZP.jpeg"><img src="https://c.l3n.co/i/lD3HZP.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDpucc.jpeg"><img src="https://c.l3n.co/i/lDpucc.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD4e4M.jpeg"><img src="https://c.l3n.co/i/lD4e4M.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4Lia.jpeg"><img src="https://b.l3n.co/i/lD4Lia.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD4Mde.jpeg"><img src="https://c.l3n.co/i/lD4Mde.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4YMk.jpeg"><img src="https://b.l3n.co/i/lD4YMk.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD4oax.jpeg"><img src="https://c.l3n.co/i/lD4oax.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD4D6H.jpeg"><img src="https://b.l3n.co/i/lD4D6H.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD3zDi.jpeg"><img src="https://c.l3n.co/i/lD3zDi.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD3eAo.jpeg"><img src="https://a.l3n.co/i/lD3eAo.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4UKZ.jpeg"><img src="https://b.l3n.co/i/lD4UKZ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4xMo.jpeg"><img src="https://b.l3n.co/i/lD4xMo.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD4FtK.jpeg"><img src="https://a.l3n.co/i/lD4FtK.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD4Nz1.jpeg"><img src="https://c.l3n.co/i/lD4Nz1.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD4Pbc.jpeg"><img src="https://b.l3n.co/i/lD4Pbc.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD3nV9.jpeg"><img src="https://c.l3n.co/i/lD3nV9.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD3lsm.jpeg"><img src="https://b.l3n.co/i/lD3lsm.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD4cPP.jpeg"><img src="https://c.l3n.co/i/lD4cPP.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD4bjm.jpeg"><img src="https://b.l3n.co/i/lD4bjm.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD4wqi.jpeg"><img src="https://a.l3n.co/i/lD4wqi.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD3351.jpeg"><img src="https://c.l3n.co/i/lD3351.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD3pOK.jpeg"><img src="https://b.l3n.co/i/lD3pOK.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD37cZ.jpeg"><img src="https://a.l3n.co/i/lD37cZ.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD4yh9.jpeg"><img src="https://c.l3n.co/i/lD4yh9.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD4GC2.jpeg"><img src="https://a.l3n.co/i/lD4GC2.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD3YEC.jpeg"><img src="https://c.l3n.co/i/lD3YEC.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD3L5v.jpeg"><img src="https://a.l3n.co/i/lD3L5v.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD3vv2.jpeg"><img src="https://b.l3n.co/i/lD3vv2.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD3oO5.jpeg"><img src="https://b.l3n.co/i/lD3oO5.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD3NgT.jpeg"><img src="https://b.l3n.co/i/lD3NgT.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD3Psb.jpeg"><img src="https://c.l3n.co/i/lD3Psb.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD3fD7.jpeg"><img src="https://a.l3n.co/i/lD3fD7.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD3ucz.jpeg"><img src="https://c.l3n.co/i/lD3ucz.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD3cVF.jpeg"><img src="https://b.l3n.co/i/lD3cVF.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD3UWr.jpeg"><img src="https://c.l3n.co/i/lD3UWr.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD3Xv3.jpeg"><img src="https://c.l3n.co/i/lD3Xv3.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD3bG0.jpeg"><img src="https://b.l3n.co/i/lD3bG0.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD4W9k.jpeg"><img src="https://a.l3n.co/i/lD4W9k.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD4ivx.jpeg"><img src="https://c.l3n.co/i/lD4ivx.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD4ZHc.jpeg"><img src="https://a.l3n.co/i/lD4ZHc.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD3yHq.jpeg"><img src="https://a.l3n.co/i/lD3yHq.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD35XA.jpeg"><img src="https://b.l3n.co/i/lD35XA.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD4Ik1.jpeg"><img src="https://c.l3n.co/i/lD4Ik1.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD4AWe.jpeg"><img src="https://b.l3n.co/i/lD4AWe.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD3xED.jpeg"><img src="https://c.l3n.co/i/lD3xED.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD3h3Q.jpeg"><img src="https://b.l3n.co/i/lD3h3Q.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD3agM.jpeg"><img src="https://c.l3n.co/i/lD3agM.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD4jGH.jpeg"><img src="https://a.l3n.co/i/lD4jGH.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD42Da.jpeg"><img src="https://a.l3n.co/i/lD42Da.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4trZ.jpeg"><img src="https://b.l3n.co/i/lD4trZ.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD413P.jpeg"><img src="https://c.l3n.co/i/lD413P.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4k9o.jpeg"><img src="https://b.l3n.co/i/lD4k9o.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD4RNm.jpeg"><img src="https://b.l3n.co/i/lD4RNm.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD4Eii.jpeg"><img src="https://a.l3n.co/i/lD4Eii.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD46L9.jpeg"><img src="https://a.l3n.co/i/lD46L9.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD4Qkv.jpeg"><img src="https://a.l3n.co/i/lD4Qkv.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD4Ca2.jpeg"><img src="https://b.l3n.co/i/lD4Ca2.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD4VlC.jpeg"><img src="https://c.l3n.co/i/lD4VlC.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD4gXK.jpeg"><img src="https://c.l3n.co/i/lD4gXK.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD4azv.jpeg"><img src="https://c.l3n.co/i/lD4azv.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDK8t5.jpeg"><img src="https://a.l3n.co/i/lDK8t5.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDKWfT.jpeg"><img src="https://a.l3n.co/i/lDKWfT.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDKjjb.jpeg"><img src="https://c.l3n.co/i/lDKjjb.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDKAKz.jpeg"><img src="https://b.l3n.co/i/lDKAKz.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDK0q7.jpeg"><img src="https://b.l3n.co/i/lDK0q7.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDpP3Z.jpeg"><img src="https://a.l3n.co/i/lDpP3Z.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKIYr.jpeg"><img src="https://c.l3n.co/i/lDKIYr.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDKtS0.jpeg"><img src="https://b.l3n.co/i/lDKtS0.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDKZhF.jpeg"><img src="https://b.l3n.co/i/lDKZhF.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDKrC3.jpeg"><img src="https://c.l3n.co/i/lDKrC3.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD4hwC.jpeg"><img src="https://b.l3n.co/i/lD4hwC.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDpUWm.jpeg"><img src="https://c.l3n.co/i/lDpUWm.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDpc9i.jpeg"><img src="https://b.l3n.co/i/lDpc9i.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDK1wD.jpeg"><img src="https://c.l3n.co/i/lDK1wD.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDKs1c.jpeg"><img src="https://b.l3n.co/i/lDKs1c.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDKEpA.jpeg"><img src="https://c.l3n.co/i/lDKEpA.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDKkfM.jpeg"><img src="https://b.l3n.co/i/lDKkfM.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKQYe.jpeg"><img src="https://c.l3n.co/i/lDKQYe.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDKT1q.jpeg"><img src="https://b.l3n.co/i/lDKT1q.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDKJqa.jpeg"><img src="https://a.l3n.co/i/lDKJqa.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKdCx.jpeg"><img src="https://c.l3n.co/i/lDKdCx.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDK92k.jpeg"><img src="https://b.l3n.co/i/lDK92k.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDKqSH.jpeg"><img src="https://b.l3n.co/i/lDKqSH.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKBx1.jpeg"><img src="https://c.l3n.co/i/lDKBx1.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDK4FZ.jpeg"><img src="https://a.l3n.co/i/lDK4FZ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDK3pK.jpeg"><img src="https://c.l3n.co/i/lDK3pK.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDKp0P.jpeg"><img src="https://c.l3n.co/i/lDKp0P.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDK7Bm.jpeg"><img src="https://b.l3n.co/i/lDK7Bm.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKC0Q.jpeg"><img src="https://c.l3n.co/i/lDKC0Q.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDpXvo.jpeg"><img src="https://c.l3n.co/i/lDpXvo.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDpbG9.jpeg"><img src="https://b.l3n.co/i/lDpbG9.jpeg"></a></div>
-						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD49X5.jpeg"><img src="https://a.l3n.co/i/lD49X5.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4qrz.jpeg"><img src="https://b.l3n.co/i/lD4qrz.jpeg"/></a></div></div>
 					</div>
 				</div>
-				<p>The wet tropics garden covers the spans of the south part of the conservatory and it's easy to get the mind absorbed into the vegetation.
-				The road eventually twists and turns into the useful tropical plants garden.
-				Daylight illuminates the room through the windows and casts plant shadows onto the ground.
-				In this room are cacao, coffee among other plants.</p>
-				<div class="photosec">
+				<p>
+					In the middle of the jungle room is a tunnel and in that tunnel are a few aquariums lined up.
+			They contain East Asia, African and other shore environments.
+			In these aquariums are also snails, shrimp, axolotl and some more.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDKSe2.jpeg"><img src="https://a.l3n.co/i/lDKSe2.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKzJ9.jpeg"><img src="https://c.l3n.co/i/lDKzJ9.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD4B4T.jpeg"><img src="https://a.l3n.co/i/lD4B4T.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4mNb.jpeg"><img src="https://b.l3n.co/i/lD4mNb.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD43i7.jpeg"><img src="https://a.l3n.co/i/lD43i7.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD44dr.jpeg"><img src="https://c.l3n.co/i/lD44dr.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD4KLF.jpeg"><img src="https://a.l3n.co/i/lD4KLF.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDpoH1.jpeg"><img src="https://b.l3n.co/i/lDpoH1.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDK5mQ.jpeg"><img src="https://a.l3n.co/i/lDK5mQ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDp2Qk.jpeg"><img src="https://b.l3n.co/i/lDp2Qk.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDKGoa.jpeg"><img src="https://b.l3n.co/i/lDKGoa.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDpyHv.jpeg"><img src="https://c.l3n.co/i/lDpyHv.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDKFe3.jpeg"><img src="https://a.l3n.co/i/lDKFe3.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDKUy0.jpeg"><img src="https://b.l3n.co/i/lDKUy0.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKh8e.jpeg"><img src="https://c.l3n.co/i/lDKh8e.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD4HlD.jpeg"><img src="https://a.l3n.co/i/lD4HlD.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD4pa3.jpeg"><img src="https://c.l3n.co/i/lD4pa3.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4O60.jpeg"><img src="https://b.l3n.co/i/lD4O60.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDKexv.jpeg"><img src="https://b.l3n.co/i/lDKexv.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDKvRC.jpeg"><img src="https://c.l3n.co/i/lDKvRC.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDKLp5.jpeg"><img src="https://b.l3n.co/i/lDKLp5.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD4lbq.jpeg"><img src="https://c.l3n.co/i/lD4lbq.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD4StA.jpeg"><img src="https://b.l3n.co/i/lD4StA.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD4nPQ.jpeg"><img src="https://a.l3n.co/i/lD4nPQ.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDp5XC.jpeg"><img src="https://a.l3n.co/i/lDp5XC.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDpag5.jpeg"><img src="https://b.l3n.co/i/lDpag5.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDKoIT.jpeg"><img src="https://c.l3n.co/i/lDKoIT.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDKuBb.jpeg"><img src="https://b.l3n.co/i/lDKuBb.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKDo7.jpeg"><img src="https://c.l3n.co/i/lDKDo7.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDKMFz.jpeg"><img src="https://a.l3n.co/i/lDKMFz.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDph3z.jpeg"><img src="https://a.l3n.co/i/lDph3z.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDKP8r.jpeg"><img src="https://b.l3n.co/i/lDKP8r.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDp8ex.jpeg"><img src="https://c.l3n.co/i/lDp8ex.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDKl2o.jpeg"><img src="https://a.l3n.co/i/lDKl2o.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDpAyH.jpeg"><img src="https://b.l3n.co/i/lDpAyH.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDpxk2.jpeg"><img src="https://a.l3n.co/i/lDpxk2.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDKfJF.jpeg"><img src="https://c.l3n.co/i/lDKfJF.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDpucc.jpeg"><img src="https://c.l3n.co/i/lDpucc.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD4e4M.jpeg"><img src="https://c.l3n.co/i/lD4e4M.jpeg"/></a></div></div>
 					</div>
 				</div>
-				<p>After that you continue into the North part of the greenhouse.
-				The next room is the air-conditioned garden.
-				When the sun drops low into the sky it illuminates the small insects flying that dance around.
-				The air conditioner above hum and a mist gently descend to which you can really feel that you're in another environment.</p>
-				<div class="photosec">
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDprum.jpeg"><img src="https://b.l3n.co/i/lDprum.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDpgmP.jpeg"><img src="https://c.l3n.co/i/lDpgmP.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD7Qkx.jpeg"><img src="https://b.l3n.co/i/lD7Qkx.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4Lia.jpeg"><img src="https://b.l3n.co/i/lD4Lia.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD4Mde.jpeg"><img src="https://c.l3n.co/i/lD4Mde.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4YMk.jpeg"><img src="https://b.l3n.co/i/lD4YMk.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD4oax.jpeg"><img src="https://c.l3n.co/i/lD4oax.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD4D6H.jpeg"><img src="https://b.l3n.co/i/lD4D6H.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDpRQo.jpeg"><img src="https://a.l3n.co/i/lDpRQo.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7VlH.jpeg"><img src="https://a.l3n.co/i/lD7VlH.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD72NT.jpeg"><img src="https://b.l3n.co/i/lD72NT.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7iLr.jpeg"><img src="https://a.l3n.co/i/lD7iLr.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDpj7c.jpeg"><img src="https://c.l3n.co/i/lDpj7c.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDp0UK.jpeg"><img src="https://b.l3n.co/i/lDp0UK.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD7AWb.jpeg"><img src="https://c.l3n.co/i/lD7AWb.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD7jGF.jpeg"><img src="https://c.l3n.co/i/lD7jGF.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD7RNM.jpeg"><img src="https://c.l3n.co/i/lD7RNM.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD7Ik3.jpeg"><img src="https://a.l3n.co/i/lD7Ik3.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD714A.jpeg"><img src="https://a.l3n.co/i/lD714A.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD7k9a.jpeg"><img src="https://b.l3n.co/i/lD7k9a.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD7trq.jpeg"><img src="https://b.l3n.co/i/lD7trq.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7Cak.jpeg"><img src="https://a.l3n.co/i/lD7Cak.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7EiQ.jpeg"><img src="https://a.l3n.co/i/lD7EiQ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD79b1.jpeg"><img src="https://c.l3n.co/i/lD79b1.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD7qrc.jpeg"><img src="https://a.l3n.co/i/lD7qrc.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7mPZ.jpeg"><img src="https://a.l3n.co/i/lD7mPZ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD7B4K.jpeg"><img src="https://b.l3n.co/i/lD7B4K.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD7Zl0.jpeg"><img src="https://c.l3n.co/i/lD7Zl0.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD7W97.jpeg"><img src="https://b.l3n.co/i/lD7W97.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDpZZZ.jpeg"><img src="https://a.l3n.co/i/lDpZZZ.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7gXD.jpeg"><img src="https://a.l3n.co/i/lD7gXD.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDpE52.jpeg"><img src="https://b.l3n.co/i/lDpE52.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDpiT1.jpeg"><img src="https://a.l3n.co/i/lDpiT1.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDp1Ai.jpeg"><img src="https://c.l3n.co/i/lDp1Ai.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDpTn9.jpeg"><img src="https://c.l3n.co/i/lDpTn9.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD76Le.jpeg"><img src="https://c.l3n.co/i/lD76Le.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD7pao.jpeg"><img src="https://b.l3n.co/i/lD7pao.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD73iP.jpeg"><img src="https://b.l3n.co/i/lD73iP.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD74dm.jpeg"><img src="https://a.l3n.co/i/lD74dm.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD7KMi.jpeg"><img src="https://c.l3n.co/i/lD7KMi.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD7O69.jpeg"><img src="https://c.l3n.co/i/lD7O69.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4UKZ.jpeg"><img src="https://b.l3n.co/i/lD4UKZ.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4xMo.jpeg"><img src="https://b.l3n.co/i/lD4xMo.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD4FtK.jpeg"><img src="https://a.l3n.co/i/lD4FtK.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD4Nz1.jpeg"><img src="https://c.l3n.co/i/lD4Nz1.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD4Pbc.jpeg"><img src="https://b.l3n.co/i/lD4Pbc.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7Hz2.jpeg"><img src="https://a.l3n.co/i/lD7Hz2.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD7StC.jpeg"><img src="https://c.l3n.co/i/lD7StC.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD7lbv.jpeg"><img src="https://b.l3n.co/i/lD7lbv.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDp6Tv.jpeg"><img src="https://c.l3n.co/i/lDp6Tv.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD4cPP.jpeg"><img src="https://c.l3n.co/i/lD4cPP.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD4bjm.jpeg"><img src="https://b.l3n.co/i/lD4bjm.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD4wqi.jpeg"><img src="https://a.l3n.co/i/lD4wqi.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD4yh9.jpeg"><img src="https://c.l3n.co/i/lD4yh9.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD4GC2.jpeg"><img src="https://a.l3n.co/i/lD4GC2.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7nPz.jpeg"><img src="https://a.l3n.co/i/lD7nPz.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD7UKq.jpeg"><img src="https://b.l3n.co/i/lD7UKq.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7cfA.jpeg"><img src="https://a.l3n.co/i/lD7cfA.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD7bjM.jpeg"><img src="https://c.l3n.co/i/lD7bjM.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD7azx.jpeg"><img src="https://b.l3n.co/i/lD7azx.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD4azv.jpeg"><img src="https://c.l3n.co/i/lD4azv.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDK8t5.jpeg"><img src="https://a.l3n.co/i/lDK8t5.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDKWfT.jpeg"><img src="https://a.l3n.co/i/lDKWfT.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDKjjb.jpeg"><img src="https://c.l3n.co/i/lDKjjb.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDKAKz.jpeg"><img src="https://b.l3n.co/i/lDKAKz.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDK0q7.jpeg"><img src="https://b.l3n.co/i/lDK0q7.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDpP3Z.jpeg"><img src="https://a.l3n.co/i/lDpP3Z.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKIYr.jpeg"><img src="https://c.l3n.co/i/lDKIYr.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lD7GCk.jpeg"><img src="https://c.l3n.co/i/lD7GCk.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD7hwH.jpeg"><img src="https://c.l3n.co/i/lD7hwH.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD7LjT.jpeg"><img src="https://c.l3n.co/i/lD7LjT.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lD7e45.jpeg"><img src="https://b.l3n.co/i/lD7e45.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDpCOC.jpeg"><img src="https://b.l3n.co/i/lDpCOC.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD7Mdb.jpeg"><img src="https://a.l3n.co/i/lD7Mdb.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDO811.jpeg"><img src="https://a.l3n.co/i/lDO811.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDOAKc.jpeg"><img src="https://c.l3n.co/i/lDOAKc.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7ohr.jpeg"><img src="https://a.l3n.co/i/lD7ohr.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD7YM7.jpeg"><img src="https://c.l3n.co/i/lD7YM7.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lD7D6F.jpeg"><img src="https://c.l3n.co/i/lD7D6F.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lD7FtD.jpeg"><img src="https://a.l3n.co/i/lD7FtD.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lD7wqQ.jpeg"><img src="https://a.l3n.co/i/lD7wqQ.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lD7Pw0.jpeg"><img src="https://c.l3n.co/i/lD7Pw0.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lD7Nz3.jpeg"><img src="https://b.l3n.co/i/lD7Nz3.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lD7xMa.jpeg"><img src="https://b.l3n.co/i/lD7xMa.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lD7yhe.jpeg"><img src="https://a.l3n.co/i/lD7yhe.jpeg"></a></div></div>
-					</div>
-				</div>
-				<p>After that you'll enter the dry tropics garden.
-				The air humidity is low and cactus grow from the dry soil.
-				The north wall has a painting that has run dirty with time.
-				What location does that painting portray?.. It looks like it could be the desert in Arizona.</p>
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDOWfK.jpeg"><img src="https://a.l3n.co/i/lDOWfK.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDOtS9.jpeg"><img src="https://c.l3n.co/i/lDOtS9.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDOC0z.jpeg"><img src="https://c.l3n.co/i/lDOC0z.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDO0qP.jpeg"><img src="https://c.l3n.co/i/lDO0qP.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDOIYm.jpeg"><img src="https://b.l3n.co/i/lDOIYm.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDOg2i.jpeg"><img src="https://c.l3n.co/i/lDOg2i.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDOrCo.jpeg"><img src="https://b.l3n.co/i/lDOrCo.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDOj0Z.jpeg"><img src="https://b.l3n.co/i/lDOj0Z.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDOT1v.jpeg"><img src="https://b.l3n.co/i/lDOT1v.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDOkf5.jpeg"><img src="https://b.l3n.co/i/lDOkf5.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDOQYb.jpeg"><img src="https://a.l3n.co/i/lDOQYb.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDOEpC.jpeg"><img src="https://c.l3n.co/i/lDOEpC.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDOJBT.jpeg"><img src="https://b.l3n.co/i/lDOJBT.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDO3pD.jpeg"><img src="https://b.l3n.co/i/lDO3pD.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDO1x2.jpeg"><img src="https://a.l3n.co/i/lDO1x2.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDOdJr.jpeg"><img src="https://a.l3n.co/i/lDOdJr.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDO927.jpeg"><img src="https://c.l3n.co/i/lDO927.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDOsR0.jpeg"><img src="https://a.l3n.co/i/lDOsR0.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDO4Fq.jpeg"><img src="https://c.l3n.co/i/lDO4Fq.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDOMFc.jpeg"><img src="https://a.l3n.co/i/lDOMFc.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDKtS0.jpeg"><img src="https://b.l3n.co/i/lDKtS0.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDKZhF.jpeg"><img src="https://b.l3n.co/i/lDKZhF.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDKrC3.jpeg"><img src="https://c.l3n.co/i/lDKrC3.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDOBx3.jpeg"><img src="https://b.l3n.co/i/lDOBx3.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDOqSF.jpeg"><img src="https://c.l3n.co/i/lDOqSF.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDOvRH.jpeg"><img src="https://b.l3n.co/i/lDOvRH.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDOpIA.jpeg"><img src="https://a.l3n.co/i/lDOpIA.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD4hwC.jpeg"><img src="https://b.l3n.co/i/lD4hwC.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDpUWm.jpeg"><img src="https://c.l3n.co/i/lDpUWm.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDpc9i.jpeg"><img src="https://b.l3n.co/i/lDpc9i.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDK1wD.jpeg"><img src="https://c.l3n.co/i/lDK1wD.jpeg"/></a></div>
+						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDOoIK.jpeg"><img src="https://b.l3n.co/i/lDOoIK.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDO7BM.jpeg"><img src="https://c.l3n.co/i/lDO7BM.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDKs1c.jpeg"><img src="https://b.l3n.co/i/lDKs1c.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDKEpA.jpeg"><img src="https://c.l3n.co/i/lDKEpA.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDKkfM.jpeg"><img src="https://b.l3n.co/i/lDKkfM.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDOOoQ.jpeg"><img src="https://b.l3n.co/i/lDOOoQ.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKQYe.jpeg"><img src="https://c.l3n.co/i/lDKQYe.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDKT1q.jpeg"><img src="https://b.l3n.co/i/lDKT1q.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDKJqa.jpeg"><img src="https://a.l3n.co/i/lDKJqa.jpeg"/></a></div>
+						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDOl2a.jpeg"><img src="https://c.l3n.co/i/lDOl2a.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDOSek.jpeg"><img src="https://c.l3n.co/i/lDOSek.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDOexx.jpeg"><img src="https://a.l3n.co/i/lDOexx.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKdCx.jpeg"><img src="https://c.l3n.co/i/lDKdCx.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDK92k.jpeg"><img src="https://b.l3n.co/i/lDK92k.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDKqSH.jpeg"><img src="https://b.l3n.co/i/lDKqSH.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDOzJe.jpeg"><img src="https://b.l3n.co/i/lDOzJe.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDOL71.jpeg"><img src="https://c.l3n.co/i/lDOL71.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDOumZ.jpeg"><img src="https://c.l3n.co/i/lDOumZ.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKBx1.jpeg"><img src="https://c.l3n.co/i/lDKBx1.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDK4FZ.jpeg"><img src="https://a.l3n.co/i/lDK4FZ.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDK3pK.jpeg"><img src="https://c.l3n.co/i/lDK3pK.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDKp0P.jpeg"><img src="https://c.l3n.co/i/lDKp0P.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDK7Bm.jpeg"><img src="https://b.l3n.co/i/lDK7Bm.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKC0Q.jpeg"><img src="https://c.l3n.co/i/lDKC0Q.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDpXvo.jpeg"><img src="https://c.l3n.co/i/lDpXvo.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDpbG9.jpeg"><img src="https://b.l3n.co/i/lDpbG9.jpeg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>After the desert you'll enter the night garden.
-				These plants are awake at night and which is why the room they are in is dark.
-				There is a clock on the wall which shows the simulated time of the plant.</p>
-				<div class="photosec">
+				<p>
+					The wet tropics garden covers the spans of the south part of the conservatory and it's easy to get the mind absorbed into the vegetation.
+			The road eventually twists and turns into the useful tropical plants garden.
+			Daylight illuminates the room through the windows and casts plant shadows onto the ground.
+			In this room are cacao, coffee among other plants.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDOXT2.jpeg"><img src="https://a.l3n.co/i/lDOXT2.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDODoP.jpeg"><img src="https://b.l3n.co/i/lDODoP.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDOfQi.jpeg"><img src="https://c.l3n.co/i/lDOfQi.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDOwUC.jpeg"><img src="https://c.l3n.co/i/lDOwUC.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDKSe2.jpeg"><img src="https://a.l3n.co/i/lDKSe2.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKzJ9.jpeg"><img src="https://c.l3n.co/i/lDKzJ9.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDK5mQ.jpeg"><img src="https://a.l3n.co/i/lDK5mQ.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDp2Qk.jpeg"><img src="https://b.l3n.co/i/lDp2Qk.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDKGoa.jpeg"><img src="https://b.l3n.co/i/lDKGoa.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDOyI5.jpeg"><img src="https://a.l3n.co/i/lDOyI5.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDOUy9.jpeg"><img src="https://b.l3n.co/i/lDOUy9.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDpyHv.jpeg"><img src="https://c.l3n.co/i/lDpyHv.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDKFe3.jpeg"><img src="https://a.l3n.co/i/lDKFe3.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDKUy0.jpeg"><img src="https://b.l3n.co/i/lDKUy0.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKh8e.jpeg"><img src="https://c.l3n.co/i/lDKh8e.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDKexv.jpeg"><img src="https://b.l3n.co/i/lDKexv.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDKvRC.jpeg"><img src="https://c.l3n.co/i/lDKvRC.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDKLp5.jpeg"><img src="https://b.l3n.co/i/lDKLp5.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDp5XC.jpeg"><img src="https://a.l3n.co/i/lDp5XC.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDpag5.jpeg"><img src="https://b.l3n.co/i/lDpag5.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDKoIT.jpeg"><img src="https://c.l3n.co/i/lDKoIT.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDKuBb.jpeg"><img src="https://b.l3n.co/i/lDKuBb.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKDo7.jpeg"><img src="https://c.l3n.co/i/lDKDo7.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDKMFz.jpeg"><img src="https://a.l3n.co/i/lDKMFz.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDph3z.jpeg"><img src="https://a.l3n.co/i/lDph3z.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDKP8r.jpeg"><img src="https://b.l3n.co/i/lDKP8r.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDp8ex.jpeg"><img src="https://c.l3n.co/i/lDp8ex.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDKl2o.jpeg"><img src="https://a.l3n.co/i/lDKl2o.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDpAyH.jpeg"><img src="https://b.l3n.co/i/lDpAyH.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDpxk2.jpeg"><img src="https://a.l3n.co/i/lDpxk2.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDKfJF.jpeg"><img src="https://c.l3n.co/i/lDKfJF.jpeg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					After that you continue into the North part of the greenhouse.
+			The next room is the air-conditioned garden.
+			When the sun drops low into the sky it illuminates the small insects flying that dance around.
+			The air conditioner above hum and a mist gently descend to which you can really feel that you're in another environment.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDprum.jpeg"><img src="https://b.l3n.co/i/lDprum.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDpgmP.jpeg"><img src="https://c.l3n.co/i/lDpgmP.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD7Qkx.jpeg"><img src="https://b.l3n.co/i/lD7Qkx.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDpRQo.jpeg"><img src="https://a.l3n.co/i/lDpRQo.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7VlH.jpeg"><img src="https://a.l3n.co/i/lD7VlH.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD72NT.jpeg"><img src="https://b.l3n.co/i/lD72NT.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7iLr.jpeg"><img src="https://a.l3n.co/i/lD7iLr.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDpj7c.jpeg"><img src="https://c.l3n.co/i/lDpj7c.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDp0UK.jpeg"><img src="https://b.l3n.co/i/lDp0UK.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD7AWb.jpeg"><img src="https://c.l3n.co/i/lD7AWb.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD7jGF.jpeg"><img src="https://c.l3n.co/i/lD7jGF.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD7RNM.jpeg"><img src="https://c.l3n.co/i/lD7RNM.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD7Ik3.jpeg"><img src="https://a.l3n.co/i/lD7Ik3.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD714A.jpeg"><img src="https://a.l3n.co/i/lD714A.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD7k9a.jpeg"><img src="https://b.l3n.co/i/lD7k9a.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD7trq.jpeg"><img src="https://b.l3n.co/i/lD7trq.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7Cak.jpeg"><img src="https://a.l3n.co/i/lD7Cak.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7EiQ.jpeg"><img src="https://a.l3n.co/i/lD7EiQ.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD79b1.jpeg"><img src="https://c.l3n.co/i/lD79b1.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD7qrc.jpeg"><img src="https://a.l3n.co/i/lD7qrc.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7mPZ.jpeg"><img src="https://a.l3n.co/i/lD7mPZ.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD7B4K.jpeg"><img src="https://b.l3n.co/i/lD7B4K.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD7Zl0.jpeg"><img src="https://c.l3n.co/i/lD7Zl0.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD7W97.jpeg"><img src="https://b.l3n.co/i/lD7W97.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDpZZZ.jpeg"><img src="https://a.l3n.co/i/lDpZZZ.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7gXD.jpeg"><img src="https://a.l3n.co/i/lD7gXD.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDpE52.jpeg"><img src="https://b.l3n.co/i/lDpE52.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDpiT1.jpeg"><img src="https://a.l3n.co/i/lDpiT1.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDp1Ai.jpeg"><img src="https://c.l3n.co/i/lDp1Ai.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDpTn9.jpeg"><img src="https://c.l3n.co/i/lDpTn9.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD76Le.jpeg"><img src="https://c.l3n.co/i/lD76Le.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD7pao.jpeg"><img src="https://b.l3n.co/i/lD7pao.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD73iP.jpeg"><img src="https://b.l3n.co/i/lD73iP.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD74dm.jpeg"><img src="https://a.l3n.co/i/lD74dm.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD7KMi.jpeg"><img src="https://c.l3n.co/i/lD7KMi.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD7O69.jpeg"><img src="https://c.l3n.co/i/lD7O69.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDO5mz.jpeg"><img src="https://b.l3n.co/i/lDO5mz.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDOFeo.jpeg"><img src="https://a.l3n.co/i/lDOFeo.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDOP8m.jpeg"><img src="https://a.l3n.co/i/lDOP8m.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDOb7v.jpeg"><img src="https://b.l3n.co/i/lDOb7v.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7Hz2.jpeg"><img src="https://a.l3n.co/i/lD7Hz2.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD7StC.jpeg"><img src="https://c.l3n.co/i/lD7StC.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD7lbv.jpeg"><img src="https://b.l3n.co/i/lD7lbv.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDp6Tv.jpeg"><img src="https://c.l3n.co/i/lDp6Tv.jpeg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7nPz.jpeg"><img src="https://a.l3n.co/i/lD7nPz.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD7UKq.jpeg"><img src="https://b.l3n.co/i/lD7UKq.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7cfA.jpeg"><img src="https://a.l3n.co/i/lD7cfA.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD7bjM.jpeg"><img src="https://c.l3n.co/i/lD7bjM.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD7azx.jpeg"><img src="https://b.l3n.co/i/lD7azx.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lD7GCk.jpeg"><img src="https://c.l3n.co/i/lD7GCk.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD7hwH.jpeg"><img src="https://c.l3n.co/i/lD7hwH.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD7LjT.jpeg"><img src="https://c.l3n.co/i/lD7LjT.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lD7e45.jpeg"><img src="https://b.l3n.co/i/lD7e45.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDpCOC.jpeg"><img src="https://b.l3n.co/i/lDpCOC.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD7Mdb.jpeg"><img src="https://a.l3n.co/i/lD7Mdb.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDO811.jpeg"><img src="https://a.l3n.co/i/lDO811.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDOAKc.jpeg"><img src="https://c.l3n.co/i/lDOAKc.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7ohr.jpeg"><img src="https://a.l3n.co/i/lD7ohr.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD7YM7.jpeg"><img src="https://c.l3n.co/i/lD7YM7.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lD7D6F.jpeg"><img src="https://c.l3n.co/i/lD7D6F.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lD7FtD.jpeg"><img src="https://a.l3n.co/i/lD7FtD.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lD7wqQ.jpeg"><img src="https://a.l3n.co/i/lD7wqQ.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lD7Pw0.jpeg"><img src="https://c.l3n.co/i/lD7Pw0.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lD7Nz3.jpeg"><img src="https://b.l3n.co/i/lD7Nz3.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lD7xMa.jpeg"><img src="https://b.l3n.co/i/lD7xMa.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lD7yhe.jpeg"><img src="https://a.l3n.co/i/lD7yhe.jpeg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					After that you'll enter the dry tropics garden.
+			The air humidity is low and cactus grow from the dry soil.
+			The north wall has a painting that has run dirty with time.
+			What location does that painting portray?.. It looks like it could be the desert in Arizona.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDOWfK.jpeg"><img src="https://a.l3n.co/i/lDOWfK.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDOtS9.jpeg"><img src="https://c.l3n.co/i/lDOtS9.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDOC0z.jpeg"><img src="https://c.l3n.co/i/lDOC0z.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDO0qP.jpeg"><img src="https://c.l3n.co/i/lDO0qP.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDOIYm.jpeg"><img src="https://b.l3n.co/i/lDOIYm.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDOg2i.jpeg"><img src="https://c.l3n.co/i/lDOg2i.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDOrCo.jpeg"><img src="https://b.l3n.co/i/lDOrCo.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDOj0Z.jpeg"><img src="https://b.l3n.co/i/lDOj0Z.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDOT1v.jpeg"><img src="https://b.l3n.co/i/lDOT1v.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDOkf5.jpeg"><img src="https://b.l3n.co/i/lDOkf5.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDOQYb.jpeg"><img src="https://a.l3n.co/i/lDOQYb.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDOEpC.jpeg"><img src="https://c.l3n.co/i/lDOEpC.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDOJBT.jpeg"><img src="https://b.l3n.co/i/lDOJBT.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDO3pD.jpeg"><img src="https://b.l3n.co/i/lDO3pD.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDO1x2.jpeg"><img src="https://a.l3n.co/i/lDO1x2.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDOdJr.jpeg"><img src="https://a.l3n.co/i/lDOdJr.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDO927.jpeg"><img src="https://c.l3n.co/i/lDO927.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDOsR0.jpeg"><img src="https://a.l3n.co/i/lDOsR0.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDO4Fq.jpeg"><img src="https://c.l3n.co/i/lDO4Fq.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDOMFc.jpeg"><img src="https://a.l3n.co/i/lDOMFc.jpeg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDOBx3.jpeg"><img src="https://b.l3n.co/i/lDOBx3.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDOqSF.jpeg"><img src="https://c.l3n.co/i/lDOqSF.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDOvRH.jpeg"><img src="https://b.l3n.co/i/lDOvRH.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDOpIA.jpeg"><img src="https://a.l3n.co/i/lDOpIA.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDOoIK.jpeg"><img src="https://b.l3n.co/i/lDOoIK.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDO7BM.jpeg"><img src="https://c.l3n.co/i/lDO7BM.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDOOoQ.jpeg"><img src="https://b.l3n.co/i/lDOOoQ.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDOl2a.jpeg"><img src="https://c.l3n.co/i/lDOl2a.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDOSek.jpeg"><img src="https://c.l3n.co/i/lDOSek.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDOexx.jpeg"><img src="https://a.l3n.co/i/lDOexx.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDOzJe.jpeg"><img src="https://b.l3n.co/i/lDOzJe.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDOL71.jpeg"><img src="https://c.l3n.co/i/lDOL71.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDOumZ.jpeg"><img src="https://c.l3n.co/i/lDOumZ.jpeg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>After that you'll exit into the Alpine garden.
-				In there are small, gently colored flowers and pine trees.
-				From here you can also enter the courtyard.
-				In the court yard are some metal chairs and pine trees that cast a shadow.</p>
-				<div class="photosec">
+				<p>
+					After the desert you'll enter the night garden.
+			These plants are awake at night and which is why the room they are in is dark.
+			There is a clock on the wall which shows the simulated time of the plant.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDH2Q7.jpeg"><img src="https://a.l3n.co/i/lDH2Q7.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDOh8b.jpeg"><img src="https://c.l3n.co/i/lDOh8b.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDH8nr.jpeg"><img src="https://c.l3n.co/i/lDH8nr.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDHAyF.jpeg"><img src="https://b.l3n.co/i/lDHAyF.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDOXT2.jpeg"><img src="https://a.l3n.co/i/lDOXT2.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDODoP.jpeg"><img src="https://b.l3n.co/i/lDODoP.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDOfQi.jpeg"><img src="https://c.l3n.co/i/lDOfQi.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDOwUC.jpeg"><img src="https://c.l3n.co/i/lDOwUC.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDHgsA.jpeg"><img src="https://a.l3n.co/i/lDHgsA.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDHiT3.jpeg"><img src="https://c.l3n.co/i/lDHiT3.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDOyI5.jpeg"><img src="https://a.l3n.co/i/lDOyI5.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDOUy9.jpeg"><img src="https://b.l3n.co/i/lDOUy9.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDH0UD.jpeg"><img src="https://a.l3n.co/i/lDH0UD.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDHZZq.jpeg"><img src="https://b.l3n.co/i/lDHZZq.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDHruM.jpeg"><img src="https://b.l3n.co/i/lDHruM.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDHRQa.jpeg"><img src="https://b.l3n.co/i/lDHRQa.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDH1AQ.jpeg"><img src="https://c.l3n.co/i/lDH1AQ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDOGuT.jpeg"><img src="https://a.l3n.co/i/lDOGuT.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDHjO0.jpeg"><img src="https://b.l3n.co/i/lDHjO0.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDHVZc.jpeg"><img src="https://a.l3n.co/i/lDHVZc.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDHCOH.jpeg"><img src="https://c.l3n.co/i/lDHCOH.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDHE5k.jpeg"><img src="https://c.l3n.co/i/lDHE5k.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDHJc1.jpeg"><img src="https://b.l3n.co/i/lDHJc1.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDHTne.jpeg"><img src="https://a.l3n.co/i/lDHTne.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDH6Tx.jpeg"><img src="https://b.l3n.co/i/lDH6Tx.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDHmVm.jpeg"><img src="https://c.l3n.co/i/lDHmVm.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDHsvi.jpeg"><img src="https://a.l3n.co/i/lDHsvi.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDO5mz.jpeg"><img src="https://b.l3n.co/i/lDO5mz.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDOFeo.jpeg"><img src="https://a.l3n.co/i/lDOFeo.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDOP8m.jpeg"><img src="https://a.l3n.co/i/lDOP8m.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDOb7v.jpeg"><img src="https://b.l3n.co/i/lDOb7v.jpeg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>The last room of the conservatory is the orchid and bromeliad garden.
-				Once again the road twists and turns around the room and around the corner is a small waterfall.
-				A girl stopped in the middle of the road and witnessed a lizard that came out of the vegetation, ripped apart a cockroach and then dragged it back into the vegetation.
-				Lastly you will pass some orchards next to the exit before you're back in the entrance of the conservatory.</p>
-				<div class="photosec">
+				<p>
+					After that you'll exit into the Alpine garden.
+			In there are small, gently colored flowers and pine trees.
+			From here you can also enter the courtyard.
+			In the court yard are some metal chairs and pine trees that cast a shadow.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDpJU5.jpeg"><img src="https://c.l3n.co/i/lDpJU5.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDHKE9.jpeg"><img src="https://a.l3n.co/i/lDHKE9.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDH35o.jpeg"><img src="https://b.l3n.co/i/lDH35o.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDH2Q7.jpeg"><img src="https://a.l3n.co/i/lDH2Q7.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDOh8b.jpeg"><img src="https://c.l3n.co/i/lDOh8b.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDH8nr.jpeg"><img src="https://c.l3n.co/i/lDH8nr.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDHAyF.jpeg"><img src="https://b.l3n.co/i/lDHAyF.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDH7cv.jpeg"><img src="https://a.l3n.co/i/lDH7cv.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDHHgC.jpeg"><img src="https://c.l3n.co/i/lDHHgC.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDHgsA.jpeg"><img src="https://a.l3n.co/i/lDHgsA.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDHiT3.jpeg"><img src="https://c.l3n.co/i/lDHiT3.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDHls5.jpeg"><img src="https://a.l3n.co/i/lDHls5.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDHzDz.jpeg"><img src="https://b.l3n.co/i/lDHzDz.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDHnVb.jpeg"><img src="https://a.l3n.co/i/lDHnVb.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDHNgD.jpeg"><img src="https://b.l3n.co/i/lDHNgD.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDHYEF.jpeg"><img src="https://a.l3n.co/i/lDHYEF.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDH0UD.jpeg"><img src="https://a.l3n.co/i/lDH0UD.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDHZZq.jpeg"><img src="https://b.l3n.co/i/lDHZZq.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDHeWT.jpeg"><img src="https://c.l3n.co/i/lDHeWT.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDHvv7.jpeg"><img src="https://b.l3n.co/i/lDHvv7.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDHruM.jpeg"><img src="https://b.l3n.co/i/lDHruM.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDHRQa.jpeg"><img src="https://b.l3n.co/i/lDHRQa.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDHLGr.jpeg"><img src="https://c.l3n.co/i/lDHLGr.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDHuX0.jpeg"><img src="https://a.l3n.co/i/lDHuX0.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDH1AQ.jpeg"><img src="https://c.l3n.co/i/lDH1AQ.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDOGuT.jpeg"><img src="https://a.l3n.co/i/lDOGuT.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDHjO0.jpeg"><img src="https://b.l3n.co/i/lDHjO0.jpeg"/></a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDHVZc.jpeg"><img src="https://a.l3n.co/i/lDHVZc.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDHCOH.jpeg"><img src="https://c.l3n.co/i/lDHCOH.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDHE5k.jpeg"><img src="https://c.l3n.co/i/lDHE5k.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDHJc1.jpeg"><img src="https://b.l3n.co/i/lDHJc1.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDHTne.jpeg"><img src="https://a.l3n.co/i/lDHTne.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDH6Tx.jpeg"><img src="https://b.l3n.co/i/lDH6Tx.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDHmVm.jpeg"><img src="https://c.l3n.co/i/lDHmVm.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDHsvi.jpeg"><img src="https://a.l3n.co/i/lDHsvi.jpeg"/></a></div>
+						</div>
+					</div>
+				</div>
+				<p>
+					The last room of the conservatory is the orchid and bromeliad garden.
+			Once again the road twists and turns around the room and around the corner is a small waterfall.
+			A girl stopped in the middle of the road and witnessed a lizard that came out of the vegetation, ripped apart a cockroach and then dragged it back into the vegetation.
+			Lastly you will pass some orchards next to the exit before you're back in the entrance of the conservatory.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDpJU5.jpeg"><img src="https://c.l3n.co/i/lDpJU5.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDHKE9.jpeg"><img src="https://a.l3n.co/i/lDHKE9.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDH35o.jpeg"><img src="https://b.l3n.co/i/lDH35o.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDH7cv.jpeg"><img src="https://a.l3n.co/i/lDH7cv.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDHHgC.jpeg"><img src="https://c.l3n.co/i/lDHHgC.jpeg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDHls5.jpeg"><img src="https://a.l3n.co/i/lDHls5.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDHzDz.jpeg"><img src="https://b.l3n.co/i/lDHzDz.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDHnVb.jpeg"><img src="https://a.l3n.co/i/lDHnVb.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDHNgD.jpeg"><img src="https://b.l3n.co/i/lDHNgD.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDHYEF.jpeg"><img src="https://a.l3n.co/i/lDHYEF.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDHeWT.jpeg"><img src="https://c.l3n.co/i/lDHeWT.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDHvv7.jpeg"><img src="https://b.l3n.co/i/lDHvv7.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDHLGr.jpeg"><img src="https://c.l3n.co/i/lDHLGr.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDHuX0.jpeg"><img src="https://a.l3n.co/i/lDHuX0.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow"></div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDHXva.jpeg"><img src="https://c.l3n.co/i/lDHXva.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDHoH3.jpeg"><img src="https://b.l3n.co/i/lDHoH3.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDHfNA.jpeg"><img src="https://b.l3n.co/i/lDHfNA.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDljai.jpeg"><img src="https://b.l3n.co/i/lDljai.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDHXva.jpeg"><img src="https://c.l3n.co/i/lDHXva.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDHoH3.jpeg"><img src="https://b.l3n.co/i/lDHoH3.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDHfNA.jpeg"><img src="https://b.l3n.co/i/lDHfNA.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDljai.jpeg"><img src="https://b.l3n.co/i/lDljai.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDHUWM.jpeg"><img src="https://a.l3n.co/i/lDHUWM.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDHc9Q.jpeg"><img src="https://b.l3n.co/i/lDHc9Q.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDHxkk.jpeg"><img src="https://c.l3n.co/i/lDHxkk.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDHyHx.jpeg"><img src="https://b.l3n.co/i/lDHyHx.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDHUWM.jpeg"><img src="https://a.l3n.co/i/lDHUWM.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDHc9Q.jpeg"><img src="https://b.l3n.co/i/lDHc9Q.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDHxkk.jpeg"><img src="https://c.l3n.co/i/lDHxkk.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDHyHx.jpeg"><img src="https://b.l3n.co/i/lDHyHx.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDHbGe.jpeg"><img src="https://b.l3n.co/i/lDHbGe.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDHar1.jpeg"><img src="https://a.l3n.co/i/lDHar1.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDH5XH.jpeg"><img src="https://c.l3n.co/i/lDH5XH.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDHbGe.jpeg"><img src="https://b.l3n.co/i/lDHbGe.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDHar1.jpeg"><img src="https://a.l3n.co/i/lDHar1.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDH5XH.jpeg"><img src="https://c.l3n.co/i/lDH5XH.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDHh3c.jpeg"><img src="https://c.l3n.co/i/lDHh3c.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDHh3c.jpeg"><img src="https://c.l3n.co/i/lDHh3c.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDl2NK.jpeg"><img src="https://b.l3n.co/i/lDl2NK.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDlW9P.jpeg"><img src="https://b.l3n.co/i/lDlW9P.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDl2NK.jpeg"><img src="https://b.l3n.co/i/lDl2NK.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDlW9P.jpeg"><img src="https://b.l3n.co/i/lDlW9P.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDlAiZ.jpeg"><img src="https://a.l3n.co/i/lDlAiZ.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDliLm.jpeg"><img src="https://c.l3n.co/i/lDliLm.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDlAiZ.jpeg"><img src="https://a.l3n.co/i/lDlAiZ.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDliLm.jpeg"><img src="https://c.l3n.co/i/lDliLm.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDlZl9.jpeg"><img src="https://b.l3n.co/i/lDlZl9.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDlgb2.jpeg"><img src="https://a.l3n.co/i/lDlgb2.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDl14C.jpeg"><img src="https://a.l3n.co/i/lDl14C.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDlkdT.jpeg"><img src="https://b.l3n.co/i/lDlkdT.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDltrv.jpeg"><img src="https://b.l3n.co/i/lDltrv.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDlZl9.jpeg"><img src="https://b.l3n.co/i/lDlZl9.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDlgb2.jpeg"><img src="https://a.l3n.co/i/lDlgb2.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDl14C.jpeg"><img src="https://a.l3n.co/i/lDl14C.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDlkdT.jpeg"><img src="https://b.l3n.co/i/lDlkdT.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDltrv.jpeg"><img src="https://b.l3n.co/i/lDltrv.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDlRN5.jpeg"><img src="https://b.l3n.co/i/lDlRN5.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDlEiz.jpeg"><img src="https://a.l3n.co/i/lDlEiz.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDlQ6r.jpeg"><img src="https://a.l3n.co/i/lDlQ6r.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDl9b3.jpeg"><img src="https://a.l3n.co/i/lDl9b3.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDlqt0.jpeg"><img src="https://c.l3n.co/i/lDlqt0.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDlVlF.jpeg"><img src="https://c.l3n.co/i/lDlVlF.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDlB4D.jpeg"><img src="https://a.l3n.co/i/lDlB4D.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDlmPq.jpeg"><img src="https://b.l3n.co/i/lDlmPq.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDl3jA.jpeg"><img src="https://c.l3n.co/i/lDl3jA.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDl4dM.jpeg"><img src="https://a.l3n.co/i/lDl4dM.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDlKMQ.jpeg"><img src="https://b.l3n.co/i/lDlKMQ.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDlF12.jpeg"><img src="https://a.l3n.co/i/lDlF12.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDlnPc.jpeg"><img src="https://b.l3n.co/i/lDlnPc.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDlYMP.jpeg"><img src="https://b.l3n.co/i/lDlYMP.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDlpaa.jpeg"><img src="https://a.l3n.co/i/lDlpaa.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDlPw9.jpeg"><img src="https://c.l3n.co/i/lDlPw9.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDlStH.jpeg"><img src="https://a.l3n.co/i/lDlStH.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDlHzk.jpeg"><img src="https://a.l3n.co/i/lDlHzk.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDllbx.jpeg"><img src="https://c.l3n.co/i/lDllbx.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDleK1.jpeg"><img src="https://c.l3n.co/i/lDleK1.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDlLjK.jpeg"><img src="https://a.l3n.co/i/lDlLjK.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDlNzo.jpeg"><img src="https://a.l3n.co/i/lDlNzo.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDlMqZ.jpeg"><img src="https://c.l3n.co/i/lDlMqZ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDl6Lb.jpeg"><img src="https://a.l3n.co/i/lDl6Lb.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDlIko.jpeg"><img src="https://c.l3n.co/i/lDlIko.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDpVZz.jpeg"><img src="https://a.l3n.co/i/lDpVZz.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDlCa7.jpeg"><img src="https://c.l3n.co/i/lDlCa7.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDlDCi.jpeg"><img src="https://b.l3n.co/i/lDlDCi.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDlohm.jpeg"><img src="https://a.l3n.co/i/lDlohm.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDlcfC.jpeg"><img src="https://c.l3n.co/i/lDlcfC.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDlRN5.jpeg"><img src="https://b.l3n.co/i/lDlRN5.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDlEiz.jpeg"><img src="https://a.l3n.co/i/lDlEiz.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDz813.jpeg"><img src="https://b.l3n.co/i/lDz813.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDlUKv.jpeg"><img src="https://b.l3n.co/i/lDlUKv.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDlbj5.jpeg"><img src="https://b.l3n.co/i/lDlbj5.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDlxYT.jpeg"><img src="https://b.l3n.co/i/lDlxYT.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDlQ6r.jpeg"><img src="https://a.l3n.co/i/lDlQ6r.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDl9b3.jpeg"><img src="https://a.l3n.co/i/lDl9b3.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDlqt0.jpeg"><img src="https://c.l3n.co/i/lDlqt0.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDlVlF.jpeg"><img src="https://c.l3n.co/i/lDlVlF.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDlyhb.jpeg"><img src="https://c.l3n.co/i/lDlyhb.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDlwqz.jpeg"><img src="https://a.l3n.co/i/lDlwqz.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDlB4D.jpeg"><img src="https://a.l3n.co/i/lDlB4D.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDlmPq.jpeg"><img src="https://b.l3n.co/i/lDlmPq.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDl3jA.jpeg"><img src="https://c.l3n.co/i/lDl3jA.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDl4dM.jpeg"><img src="https://a.l3n.co/i/lDl4dM.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDlKMQ.jpeg"><img src="https://b.l3n.co/i/lDlKMQ.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDlF12.jpeg"><img src="https://a.l3n.co/i/lDlF12.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDlnPc.jpeg"><img src="https://b.l3n.co/i/lDlnPc.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDlYMP.jpeg"><img src="https://b.l3n.co/i/lDlYMP.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDlpaa.jpeg"><img src="https://a.l3n.co/i/lDlpaa.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDlPw9.jpeg"><img src="https://c.l3n.co/i/lDlPw9.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDlStH.jpeg"><img src="https://a.l3n.co/i/lDlStH.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDlHzk.jpeg"><img src="https://a.l3n.co/i/lDlHzk.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDllbx.jpeg"><img src="https://c.l3n.co/i/lDllbx.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDleK1.jpeg"><img src="https://c.l3n.co/i/lDleK1.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDlLjK.jpeg"><img src="https://a.l3n.co/i/lDlLjK.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDlNzo.jpeg"><img src="https://a.l3n.co/i/lDlNzo.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDlMqZ.jpeg"><img src="https://c.l3n.co/i/lDlMqZ.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDl6Lb.jpeg"><img src="https://a.l3n.co/i/lDl6Lb.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDlIko.jpeg"><img src="https://c.l3n.co/i/lDlIko.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDpVZz.jpeg"><img src="https://a.l3n.co/i/lDpVZz.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDlCa7.jpeg"><img src="https://c.l3n.co/i/lDlCa7.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDlDCi.jpeg"><img src="https://b.l3n.co/i/lDlDCi.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDlohm.jpeg"><img src="https://a.l3n.co/i/lDlohm.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDlcfC.jpeg"><img src="https://c.l3n.co/i/lDlcfC.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDlaSr.jpeg"><img src="https://b.l3n.co/i/lDlaSr.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzj0q.jpeg"><img src="https://b.l3n.co/i/lDzj0q.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDzWfD.jpeg"><img src="https://c.l3n.co/i/lDzWfD.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDlGC7.jpeg"><img src="https://a.l3n.co/i/lDlGC7.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDz813.jpeg"><img src="https://b.l3n.co/i/lDz813.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDlUKv.jpeg"><img src="https://b.l3n.co/i/lDlUKv.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDlbj5.jpeg"><img src="https://b.l3n.co/i/lDlbj5.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDlxYT.jpeg"><img src="https://b.l3n.co/i/lDlxYT.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDlO6e.jpeg"><img src="https://b.l3n.co/i/lDlO6e.jpeg"></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDlyhb.jpeg"><img src="https://c.l3n.co/i/lDlyhb.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDlwqz.jpeg"><img src="https://a.l3n.co/i/lDlwqz.jpeg"/></a></div>
+						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDz0BA.jpeg"><img src="https://c.l3n.co/i/lDz0BA.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDlhwF.jpeg"><img src="https://c.l3n.co/i/lDlhwF.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDzIYM.jpeg"><img src="https://a.l3n.co/i/lDzIYM.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDzg2Q.jpeg"><img src="https://c.l3n.co/i/lDzg2Q.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDzAp0.jpeg"><img src="https://a.l3n.co/i/lDzAp0.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDlaSr.jpeg"><img src="https://b.l3n.co/i/lDlaSr.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzj0q.jpeg"><img src="https://b.l3n.co/i/lDzj0q.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDzWfD.jpeg"><img src="https://c.l3n.co/i/lDzWfD.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDlGC7.jpeg"><img src="https://a.l3n.co/i/lDlGC7.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDlO6e.jpeg"><img src="https://b.l3n.co/i/lDlO6e.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDz0BA.jpeg"><img src="https://c.l3n.co/i/lDz0BA.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDlhwF.jpeg"><img src="https://c.l3n.co/i/lDlhwF.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDzIYM.jpeg"><img src="https://a.l3n.co/i/lDzIYM.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDzg2Q.jpeg"><img src="https://c.l3n.co/i/lDzg2Q.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDzAp0.jpeg"><img src="https://a.l3n.co/i/lDzAp0.jpeg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow"></div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzrCa.jpeg"><img src="https://b.l3n.co/i/lDzrCa.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDztSe.jpeg"><img src="https://c.l3n.co/i/lDztSe.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDz1xk.jpeg"><img src="https://a.l3n.co/i/lDz1xk.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzrCa.jpeg"><img src="https://b.l3n.co/i/lDzrCa.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDztSe.jpeg"><img src="https://c.l3n.co/i/lDztSe.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDz1xk.jpeg"><img src="https://a.l3n.co/i/lDz1xk.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzT1x.jpeg"><img src="https://b.l3n.co/i/lDzT1x.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDzQoZ.jpeg"><img src="https://b.l3n.co/i/lDzQoZ.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDzEpH.jpeg"><img src="https://a.l3n.co/i/lDzEpH.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzT1x.jpeg"><img src="https://b.l3n.co/i/lDzT1x.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDzQoZ.jpeg"><img src="https://b.l3n.co/i/lDzQoZ.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDzEpH.jpeg"><img src="https://a.l3n.co/i/lDzEpH.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDzkF1.jpeg"><img src="https://c.l3n.co/i/lDzkF1.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDzC0c.jpeg"><img src="https://b.l3n.co/i/lDzC0c.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDzJBK.jpeg"><img src="https://c.l3n.co/i/lDzJBK.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDzkF1.jpeg"><img src="https://c.l3n.co/i/lDzkF1.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDzC0c.jpeg"><img src="https://b.l3n.co/i/lDzC0c.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDzJBK.jpeg"><img src="https://c.l3n.co/i/lDzJBK.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDz92P.jpeg"><img src="https://c.l3n.co/i/lDz92P.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDzdJm.jpeg"><img src="https://b.l3n.co/i/lDzdJm.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDz92P.jpeg"><img src="https://c.l3n.co/i/lDz92P.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDzdJm.jpeg"><img src="https://b.l3n.co/i/lDzdJm.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDzqei.jpeg"><img src="https://a.l3n.co/i/lDzqei.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzBxo.jpeg"><img src="https://b.l3n.co/i/lDzBxo.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDzqei.jpeg"><img src="https://a.l3n.co/i/lDzqei.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzBxo.jpeg"><img src="https://b.l3n.co/i/lDzBxo.jpeg"/></a></div></div>
 					</div>
+				</div>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDp9sT.jpeg"><img src="https://c.l3n.co/i/lDp9sT.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDz4Fv.jpeg"><img src="https://c.l3n.co/i/lDz4Fv.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDz372.jpeg"><img src="https://b.l3n.co/i/lDz372.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDzpIC.jpeg"><img src="https://a.l3n.co/i/lDzpIC.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDz7B5.jpeg"><img src="https://c.l3n.co/i/lDz7B5.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDzl8T.jpeg"><img src="https://c.l3n.co/i/lDzl8T.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDp9sT.jpeg"><img src="https://c.l3n.co/i/lDp9sT.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDz4Fv.jpeg"><img src="https://c.l3n.co/i/lDz4Fv.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDz372.jpeg"><img src="https://b.l3n.co/i/lDz372.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDzpIC.jpeg"><img src="https://a.l3n.co/i/lDzpIC.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDz7B5.jpeg"><img src="https://c.l3n.co/i/lDz7B5.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDzl8T.jpeg"><img src="https://c.l3n.co/i/lDzl8T.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzzJb.jpeg"><img src="https://b.l3n.co/i/lDzzJb.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDzSe7.jpeg"><img src="https://a.l3n.co/i/lDzSe7.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzeyr.jpeg"><img src="https://b.l3n.co/i/lDzeyr.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDzsR9.jpeg"><img src="https://c.l3n.co/i/lDzsR9.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDzOoz.jpeg"><img src="https://b.l3n.co/i/lDzOoz.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzzJb.jpeg"><img src="https://b.l3n.co/i/lDzzJb.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDzSe7.jpeg"><img src="https://a.l3n.co/i/lDzSe7.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzeyr.jpeg"><img src="https://b.l3n.co/i/lDzeyr.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDzsR9.jpeg"><img src="https://c.l3n.co/i/lDzsR9.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDzOoz.jpeg"><img src="https://b.l3n.co/i/lDzOoz.jpeg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>North of the conservatory is a cherry tree garden.
-				The small, hard cherries have by the end of May only become a gentle red color.
-				If one follows the road west they'll find a small bonsai exhibition.
-				The bonsai trees are neatly rowed up on tables and an approach with a macro lens reveals some closer details.</p>
-				<div class="photosec">
+				<p>
+					North of the conservatory is a cherry tree garden.
+			The small, hard cherries have by the end of May only become a gentle red color.
+			If one follows the road west they'll find a small bonsai exhibition.
+			The bonsai trees are neatly rowed up on tables and an approach with a macro lens reveals some closer details.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDpL5x.jpeg"><img src="https://a.l3n.co/i/lDpL5x.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDpsnF.jpeg"><img src="https://a.l3n.co/i/lDpsnF.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDpmVr.jpeg"><img src="https://c.l3n.co/i/lDpmVr.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDpdub.jpeg"><img src="https://a.l3n.co/i/lDpdub.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDpBA7.jpeg"><img src="https://b.l3n.co/i/lDpBA7.jpeg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDSTnb.jpeg"><img src="https://c.l3n.co/i/lDSTnb.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDS6Er.jpeg"><img src="https://c.l3n.co/i/lDS6Er.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDSRVT.jpeg"><img src="https://a.l3n.co/i/lDSRVT.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDSE57.jpeg"><img src="https://b.l3n.co/i/lDSE57.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDSJc3.jpeg"><img src="https://a.l3n.co/i/lDSJc3.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDSCOF.jpeg"><img src="https://b.l3n.co/i/lDSCOF.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDSpHk.jpeg"><img src="https://b.l3n.co/i/lDSpHk.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDS9sD.jpeg"><img src="https://a.l3n.co/i/lDS9sD.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDSVg0.jpeg"><img src="https://c.l3n.co/i/lDSVg0.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDSdDq.jpeg"><img src="https://c.l3n.co/i/lDSdDq.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDSHgH.jpeg"><img src="https://c.l3n.co/i/lDSHgH.jpeg"></a></div></div>
-					</div>
-				</div>
-				<p>North of the bonsai exhibition is the perennial garden.
-				There is a ditch with water between the flowers and damselflies laid eggs in between the lily pads.
-				A woman passed by in the garden with clothes that matched the colors of the flowers well.
-				Meanwhile a hornet flew into the garden and landed on a nearby handrail.</p>
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDS2QP.jpeg"><img src="https://a.l3n.co/i/lDS2QP.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDSiTo.jpeg"><img src="https://a.l3n.co/i/lDSiTo.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDSjO9.jpeg"><img src="https://b.l3n.co/i/lDSjO9.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDSA5i.jpeg"><img src="https://b.l3n.co/i/lDSA5i.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDS8nm.jpeg"><img src="https://c.l3n.co/i/lDS8nm.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDzwUH.jpeg"><img src="https://a.l3n.co/i/lDzwUH.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzyZ1.jpeg"><img src="https://b.l3n.co/i/lDzyZ1.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDzhAZ.jpeg"><img src="https://c.l3n.co/i/lDzhAZ.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDzGuK.jpeg"><img src="https://b.l3n.co/i/lDzGuK.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDz5mc.jpeg"><img src="https://a.l3n.co/i/lDz5mc.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDSgsC.jpeg"><img src="https://c.l3n.co/i/lDSgsC.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDS0c2.jpeg"><img src="https://c.l3n.co/i/lDS0c2.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDSZZv.jpeg"><img src="https://b.l3n.co/i/lDSZZv.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDSru5.jpeg"><img src="https://a.l3n.co/i/lDSru5.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDS1Az.jpeg"><img src="https://b.l3n.co/i/lDS1Az.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDpL5x.jpeg"><img src="https://a.l3n.co/i/lDpL5x.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDpsnF.jpeg"><img src="https://a.l3n.co/i/lDpsnF.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDpmVr.jpeg"><img src="https://c.l3n.co/i/lDpmVr.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDpdub.jpeg"><img src="https://a.l3n.co/i/lDpdub.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDpBA7.jpeg"><img src="https://b.l3n.co/i/lDpBA7.jpeg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>To the East (about the middle of the North half of the garden) is Nakaragi Shrine.
-				To the West, North and East side of the shrine it is surrounded by ponds, and further surrounding everything are different types of grooves which are connected with cozy bridges.
-				A man threw in feed for the catfish, meanwhile a woman sat in one of the pavilions and painted the landscape.
-				Water striders ran around on the water surface with their shadows cast onto the bottom of the pond.
-				The forest shade danced gently on the ground and a watermill to the North spun slowly.</p>
-				<div class="photosec">
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDp353.jpeg"><img src="https://c.l3n.co/i/lDp353.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDpKE0.jpeg"><img src="https://b.l3n.co/i/lDpKE0.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDp7cq.jpeg"><img src="https://a.l3n.co/i/lDp7cq.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDSTnb.jpeg"><img src="https://c.l3n.co/i/lDSTnb.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDS6Er.jpeg"><img src="https://c.l3n.co/i/lDS6Er.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDSRVT.jpeg"><img src="https://a.l3n.co/i/lDSRVT.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDpHgA.jpeg"><img src="https://c.l3n.co/i/lDpHgA.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDplsM.jpeg"><img src="https://b.l3n.co/i/lDplsM.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDpeAa.jpeg"><img src="https://c.l3n.co/i/lDpeAa.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDSE57.jpeg"><img src="https://b.l3n.co/i/lDSE57.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDSJc3.jpeg"><img src="https://a.l3n.co/i/lDSJc3.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDSCOF.jpeg"><img src="https://b.l3n.co/i/lDSCOF.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDpnVe.jpeg"><img src="https://a.l3n.co/i/lDpnVe.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDpvvk.jpeg"><img src="https://b.l3n.co/i/lDpvvk.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDzMU0.jpeg"><img src="https://c.l3n.co/i/lDzMU0.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDzoID.jpeg"><img src="https://a.l3n.co/i/lDzoID.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDzumq.jpeg"><img src="https://c.l3n.co/i/lDzumq.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDzDuA.jpeg"><img src="https://b.l3n.co/i/lDzDuA.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDzP8M.jpeg"><img src="https://c.l3n.co/i/lDzP8M.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDzfQQ.jpeg"><img src="https://b.l3n.co/i/lDzfQQ.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDSpHk.jpeg"><img src="https://b.l3n.co/i/lDSpHk.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDS9sD.jpeg"><img src="https://a.l3n.co/i/lDS9sD.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDzvRF.jpeg"><img src="https://c.l3n.co/i/lDzvRF.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDzL73.jpeg"><img src="https://a.l3n.co/i/lDzL73.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDSVg0.jpeg"><img src="https://c.l3n.co/i/lDSVg0.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDSdDq.jpeg"><img src="https://c.l3n.co/i/lDSdDq.jpeg"/></a></div>
 						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDzXTk.jpeg"><img src="https://a.l3n.co/i/lDzXTk.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDzUye.jpeg"><img src="https://c.l3n.co/i/lDzUye.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDzb7x.jpeg"><img src="https://c.l3n.co/i/lDzb7x.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDzFea.jpeg"><img src="https://a.l3n.co/i/lDzFea.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDSHgH.jpeg"><img src="https://c.l3n.co/i/lDSHgH.jpeg"/></a></div></div>
 					</div>
 				</div>
-				<p>In the south end of the botanical garden is a rose garden.
-				The rose garden has a French touch to it.
-				There are statues of western women in the garden and a duck relaxed in front of a fountain.
-				As the sun slowly set a gardener trimmed a red rose bush and the visitors took a few last pictures of the flowers.</p>
-				<div class="photosec">
+				<p>
+					North of the bonsai exhibition is the perennial garden.
+			There is a ditch with water between the flowers and damselflies laid eggs in between the lily pads.
+			A woman passed by in the garden with clothes that matched the colors of the flowers well.
+			Meanwhile a hornet flew into the garden and landed on a nearby handrail.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDSeWK.jpeg"><img src="https://b.l3n.co/i/lDSeWK.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDSn9Z.jpeg"><img src="https://a.l3n.co/i/lDSn9Z.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDSLGm.jpeg"><img src="https://b.l3n.co/i/lDSLGm.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDSl31.jpeg"><img src="https://a.l3n.co/i/lDSl31.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDS2QP.jpeg"><img src="https://a.l3n.co/i/lDS2QP.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDSiTo.jpeg"><img src="https://a.l3n.co/i/lDSiTo.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDSjO9.jpeg"><img src="https://b.l3n.co/i/lDSjO9.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDSUW5.jpeg"><img src="https://a.l3n.co/i/lDSUW5.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDSA5i.jpeg"><img src="https://b.l3n.co/i/lDSA5i.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDS8nm.jpeg"><img src="https://c.l3n.co/i/lDS8nm.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDSc9z.jpeg"><img src="https://b.l3n.co/i/lDSc9z.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDSxk7.jpeg"><img src="https://a.l3n.co/i/lDSxk7.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDSar3.jpeg"><img src="https://c.l3n.co/i/lDSar3.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDSylr.jpeg"><img src="https://b.l3n.co/i/lDSylr.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDzwUH.jpeg"><img src="https://a.l3n.co/i/lDzwUH.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzyZ1.jpeg"><img src="https://b.l3n.co/i/lDzyZ1.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDzhAZ.jpeg"><img src="https://c.l3n.co/i/lDzhAZ.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDzGuK.jpeg"><img src="https://b.l3n.co/i/lDzGuK.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDegbk.jpeg"><img src="https://c.l3n.co/i/lDegbk.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDe2ND.jpeg"><img src="https://a.l3n.co/i/lDe2ND.jpeg"></a></div>
-						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDz5mc.jpeg"><img src="https://a.l3n.co/i/lDz5mc.jpeg"/></a></div></div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDSXLT.jpeg"><img src="https://b.l3n.co/i/lDSXLT.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDSP3v.jpeg"><img src="https://c.l3n.co/i/lDSP3v.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDSuX9.jpeg"><img src="https://a.l3n.co/i/lDSuX9.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDejaQ.jpeg"><img src="https://b.l3n.co/i/lDejaQ.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDSgsC.jpeg"><img src="https://c.l3n.co/i/lDSgsC.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDS0c2.jpeg"><img src="https://c.l3n.co/i/lDS0c2.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDSZZv.jpeg"><img src="https://b.l3n.co/i/lDSZZv.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDeWdA.jpeg"><img src="https://b.l3n.co/i/lDeWdA.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDeiLM.jpeg"><img src="https://c.l3n.co/i/lDeiLM.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/lDekdK.jpeg"><img src="https://a.l3n.co/i/lDekdK.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDeRP1.jpeg"><img src="https://c.l3n.co/i/lDeRP1.jpeg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDetrx.jpeg"><img src="https://b.l3n.co/i/lDetrx.jpeg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDe6MZ.jpeg"><img src="https://c.l3n.co/i/lDe6MZ.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDeCaP.jpeg"><img src="https://b.l3n.co/i/lDeCaP.jpeg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/lDeQ6m.jpeg"><img src="https://c.l3n.co/i/lDeQ6m.jpeg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDSru5.jpeg"><img src="https://a.l3n.co/i/lDSru5.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDS1Az.jpeg"><img src="https://b.l3n.co/i/lDS1Az.jpeg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>That is Kyoto Botanical Garden.
-				The spacious garden is quiet and you may sit by the pond or in the conservatory and study or paint if you like to.
-				Unfortunately, not all places of the garden were captured for the current album.
-				For example, the plum garden and the bamboo garden were left out.
-				If you like plants and are in Kyoto then Kyoto Botanical Garden is worth a visit.</p>
-				<div class="photosec">
+				<p>
+					To the East (about the middle of the North half of the garden) is Nakaragi Shrine.
+			To the West, North and East side of the shrine it is surrounded by ponds, and further surrounding everything are different types of grooves which are connected with cozy bridges.
+			A man threw in feed for the catfish, meanwhile a woman sat in one of the pavilions and painted the landscape.
+			Water striders ran around on the water surface with their shadows cast onto the bottom of the pond.
+			The forest shade danced gently on the ground and a watermill to the North spun slowly.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/lDemPv.jpeg"><img src="https://a.l3n.co/i/lDemPv.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/lDeBK2.jpeg"><img src="https://b.l3n.co/i/lDeBK2.jpeg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/lDe9bo.jpeg"><img src="https://b.l3n.co/i/lDe9bo.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDp353.jpeg"><img src="https://c.l3n.co/i/lDp353.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDpKE0.jpeg"><img src="https://b.l3n.co/i/lDpKE0.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDp7cq.jpeg"><img src="https://a.l3n.co/i/lDp7cq.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/lDeqt9.jpeg"><img src="https://c.l3n.co/i/lDeqt9.jpeg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/lDeVzi.jpeg"><img src="https://a.l3n.co/i/lDeVzi.jpeg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDpHgA.jpeg"><img src="https://c.l3n.co/i/lDpHgA.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDplsM.jpeg"><img src="https://b.l3n.co/i/lDplsM.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDpeAa.jpeg"><img src="https://c.l3n.co/i/lDpeAa.jpeg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDe3jC.jpeg"><img src="https://b.l3n.co/i/lDe3jC.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/lDeKMz.jpeg"><img src="https://b.l3n.co/i/lDeKMz.jpeg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/lDe4d5.jpeg"><img src="https://c.l3n.co/i/lDe4d5.jpeg"></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDpnVe.jpeg"><img src="https://a.l3n.co/i/lDpnVe.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDpvvk.jpeg"><img src="https://b.l3n.co/i/lDpvvk.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDzMU0.jpeg"><img src="https://c.l3n.co/i/lDzMU0.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDzoID.jpeg"><img src="https://a.l3n.co/i/lDzoID.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDzumq.jpeg"><img src="https://c.l3n.co/i/lDzumq.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDzDuA.jpeg"><img src="https://b.l3n.co/i/lDzDuA.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDzP8M.jpeg"><img src="https://c.l3n.co/i/lDzP8M.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDzfQQ.jpeg"><img src="https://b.l3n.co/i/lDzfQQ.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDzvRF.jpeg"><img src="https://c.l3n.co/i/lDzvRF.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDzL73.jpeg"><img src="https://a.l3n.co/i/lDzL73.jpeg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDzXTk.jpeg"><img src="https://a.l3n.co/i/lDzXTk.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDzUye.jpeg"><img src="https://c.l3n.co/i/lDzUye.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDzb7x.jpeg"><img src="https://c.l3n.co/i/lDzb7x.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDzFea.jpeg"><img src="https://a.l3n.co/i/lDzFea.jpeg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					In the south end of the botanical garden is a rose garden.
+			The rose garden has a French touch to it.
+			There are statues of western women in the garden and a duck relaxed in front of a fountain.
+			As the sun slowly set a gardener trimmed a red rose bush and the visitors took a few last pictures of the flowers.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDSeWK.jpeg"><img src="https://b.l3n.co/i/lDSeWK.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDSn9Z.jpeg"><img src="https://a.l3n.co/i/lDSn9Z.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDSLGm.jpeg"><img src="https://b.l3n.co/i/lDSLGm.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDSl31.jpeg"><img src="https://a.l3n.co/i/lDSl31.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDSUW5.jpeg"><img src="https://a.l3n.co/i/lDSUW5.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDSc9z.jpeg"><img src="https://b.l3n.co/i/lDSc9z.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDSxk7.jpeg"><img src="https://a.l3n.co/i/lDSxk7.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDSar3.jpeg"><img src="https://c.l3n.co/i/lDSar3.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDSylr.jpeg"><img src="https://b.l3n.co/i/lDSylr.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDegbk.jpeg"><img src="https://c.l3n.co/i/lDegbk.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDe2ND.jpeg"><img src="https://a.l3n.co/i/lDe2ND.jpeg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDSXLT.jpeg"><img src="https://b.l3n.co/i/lDSXLT.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDSP3v.jpeg"><img src="https://c.l3n.co/i/lDSP3v.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDSuX9.jpeg"><img src="https://a.l3n.co/i/lDSuX9.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDejaQ.jpeg"><img src="https://b.l3n.co/i/lDejaQ.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDeWdA.jpeg"><img src="https://b.l3n.co/i/lDeWdA.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDeiLM.jpeg"><img src="https://c.l3n.co/i/lDeiLM.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/lDekdK.jpeg"><img src="https://a.l3n.co/i/lDekdK.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDeRP1.jpeg"><img src="https://c.l3n.co/i/lDeRP1.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDetrx.jpeg"><img src="https://b.l3n.co/i/lDetrx.jpeg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDe6MZ.jpeg"><img src="https://c.l3n.co/i/lDe6MZ.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDeCaP.jpeg"><img src="https://b.l3n.co/i/lDeCaP.jpeg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/lDeQ6m.jpeg"><img src="https://c.l3n.co/i/lDeQ6m.jpeg"/></a></div>
+						</div>
+					</div>
+				</div>
+				<p>
+					That is Kyoto Botanical Garden.
+			The spacious garden is quiet and you may sit by the pond or in the conservatory and study or paint if you like to.
+			Unfortunately, not all places of the garden were captured for the current album.
+			For example, the plum garden and the bamboo garden were left out.
+			If you like plants and are in Kyoto then Kyoto Botanical Garden is worth a visit.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/lDemPv.jpeg"><img src="https://a.l3n.co/i/lDemPv.jpeg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/lDeBK2.jpeg"><img src="https://b.l3n.co/i/lDeBK2.jpeg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/lDe9bo.jpeg"><img src="https://b.l3n.co/i/lDe9bo.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/lDeqt9.jpeg"><img src="https://c.l3n.co/i/lDeqt9.jpeg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/lDeVzi.jpeg"><img src="https://a.l3n.co/i/lDeVzi.jpeg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDe3jC.jpeg"><img src="https://b.l3n.co/i/lDe3jC.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/lDeKMz.jpeg"><img src="https://b.l3n.co/i/lDeKMz.jpeg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/lDe4d5.jpeg"><img src="https://c.l3n.co/i/lDe4d5.jpeg"/></a></div></div>
 					</div>
 				</div>
 			</div>
@@ -1224,48 +1311,48 @@
 				</tr>
 				<tr>
 					<td>Sessions</td>
-					<td>2 sessions</td>
+					<td trygrab="session">2&ensp;sessions</td>
 				</tr>
 				<tr>
 					<td>Destination</td>
-					<td>
-						Kyoto (京都)
-						<ol><li>Kyoto Botanical Garden (京都植物園)</li></ol>
-					</td>
+					<td>Botanical Garden&ensp;(植物園),&ensp;Kyoto&ensp;(京都)</td>
 				</tr>
+				
+				
 			</table>
-			<hr>
-			<a href="https://crasywolfang.com/en/post/2206lubo">
+			<hr/>
+			<a href="K:/CWOLF/export/en/post/2207oasf.html">
 				<div class="photoCard">
-					<h1>Lund Botanical Garden</h1>
-					<span class="card-left">Botanic photography</span>
-					<span class="card-right">2024-06-22</span>
-					<img src="https://b.l3n.co/i/zHZj3o.jpeg">
-					<span class="card-right">Lund, June 2022</span>
+					<h1 format="single">Oasen Flower Shop</h1>
+					<span class="card-left" format="single">Botanic photography<small> (55 photos)</small></span>
+					<span class="card-right">2023-07-31</span>
+					<img src="https://b.l3n.co/i/Q2wFFQ.jpeg"/>
+					<span class="card-right" format="single">Malmö,&ensp;July&ensp;2022</span>
 				</div>
 			</a>
-			<a href="https://crasywolfang.com/en/post/2206otzo">
+			<a href="K:/CWOLF/export/en/post/2208skdp.html">
 				<div class="photoCard">
-					<h1>Tennoji Zoo</h1>
-					<span class="card-left">Zoo photography</span>
+					<h1 format="single">Skånes Djurpark</h1>
+					<span class="card-left" format="single">Zoo photography<small> (144 photos)</small></span>
 					<span class="card-right">2024-06-22</span>
-					<img src="https://c.l3n.co/i/lDYvLC.jpeg">
-					<span class="card-right">Osaka, June 2022</span>
+					<img src="https://c.l3n.co/i/lDYYkz.jpeg"/>
+					<span class="card-right" format="single">Höör,&ensp;August&ensp;2022</span>
 				</div>
 			</a>
-			<a href="https://crasywolfang.com/en/post/2208skdp">
+			
+			<a href="K:/CWOLF/export/en/post/2206lubo.html">
 				<div class="photoCard">
-					<h1>Skånes Djurpark</h1>
-					<span class="card-left">Zoo photography</span>
+					<h1 format="single">Lund Botanical Garden</h1>
+					<span class="card-left" format="single">Botanic photography<small> (271 photos)</small></span>
 					<span class="card-right">2024-06-22</span>
-					<img src="https://c.l3n.co/i/lDYYkz.jpeg">
-					<span class="card-right">Höör, August 2022</span>
+					<img src="https://b.l3n.co/i/zHZj3o.jpeg"/>
+					<span class="card-right" format="single">Lund,&ensp;June&mdash;July&ensp;2022</span>
 				</div>
 			</a>
 			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
+				<hr/>©CrasyWolfang 2014-2025
 				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
+				<a href="#top">top ↑</a>
 			</div>
 		</div>
 	</body>

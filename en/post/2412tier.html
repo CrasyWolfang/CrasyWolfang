@@ -1,0 +1,725 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			width: 100%;
+		}
+		.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+		}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="K:/CWOLF/export/en/post/2412tier.html">English</a> | <a href="K:/CWOLF/export/jp/post/2412tier.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="K:/CWOLF/export/en/home.html">Home</a></li>
+					<li><a href="K:/CWOLF/export/en/photo.html">Photography</a></li>
+					
+					<li><a href="K:/CWOLF/export/en/about.html">About</a></li>
+				</ul>
+			</nav>
+			
+			
+			<div class="title">
+				<h1>Tierpark</h1>
+				<span class="title-left">Zoo photography</span>
+				<span class="title-right">
+					<div format="single"><span class="grey">published:&ensp;</span>TO COME</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<p>
+					The photos below are taken in Berlin Tierpark.
+			"Tierpark" means "animal park" in German and often Berlin Tierpark is mistakenly called "Berlin Zoo," however Berlin has two zoos and "Berlin Zoo" refers to the park built in West Berlin.
+			The animal park in East Berlin was established in 1955 to counter the zoo in West Berlin.<sup format="single"><abbr class="ref" title="Tierpark Berlin">ref</abbr></sup>
+			The estate that the animal park is centered around was inhabited by nobels until 1945 when the Red Army occupied East Berlin and the nobles were evicted.<sup format="single"><abbr class="ref" title="Schloss Friedrichsfelde">ref</abbr></sup>
+			The animal park has since then become the largest in Europe.
+</p>
+				<p>
+			It was a cold December morning when the photographer entered the zoo.
+			Fog hung over Berlin on that day.
+			Besides the photographer's friend, there was nobody but a man walking his dog at the zoo in the morning.
+			As they walked in they looked up on the blue tits that were playing on the Christmas tree ornaments.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMW3U0.jpg"><img src="https://a.l3n.co/i/NMW3U0.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMWpmq.jpg"><img src="https://a.l3n.co/i/NMWpmq.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMW7uA.jpg"><img src="https://d.l3n.co/i/NMW7uA.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMWKID.jpg"><img src="https://d.l3n.co/i/NMWKID.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					The photographer walked over to the bird section first.
+			The birds differed vastly in their personality.
+			Some birds screamed in fear as they saw the photographer, and some other birds came up to the camera as if they were trying to make friends.
+			Well, truth to be told was that probably half of the birds tried to run away and hide which made it difficult to photograph them.
+			Besides the bird cages there was also a squirrel on top and some of Berlin's wild birds in the trees.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWzea.jpg"><img src="https://a.l3n.co/i/NMWzea.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMWH8M.jpg"><img src="https://a.l3n.co/i/NMWH8M.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMWlQQ.jpg"><img src="https://d.l3n.co/i/NMWlQQ.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMABPc.jpg"><img src="https://b.l3n.co/i/NMABPc.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMWSye.jpg"><img src="https://c.l3n.co/i/NMWSye.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWYZ1.jpg"><img src="https://a.l3n.co/i/NMWYZ1.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMWomc.jpg"><img src="https://b.l3n.co/i/NMWomc.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMWF5i.jpg"><img src="https://c.l3n.co/i/NMWF5i.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMWXO9.jpg"><img src="https://b.l3n.co/i/NMWXO9.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/NMWcTo.jpg"><img src="https://a.l3n.co/i/NMWcTo.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMW5u5.jpg"><img src="https://d.l3n.co/i/NMW5u5.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/NMWhVT.jpg"><img src="https://c.l3n.co/i/NMWhVT.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/NMi2nb.jpg"><img src="https://a.l3n.co/i/NMi2nb.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWfnm.jpg"><img src="https://a.l3n.co/i/NMWfnm.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWnTk.jpg"><img src="https://a.l3n.co/i/NMWnTk.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMWv7x.jpg"><img src="https://d.l3n.co/i/NMWv7x.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMWLUH.jpg"><img src="https://b.l3n.co/i/NMWLUH.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMWNAZ.jpg"><img src="https://b.l3n.co/i/NMWNAZ.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMWPQP.jpg"><img src="https://d.l3n.co/i/NMWPQP.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMWysC.jpg"><img src="https://b.l3n.co/i/NMWysC.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMWaAz.jpg"><img src="https://b.l3n.co/i/NMWaAz.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMi857.jpg"><img src="https://b.l3n.co/i/NMi857.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMiWEr.jpg"><img src="https://a.l3n.co/i/NMiWEr.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMiIg0.jpg"><img src="https://d.l3n.co/i/NMiIg0.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMiZsD.jpg"><img src="https://a.l3n.co/i/NMiZsD.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMigDq.jpg"><img src="https://d.l3n.co/i/NMigDq.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMitWA.jpg"><img src="https://a.l3n.co/i/NMitWA.jpg"/></a></div></div>
+					</div>
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWuuK.jpg"><img src="https://a.l3n.co/i/NMWuuK.jpg"/></a></div></div></div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMWbc2.jpg"><img src="https://d.l3n.co/i/NMWbc2.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMijc3.jpg"><img src="https://b.l3n.co/i/NMijc3.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWxZv.jpg"><img src="https://a.l3n.co/i/NMWxZv.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMi1VM.jpg"><img src="https://d.l3n.co/i/NMi1VM.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMiRvQ.jpg"><img src="https://b.l3n.co/i/NMiRvQ.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					Next up are the polar bears.
+			As usual, polar bears in parks are popular, however, since the day was cold the audience was small.
+			Tierpark has two polar bears, the mother "Tonja" and her daughter "Hertha."
+			The park faced controversy when Hertha was born as her parents are siblings.<sup format="single"><abbr class="ref" title="Guy">ref</abbr></sup>
+			Of course the caretaker didn't mention any of that while he fed the bears with apples and carrots.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMiT5a.jpg"><img src="https://a.l3n.co/i/NMiT5a.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMiCcx.jpg"><img src="https://d.l3n.co/i/NMiCcx.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/NMikEe.jpg"><img src="https://c.l3n.co/i/NMikEe.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/NMi6Hk.jpg"><img src="https://a.l3n.co/i/NMi6Hk.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMiQgH.jpg"><img src="https://b.l3n.co/i/NMiQgH.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					Afterwards the photographer and his friend decided to head for the park building to warm themselves up.
+			On the way they went past the enclosure for a bunch of other animals.
+			Owls, seagulls, donkeys, monkeys.
+			Terrifying enough, one of the monkeys had caught a wild pigeon which it was eating in its enclosure.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMi9Dc.jpg"><img src="https://c.l3n.co/i/NMi9Dc.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMiV31.jpg"><img src="https://a.l3n.co/i/NMiV31.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMiqWK.jpg"><img src="https://b.l3n.co/i/NMiqWK.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMiB9Z.jpg"><img src="https://c.l3n.co/i/NMiB9Z.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMimvP.jpg"><img src="https://d.l3n.co/i/NMimvP.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMisGm.jpg"><img src="https://b.l3n.co/i/NMisGm.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMi4ki.jpg"><img src="https://c.l3n.co/i/NMi4ki.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMiKHo.jpg"><img src="https://d.l3n.co/i/NMiKHo.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMA3qZ.jpg"><img src="https://b.l3n.co/i/NMA3qZ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMAsjK.jpg"><img src="https://a.l3n.co/i/NMAsjK.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMiiOF.jpg"><img src="https://d.l3n.co/i/NMiiOF.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/NMipX9.jpg"><img src="https://c.l3n.co/i/NMipX9.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMiOr2.jpg"><img src="https://b.l3n.co/i/NMiOr2.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMiH3v.jpg"><img src="https://d.l3n.co/i/NMiH3v.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					Inside the atmosphere changed.
+			Suddenly there were plenty of visitors and their voices echoed through the hallway.
+			The camera lens had fogged up (this is a common issue when photographing in cold weather) so the photographer took a break.
+			The building is the "Rainforest House" and along the wall it hosts different lizards and snakes.
+			The middle of the house consists of a groove which visitors can go inside and within they can find crocodiles and birds.
+			Lastly, at the end of the corridor is a tiger and her cups which at this time were in the middle of a nap.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMiSW5.jpg"><img src="https://b.l3n.co/i/NMiSW5.jpg"/></a></div></div></div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMAefC.jpg"><img src="https://c.l3n.co/i/NMAefC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMA7Ci.jpg"><img src="https://d.l3n.co/i/NMA7Ci.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMAHw9.jpg"><img src="https://d.l3n.co/i/NMAHw9.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMinLT.jpg"><img src="https://a.l3n.co/i/NMinLT.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMivGb.jpg"><img src="https://c.l3n.co/i/NMivGb.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMAvj5.jpg"><img src="https://b.l3n.co/i/NMAvj5.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMie9z.jpg"><img src="https://d.l3n.co/i/NMie9z.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMA4MP.jpg"><img src="https://d.l3n.co/i/NMA4MP.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMAKhm.jpg"><img src="https://a.l3n.co/i/NMAKhm.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMiMk7.jpg"><img src="https://d.l3n.co/i/NMiMk7.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMAOzo.jpg"><img src="https://b.l3n.co/i/NMAOzo.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMioXF.jpg"><img src="https://c.l3n.co/i/NMioXF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMiN40.jpg"><img src="https://b.l3n.co/i/NMiN40.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMiPND.jpg"><img src="https://d.l3n.co/i/NMiPND.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMiFiq.jpg"><img src="https://c.l3n.co/i/NMiFiq.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMicLM.jpg"><img src="https://b.l3n.co/i/NMicLM.jpg"/></a></div></div>
+					</div>
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMiDr3.jpg"><img src="https://d.l3n.co/i/NMiDr3.jpg"/></a></div></div></div>
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMjIzi.jpg"><img src="https://b.l3n.co/i/NMjIzi.jpg"/></a></div></div></div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMiGrx.jpg"><img src="https://c.l3n.co/i/NMiGrx.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMj8ic.jpg"><img src="https://d.l3n.co/i/NMj8ic.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMihP1.jpg"><img src="https://c.l3n.co/i/NMihP1.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/NMjkMz.jpg"><img src="https://c.l3n.co/i/NMjkMz.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMjWMZ.jpg"><img src="https://d.l3n.co/i/NMjWMZ.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMia4H.jpg"><img src="https://a.l3n.co/i/NMia4H.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMjAdK.jpg"><img src="https://b.l3n.co/i/NMjAdK.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMj6hT.jpg"><img src="https://a.l3n.co/i/NMj6hT.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMjiaP.jpg"><img src="https://c.l3n.co/i/NMjiaP.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMjZbo.jpg"><img src="https://d.l3n.co/i/NMjZbo.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMjrt9.jpg"><img src="https://b.l3n.co/i/NMjrt9.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMj1Pv.jpg"><img src="https://c.l3n.co/i/NMj1Pv.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMjTjC.jpg"><img src="https://b.l3n.co/i/NMjTjC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMjtK2.jpg"><img src="https://d.l3n.co/i/NMjtK2.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMj06m.jpg"><img src="https://d.l3n.co/i/NMj06m.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMjEd5.jpg"><img src="https://a.l3n.co/i/NMjEd5.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMilNC.jpg"><img src="https://a.l3n.co/i/NMilNC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMiYlr.jpg"><img src="https://a.l3n.co/i/NMiYlr.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMAz12.jpg"><img src="https://a.l3n.co/i/NMAz12.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMixle.jpg"><img src="https://b.l3n.co/i/NMixle.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMASKv.jpg"><img src="https://b.l3n.co/i/NMASKv.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMiwka.jpg"><img src="https://c.l3n.co/i/NMiwka.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMiXaQ.jpg"><img src="https://d.l3n.co/i/NMiXaQ.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					Outside of the rainforest house, vultures were hugging themselves to the cliff walls to try to keep themselves away from the cold.
+			At that point the tigers had woken up from their nap and could be found outside playing.
+			East of the building, one of the caretakers prepared food and when he walked into the enclosure the penguins all gathered around him.
+			He fed the penguins and told stories about them.
+			Wild seagulls and herons also came to the enclosure to snatch some fish when the opportunity struck them.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMiybk.jpg"><img src="https://a.l3n.co/i/NMiybk.jpg"/></a></div></div></div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMAMYT.jpg"><img src="https://d.l3n.co/i/NMAMYT.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMALqz.jpg"><img src="https://a.l3n.co/i/NMALqz.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMAYhb.jpg"><img src="https://c.l3n.co/i/NMAYhb.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMAuC7.jpg"><img src="https://b.l3n.co/i/NMAuC7.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMjHwe.jpg"><img src="https://b.l3n.co/i/NMjHwe.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMjOza.jpg"><img src="https://c.l3n.co/i/NMjOza.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMj4YA.jpg"><img src="https://c.l3n.co/i/NMj4YA.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMjKhM.jpg"><img src="https://d.l3n.co/i/NMjKhM.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMj3qq.jpg"><img src="https://d.l3n.co/i/NMj3qq.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMj7CQ.jpg"><img src="https://a.l3n.co/i/NMj7CQ.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMjVwr.jpg"><img src="https://d.l3n.co/i/NMjVwr.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMjJ6b.jpg"><img src="https://d.l3n.co/i/NMjJ6b.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMjqK3.jpg"><img src="https://a.l3n.co/i/NMjqK3.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMjBf0.jpg"><img src="https://d.l3n.co/i/NMjBf0.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMjsjD.jpg"><img src="https://c.l3n.co/i/NMjsjD.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMjdtF.jpg"><img src="https://c.l3n.co/i/NMjdtF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMjQz7.jpg"><img src="https://a.l3n.co/i/NMjQz7.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					In the giraffe enclosure there was only a lonely rabbit which was eating from the hay.
+			The sun was slowly setting and the giraffes had gone into their stable for the evening.
+			Inside there were also young giraffes and they were scratching themselves against the fence.
+			The naked mole rat exhibition was also located in the stable.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMjuCP.jpg"><img src="https://d.l3n.co/i/NMjuCP.jpg"/></a></div></div></div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMAGSe.jpg"><img src="https://c.l3n.co/i/NMAGSe.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMAf13.jpg"><img src="https://d.l3n.co/i/NMAf13.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMAaxk.jpg"><img src="https://d.l3n.co/i/NMAaxk.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMW21x.jpg"><img src="https://b.l3n.co/i/NMW21x.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMWAF1.jpg"><img src="https://d.l3n.co/i/NMWAF1.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMW8pH.jpg"><img src="https://a.l3n.co/i/NMW8pH.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMADSr.jpg"><img src="https://c.l3n.co/i/NMADSr.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMANwF.jpg"><img src="https://a.l3n.co/i/NMANwF.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMjDSm.jpg"><img src="https://c.l3n.co/i/NMjDSm.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				<p>
+					As the dark fell the fog didn't clear up and the animals slowly faded away with the dim mist.
+			As the photographer took a few last photos of sleeping animals a guard came over and asked to leave the park.
+			Night fell upon the animal park, beams of light started to sway in the dark and visitors who had come for the Christmas event on this day poured in.
+			The photographer and his friend went up the stream and exited the park.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMAFp0.jpg"><img src="https://b.l3n.co/i/NMAFp0.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMW0oZ.jpg"><img src="https://d.l3n.co/i/NMW0oZ.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMWjBK.jpg"><img src="https://c.l3n.co/i/NMWjBK.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWi0c.jpg"><img src="https://a.l3n.co/i/NMWi0c.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMWV8T.jpg"><img src="https://c.l3n.co/i/NMWV8T.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMjz1k.jpg"><img src="https://c.l3n.co/i/NMjz1k.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/NMjSKx.jpg"><img src="https://b.l3n.co/i/NMjSKx.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMWrei.jpg"><img src="https://d.l3n.co/i/NMWrei.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMjefH.jpg"><img src="https://a.l3n.co/i/NMjefH.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMjo2Z.jpg"><img src="https://b.l3n.co/i/NMjo2Z.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMjv01.jpg"><img src="https://d.l3n.co/i/NMjv01.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMjLqc.jpg"><img src="https://c.l3n.co/i/NMjLqc.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMWtxo.jpg"><img src="https://b.l3n.co/i/NMWtxo.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMWRR9.jpg"><img src="https://d.l3n.co/i/NMWRR9.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMWT72.jpg"><img src="https://b.l3n.co/i/NMWT72.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMWCB5.jpg"><img src="https://b.l3n.co/i/NMWCB5.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMWEFv.jpg"><img src="https://d.l3n.co/i/NMWEFv.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/NMW6IC.jpg"><img src="https://c.l3n.co/i/NMW6IC.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMWJoz.jpg"><img src="https://d.l3n.co/i/NMWJoz.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMAUfD.jpg"><img src="https://c.l3n.co/i/NMAUfD.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/NMW9Jb.jpg"><img src="https://b.l3n.co/i/NMW9Jb.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/NMWZ2P.jpg"><img src="https://a.l3n.co/i/NMWZ2P.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/NMAX0q.jpg"><img src="https://a.l3n.co/i/NMAX0q.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/NMWgJm.jpg"><img src="https://b.l3n.co/i/NMWgJm.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/i/NMA5Ca.jpg"><img src="https://d.l3n.co/i/NMA5Ca.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMAbBA.jpg"><img src="https://c.l3n.co/i/NMAbBA.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/i/NMAwYM.jpg"><img src="https://d.l3n.co/i/NMAwYM.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/NMAy2Q.jpg"><img src="https://c.l3n.co/i/NMAy2Q.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/i/NMWqyr.jpg"><img src="https://d.l3n.co/i/NMWqyr.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/NMWde7.jpg"><img src="https://c.l3n.co/i/NMWde7.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/NMWmRF.jpg"><img src="https://a.l3n.co/i/NMWmRF.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/NMWs73.jpg"><img src="https://c.l3n.co/i/NMWs73.jpg"/></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>Photographer</td>
+					<td>Crasy Wolfang</td>
+				</tr>
+				<tr>
+					<td>Sessions</td>
+					<td>1 session</td>
+				</tr>
+				<tr>
+					<td>Destination</td>
+					<td>Tierpark,&ensp;Berlin</td>
+				</tr>
+				
+				<tr tryobj="reference">
+					<td>References</td>
+					<td class="creditref">
+						<ol>
+							<li>Tierpark Berlin.&ensp;<i>History</i>.&ensp;HP.&ensp;Url:&ensp;<a href="https://www.tierpark-berlin.de/en/about-the-tierpark/history">https://www.tierpark-berlin.de/en/about-the-tierpark/history</a>&ensp;[2025-08-26].</li>
+							<li>Schloss Friedrichsfelde.&ensp;<i>Die Geschichte vom Schloss Friedrichsfelde</i>.&ensp;HP.&ensp;Url:&ensp;<a href="https://www.schloss-friedrichsfelde.de/geschichte-schloss-friedrichsfelde">https://www.schloss-friedrichsfelde.de/geschichte-schloss-friedrichsfelde</a>&ensp;[2025-08-26,&ensp;German].</li>
+							<li>Jack,&ensp;Guy.&ensp;<i>Berlin zoo says its polar bear cub’s parents were brother and sister</i>.&ensp;(CNN).&ensp;Url:&ensp;<a href="https://edition.cnn.com/2021/05/19/europe/berlin-zoo-polar-bear-incest-scli-intl/index.html">https://edition.cnn.com/2021/05/19/europe/berlin-zoo-polar-bear-incest-scli-intl/index.html</a>&ensp;[2025-08-26].</li>
+						</ol>
+					</td>
+				</tr>
+			</table>
+			<hr/>
+			
+			
+			
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2025
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>

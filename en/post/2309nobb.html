@@ -1,191 +1,211 @@
-<!DOCTYPE html>
+<!DOCTYPE>
+
+
 <html>
 	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
 		<style>
 			body{background-color: #000000;}
-			a{
+		a{
 			color: #D3D3D3;
 			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
 			color: #ffffff;
 			max-width: 1200px;
 			min-width: 640px;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
 			color: #ffffff;
 			text-decoration: none;
-			}
-			#header img{
+		}
+		#header img{
 			display: block;
 			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
 			margin: 0em;
 			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
 			display: inline;
 			padding: 0em;
 			font-size: 1.3em;
 			border: 2px solid #808080;
-			}
-			#topMenu a{
+		}
+		#topMenu a{
 			padding-top: 0em;
 			padding-bottom: 0em;
 			padding-left: 2em;
 			padding-right: 2em;
 			color: #ffffff;
-			}
-			#bottom{
+		}
+		#bottom{
 			color: #808080;
 			background-color: #000000;
-			}
-			.update{
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
 			margin: 0.5em;
 			padding-top: 1em;
 			padding-bottom: 1em;
 			padding-left: 2em;
 			padding-right: 2em;
 			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
 			max-width: 80%;
 			max-height: 800px;
-			}
-			.updatePosts img{
+		}
+		.updatePosts img{
 			max-height: 800px;
-			}
-			.updatePosts ul{
+		}
+		.updatePosts ul{
 			max-width: 600px;
 			margin-right: auto;
 			margin-left: auto;
-			}
-			.update .image{
+		}
+		.update .image{
 			width: 80%;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			.update .date{
+		}
+		.update .date{
 			color: #808080;
 			text-align: right;
-			}
-			.flowbutton {
+		}
+		
+		.flowbutton {
 			padding: 1em;
 			gap: 1em;
-			}
-			.flowbutton li{
+		}
+		.flowbutton li{
 			list-style-type: none;
 			margin-top: 0.5em;
 			color: #ffffff;
 			border: 1px solid #ffffff;
 			text-align: center;
 			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			.catCard{
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
 			list-style: none;
 			padding-left: 0;
 			text-align: center;
 			font-size: 1.3em;
-			}
-			.catCard li{
+		}
+		.catCard li{
 			margin: 0.3em;
 			display: inline-block;
 			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
 			width: 240px;
 			display: block;
-			}
-			.catCard a{
+		}
+		.catCard a{
 			color: #ffffff;
 			display: block;
-			}
-			.title{
+			padding: 0.5em;
+		}
+		
+		.title{
 			margin-left: auto;
 			margin-right: auto;
 			max-width: 800px;
 			padding: 1em;
 			padding-bottom: 2em;
-			}
-			.title h1{
+		}
+		.title h1{
 			border-bottom: 1px solid;
 			width: 100%;
 			margin: 0px;
-			}
-			.subtitle{
+		}
+		.subtitle{
 			font-size: 0.8em;
 			color: #808080;
-			}
-			.title .grey {color: #808080;}
-			.title-left{float: left;}
-			.title-right{
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
 			float: right;
 			text-align: right;
-			}
-			.photo-content p{
+		}
+		
+		.photo-content p{
 			padding-left: 1em;
 			padding-right: 1em;
 			text-indent: 2em;
-			}
-			.note {
+		}
+		.note {
 			margin: 1em;
 			border: 1px solid #ffffff;
-			}
-			.ref{
+		}
+		
+		.ref{
 			color: #D3D3D3;
 			text-decoration: none;
 			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			.photoCard{
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
 			color: #ffffff;
 			border: 2px solid #808080;
 			margin-top: 1em;
 			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
 			margin: 0px;
 			padding-left: 0.15em;
-			}
-			.card-left{
+		}
+		.card-left{
 			float: left;
 			padding-left: 0.4em;
-			}
-			.card-right{
+		}
+		.card-right{
 			float: right;
 			text-align: right;
 			padding-right: 0.4em;
-			}
-			.photoCard img{
+		}
+		.photoCard img{
 			width: 100%;
 			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			.imgWrap{
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
 			display: flex;
 			flex-direction: row;
 			gap: 0.5em;
@@ -194,251 +214,289 @@
 			margin-left: auto;
 			margin-right: auto;
 			justify-content: center;
-			}
-			.imgWrap img{
+			width: 100%;
+		}
+		.imgWrap img{
 			display: block;
 			max-width: 100%;
 			gap: 0.5em;
-			}
-			.bibliography ul{
+		}
+		
+		.bibliography ul{
 			list-style-type: none;
 			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
+		}
+		.bibliography li:not(:last-child) {
 			margin-bottom: 0.5em;
-			}
-			.largePhoto{
+		}
+		
+		.largePhoto{
 			border: 1px solid #ffffff;
 			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
+		}
+		.largePhotoUrl div{
 			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
+		}
+		.largePhotoTop{
 			text-indent: 1em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
 			font-size: 1.3em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
 			text-indent: 2em;
-			}
-			.largePhoto p{
+		}
+		.largePhoto p{
 			text-indent: 2em;
 			padding-left: 1em;
 			padding-right: 1em;
-			}
-			.credits{
+		}
+		
+		.credits{
 			width: 100%;
 			border-collapse: collapse;
-			}
-			.credits td{
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
 			border: 1px solid #ffffff;
 			padding: 0.3em;
 			padding-left: 1em;
-			}
-			.credits td:first-child {
+			color: #ffffff;
+		}
+		.credits td:first-child {
 			width: 12%;
 			white-space: nowrap;
-			}
+			padding-right: 1em;
+		}
 		</style>
 	</head>
 	<body>
 		<div id="container">
 			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/post/2309nobb">English</a> | <a href="https://www.CrasyWolfang.com/jp/post/2309nobb">日本語</a></div>
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="K:/CWOLF/export/en/post/2309nobb.html">English</a> | <a href="K:/CWOLF/export/jp/post/2309nobb.html">日本語</a></div>
 			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
 			<nav id="topMenu">
 				<ul>
-					<li><a href="https://www.CrasyWolfang.com/en/home">Home</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/photo">Photography</a></li>
-					<li><a href="https://www.CrasyWolfang.com/en/about">About</a></li>
+					<li><a href="K:/CWOLF/export/en/home.html">Home</a></li>
+					<li><a href="K:/CWOLF/export/en/photo.html">Photography</a></li>
+					
+					<li><a href="K:/CWOLF/export/en/about.html">About</a></li>
 				</ul>
 			</nav>
+			
+			
 			<div class="title">
 				<h1>Nöbbelöv's Marshland</h1>
 				<span class="title-left">Meadow photography</span>
 				<span class="title-right">
-					<span class="grey"">published: </span>
-					2025-02-03
+					<div format="single"><span class="grey">published:&ensp;</span>2025-02-03</div>
+					
 				</span>
 			</div>
 			<div class="photo-content">
-				<div class="photosec"><div class="photorow"><div class="imgWrap" style="width: 50%"><div class="img"><a href="https://b.l3n.co/i/M5nibc.jpg"><img src="https://b.l3n.co/i/M5nibc.jpg"></a></div></div></div></div>
-				<p>In North-West Lund there is a former town called Nobbelöv (now a part of the city).
-				Besides the 8-story apartment buildings in the center there are few buildings in this area that are more than 2 stories tall which makes the red church tower easy to spot against the blue sky.
-				The church exterior is oddly made out of red bricks (usually Scandinavian churches are covered in white mortar on the outside).
-				This church was founded in the small village in the 12th century but was demolished in 1899 and rebuilt in 1901.<sup><abbr class="ref" title="Norra Nobbelövs Församling, 1997">ref</abbr></sup></p>
-				<div class="photosec">
+				
+				<div class="photoblock"><div class="photorow"><div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/M5nibc.jpg"><img src="https://b.l3n.co/i/M5nibc.jpg"/></a></div></div></div></div>
+				<p>
+					In North-West Lund there is a former town called Nobbelöv (now a part of the city).
+			Besides the 8-story apartment buildings in the center there are few buildings in this area that are more than 2 stories tall which makes the red church tower easy to spot against the blue sky.
+			The church exterior is oddly made out of red bricks (usually Scandinavian churches are covered in white mortar on the outside).
+			This church was founded in the small village in the 12th century but was demolished in 1899 and rebuilt in 1901.<sup format="single"><abbr class="ref" title="Norra Nobbelövs Församling">ref</abbr></sup>
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5nVfT.jpg"><img src="https://a.l3n.co/i/M5nVfT.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/M5nQKz.jpg"><img src="https://b.l3n.co/i/M5nQKz.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5ntqi.jpg"><img src="https://b.l3n.co/i/M5ntqi.jpg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/M5nVfT.jpg"><img src="https://a.l3n.co/i/M5nVfT.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/M5nQKz.jpg"><img src="https://b.l3n.co/i/M5nQKz.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5ntqi.jpg"><img src="https://b.l3n.co/i/M5ntqi.jpg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>On the inside of the church there is nobody.
-				Light illuminates the church through the red, green and blue windows and in the dim church is a single lit candle.
-				In the very front, in a bright section of the room is an image of Jesus Christ and on the edge of the same table a yellow flower.</p>
-				<div class="photosec">
+				<p>
+					On the inside of the church there is nobody.
+			Light illuminates the church through the red, green and blue windows and in the dim church is a single lit candle.
+			In the very front, in a bright section of the room is an image of Jesus Christ and on the edge of the same table a yellow flower.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5n2ax.jpg"><img src="https://c.l3n.co/i/M5n2ax.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/M5n6wC.jpg"><img src="https://b.l3n.co/i/M5n6wC.jpg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/M5nkzv.jpg"><img src="https://a.l3n.co/i/M5nkzv.jpg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/M5n2ax.jpg"><img src="https://c.l3n.co/i/M5n2ax.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/M5n6wC.jpg"><img src="https://b.l3n.co/i/M5n6wC.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/M5nkzv.jpg"><img src="https://a.l3n.co/i/M5nkzv.jpg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/M5nJt5.jpg"><img src="https://a.l3n.co/i/M5nJt5.jpg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/M5nEC2.jpg"><img src="https://c.l3n.co/i/M5nEC2.jpg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/M5nJt5.jpg"><img src="https://a.l3n.co/i/M5nJt5.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/M5nEC2.jpg"><img src="https://c.l3n.co/i/M5nEC2.jpg"/></a></div>
 						</div>
 					</div>
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5ehMk.jpg"><img src="https://b.l3n.co/i/M5ehMk.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5n1Mo.jpg"><img src="https://c.l3n.co/i/M5n1Mo.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5nRh9.jpg"><img src="https://b.l3n.co/i/M5nRh9.jpg"></a></div>
-						</div>
-					</div>
-				</div>
-				<p>There isn't anyone to be seen outside either.
-				Dry autumn leaves lay scattered on the ground.
-				At a playground by the church colorful toys remain motionless.
-				At this little church, it wasn't until the 90s that a secret was revealed buried in the ground.
-				When they were digging up the ground to provide a waterline for the church the soldiers of Charles XI were discovered<sup><abbr class="ref" title="Norra Nobbelövs Församling, 1997">ref</abbr></sup>.
-				At this point the whereabouts of these dead bodies had been unknown for 300 years.</p>
-				<div class="photosec">
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5nBYr.jpg"><img src="https://b.l3n.co/i/M5nBYr.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5nrjm.jpg"><img src="https://c.l3n.co/i/M5nrjm.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5nZPP.jpg"><img src="https://b.l3n.co/i/M5nZPP.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5nmhF.jpg"><img src="https://a.l3n.co/i/M5nmhF.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5nIKZ.jpg"><img src="https://a.l3n.co/i/M5nIKZ.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5ndjb.jpg"><img src="https://c.l3n.co/i/M5ndjb.jpg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/M5nqq7.jpg"><img src="https://a.l3n.co/i/M5nqq7.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/M5nA6H.jpg"><img src="https://a.l3n.co/i/M5nA6H.jpg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/M5nWz1.jpg"><img src="https://c.l3n.co/i/M5nWz1.jpg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/M5ehMk.jpg"><img src="https://b.l3n.co/i/M5ehMk.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5n1Mo.jpg"><img src="https://c.l3n.co/i/M5n1Mo.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5nRh9.jpg"><img src="https://b.l3n.co/i/M5nRh9.jpg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>In 1676 the decisive battle between Sweden and Denmark took place in the frozen plains North.
-				In the battle 8, 9 thousand soldiers died and Sweden took the victory<sup><abbr class="ref" title="Norra Nobbelövs Församling, 1997">ref</abbr></sup><sup><abbr class="ref" title="Länsstyrelsen">ref</abbr></sup>.
-				Looking at the plains today it's hard to imagine that such a big battle took place out here.</p><p>In the South-West end of the plains is a mire.
-				The wet ground is enclosed by a wooden fence and geese have landed within to graze on grass.
-				There are willows growing alongside the path and a creek following the same path, and a woman walking her two dogs on.
-				This place only seems popular for strolls and bird watching.</p>
-				<div class="photosec">
+				<p>
+					There isn't anyone to be seen outside either.
+			Dry autumn leaves lay scattered on the ground.
+			At a playground by the church colorful toys remain motionless.
+			At this little church, it wasn't until the 90s that a secret was revealed buried in the ground.
+			When they were digging up the ground to provide a waterline for the church the soldiers of Charles XI were discovered<sup format="single"><abbr class="ref" title="Norra Nobbelövs Församling">ref</abbr></sup>.
+			At this point the whereabouts of these dead bodies had been unknown for 300 years.
+				</p>
+				
+				<div class="photoblock">
 					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5n4S0.jpg"><img src="https://c.l3n.co/i/M5n4S0.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5n0tK.jpg"><img src="https://c.l3n.co/i/M5n0tK.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5n3C3.jpg"><img src="https://b.l3n.co/i/M5n3C3.jpg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/M5nBYr.jpg"><img src="https://b.l3n.co/i/M5nBYr.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5nrjm.jpg"><img src="https://c.l3n.co/i/M5nrjm.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5nZPP.jpg"><img src="https://b.l3n.co/i/M5nZPP.jpg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/M5nKwD.jpg"><img src="https://a.l3n.co/i/M5nKwD.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5nHfM.jpg"><img src="https://b.l3n.co/i/M5nHfM.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5n71q.jpg"><img src="https://b.l3n.co/i/M5n71q.jpg"></a></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/M5nmhF.jpg"><img src="https://a.l3n.co/i/M5nmhF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/M5nIKZ.jpg"><img src="https://a.l3n.co/i/M5nIKZ.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5ndjb.jpg"><img src="https://c.l3n.co/i/M5ndjb.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/M5nqq7.jpg"><img src="https://a.l3n.co/i/M5nqq7.jpg"/></a></div>
 						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5nOpA.jpg"><img src="https://c.l3n.co/i/M5nOpA.jpg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5neYe.jpg"><img src="https://a.l3n.co/i/M5neYe.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5nz0Q.jpg"><img src="https://c.l3n.co/i/M5nz0Q.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5nSqa.jpg"><img src="https://b.l3n.co/i/M5nSqa.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5nv2k.jpg"><img src="https://b.l3n.co/i/M5nv2k.jpg"></a></div></div>
-					</div>
-				</div>
-				<p>West of the mire water flows out and cows graze on in the north end.
-				In the past the mire stretched across what are now fields which were drained in the 19th century for farming<sup><abbr class="ref" title="Lunds Komun">ref</abbr></sup>.
-				These days only the south-west part remains.
-				In the north a country house can be seen, and to the west a bunch of cars flow along the main road.
-				Above are hanging power lines and in the background wind turbines spin.
-				How different this place must have looked those 2-3 hundred years ago.</p>
-				<div class="photosec">
-					<div class="photorow"><div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5nLCx.jpg"><img src="https://c.l3n.co/i/M5nLCx.jpg"></a></div></div></div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://c.l3n.co/i/M5nFBm.jpg"><img src="https://c.l3n.co/i/M5nFBm.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/M5nDpK.jpg"><img src="https://b.l3n.co/i/M5nDpK.jpg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/M5nUoi.jpg"><img src="https://a.l3n.co/i/M5nUoi.jpg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5nYx1.jpg"><img src="https://b.l3n.co/i/M5nYx1.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5nu1c.jpg"><img src="https://c.l3n.co/i/M5nu1c.jpg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/M5nNFZ.jpg"><img src="https://a.l3n.co/i/M5nNFZ.jpg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/M5nMSH.jpg"><img src="https://a.l3n.co/i/M5nMSH.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/M5nf0P.jpg"><img src="https://b.l3n.co/i/M5nf0P.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5nX2o.jpg"><img src="https://b.l3n.co/i/M5nX2o.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/M5nwe2.jpg"><img src="https://b.l3n.co/i/M5nwe2.jpg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/M5nxxv.jpg"><img src="https://c.l3n.co/i/M5nxxv.jpg"></a></div>
-						</div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://a.l3n.co/i/M5nbJ9.jpg"><img src="https://a.l3n.co/i/M5nbJ9.jpg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/M5nGp5.jpg"><img src="https://a.l3n.co/i/M5nGp5.jpg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/M5naFz.jpg"><img src="https://c.l3n.co/i/M5naFz.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5v8Bb.jpg"><img src="https://c.l3n.co/i/M5v8Bb.jpg"></a></div>
-							<div class="img"><a href="https://a.l3n.co/i/M5vAo7.jpg"><img src="https://a.l3n.co/i/M5vAo7.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5vr7q.jpg"><img src="https://b.l3n.co/i/M5vr7q.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/M5v0e3.jpg"><img src="https://b.l3n.co/i/M5v0e3.jpg"></a></div>
-							<div class="img"><a href="https://b.l3n.co/i/M5v2IT.jpg"><img src="https://b.l3n.co/i/M5v2IT.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5vIy0.jpg"><img src="https://a.l3n.co/i/M5vIy0.jpg"></a></div></div>
-					</div>
-					<div class="photorow">
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://a.l3n.co/i/M5vjJF.jpg"><img src="https://a.l3n.co/i/M5vjJF.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%"><div class="img"><a href="https://b.l3n.co/i/M5n5RC.jpg"><img src="https://b.l3n.co/i/M5n5RC.jpg"></a></div></div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://c.l3n.co/i/M5vtUA.jpg"><img src="https://c.l3n.co/i/M5vtUA.jpg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/M5vgRD.jpg"><img src="https://c.l3n.co/i/M5vgRD.jpg"></a></div>
-						</div>
-						<div class="imgWrap" style="width: 100%">
-							<div class="img"><a href="https://b.l3n.co/i/M5vRIM.jpg"><img src="https://b.l3n.co/i/M5vRIM.jpg"></a></div>
-							<div class="img"><a href="https://c.l3n.co/i/M5vi8r.jpg"><img src="https://c.l3n.co/i/M5vi8r.jpg"></a></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/M5nA6H.jpg"><img src="https://a.l3n.co/i/M5nA6H.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/M5nWz1.jpg"><img src="https://c.l3n.co/i/M5nWz1.jpg"/></a></div>
 						</div>
 					</div>
 				</div>
-				<p>The railway to Gothenburg runs along the East side of the mire.
-				There is no place to cross the rails, however, if you watch your step you are able to sneak under a tunnel that was strangely placed there for a creek.
-				On the east side of the rail is a groove.
-				A path cuts through the grove in a way that it appears as a green tunnel.
-				Once one exits this tunnel on the other side they will see a pasture and a herd of cows who all might look right back.
-				There is also a pond and a lean-in (known as wind shelter locally) in which one can spend the night or have a barbecue.
-				The path continues over the creek on the left to which it leads over to agricultural fields.</p><p>At this point the sun lay low on the sky and a tree on the horizon over the field is illuminated by a golden glow.
-				In this view it is hard to imagine that people died in war out here.</p>
+				<p>
+					In 1676 the decisive battle between Sweden and Denmark took place in the frozen plains North.
+			In the battle 8, 9 thousand soldiers died and Sweden took the victory<sup format="single"><abbr class="ref" title="Norra Nobbelövs Församling">ref</abbr></sup><sup format="single"><abbr class="ref" title="Länsstyrelsen">ref</abbr></sup>.
+			Looking at the plains today it's hard to imagine that such a big battle took place out here.
+		</p>
+				<p>
+			In the South-West end of the plains is a mire.
+			The wet ground is enclosed by a wooden fence and geese have landed within to graze on grass.
+			There are willows growing alongside the path and a creek following the same path, and a woman walking her two dogs on.
+			This place only seems popular for strolls and bird watching.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/M5n4S0.jpg"><img src="https://c.l3n.co/i/M5n4S0.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5n0tK.jpg"><img src="https://c.l3n.co/i/M5n0tK.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5n3C3.jpg"><img src="https://b.l3n.co/i/M5n3C3.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/M5nKwD.jpg"><img src="https://a.l3n.co/i/M5nKwD.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5nHfM.jpg"><img src="https://b.l3n.co/i/M5nHfM.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5n71q.jpg"><img src="https://b.l3n.co/i/M5n71q.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/M5nOpA.jpg"><img src="https://c.l3n.co/i/M5nOpA.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/M5neYe.jpg"><img src="https://a.l3n.co/i/M5neYe.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5nz0Q.jpg"><img src="https://c.l3n.co/i/M5nz0Q.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5nSqa.jpg"><img src="https://b.l3n.co/i/M5nSqa.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/M5nv2k.jpg"><img src="https://b.l3n.co/i/M5nv2k.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					West of the mire water flows out and cows graze on in the north end.
+			In the past the mire stretched across what are now fields which were drained in the 19th century for farming<sup format="single"><abbr class="ref" title="Lunds Komun">ref</abbr></sup>.
+			These days only the south-west part remains.
+			In the north a country house can be seen, and to the west a bunch of cars flow along the main road.
+			Above are hanging power lines and in the background wind turbines spin.
+			How different this place must have looked those 2-3 hundred years ago.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/M5nLCx.jpg"><img src="https://c.l3n.co/i/M5nLCx.jpg"/></a></div></div></div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/i/M5nFBm.jpg"><img src="https://c.l3n.co/i/M5nFBm.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/M5nDpK.jpg"><img src="https://b.l3n.co/i/M5nDpK.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/M5nUoi.jpg"><img src="https://a.l3n.co/i/M5nUoi.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/M5nYx1.jpg"><img src="https://b.l3n.co/i/M5nYx1.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5nu1c.jpg"><img src="https://c.l3n.co/i/M5nu1c.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/M5nNFZ.jpg"><img src="https://a.l3n.co/i/M5nNFZ.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/M5nMSH.jpg"><img src="https://a.l3n.co/i/M5nMSH.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/M5nf0P.jpg"><img src="https://b.l3n.co/i/M5nf0P.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5nX2o.jpg"><img src="https://b.l3n.co/i/M5nX2o.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/M5nwe2.jpg"><img src="https://b.l3n.co/i/M5nwe2.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/M5nxxv.jpg"><img src="https://c.l3n.co/i/M5nxxv.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/i/M5nbJ9.jpg"><img src="https://a.l3n.co/i/M5nbJ9.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/M5nGp5.jpg"><img src="https://a.l3n.co/i/M5nGp5.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/M5naFz.jpg"><img src="https://c.l3n.co/i/M5naFz.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5v8Bb.jpg"><img src="https://c.l3n.co/i/M5v8Bb.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/i/M5vAo7.jpg"><img src="https://a.l3n.co/i/M5vAo7.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5vr7q.jpg"><img src="https://b.l3n.co/i/M5vr7q.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/M5v0e3.jpg"><img src="https://b.l3n.co/i/M5v0e3.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/i/M5v2IT.jpg"><img src="https://b.l3n.co/i/M5v2IT.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/M5vIy0.jpg"><img src="https://a.l3n.co/i/M5vIy0.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/i/M5vjJF.jpg"><img src="https://a.l3n.co/i/M5vjJF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/i/M5n5RC.jpg"><img src="https://b.l3n.co/i/M5n5RC.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/i/M5vtUA.jpg"><img src="https://c.l3n.co/i/M5vtUA.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/M5vgRD.jpg"><img src="https://c.l3n.co/i/M5vgRD.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/i/M5vRIM.jpg"><img src="https://b.l3n.co/i/M5vRIM.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/i/M5vi8r.jpg"><img src="https://c.l3n.co/i/M5vi8r.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				<p>
+					The railway to Gothenburg runs along the East side of the mire.
+			There is no place to cross the rails, however, if you watch your step you are able to sneak under a tunnel that was strangely placed there for a creek.
+			On the east side of the rail is a groove.
+			A path cuts through the grove in a way that it appears as a green tunnel.
+			Once one exits this tunnel on the other side they will see a pasture and a herd of cows who all might look right back.
+			There is also a pond and a lean-in (known as wind shelter locally) in which one can spend the night or have a barbecue.
+			The path continues over the creek on the left to which it leads over to agricultural fields.
+</p>
+				<p>
+			At this point the sun lay low on the sky and a tree on the horizon over the field is illuminated by a golden glow.
+			In this view it is hard to imagine that people died in war out here.
+				</p>
 			</div>
 			<table class="credits">
 				<tr>
@@ -453,46 +511,65 @@
 					<td>Destination</td>
 					<td>
 						Lund
-						<ol>
+						<ul>
 							<li>North church of Nöbbelöv (Norra Nöbbelövs kyrka)</li>
 							<li>Nöbbelöv's Marshland (Nöbbelövs Mosse)</li>
-						</ol>
+						</ul>
 					</td>
 				</tr>
-				<tr>
+				
+				<tr tryobj="reference">
 					<td>References</td>
-					<td>
+					<td class="creditref">
 						<ol>
-							<li>Norra Nobbelövs Församling. <i>Norra Nobbelövs Kyrka</i>. (Norra Nobbelövs Församling, 1997, Lund). Pamphlet.</li>
-							<li>Länsstyrelsen. <i>Nöbbelövs mosse</i>. Url: <a href="https://www.lansstyrelsen.se/skane/besoksmal/naturreservat/lund/nobbelovs-mosse">https://www.lansstyrelsen.se/skane/besoksmal/naturreservat/lund/nobbelovs-mosse</a> (Swe)[acc 2024-11-28]</li>
-							<li>Lunds Komun. <i>Uteklassrum Nöbbelövs mosse</i>. Url: <a href="https://lund.se/personalingangen/for-dig-som-arbetar-inom-forskola-och-skola/naturskolan/uteklassrum/nobbelovs-mosse">https://lund.se/personalingangen/for-dig-som-arbetar-inom-forskola-och-skola/naturskolan/uteklassrum/nobbelovs-mosse</a> (Swe)[acc 2024-11-28]</li>
+							<li>Norra Nobbelövs Församling.&ensp;<i>Norra Nobbelövs Kyrka</i>.&ensp;pamphlet.&ensp;</li>
+							<li>Länsstyrelsen.&ensp;<i>Nöbbelövs mosse</i>.&ensp;HP.&ensp;Url:&ensp;<a href="https://www.lansstyrelsen.se/skane/besoksmal/naturreservat/lund/nobbelovs-mosse">https://www.lansstyrelsen.se/skane/besoksmal/naturreservat/lund/nobbelovs-mosse</a>&ensp;[2024-11-28,&ensp;Swedish].</li>
+							<li>Lunds Komun.&ensp;<i>Uteklassrum Nöbbelövs mosse</i>.&ensp;HP.&ensp;Url:&ensp;<a href="https://lund.se/personalingangen/for-dig-som-arbetar-inom-forskola-och-skola/naturskolan/uteklassrum/nobbelovs-mosse">https://lund.se/personalingangen/for-dig-som-arbetar-inom-forskola-och-skola/naturskolan/uteklassrum/nobbelovs-mosse</a>&ensp;[2024-11-28,&ensp;Swedish].</li>
 						</ol>
 					</td>
 				</tr>
 			</table>
-			<hr>
-			<a href="https://crasywolfang.com/en/post/2308rinb">
+			<hr/>
+			<a href="K:/CWOLF/export/en/post/2207dbsb.html">
 				<div class="photoCard">
-					<h1>Rinnebäck</h1>
-					<span class="card-left">Waterway photography</span>
-					<span class="card-right">2025-02-03</span>
-					<img src="https://a.l3n.co/i/S7HoAc.jpg">
-					<span class="card-right">Lund, August 2023</span>
+					<h1 format="single">Dalby Quarry</h1>
+					<span class="card-left" format="single">Meadow photography<small> (44 photos)</small></span>
+					<span class="card-right">2023-07-31</span>
+					<img src="https://c.l3n.co/i/JhLO97.jpeg"/>
+					<span class="card-right" format="single">Lund,&ensp;July&ensp;2022</span>
 				</div>
 			</a>
-			<a href="https://crasywolfang.com/en/post/2310boma">
+			<a href="K:/CWOLF/export/en/post/2404cphs.html">
 				<div class="photoCard">
-					<h1>Change of Season</h1>
-					<span class="card-left">Botanic photography</span>
+					<h1 format="single">Copenhagen Sakura Festival<span trygrab="subtitle" class="subtitle">&ensp;(2024)</span></h1>
+					<span class="card-left" format="single">Event photography<small> (186 photos)</small></span>
 					<span class="card-right">2025-02-03</span>
-					<img src="https://a.l3n.co/i/YIGXh0.jpg">
-					<span class="card-right">Lund, October 2023</span>
+					<img src="https://c.l3n.co/i/Smtqmi.jpg"/>
+					<span class="card-right" format="single">Copenhagen,&ensp;April&ensp;2024</span>
+				</div>
+			</a>
+			<a href="K:/CWOLF/export/en/post/2310boma.html">
+				<div class="photoCard">
+					<h1 format="single">Change of Season</h1>
+					<span class="card-left" format="single">Botanic photography<small> (175 photos)</small></span>
+					<span class="card-right">2025-02-03</span>
+					<img src="https://a.l3n.co/i/YIGXh0.jpg"/>
+					<span class="card-right" format="single">Lund,&ensp;October&ensp;2023</span>
+				</div>
+			</a>
+			<a href="K:/CWOLF/export/en/post/2407skry.html">
+				<div class="photoCard">
+					<h1 format="single">Skrylle</h1>
+					<span class="card-left" format="single">Meadow photography<small> (63 photos)</small></span>
+					<span class="card-right">2025-02-26</span>
+					<img src="https://a.l3n.co/i/YLiEn5.jpg"/>
+					<span class="card-right" format="single">Lund,&ensp;July&ensp;2024</span>
 				</div>
 			</a>
 			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
+				<hr/>©CrasyWolfang 2014-2025
 				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
+				<a href="#top">top ↑</a>
 			</div>
 		</div>
 	</body>

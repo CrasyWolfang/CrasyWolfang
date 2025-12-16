@@ -1,191 +1,211 @@
-<!DOCTYPE html>
+<!DOCTYPE>
+
+
 <html>
 	<head>
-		<title>CWOLF </title>
-		<meta charset="utf-8">
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
 		<style>
 			body{background-color: #000000;}
-			a{
+		a{
 			color: #D3D3D3;
 			text-decoration: none;
-			}
-			a:hover{background-color: #e0c068;}
-			#container{
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
 			color: #ffffff;
 			max-width: 1200px;
 			min-width: 640px;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			#top{width: 100%;}
-			#topLang{float: right;}
-			#topLang a{
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
 			color: #ffffff;
 			text-decoration: none;
-			}
-			#header img{
+		}
+		#header img{
 			display: block;
 			width: 100%;
-			}
-			#topMenu{background-color: #000000;}
-			#topMenu ul{
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
 			margin: 0em;
 			padding: 0em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			}
-			#topMenu li{
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
 			display: inline;
 			padding: 0em;
 			font-size: 1.3em;
 			border: 2px solid #808080;
-			}
-			#topMenu a{
+		}
+		#topMenu a{
 			padding-top: 0em;
 			padding-bottom: 0em;
 			padding-left: 2em;
 			padding-right: 2em;
 			color: #ffffff;
-			}
-			#bottom{
+		}
+		#bottom{
 			color: #808080;
 			background-color: #000000;
-			}
-			.update{
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
 			margin: 0.5em;
 			padding-top: 1em;
 			padding-bottom: 1em;
 			padding-left: 2em;
 			padding-right: 2em;
 			border: solid #101010;
-			}
-			.update h1{text-align: center;}
-			.updateParagraph{text-indent: 2em;}
-			.updatePosts .imgWrap{
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
 			max-width: 80%;
 			max-height: 800px;
-			}
-			.updatePosts img{
+		}
+		.updatePosts img{
 			max-height: 800px;
-			}
-			.updatePosts ul{
+		}
+		.updatePosts ul{
 			max-width: 600px;
 			margin-right: auto;
 			margin-left: auto;
-			}
-			.update .image{
+		}
+		.update .image{
 			width: 80%;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			}
-			.update .date{
+		}
+		.update .date{
 			color: #808080;
 			text-align: right;
-			}
-			.flowbutton {
+		}
+		
+		.flowbutton {
 			padding: 1em;
 			gap: 1em;
-			}
-			.flowbutton li{
+		}
+		.flowbutton li{
 			list-style-type: none;
 			margin-top: 0.5em;
 			color: #ffffff;
 			border: 1px solid #ffffff;
 			text-align: center;
 			font-size: 1.6em;
-			}
-			.flowbutton li:hover{background-color: #e0c068;}
-			.center{text-align: center;}
-			h1.center{text-decoration: underline;}
-			.catCard{
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
 			list-style: none;
 			padding-left: 0;
 			text-align: center;
 			font-size: 1.3em;
-			}
-			.catCard li{
+		}
+		.catCard li{
 			margin: 0.3em;
 			display: inline-block;
 			border: 2px solid #808080;
-			padding: 0.5em;
-			}
-			.catCard li:hover{background-color: #e0c068;}
-			.catCard img{
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
 			width: 240px;
 			display: block;
-			}
-			.catCard a{
+		}
+		.catCard a{
 			color: #ffffff;
 			display: block;
-			}
-			.title{
+			padding: 0.5em;
+		}
+		
+		.title{
 			margin-left: auto;
 			margin-right: auto;
 			max-width: 800px;
 			padding: 1em;
 			padding-bottom: 2em;
-			}
-			.title h1{
+		}
+		.title h1{
 			border-bottom: 1px solid;
 			width: 100%;
 			margin: 0px;
-			}
-			.subtitle{
+		}
+		.subtitle{
 			font-size: 0.8em;
 			color: #808080;
-			}
-			.title .grey {color: #808080;}
-			.title-left{float: left;}
-			.title-right{
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
 			float: right;
 			text-align: right;
-			}
-			.photo-content p{
+		}
+		
+		.photo-content p{
 			padding-left: 1em;
 			padding-right: 1em;
 			text-indent: 2em;
-			}
-			.note {
+		}
+		.note {
 			margin: 1em;
 			border: 1px solid #ffffff;
-			}
-			.ref{
+		}
+		
+		.ref{
 			color: #D3D3D3;
 			text-decoration: none;
 			font-size: 0.8em;
-			}
-			.ref::before{content: '[';}
-			.ref::after{content: ']';}
-			.photosec div.photorow:not(:first-child ){margin-top: 2em;}
-			.photoCard{
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
 			color: #ffffff;
 			border: 2px solid #808080;
 			margin-top: 1em;
 			padding-bottom: 2em;
-			}
-			.photoCard:hover{background-color: #e0c068;}
-			.photoCard h1{
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
 			margin: 0px;
 			padding-left: 0.15em;
-			}
-			.card-left{
+		}
+		.card-left{
 			float: left;
 			padding-left: 0.4em;
-			}
-			.card-right{
+		}
+		.card-right{
 			float: right;
 			text-align: right;
 			padding-right: 0.4em;
-			}
-			.photoCard img{
+		}
+		.photoCard img{
 			width: 100%;
 			display: block;
-			}
-			.imgdesc{
-			padding-top: -30em;
-			}
-			.imgWrap{
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
 			display: flex;
 			flex-direction: row;
 			gap: 0.5em;
@@ -194,125 +214,149 @@
 			margin-left: auto;
 			margin-right: auto;
 			justify-content: center;
-			}
-			.imgWrap img{
+			width: 100%;
+		}
+		.imgWrap img{
 			display: block;
 			max-width: 100%;
 			gap: 0.5em;
-			}
-			.bibliography ul{
+		}
+		
+		.bibliography ul{
 			list-style-type: none;
 			text-indent: 0em;
-			}
-			.bibliography li:not(:last-child) {
+		}
+		.bibliography li:not(:last-child) {
 			margin-bottom: 0.5em;
-			}
-			.largePhoto{
+		}
+		
+		.largePhoto{
 			border: 1px solid #ffffff;
 			margin-bottom: 1em;
-			}
-			.largePhotoUrl div{
+		}
+		.largePhotoUrl div{
 			background-color: #ffffff;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: #e0c068;
-			}
-			.largePhotoUrl div:hover{
+		}
+		.largePhotoUrl div:hover{
 			background-color: background-color: #e0c068;
-			}
-			.largePhotoTop{
+		}
+		.largePhotoTop{
 			text-indent: 1em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
-			}
-			.largePhoto img{display: block;}
-			.largePhotoTitle{
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
 			font-size: 1.3em;
 			font-weight: bold;
 			color: #000000;
 			display: inline-block;
 			width: 100%;
 			text-indent: 2em;
-			}
-			.largePhoto p{
+		}
+		.largePhoto p{
 			text-indent: 2em;
 			padding-left: 1em;
 			padding-right: 1em;
-			}
-			.credits{
+		}
+		
+		.credits{
 			width: 100%;
 			border-collapse: collapse;
-			}
-			.credits td{
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
 			border: 1px solid #ffffff;
 			padding: 0.3em;
 			padding-left: 1em;
-			}
-			.credits td:first-child {
+			color: #ffffff;
+		}
+		.credits td:first-child {
 			width: 12%;
 			white-space: nowrap;
-			}
+			padding-right: 1em;
+		}
 		</style>
 	</head>
 	<body>
 		<div id="container">
 			<div id="top">
-				<small style="color: grey;">CWOLF WEB PROJECT</small>
-				<div id="topLang">🌎 <a href="https://www.CrasyWolfang.com/en/archive/2024">English</a> | <a href="https://www.CrasyWolfang.com/jp/archive/2024">日本語</a></div>
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="K:/CWOLF/export/en/archive/2024.html">English</a> | <a href="K:/CWOLF/export/jp/archive/2024.html">日本語</a></div>
 			</div>
-			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"></div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
 			<nav id="topMenu">
 				<ul>
-					<li><a href="https://www.CrasyWolfang.com/jp/home">ホーム</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/photo">写真撮影</a></li>
-					<li><a href="https://www.CrasyWolfang.com/jp/about">について</a></li>
+					<li><a href="K:/CWOLF/export/jp/home.html">ホーム</a></li>
+					<li><a href="K:/CWOLF/export/jp/photo.html">写真撮影</a></li>
+					
+					<li><a href="K:/CWOLF/export/jp/about.html">について</a></li>
 				</ul>
 			</nav>
+			
 			<div class="update">
 				<h1>植物園・動物園</h1>
 				<div class="updateParagraph">
-					<p>二年前、日本と北欧の設備を比べようと思ったから、京都植物園と天王寺動物園とルンド植物園と京都植物園に行ってみた。
-					夏の写真をそれぞれの動物園で一日かけて撮った。
-					植物園の中は様々な植物に囲まれているから何回も来て写真を撮ることになった。</p><p>その結果、植物知らず参加者にとって日本と北欧の植物園はだいたい同じ。
-					それは日本の植物園で見る花とかはまた北欧で見ることを感じる。
-					京都植物園に入場料を支払う。
-					そして、木漏れ日の下に絵師が景色をカンバスに写す。
-					ルンド植物園は無料であり、中に大学生がピクニックをしたりする。</p><p>その一方、日本の動物園と北欧の植物園は天地雲泥。
-					天王寺動物園には種類がたくさんいるし入場料は安いが囲まれは小さく、動物は心配そうな顔をしながら周りを走っている。
-					スコーネ植物園に欧州の種類が集まって動物は幸せみたいだが入場料は高く、設備は子供のために作られた感じがした。
-					ストックホルムとかコペンハーゲンの植物園に行くと違うかもしれない。</p>
+					<p>
+						二年前、日本と北欧の設備を比べようと思ったから、京都植物園と天王寺動物園とルンド植物園と京都植物園に行ってみた。
+				夏の写真をそれぞれの動物園で一日かけて撮った。
+				植物園の中は様々な植物に囲まれているから何回も来て写真を撮ることになった。
+			</p>
+					<p>
+				その結果、植物知らず参加者にとって日本と北欧の植物園はだいたい同じ。
+				それは日本の植物園で見る花とかはまた北欧で見ることを感じる。
+				京都植物園に入場料を支払う。
+				そして、木漏れ日の下に絵師が景色をカンバスに写す。
+				ルンド植物園は無料であり、中に大学生がピクニックをしたりする。
+			</p>
+					<p>
+				その一方、日本の動物園と北欧の植物園は天地雲泥。
+				天王寺動物園には種類がたくさんいるし入場料は安いが囲まれは小さく、動物は心配そうな顔をしながら周りを走っている。
+				スコーネ植物園に欧州の種類が集まって動物は幸せみたいだが入場料は高く、設備は子供のために作られた感じがした。
+				ストックホルムとかコペンハーゲンの植物園に行くと違うかもしれない。
+					</p>
 				</div>
 				<div class="updatePosts">
 					<div class="imgWrap">
-						<a href="https://www.CrasyWolfang.com/jp/post/2205kybo"><img src="https://c.l3n.co/i/zHJb4C.jpeg"></a>
-						<a href="https://www.CrasyWolfang.com/jp/post/2206lubo"><img src="https://a.l3n.co/i/zHJXrv.jpeg"></a>
-						<a href="https://www.CrasyWolfang.com/jp/post/2206otzo"><img src="https://b.l3n.co/i/zHJwN5.jpeg"></a>
-						<a href="https://www.CrasyWolfang.com/jp/post/2208skdp"><img src="https://a.l3n.co/i/zHJyiz.jpeg"></a>
+						<a href="K:/CWOLF/export/jp/post/2205kybo.html" format="single"><img src="https://c.l3n.co/i/zHJb4C.jpeg"/></a>
+						<a href="K:/CWOLF/export/jp/post/2206lubo.html" format="single"><img src="https://a.l3n.co/i/zHJXrv.jpeg"/></a>
+						<a href="K:/CWOLF/export/jp/post/2206otzo.html" format="single"><img src="https://b.l3n.co/i/zHJwN5.jpeg"/></a>
+						<a href="K:/CWOLF/export/jp/post/2208skdp.html" format="single"><img src="https://a.l3n.co/i/zHJyiz.jpeg"/></a>
 					</div>
 					<ul>
-						<li><a href="https://www.CrasyWolfang.com/jp/post/2205kybo">京都植物園</a></li>
-						<li><a href="https://www.CrasyWolfang.com/jp/post/2206lubo">ルンド植物園</a></li>
-						<li><a href="https://www.CrasyWolfang.com/jp/post/2206otzo">天王寺動物園</a></li>
-						<li><a href="https://www.CrasyWolfang.com/jp/post/2208skdp">スコーネ動物園</a></li>
+						<li><a href="K:/CWOLF/export/jp/post/2205kybo.html" format="single">京都植物園</a></li>
+						<li><a href="K:/CWOLF/export/jp/post/2206lubo.html" format="single">ルンド植物園</a></li>
+						<li><a href="K:/CWOLF/export/jp/post/2206otzo.html" format="single">天王寺動物園</a></li>
+						<li><a href="K:/CWOLF/export/jp/post/2208skdp.html" format="single">スコーネ動物園</a></li>
 					</ul>
 				</div>
 				<div class="updateParagraph">
-					<p>二年後にこの四集が発表される。
-					またルンド植物園の写真を投稿する（無料だからよく行ってしまう）。
-					それまで、この写真をゆっくり楽しんでください。</p>
+					<p>
+						二年後にこの四集が発表される。
+				またルンド植物園の写真を投稿する（無料だからよく行ってしまう）。
+				それまで、この写真をゆっくり楽しんでください。
+					</p>
 				</div>
-				<div class="date">2024年06月22日</div>
+				<div class="date" format="single">2024年06月22日</div>
 			</div>
+			
 			<ul class="flowbutton">
-				<a href="https://www.CrasyWolfang.com/jp/archive/2024"><li>2024</li></a>
-				<a href="https://www.CrasyWolfang.com/jp/archive/2023"><li>2023</li></a>
+				<a href="K:/CWOLF/export/jp/archive/2024.html"><li>2024年</li></a>
+				<a href="K:/CWOLF/export/jp/archive/2023.html"><li>2023年</li></a>
 			</ul>
 			<div id="bottom">
-				<hr>©CrasyWolfang 2014-2025
+				<hr/>©CrasyWolfang 2014-2025
 				✉ <adress>forwardtowolf@gmail.com</adress>
-				<a href="#top" style="float: right; color: grey;">top ↑</a>
+				<a href="#top">top ↑</a>
 			</div>
 		</div>
 	</body>
