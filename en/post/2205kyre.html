@@ -1,0 +1,524 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			width: 100%;
+		}
+		.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+		}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="https://crasywolfang.com/en/post/2205kyre.html">English</a> | <a href="https://crasywolfang.com/jp/post/2205kyre.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://crasywolfang.com/en/home.html">Home</a></li>
+					<li><a href="https://crasywolfang.com/en/photo.html">Photography</a></li>
+					
+					<li><a href="https://crasywolfang.com/en/about.html">About</a></li>
+				</ul>
+			</nav>
+			
+			<div class="title">
+				<h1>Kyoto Reien</h1>
+				<span class="title-left">Religious photography</span>
+				<span class="title-right">
+					<div format="single"><span class="grey">published:&ensp;</span>2026-01-07</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<p>
+					It is the year 2020.
+			The photographer is driving with his coworker towards their construction site in Kameoka.
+			They drive under the Kyoto Jukan Expressway (E9) and up a road that resembles a valley.
+			Left on the sidewalk is a flow of high school students that walk past and even more wait by the bus stop outside of their high school.
+			The photographer's eyes are pulled towards a road next to the high school which leads up the mountain.
+			In front is a large sign with "Kyoto Cemetery" written on it.
+			"My parents are buried up there," the coworker says to the photographer.
+			Ever since then, the photographer's mind has been laid on this mysterious cemetery that is hidden up the mountain.
+		</p>
+				<p>
+			A year later the photographer is at the cemetery.
+			However, the day is rainy and the main goal of the trip lay in Kameoka.
+			Later in 2022 the photographer sets off once again for the cemetery.
+			It's a sunny day, and on the way he takes a few photos of the "light" character that is drawn into the wall in Rakusai.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fkxnt5.jpg"><img src="https://d.l3n.co/Fkxnt5.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/FkxSwC.jpg"><img src="https://b.l3n.co/FkxSwC.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkxvKz.jpg"><img src="https://c.l3n.co/FkxvKz.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				<p>
+					When the photographer arrives at the cemetery it is quiet.
+			Only the dragonflies that fly between the rock figures and crows that hang around in the cherry trees dare to make an appearance 
+			The photographer wanders with his tripod strapped onto his back in the search for a proper view over the area.
+			On the way he passes many pretty graves, one of them which is decorated with clay owls and the text "My citizenship is in heaven," inscribed onto the tombstone.
+			He goes up the hill and finds a spot under a cherry tree where he places his tripod.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkxLfT.jpg"><img src="https://a.l3n.co/FkxLfT.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/Fkxoq7.jpg"><img src="https://a.l3n.co/Fkxoq7.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/Fkx5Ye.jpg"><img src="https://a.l3n.co/Fkx5Ye.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkypUA.jpg"><img src="https://a.l3n.co/FkypUA.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/Fky4RD.jpg"><img src="https://b.l3n.co/Fky4RD.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/Fkxa2k.jpg"><img src="https://c.l3n.co/Fkxa2k.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/Fkyq8r.jpg"><img src="https://c.l3n.co/Fkyq8r.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkxDhF.jpg"><img src="https://c.l3n.co/FkxDhF.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/FkxPC3.jpg"><img src="https://b.l3n.co/FkxPC3.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/FkxuYr.jpg"><img src="https://d.l3n.co/FkxuYr.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkxhCx.jpg"><img src="https://a.l3n.co/FkxhCx.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/FkxfS0.jpg"><img src="https://d.l3n.co/FkxfS0.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkxbfM.jpg"><img src="https://c.l3n.co/FkxbfM.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkxXpA.jpg"><img src="https://a.l3n.co/FkxXpA.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fkxc1q.jpg"><img src="https://d.l3n.co/Fkxc1q.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fkxx0Q.jpg"><img src="https://b.l3n.co/Fkxx0Q.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/Fkxyqa.jpg"><img src="https://c.l3n.co/Fkxyqa.jpg"/></a></div></div>
+					</div>
+				</div>
+				<div class="largePhoto">
+					<a class="largePhotoUrl" href="https://d.l3n.co/Fk5q3Z.jpg">
+						<div>
+							<span class="largePhotoTop">Large format&ensp;(153 MP)</span>
+							<img width="100%" src="https://d.l3n.co/Fkysy0.jpg"/>
+							<span class="largePhotoTitle">Kyoto Reien</span>
+						</div>
+					</a>
+					<p>
+						Kyoto Cemetery slopes upwards towards the south.
+				Under a cherry tree on the slope the photographer places his tripod and captures a panorama over the scenery.
+				The location captures about two thirds of the cemetery and besides a funeral in progress there is almost nobody around, unless one counts the cars that drive past on the Kyoto Jukan Expressway.
+				The city of Kyoto also gets captured in the background, and the photographer realizes that he can see his house from there.
+				In the background, Kyoto tower also stands visible, and if one takes the time to look for it they can also see the red gates of Fushimi Inari Taisha in the picture.
+					</p>
+				</div>
+				<div class="largePhoto">
+					<a class="largePhotoUrl" href="https://d.l3n.co/Fk5frq.jpg">
+						<div>
+							<span class="largePhotoTop">Large format&ensp;(112 MP)</span>
+							<img width="100%" src="https://b.l3n.co/Fkyme3.jpg"/>
+							<span class="largePhotoTitle">Ksitigarbha</span>
+						</div>
+					</a>
+					<p>
+						The first time the photographer was up at Kyoto Cemetery he found his way to the children's playground.
+				On that day it was raining and the colors of the playground seemed to fade in front in an eerie manner.
+				Next to the playground he found Ksitigarbha (statue for unborn and dead children), and as he approached the location the statues of the children locked their eyes onto him.
+				Rain was dripping off their red hats and cherry blossom petals were clung onto the surrounding concrete.
+				The photographer didn't have a tripod and his camera was soaking wet.
+				He couldn't take a good photo, but he promised that if he gets the chance he will return and take a proper photo.
+				For the children who have died, and for the children who were never born.
+</p>
+					<p>
+				A year passed and the photographer has returned for that photograph.
+				He placed his tripod in front of the statues and for the next full hour he exposed the scenery.
+				For that one scene he captured 540 exposures.
+				Those exposures were transferred into the photographer's computer, however, frankly the photographer did not have the skill or knowledge yet on how to properly process such a extreme photo.
+				He tried several times and failed each time.
+				Three and a half years passed since that photo was taken.
+				In the meantime, the photographer spent all of his available freetime on photography, and as a result, gradually improved his technique.
+				Finally, he was able to stitch together that one photo that he had held onto all of these years.
+				Therefore, please enjoy this panorama for all the time put into it.
+					</p>
+				</div>
+				<p>
+					On the way back the photographer enjoyed the view.
+			He stopped a while by some rice paddies to take photos of the farmers, and then went off the road and into a bamboo grove to watch the golden sunlight shimmer through.
+			Finally, on the way back, he stopped on a bridge to watch the children below play in the river.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fky2SH.jpg"><img src="https://b.l3n.co/Fky2SH.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fky8x1.jpg"><img src="https://d.l3n.co/Fky8x1.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkyW1c.jpg"><img src="https://a.l3n.co/FkyW1c.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkyBJF.jpg"><img src="https://a.l3n.co/FkyBJF.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkyjFZ.jpg"><img src="https://a.l3n.co/FkyjFZ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FkyipK.jpg"><img src="https://d.l3n.co/FkyipK.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fkygoi.jpg"><img src="https://b.l3n.co/Fkygoi.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/Fkyt2o.jpg"><img src="https://c.l3n.co/Fkyt2o.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/FkyI0P.jpg"><img src="https://c.l3n.co/FkyI0P.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/FkyCFz.jpg"><img src="https://a.l3n.co/FkyCFz.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/Fky1J9.jpg"><img src="https://b.l3n.co/Fky1J9.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/FkyZBm.jpg"><img src="https://d.l3n.co/FkyZBm.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/Fky6p5.jpg"><img src="https://b.l3n.co/Fky6p5.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkyRe2.jpg"><img src="https://c.l3n.co/FkyRe2.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FkyTxv.jpg"><img src="https://b.l3n.co/FkyTxv.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkykRC.jpg"><img src="https://a.l3n.co/FkykRC.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FkyVBb.jpg"><img src="https://b.l3n.co/FkyVBb.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FkyQIT.jpg"><img src="https://c.l3n.co/FkyQIT.jpg"/></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>Photographer</td>
+					<td>Crasy Wolfang</td>
+				</tr>
+				<tr>
+					<td>Sessions</td>
+					<td>1 session</td>
+				</tr>
+				<tr>
+					<td>Destination</td>
+					<td>Kyoto Reien&ensp;(京都霊園),&ensp;Kyoto&ensp;(京都)</td>
+				</tr>
+				
+				
+			</table>
+			<hr/>
+			<a href="https://crasywolfang.com/en/post/2205fuit.html">
+				<div class="photoCard">
+					<h1 format="single">Inari Mountain Shadow</h1>
+					<span class="card-left" format="single">Religious photography<small> (124 photos)</small></span>
+					<span class="card-right">2023-08-25</span>
+					<img src="https://c.l3n.co/i/VoQ7l0.jpeg"/>
+					<span class="card-right" format="single">Kyoto,&ensp;May&ensp;2022</span>
+				</div>
+			</a>
+			<a href="https://crasywolfang.com/en/post/2408trpa.html">
+				<div class="photoCard">
+					<h1 format="single">The Garden Palette</h1>
+					<span class="card-left" format="single">Botanic photography<small> (78 photos)</small></span>
+					<span class="card-right">2026-01-07</span>
+					<img src="https://b.l3n.co/i/NMm3m1.jpg"/>
+					<span class="card-right" format="single">Malmö,&ensp;August&ensp;2024</span>
+				</div>
+			</a>
+			
+			<a href="https://crasywolfang.com/en/post/2205toji.html">
+				<div class="photoCard">
+					<h1 format="single">Toji</h1>
+					<span class="card-left" format="single">Religious photography<small> (92 photos)</small></span>
+					<span class="card-right">2026-01-07</span>
+					<img src="https://b.l3n.co/i/PAC6Cq.jpg"/>
+					<span class="card-right" format="single">Kyoto,&ensp;May&ensp;2022</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2026
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>

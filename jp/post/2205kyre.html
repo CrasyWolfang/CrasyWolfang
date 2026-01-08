@@ -1,0 +1,526 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+			padding-bottom: 0.25em;
+			padding-top: 0.25em;
+			margin-left: auto;
+			margin-right: auto;
+			justify-content: center;
+			width: 100%;
+		}
+		.imgWrap img{
+			display: block;
+			max-width: 100%;
+			gap: 0.5em;
+		}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="https://crasywolfang.com/en/post/2205kyre.html">English</a> | <a href="https://crasywolfang.com/jp/post/2205kyre.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://crasywolfang.com/jp/home.html">ホーム</a></li>
+					<li><a href="https://crasywolfang.com/jp/photo.html">写真撮影</a></li>
+					
+					<li><a href="https://crasywolfang.com/jp/about.html">について</a></li>
+				</ul>
+			</nav>
+			
+			<div class="title">
+				<h1>京都霊園</h1>
+				<span class="title-left">神殿撮影</span>
+				<span class="title-right">
+					<div format="single"><span class="grey">発行日&ensp;</span>2026年01月07日</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<p>
+					令和２年。
+			撮影者は同僚と亀岡の現場へ運転する。
+			車が京都縦貫自動車道（E9）の下を通ると谷みたいな道に入る。
+			歩道に高校生が流れ、バス停で男の子が待っている。
+			高校の隣の道は丘の奥まで目を引く。
+			そして、その前に置いた『京都霊園』と大きく書いてある看板。
+			同僚は「私の親があそこの霊園に埋葬している」と教えてくれた。
+			その時から山の中のお墓場は撮影者に奇妙なイメージがあふれた。
+		</p>
+				<p>
+			来年の春に撮影者が霊園に行ってみた。
+			しかし、その日は雨が降っていて本当の行先は亀岡の奥であった。
+			もう令和４年になって、撮影者がまた京都霊園へ自転車で走る。
+			あの日は晴れて、道の途中で洛西の壁に描いた「光」という漢字の写真を撮る。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fkxnt5.jpg"><img src="https://d.l3n.co/Fkxnt5.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/FkxSwC.jpg"><img src="https://b.l3n.co/FkxSwC.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkxvKz.jpg"><img src="https://c.l3n.co/FkxvKz.jpg"/></a></div>
+						</div>
+					</div>
+				</div>
+				<p>
+					撮影者が霊園に着くと静かである。
+			トンボが石の頭を巡り、カラスが桜の木の枝で鳴く。
+			三脚を持ち、撮影者が霊園を散歩して適当な景色を探す。
+			奥のお墓が彫刻のフクロウに飾られて墓碑に「国籍は天にあり」と書いてある。
+			奇麗なお墓をたくさん通り、坂を登って三脚を桜の木の下に置いた。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkxLfT.jpg"><img src="https://a.l3n.co/FkxLfT.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/Fkxoq7.jpg"><img src="https://a.l3n.co/Fkxoq7.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/Fkx5Ye.jpg"><img src="https://a.l3n.co/Fkx5Ye.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkypUA.jpg"><img src="https://a.l3n.co/FkypUA.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/Fky4RD.jpg"><img src="https://b.l3n.co/Fky4RD.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/Fkxa2k.jpg"><img src="https://c.l3n.co/Fkxa2k.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/Fkyq8r.jpg"><img src="https://c.l3n.co/Fkyq8r.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkxDhF.jpg"><img src="https://c.l3n.co/FkxDhF.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/FkxPC3.jpg"><img src="https://b.l3n.co/FkxPC3.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/FkxuYr.jpg"><img src="https://d.l3n.co/FkxuYr.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkxhCx.jpg"><img src="https://a.l3n.co/FkxhCx.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/FkxfS0.jpg"><img src="https://d.l3n.co/FkxfS0.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkxbfM.jpg"><img src="https://c.l3n.co/FkxbfM.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkxXpA.jpg"><img src="https://a.l3n.co/FkxXpA.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fkxc1q.jpg"><img src="https://d.l3n.co/Fkxc1q.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fkxx0Q.jpg"><img src="https://b.l3n.co/Fkxx0Q.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/Fkxyqa.jpg"><img src="https://c.l3n.co/Fkxyqa.jpg"/></a></div></div>
+					</div>
+				</div>
+				<div class="largePhoto">
+					<a class="largePhotoUrl" href="https://d.l3n.co/Fk5q3Z.jpg">
+						<div>
+							<span class="largePhotoTop">大型写真（153 MP）</span>
+							<img width="100%" src="https://d.l3n.co/Fkysy0.jpg"/>
+							<span class="largePhotoTitle">京都霊園</span>
+						</div>
+					</a>
+					<p>
+						京都霊園の坂が南向上する。
+				坂の桜の木の下に撮影者が三脚を置きパノラマを撮影する。
+				レンズの前に霊園の三分の二ぐらいが写っていて、葬儀の人以外は霊園にほとんどだれもいない。
+				それ以外は京都縦貫自動車道に流れている車である。
+				背景に京都市が写り、撮影者の自分の家が見えるほどと分かった。
+				景色に京都タワーが見え、ちゃんとを観ると伏見稲荷大社の赤い鳥居も現れる。
+					</p>
+				</div>
+				<div class="largePhoto">
+					<a class="largePhotoUrl" href="https://d.l3n.co/Fk5frq.jpg">
+						<div>
+							<span class="largePhotoTop">大型写真（112 MP）</span>
+							<img width="100%" src="https://b.l3n.co/Fkyme3.jpg"/>
+							<span class="largePhotoTitle">水子地蔵尊</span>
+						</div>
+					</a>
+					<p>
+						撮影者が初めて京都霊園に入った時児童公園が見えた。
+				あの日は降っていて、遊び場の色が前に褪せて気持ちがちょっと悪かった。
+				隣には水子地蔵尊があって寄せると子供の像は撮影者に目を付けた。
+				雨が赤い帽子から滴っていて、 散った花びらがコンクリートに貼ってあった。
+				三脚を持たずカメラのレンズが濡れたし。
+				また機会があれば、ここに戻って写真を奇麗に撮ってあげると約束した。
+				死んだ子供のために。
+				そして、生まれず子供のために。
+</p>
+					<p>
+				一年後に撮影者が写真を撮るために戻ってきた。
+				三脚を像の前に置いて一時間ぐらい風景を撮った。
+				その風景は540枚に絞った。
+				実は、その絞りをパソコンに移動させたけれども、その上級撮影をどうやってちゃんとを作り上げるかわからなかった。
+				何回も仕上げてみたが何回も失敗した。
+				3年半が経ってしまった。
+				暇な時間に撮影してばかりであり、撮影技術がぼちぼち上がった。
+				やっぱり、ずっと守っていた写真を組むことが出来た。
+				だから、このパノラマを発表してあげる。
+					</p>
+				</div>
+				<p>
+					帰り道に撮影者は景色を楽しんだ。
+			しばらく田んぼの農業を撮って、後で道を外れて竹林に入って金色な木漏れ日を観た。
+			最後に途中で橋に立って川で遊んでいる子供をしばらく観た。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fky2SH.jpg"><img src="https://b.l3n.co/Fky2SH.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fky8x1.jpg"><img src="https://d.l3n.co/Fky8x1.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkyW1c.jpg"><img src="https://a.l3n.co/FkyW1c.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkyBJF.jpg"><img src="https://a.l3n.co/FkyBJF.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkyjFZ.jpg"><img src="https://a.l3n.co/FkyjFZ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FkyipK.jpg"><img src="https://d.l3n.co/FkyipK.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fkygoi.jpg"><img src="https://b.l3n.co/Fkygoi.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/Fkyt2o.jpg"><img src="https://c.l3n.co/Fkyt2o.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/FkyI0P.jpg"><img src="https://c.l3n.co/FkyI0P.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/FkyCFz.jpg"><img src="https://a.l3n.co/FkyCFz.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/Fky1J9.jpg"><img src="https://b.l3n.co/Fky1J9.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/FkyZBm.jpg"><img src="https://d.l3n.co/FkyZBm.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/Fky6p5.jpg"><img src="https://b.l3n.co/Fky6p5.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FkyRe2.jpg"><img src="https://c.l3n.co/FkyRe2.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FkyTxv.jpg"><img src="https://b.l3n.co/FkyTxv.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FkykRC.jpg"><img src="https://a.l3n.co/FkykRC.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FkyVBb.jpg"><img src="https://b.l3n.co/FkyVBb.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FkyQIT.jpg"><img src="https://c.l3n.co/FkyQIT.jpg"/></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>撮影者</td>
+					<td>狼牙クレシ</td>
+				</tr>
+				<tr>
+					<td>撮影回</td>
+					<td>1回</td>
+				</tr>
+				<tr>
+					<td>行き先</td>
+					<td>京都・京都霊園</td>
+				</tr>
+				
+				
+			</table>
+			<hr/>
+			<a href="https://crasywolfang.com/jp/post/2205fuit.html">
+				<div class="photoCard">
+					<h1 format="single">稲荷山陰</h1>
+					<span class="card-left" format="single">神殿撮影<small>（124枚）</small></span>
+					<span class="card-right">2023年08月25日</span>
+					<img src="https://c.l3n.co/i/VoQ7l0.jpeg"/>
+					<span class="card-right" format="single">京都、2022年05月</span>
+				</div>
+			</a>
+			<a href="https://crasywolfang.com/jp/post/2408trpa.html">
+				<div class="photoCard">
+					<h1 format="single">庭園調色板</h1>
+					<span class="card-left" format="single">植物撮影<small>（78枚）</small></span>
+					<span class="card-right">2026年01月07日</span>
+					<img src="https://b.l3n.co/i/NMm3m1.jpg"/>
+					<span class="card-right" format="single">マルメ、2024年08月</span>
+				</div>
+			</a>
+			
+			<a href="https://crasywolfang.com/jp/post/2205toji.html">
+				<div class="photoCard">
+					<h1 format="single">東寺</h1>
+					<span class="card-left" format="single">神殿撮影<small>（92枚）</small></span>
+					<span class="card-right">2026年01月07日</span>
+					<img src="https://b.l3n.co/i/PAC6Cq.jpg"/>
+					<span class="card-right" format="single">京都、2022年05月</span>
+				</div>
+			</a>
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2026
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>
