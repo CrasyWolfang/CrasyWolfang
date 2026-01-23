@@ -1,0 +1,498 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.6em;
+			padding-bottom: 0.3em;
+			padding-top: 0.3em;
+			justify-content: center;
+			align-items: stretch;
+			align-content: stretch;
+			width: 100%;
+		}
+		.imgWrap img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.img:only-child{width: 100%;}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="https://crasywolfang.com/en/post/1908sami.html">English</a> | <a href="https://crasywolfang.com/jp/post/1908sami.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://crasywolfang.com/jp/home.html">ホーム</a></li>
+					<li><a href="https://crasywolfang.com/jp/photo.html">写真撮影</a></li>
+					
+					<li><a href="https://crasywolfang.com/jp/about.html">について</a></li>
+				</ul>
+			</nav>
+			
+			<div class="title">
+				<h1>境港</h1>
+				<span class="title-left">都会撮影</span>
+				<span class="title-right">
+					<div format="single"><span class="grey">発行日&ensp;</span>2026年01月23日</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<p>
+					大山はフェリーの景色に入った。
+			昨日の雨は朝霧に現れて残っていた。
+			乗客は船を降りて入国審査に行った。
+			ある外国人は日本を巡ろうと思って自転車を持ってきた。
+			入国管理官は分からなくて「自転車で巡ることという意味はどうでしょうか」と聞いた。
+			その間に外の駐車場で車の検査が行われていた。
+</p>
+				<p>
+			検査の後に写真家とおじいさんと家族の友達は食事に行った。
+			境港の知られていることは魚と漫画家の水木しげるの二つである。
+			だから、群は寿司を食べ、そして妖怪に飾られた街を巡った。
+			道は店に並んで全て妖怪のグッズを売ってい、写真家は店を入ってお風呂のタオルを買った
+			巡りの後、おじいさんと写真家はお茶を飲んで車に乗って境港を出発した。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzUuLb.jpg"><img src="https://a.l3n.co/FzUuLb.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzUDa7.jpg"><img src="https://c.l3n.co/FzUDa7.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzUP6r.jpg"><img src="https://a.l3n.co/FzUP6r.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzUflF.jpg"><img src="https://d.l3n.co/FzUflF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzUFb3.jpg"><img src="https://a.l3n.co/FzUFb3.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzUX4D.jpg"><img src="https://d.l3n.co/FzUX4D.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzUbPq.jpg"><img src="https://a.l3n.co/FzUbPq.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzUct0.jpg"><img src="https://b.l3n.co/FzUct0.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzUxjA.jpg"><img src="https://c.l3n.co/FzUxjA.jpg"/></a></div></div>
+					</div>
+					<div class="photorow"><div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzUSb2.jpg"><img src="https://b.l3n.co/FzUSb2.jpg"/></a></div></div></div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzUydM.jpg"><img src="https://b.l3n.co/FzUydM.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzcWtH.jpg"><img src="https://d.l3n.co/FzcWtH.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/FzcjPc.jpg"><img src="https://a.l3n.co/FzcjPc.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/FzU5MQ.jpg"><img src="https://a.l3n.co/FzU5MQ.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FzUGaa.jpg"><img src="https://c.l3n.co/FzUGaa.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzUh6e.jpg"><img src="https://d.l3n.co/FzUh6e.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/Fzc2zk.jpg"><img src="https://a.l3n.co/Fzc2zk.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/Fzc8bx.jpg"><img src="https://b.l3n.co/Fzc8bx.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FzciK1.jpg"><img src="https://c.l3n.co/FzciK1.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/FzUOai.jpg"><img src="https://c.l3n.co/FzUOai.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/FzUlko.jpg"><img src="https://d.l3n.co/FzUlko.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzcVqz.jpg"><img src="https://c.l3n.co/FzcVqz.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzcIjK.jpg"><img src="https://c.l3n.co/FzcIjK.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzcZqZ.jpg"><img src="https://d.l3n.co/FzcZqZ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzcgMP.jpg"><img src="https://a.l3n.co/FzcgMP.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fzcrhm.jpg"><img src="https://b.l3n.co/Fzcrhm.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/Fzc1Ci.jpg"><img src="https://c.l3n.co/Fzc1Ci.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzcTw9.jpg"><img src="https://b.l3n.co/FzcTw9.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/Fzck12.jpg"><img src="https://a.l3n.co/Fzck12.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzcRzo.jpg"><img src="https://a.l3n.co/FzcRzo.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fzc6Kv.jpg"><img src="https://d.l3n.co/Fzc6Kv.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzcCfC.jpg"><img src="https://c.l3n.co/FzcCfC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzcQj5.jpg"><img src="https://d.l3n.co/FzcQj5.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzUnrv.jpg"><img src="https://d.l3n.co/FzUnrv.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/FzULN5.jpg"><img src="https://c.l3n.co/FzULN5.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/FzUv4C.jpg"><img src="https://b.l3n.co/FzUv4C.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzUYiz.jpg"><img src="https://b.l3n.co/FzUYiz.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/Fzcdhb.jpg"><img src="https://a.l3n.co/Fzcdhb.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Fzc9YT.jpg"><img src="https://d.l3n.co/Fzc9YT.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/FzcmSr.jpg"><img src="https://b.l3n.co/FzcmSr.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/FzcpfD.jpg"><img src="https://a.l3n.co/FzcpfD.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/FzcHBA.jpg"><img src="https://a.l3n.co/FzcHBA.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/FzcKp0.jpg"><img src="https://b.l3n.co/FzcKp0.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzclYM.jpg"><img src="https://c.l3n.co/FzclYM.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzcS2Q.jpg"><img src="https://b.l3n.co/FzcS2Q.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzcnSe.jpg"><img src="https://b.l3n.co/FzcnSe.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/Fzcvxk.jpg"><img src="https://c.l3n.co/Fzcvxk.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/FzceCa.jpg"><img src="https://a.l3n.co/FzceCa.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzcM1x.jpg"><img src="https://d.l3n.co/FzcM1x.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzcD0c.jpg"><img src="https://b.l3n.co/FzcD0c.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fzcx72.jpg"><img src="https://b.l3n.co/Fzcx72.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzcF2P.jpg"><img src="https://d.l3n.co/FzcF2P.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/FzcNBK.jpg"><img src="https://d.l3n.co/FzcNBK.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FzcPoZ.jpg"><img src="https://c.l3n.co/FzcPoZ.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/Fzccei.jpg"><img src="https://d.l3n.co/Fzccei.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/FzcoF1.jpg"><img src="https://c.l3n.co/FzcoF1.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzcYpH.jpg"><img src="https://a.l3n.co/FzcYpH.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzcUJm.jpg"><img src="https://c.l3n.co/FzcUJm.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzcyFv.jpg"><img src="https://d.l3n.co/FzcyFv.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/FzcXxo.jpg"><img src="https://b.l3n.co/FzcXxo.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzcwR9.jpg"><img src="https://c.l3n.co/FzcwR9.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzcGIC.jpg"><img src="https://c.l3n.co/FzcGIC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzcaB5.jpg"><img src="https://a.l3n.co/FzcaB5.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Fzchoz.jpg"><img src="https://b.l3n.co/Fzchoz.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/FzX88T.jpg"><img src="https://c.l3n.co/FzX88T.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzXAJb.jpg"><img src="https://d.l3n.co/FzXAJb.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzXWe7.jpg"><img src="https://a.l3n.co/FzXWe7.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzXiyr.jpg"><img src="https://d.l3n.co/FzXiyr.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/FzX0RF.jpg"><img src="https://c.l3n.co/FzX0RF.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/FzXI73.jpg"><img src="https://b.l3n.co/FzXI73.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/FzXZU0.jpg"><img src="https://a.l3n.co/FzXZU0.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/FzUodT.jpg"><img src="https://d.l3n.co/FzUodT.jpg"/></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>撮影者</td>
+					<td>狼牙クレシ</td>
+				</tr>
+				<tr>
+					<td>撮影回</td>
+					<td>1回</td>
+				</tr>
+				<tr>
+					<td>行き先</td>
+					<td>境港</td>
+				</tr>
+				
+				
+			</table>
+			<hr/>
+			<a href="https://crasywolfang.com/jp/post/1908doha.html">
+				<div class="photoCard">
+					<h1 format="single">トンへ</h1>
+					<span class="card-left" format="single">都会撮影<small>（39枚）</small></span>
+					<span class="card-right">2026年01月23日</span>
+					<img src="https://c.l3n.co/Fz5iKo.jpg"/>
+					<span class="card-right" format="single">トンヘ、2019年08月</span>
+				</div>
+			</a>
+			
+			<a href="https://crasywolfang.com/jp/post/1908sira.html">
+				<div class="photoCard">
+					<h1 format="single">シベリア鉄道</h1>
+					<span class="card-left" format="single">雑多撮影<small>（113枚）</small></span>
+					<span class="card-right">2026年01月23日</span>
+					<img src="https://c.l3n.co/Fz58wm.jpg"/>
+					<span class="card-right" format="single">ロシア、2019年08月</span>
+				</div>
+			</a>
+			
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2026
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>

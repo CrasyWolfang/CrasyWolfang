@@ -76,6 +76,9 @@
 		.updatePosts .imgWrap{
 			max-width: 80%;
 			max-height: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			
 		}
 		.updatePosts img{
 			max-height: 800px;
@@ -208,19 +211,20 @@
 		.imgWrap{
 			display: flex;
 			flex-direction: row;
-			gap: 0.5em;
-			padding-bottom: 0.25em;
-			padding-top: 0.25em;
-			margin-left: auto;
-			margin-right: auto;
+			gap: 0.6em;
+			padding-bottom: 0.3em;
+			padding-top: 0.3em;
 			justify-content: center;
+			align-items: stretch;
+			align-content: stretch;
 			width: 100%;
 		}
 		.imgWrap img{
-			display: block;
-			max-width: 100%;
-			gap: 0.5em;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
+		.img:only-child{width: 100%;}
 		
 		.bibliography ul{
 			list-style-type: none;
@@ -303,6 +307,37 @@
 				</ul>
 			</nav>
 			
+			<div class="update">
+				<h1>日本への旅</h1>
+				<div class="updateParagraph">
+					<p>
+						下記の投稿は2019年の旅行と関係している。
+				その写真は旅の様々な都市で撮られた。
+				旅は欧州のスウェーデンからアジアの日本までかけて、その間に写真家はラトビアやロシアや韓国の都市を訪ねて写真を撮った。
+				写真は観光客の見方ではなく、一人の旅客として写す。
+					</p>
+				</div>
+				<div class="updatePosts">
+					<div class="imgWrap">
+						<a href="https://crasywolfang.com/jp/post/1908riga.html" format="single"><img src="https://c.l3n.co/FQMG8D.jpg"/></a>
+						<a href="https://crasywolfang.com/jp/post/1908vlvo.html" format="single"><img src="https://d.l3n.co/Fz5Zqv.jpg"/></a>
+						<a href="https://crasywolfang.com/jp/post/1908doha.html" format="single"><img src="https://b.l3n.co/Fz5gYC.jpg"/></a>
+						<a href="https://crasywolfang.com/jp/post/1908sami.html" format="single"><img src="https://d.l3n.co/Fz5rh5.jpg"/></a>
+						<a href="https://crasywolfang.com/jp/post/1908sira.html" format="single"><img src="https://a.l3n.co/Fz5I02.jpg"/></a>
+						<a href="https://crasywolfang.com/jp/post/1908ride.html" format="single"><img src="https://c.l3n.co/FnDQVm.jpg"/></a>
+					</div>
+					<ul>
+						<li><a href="https://crasywolfang.com/jp/post/1908riga.html" format="single">リガ</a></li>
+						<li><a href="https://crasywolfang.com/jp/post/1908vlvo.html" format="single">ウラジオストク</a></li>
+						<li><a href="https://crasywolfang.com/jp/post/1908doha.html" format="single">トンへ</a></li>
+						<li><a href="https://crasywolfang.com/jp/post/1908sami.html" format="single">境港</a></li>
+						<li><a href="https://crasywolfang.com/jp/post/1908sira.html" format="single">シベリア鉄道</a></li>
+						<li><a href="https://crasywolfang.com/jp/post/1908ride.html" format="single">日本への旅</a></li>
+					</ul>
+				</div>
+				<p class="center">ゆっくりご覧ください。</p>
+				<div class="date" format="single">2026年01月23日</div>
+			</div>
 			<div class="update">
 				<h1>動物・神殿写真</h1>
 				<div class="updateParagraph">
