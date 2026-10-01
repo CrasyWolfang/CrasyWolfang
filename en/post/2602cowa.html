@@ -1,0 +1,481 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.6em;
+			padding-bottom: 0.3em;
+			padding-top: 0.3em;
+			justify-content: center;
+			align-items: stretch;
+			align-content: stretch;
+			width: 100%;
+		}
+		.imgWrap img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.img:only-child{width: 100%;}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="https://crasywolfang.com/en/post/2602cowa.html">English</a> | <a href="https://crasywolfang.com/jp/post/2602cowa.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://crasywolfang.com/en/home.html">Home</a></li>
+					<li><a href="https://crasywolfang.com/en/photo.html">Photography</a></li>
+					
+					<li><a href="https://crasywolfang.com/en/about.html">About</a></li>
+				</ul>
+			</nav>
+			
+			<div class="title">
+				<h1 format="single">The Cold Wind</h1>
+				<span class="title-left">Waterway photography</span>
+				
+				<span class="title-right">
+					<div format="single"><span class="grey">published:&ensp;</span>TO COME</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<p>
+					It was a cold day.
+			The temperature has fluctuated all winter but in the recent week finally settled to a frozen atmosphere.
+			The wind blew cold and it felt like a wolf breathing directly on one's skin.
+</p>
+				<p>
+			The photographer decided to go out for a walk and headed for the Rinnebäck ravine.
+			On the fields nearby a hare (Lepus europaeus) folded its long ears against his body to hide himself away from the photographer.
+			In the same moment, a red kite (Milvus milvus) flew over the field.
+</p>
+				<p>
+			In the ravine the creek was still flowing.
+			However, the water was frozen in places to the degree that it was possible to walk across without cracking the surface and the ice had formed different beautiful patterns.
+			A flock of fieldfares (Turdus pilaris) had gathered in the valley, however, they made sure to avoid the photographer's camera.
+			Whenever the camera was pointed at them they flew to the next tree.
+			Two rock pigeons (Columba livia) played in the airspace above and the photographer snapped some pictures as they circled past.
+			During their play a common buzzard (Buteo buteo) also flew past.
+			There were also a few wrens (Troglodytes troglodytes) in the ravine, but they were aware of the photographer's presence and their small bodies allowed them to hide in holes to which they fully managed to circumvent the camera.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGz8M.jpg"><img src="https://c.l3n.co/UdGz8M.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGHuA.jpg"><img src="https://b.l3n.co/UdGHuA.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdG3RF.jpg"><img src="https://c.l3n.co/UdG3RF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGBe7.jpg"><img src="https://d.l3n.co/UdGBe7.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGmyr.jpg"><img src="https://b.l3n.co/UdGmyr.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdG473.jpg"><img src="https://a.l3n.co/UdG473.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGKU0.jpg"><img src="https://c.l3n.co/UdGKU0.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdG7ID.jpg"><img src="https://a.l3n.co/UdG7ID.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGOmq.jpg"><img src="https://d.l3n.co/UdGOmq.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGM7x.jpg"><img src="https://d.l3n.co/UdGM7x.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGeea.jpg"><img src="https://c.l3n.co/UdGeea.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGSQQ.jpg"><img src="https://b.l3n.co/UdGSQQ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGLTk.jpg"><img src="https://b.l3n.co/UdGLTk.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGnye.jpg"><img src="https://d.l3n.co/UdGnye.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGYUH.jpg"><img src="https://a.l3n.co/UdGYUH.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					The photographer continued down to Höje River Valley.
+			On fields outside the goose were screaming loudly and they all flew off when they saw the photographer come walking.
+			The photographer's hands and feet were cold from the wind, so instead of going to the ponds he went into a grove.
+			There he took out a piece of candy from his pocket and as he put it in his mouth he saw a strange bird fly out from the grove.
+			He quickly chased after it and ran out onto a field.
+			A hare and two blackbirds watched him stand out there and wait for the bird.
+			After a short while the bird showed up again and a photo of the sparrowhawk (Accipiter nisus) was captured.
+</p>
+				<p>
+			The water in the ponds had also frozen and the western most pond was almost completely frozen over.
+			A lonely gray mute swan (Cygnus olor, the gray color is of a young swan) swam around by itself.
+			In the other ponds the goose landed and took off, and in the middle pond stood a cormorant (Phalacrocorax carbo) and gazed over the scenery.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGuZ1.jpg"><img src="https://c.l3n.co/UdGuZ1.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGNuK.jpg"><img src="https://d.l3n.co/UdGNuK.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGDmc.jpg"><img src="https://a.l3n.co/UdGDmc.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGfAZ.jpg"><img src="https://a.l3n.co/UdGfAZ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGFQP.jpg"><img src="https://c.l3n.co/UdGFQP.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					The next day the photographer tried to go back again to the ponds.
+			The cormorant that was mentioned earlier was swimming in the small pond and afterwards stood in the same spot as previously and gazed upon the scenery.
+			The gray swan was still in the western pond.
+			The crackle of the geese were really loud and the presence of greylag geese (Anser anser) and barnacle geese (Branta leucopsis) was clear above.
+</p>
+				<p>
+			The photographer kneeled down at one of the ponds to take a photo of a little grebe (Tachybaptus ruficollis).
+			While he was taking his photos, a married couple came over to him and asked "what are you photographing?"
+</p>
+				<p>
+			"There is this little diver that I have wanted to photograph for a long time."
+</p>
+				<p>
+			The man pointed at a pillar of ice out by the water and asked "That is a bird right? My wife says it's not but we can't figure out who is right."
+</p>
+				<p>
+			"That is just some ice frozen onto a pole, but I see where you're coming from since it really looks like a heron from afar."
+			The photographer took a photo and showed the man.
+</p>
+				<p>
+			"Is that so..." he said and the couple continued their walk.
+</p>
+				<p>
+			Afterwards the photographer went alongside the fields.
+			There must have been over a thousand geese on the field.
+			The photographer stopped briefly in his tracks to take a photo and instantly all of the geese took off to the sky.
+			The sound of their flapping wings together with everyone screaming is an experience that can hardly be described.
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGUnm.jpg"><img src="https://a.l3n.co/UdGUnm.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGc5i.jpg"><img src="https://c.l3n.co/UdGc5i.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGbTo.jpg"><img src="https://b.l3n.co/UdGbTo.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGwO9.jpg"><img src="https://c.l3n.co/UdGwO9.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGxc2.jpg"><img src="https://b.l3n.co/UdGxc2.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/Uda8VT.jpg"><img src="https://a.l3n.co/Uda8VT.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGau5.jpg"><img src="https://a.l3n.co/UdGau5.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdaAnb.jpg"><img src="https://d.l3n.co/UdaAnb.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGGsC.jpg"><img src="https://b.l3n.co/UdGGsC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdG5Zv.jpg"><img src="https://a.l3n.co/UdG5Zv.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Uda2Az.jpg"><img src="https://d.l3n.co/Uda2Az.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdaW57.jpg"><img src="https://b.l3n.co/UdaW57.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdajEr.jpg"><img src="https://d.l3n.co/UdajEr.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdaIc3.jpg"><img src="https://d.l3n.co/UdaIc3.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Uda0OF.jpg"><img src="https://b.l3n.co/Uda0OF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/Udagg0.jpg"><img src="https://a.l3n.co/Udagg0.jpg"/></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>Photographer</td>
+					<td>Crasy Wolfang</td>
+				</tr>
+				<tr>
+					<td>Sessions</td>
+					<td trygrab="session">2&ensp;sessions</td>
+				</tr>
+				<tr>
+					<td>Destination</td>
+					<td>
+						Lund
+						<ul>
+							<li>Rinnebäck Ravine&ensp;(Rinnebäcksravinen)</li>
+							<li>Höje River Valley&ensp;(Höjeådalen)</li>
+						</ul>
+					</td>
+				</tr>
+				
+				
+			</table>
+			<hr/>
+			
+			
+			
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2026
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>

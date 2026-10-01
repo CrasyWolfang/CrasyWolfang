@@ -1,0 +1,479 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.6em;
+			padding-bottom: 0.3em;
+			padding-top: 0.3em;
+			justify-content: center;
+			align-items: stretch;
+			align-content: stretch;
+			width: 100%;
+		}
+		.imgWrap img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.img:only-child{width: 100%;}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="https://crasywolfang.com/en/post/2602cowa.html">English</a> | <a href="https://crasywolfang.com/jp/post/2602cowa.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://crasywolfang.com/jp/home.html">ホーム</a></li>
+					<li><a href="https://crasywolfang.com/jp/photo.html">写真撮影</a></li>
+					
+					<li><a href="https://crasywolfang.com/jp/about.html">について</a></li>
+				</ul>
+			</nav>
+			
+			<div class="title">
+				<h1 format="single">ガンの鳴き声</h1>
+				<span class="title-left">水域撮影</span>
+				
+				<span class="title-right">
+					<div format="single"><span class="grey">発行日&ensp;</span>TO COME</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<p>
+					寒い日であった。
+			冬に温度は上がり下がりし最近に下って氷が風景に凝った。
+			風邪が吹いていて肌にオオカミの息が引いているように感じた。
+</p>
+				<p>
+			撮影者は散歩をしようと思って、ルンドのリネベック谷へ歩き出した。
+			畑でヤブノウサギ（Lepus europaeus）は 撮影者に見えないように 長い耳を体に折った。
+			同時に上にアカトビ（Milvus milvus）が飛び渡った。
+</p>
+				<p>
+			谷の川がまだ流れていた。
+			しかし氷に凝った所もあって、ひびが入らず踏め、上に色々な奇麗な模様が作られた。
+			ノハラツグミの群（Turdus pilaris）が谷に集まっているが撮影者のカメラを避けていた。
+			カメラを鳥へ向けると次にの木まで飛び出す。
+			谷の空に鳩（Columba livia）が二羽谷の空を遊び、撮影者は鳥をそのままに撮った。
+			その間にパノスリ（Buteo buteo）も一羽飛び渡った。
+			ミソサザイ（Troglodytes troglodytes）も何羽か現れるが体は小さくて穴に隠すこともあるし、カメラの眼を避けられた。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGz8M.jpg"><img src="https://c.l3n.co/UdGz8M.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGHuA.jpg"><img src="https://b.l3n.co/UdGHuA.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdG3RF.jpg"><img src="https://c.l3n.co/UdG3RF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGBe7.jpg"><img src="https://d.l3n.co/UdGBe7.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGmyr.jpg"><img src="https://b.l3n.co/UdGmyr.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdG473.jpg"><img src="https://a.l3n.co/UdG473.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGKU0.jpg"><img src="https://c.l3n.co/UdGKU0.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdG7ID.jpg"><img src="https://a.l3n.co/UdG7ID.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGOmq.jpg"><img src="https://d.l3n.co/UdGOmq.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGM7x.jpg"><img src="https://d.l3n.co/UdGM7x.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGeea.jpg"><img src="https://c.l3n.co/UdGeea.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGSQQ.jpg"><img src="https://b.l3n.co/UdGSQQ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGLTk.jpg"><img src="https://b.l3n.co/UdGLTk.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGnye.jpg"><img src="https://d.l3n.co/UdGnye.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGYUH.jpg"><img src="https://a.l3n.co/UdGYUH.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					撮影者はヘジェ川谷へ続いた。
+			ガンがたくさん地域の畑で声を強く鳴き、撮影者が見えたら群が逃げた。
+			足元と手元は風で寒くなったので、池の代わりに林へ行った。
+			そして、林の中でポケットから飴を一食出して口に入れている間に珍しい鳥が林から飛び出した。
+			鳥を見られるように速く畑まで走っていた。
+			ヤブノウサギとクロウタドリの二羽は畑で待っていた撮影者を観た。
+			そして、鳥が戻ってきて写真にハイタカ（Accipiter nisus）が写った。
+</p>
+				<p>
+			池の氷も凝り、一番西の池はほとんど 氷に覆われていて灰色の コブ白鳥（Cygnus olor、グレイ色は若いという意味である）は一人で泳いでいた。
+			他の池でガンが行ったり来たりしていて、真ん中の池の前でウ（Phalacrocorax carbo）が立って景色を眺めていた。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGuZ1.jpg"><img src="https://c.l3n.co/UdGuZ1.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdGNuK.jpg"><img src="https://d.l3n.co/UdGNuK.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGDmc.jpg"><img src="https://a.l3n.co/UdGDmc.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGfAZ.jpg"><img src="https://a.l3n.co/UdGfAZ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGFQP.jpg"><img src="https://c.l3n.co/UdGFQP.jpg"/></a></div></div>
+					</div>
+				</div>
+				<p>
+					次の日に撮影者がまた池に行ってみた。
+			先に述べたウはまだいて、小さい池を泳いでそしてまた前で景色を眺めた。
+			西の池に灰色の白鳥がまだいた。
+			ガンの鳴き声がすごく響いていて、ハイイロガン（Anser anser）とカオジロガン（Branta leucopsis）は空を飛び回った。
+</p>
+				<p>
+			池の際に膝射に座ってカイツブリ（Tachybaptus ruficollis）の写真を撮った。
+			取っている時に夫婦は「なの写真を撮りますか。」
+</p>
+				<p>
+			「この小さい鳥はずっと撮りたいんですけれど。」
+</p>
+				<p>
+			そして、おじさんは池の氷に目を指して「あれは鳥ですね。奥さんはそれは鳥ではないといっています。」
+</p>
+				<p>
+			「そうですね。あれはサギみたいですけれども氷が棒にかかったことしかない。」
+			写真を一枚撮ってあげておじさんに見せた。
+</p>
+				<p>
+			「そうですか。」と言って二人は散歩を続けた。
+</p>
+				<p>
+			あとで撮影者は畑に沿って歩いた。
+			畑にガンが千以上いたはずである。
+			しばらく写真を取るために立ち止まり、ガンが全部空へ飛び出して、鳥の羽音と鳴き声がすごく響いた体験であった。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGUnm.jpg"><img src="https://a.l3n.co/UdGUnm.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGc5i.jpg"><img src="https://c.l3n.co/UdGc5i.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGbTo.jpg"><img src="https://b.l3n.co/UdGbTo.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UdGwO9.jpg"><img src="https://c.l3n.co/UdGwO9.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGxc2.jpg"><img src="https://b.l3n.co/UdGxc2.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/Uda8VT.jpg"><img src="https://a.l3n.co/Uda8VT.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdGau5.jpg"><img src="https://a.l3n.co/UdGau5.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdaAnb.jpg"><img src="https://d.l3n.co/UdaAnb.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdGGsC.jpg"><img src="https://b.l3n.co/UdGGsC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UdG5Zv.jpg"><img src="https://a.l3n.co/UdG5Zv.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/Uda2Az.jpg"><img src="https://d.l3n.co/Uda2Az.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UdaW57.jpg"><img src="https://b.l3n.co/UdaW57.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdajEr.jpg"><img src="https://d.l3n.co/UdajEr.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UdaIc3.jpg"><img src="https://d.l3n.co/UdaIc3.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/Uda0OF.jpg"><img src="https://b.l3n.co/Uda0OF.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/Udagg0.jpg"><img src="https://a.l3n.co/Udagg0.jpg"/></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>撮影者</td>
+					<td>狼牙クレシ</td>
+				</tr>
+				<tr>
+					<td>撮影回</td>
+					<td trygrab="session">2回</td>
+				</tr>
+				<tr>
+					<td>行き先</td>
+					<td>
+						ルンド（Lund）
+						<ul>
+							<li>リネベックの谷（Rinnebäcksravinen）</li>
+							<li>ヘジェ川谷（Höjeådalen）</li>
+						</ul>
+					</td>
+				</tr>
+				
+				
+			</table>
+			<hr/>
+			
+			
+			
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2026
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>

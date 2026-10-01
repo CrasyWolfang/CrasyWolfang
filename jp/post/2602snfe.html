@@ -1,0 +1,556 @@
+<!DOCTYPE>
+
+
+<html>
+	<head>
+		<title>CWOLF</title>
+		<meta charset="utf-8"/>
+		<style>
+			body{background-color: #000000;}
+		a{
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		a:hover{background-color: #e0c068;}
+		#container{
+			color: #ffffff;
+			max-width: 1200px;
+			min-width: 640px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#top{width: 100%;}
+		#topLang{float: right;}
+		#topLang a{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#header img{
+			display: block;
+			width: 100%;
+		}
+		#topMenu{background-color: #000000;}
+		#topMenu ul{
+			margin: 0em;
+			padding: 0em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		#topMenu li{
+			display: inline;
+			padding: 0em;
+			font-size: 1.3em;
+			border: 2px solid #808080;
+		}
+		#topMenu a{
+			padding-top: 0em;
+			padding-bottom: 0em;
+			padding-left: 2em;
+			padding-right: 2em;
+			color: #ffffff;
+		}
+		#bottom{
+			color: #808080;
+			background-color: #000000;
+		}
+		#bottom a{
+			float: right;
+			color: #808080;
+		}
+		
+		#cwolfwatermark{
+			color: #808080;
+			font-size: 0.8em;
+		}
+		
+		.update{
+			margin: 0.5em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 2em;
+			padding-right: 2em;
+			border: solid #101010;
+		}
+		.update h1{text-align: center;}
+		.updateParagraph{text-indent: 2em;}
+		.updatePosts .imgWrap{
+			max-width: 80%;
+			max-height: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			
+		}
+		.updatePosts img{
+			max-height: 800px;
+		}
+		.updatePosts ul{
+			max-width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.update .image{
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.update .date{
+			color: #808080;
+			text-align: right;
+		}
+		
+		.flowbutton {
+			padding: 1em;
+			gap: 1em;
+		}
+		.flowbutton li{
+			list-style-type: none;
+			margin-top: 0.5em;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			text-align: center;
+			font-size: 1.6em;
+		}
+		.flowbutton li:hover{background-color: #e0c068;}
+		
+		.center{text-align: center;}
+		h1.center{text-decoration: underline;}
+		
+		.catCard{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+			font-size: 1.3em;
+		}
+		.catCard li{
+			margin: 0.3em;
+			display: inline-block;
+			border: 2px solid #808080;
+		}
+		.catCard li:hover{background-color: #e0c068;}
+		.catCard img{
+			width: 240px;
+			display: block;
+		}
+		.catCard a{
+			color: #ffffff;
+			display: block;
+			padding: 0.5em;
+		}
+		
+		.title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 1em;
+			padding-bottom: 2em;
+		}
+		.title h1{
+			border-bottom: 1px solid;
+			width: 100%;
+			margin: 0px;
+		}
+		.subtitle{
+			font-size: 0.8em;
+			color: #808080;
+		}
+		.title .grey {color: #808080;}
+		
+		.title-left{float: left;}
+		.title-right{
+			float: right;
+			text-align: right;
+		}
+		
+		.photo-content p{
+			padding-left: 1em;
+			padding-right: 1em;
+			text-indent: 2em;
+		}
+		.note {
+			margin: 1em;
+			border: 1px solid #ffffff;
+		}
+		
+		.ref{
+			color: #D3D3D3;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+		.ref::before{content: '[';}
+		.ref::after{content: ']';}
+		
+		.photorow{margin-top: 1.2em;}
+		
+		.photoCard{
+			color: #ffffff;
+			border: 2px solid #808080;
+			margin-top: 1em;
+			padding-bottom: 2em;
+		}
+		.photoCard:hover{background-color: #e0c068;}
+		.photoCard h1{
+			margin: 0px;
+			padding-left: 0.15em;
+		}
+		.card-left{
+			float: left;
+			padding-left: 0.4em;
+		}
+		.card-right{
+			float: right;
+			text-align: right;
+			padding-right: 0.4em;
+		}
+		.photoCard img{
+			width: 100%;
+			display: block;
+		}
+		.imgdesc{padding-bottom: 1em;}
+		
+		.imgWrap{
+			display: flex;
+			flex-direction: row;
+			gap: 0.6em;
+			padding-bottom: 0.3em;
+			padding-top: 0.3em;
+			justify-content: center;
+			align-items: stretch;
+			align-content: stretch;
+			width: 100%;
+		}
+		.imgWrap img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.img:only-child{width: 100%;}
+		
+		.bibliography ul{
+			list-style-type: none;
+			text-indent: 0em;
+		}
+		.bibliography li:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+		
+		.largePhoto{
+			border: 1px solid #ffffff;
+			margin-bottom: 1em;
+		}
+		.largePhotoUrl div{
+			background-color: #ffffff;
+		}
+		.largePhotoUrl div:hover{
+			background-color: #e0c068;
+		}
+		.largePhotoUrl div:hover{
+			background-color: background-color: #e0c068;
+		}
+		.largePhotoTop{
+			text-indent: 1em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+		}
+		.largePhoto img{display: block;}
+		.largePhotoTitle{
+			font-size: 1.3em;
+			font-weight: bold;
+			color: #000000;
+			display: inline-block;
+			width: 100%;
+			text-indent: 2em;
+		}
+		.largePhoto p{
+			text-indent: 2em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.credits{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.creditref ol{
+			margin: 0;
+			padding-left: 1em;
+		}
+		.creditref li:not(:last-child){margin-bottom: 0.2em;}
+		.credits td{
+			border: 1px solid #ffffff;
+			padding: 0.3em;
+			padding-left: 1em;
+			color: #ffffff;
+		}
+		.credits td:first-child {
+			width: 12%;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<span id="cwolfwatermark">CWOLF WEB PROJECT</span>
+				<div id="topLang">🌎 <a href="https://crasywolfang.com/en/post/2602snfe.html">English</a> | <a href="https://crasywolfang.com/jp/post/2602snfe.html">日本語</a></div>
+			</div>
+			<div id="header"><img src="https://i3.lensdump.com/i/1cR5jC.jpg"/></div>
+			<nav id="topMenu">
+				<ul>
+					<li><a href="https://crasywolfang.com/jp/home.html">ホーム</a></li>
+					<li><a href="https://crasywolfang.com/jp/photo.html">写真撮影</a></li>
+					
+					<li><a href="https://crasywolfang.com/jp/about.html">について</a></li>
+				</ul>
+			</nav>
+			
+			
+			<div class="title">
+				<h1 format="single">スノー・イベント</h1>
+				<span class="title-left">イベント撮影</span>
+				
+				<span class="title-right">
+					<div format="single"><span class="grey">発行日&ensp;</span>TO COME</div>
+					
+				</span>
+			</div>
+			<div class="photo-content">
+				<div class="note">
+					<p>
+						下記の写真は<a href="https://www.lundagard.se/2026/02/27/lesskiga-tricks-nar-skidtavling-arrangeras-i-lundagard/">ルンダゴード</a>という学生新聞にとられた。
+					</p>
+				</div>
+				<p>
+					二月であり、寒い温度が上がり始めてこの日小雨が軽く降ってきた。
+			ルンド大学の前から音楽が流れている。
+			通行人たちは写真を撮るためにしばらく足元で停まる。
+			目の前でルンド積極スポーツ界（Lunds extremsportarsällskap、略称：LESS）は スケートリンクの原因<sup format="single"><abbr class="ref" title="Hagström&ensp;2026">参考</abbr></sup>の雪を集めてスキーをするために足場を立てた。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVRC2x.jpg"><img src="https://d.l3n.co/UVRC2x.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVRJJH.jpg"><img src="https://b.l3n.co/UVRJJH.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UVRkok.jpg"><img src="https://a.l3n.co/UVRkok.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVEW60.jpg"><img src="https://c.l3n.co/UVEW60.jpg"/></a></div></div>
+					</div>
+				</div>
+				<h2 format="p">
+					<p>
+						Rail jam
+					</p>
+				</h2>
+				<p>
+					午前は静かで、男の人は一人でランプを出す。
+			この時にRailJamというだれでもランプから落ちていいイベントを行う。
+			スタッフは借りられるスキーもあるから撮影者も無料でスキーしてもいいと教えてくれる。
+			午後に雨が止んでスキーする選手と観客が増えている。
+			最初に選手はスキーで飛んだりスリに滑ったりするが観客がまた増えてきたのでバク宙とかの芸当もしてみた。
+			競争の小手調べだね。
+			その間にスポンサーの製品を持ちながらカメラに出す。
+			街の中でスキーをする行為は珍しく、ニュースも記事を作るために来た。
+			<ruby>Sydsvenskan<rt>スィードスウェンスカン</rt></ruby>という地方紙の写真家が選手にゴープロを渡して登録しようとしているあいだに、<ruby>SVT<rt>スウェーデン公共放送</rt></ruby>のカメラマンは選手を面談する。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/UV1Pfm.jpg"><img src="https://c.l3n.co/UV1Pfm.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/UVThdr.jpg"><img src="https://b.l3n.co/UVThdr.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UV1F0i.jpg"><img src="https://d.l3n.co/UV1F0i.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UV1Yzc.jpg"><img src="https://b.l3n.co/UV1Yzc.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UV1NKP.jpg"><img src="https://a.l3n.co/UV1NKP.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/UVE2LF.jpg"><img src="https://a.l3n.co/UVE2LF.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/UV1eqk.jpg"><img src="https://c.l3n.co/UV1eqk.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVE8a3.jpg"><img src="https://d.l3n.co/UVE8a3.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/UV1b22.jpg"><img src="https://a.l3n.co/UV1b22.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/UV1cY9.jpg"><img src="https://d.l3n.co/UV1cY9.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/UV1wCv.jpg"><img src="https://b.l3n.co/UV1wCv.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/UV1xSC.jpg"><img src="https://c.l3n.co/UV1xSC.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UV1yw5.jpg"><img src="https://b.l3n.co/UV1yw5.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/UVRj23.jpg"><img src="https://a.l3n.co/UVRj23.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/UV1hfb.jpg"><img src="https://b.l3n.co/UV1hfb.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/UVR807.jpg"><img src="https://d.l3n.co/UVR807.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/UVRWYF.jpg"><img src="https://b.l3n.co/UVRWYF.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/UV1apT.jpg"><img src="https://d.l3n.co/UV1apT.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVRT0a.jpg"><img src="https://d.l3n.co/UVRT0a.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVRZxq.jpg"><img src="https://d.l3n.co/UVRZxq.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/UVRtpM.jpg"><img src="https://c.l3n.co/UVRtpM.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/UVRdRK.jpg"><img src="https://d.l3n.co/UVRdRK.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/UVRVxc.jpg"><img src="https://a.l3n.co/UVRVxc.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/UVRQe1.jpg"><img src="https://d.l3n.co/UVRQe1.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/UVRq7Z.jpg"><img src="https://c.l3n.co/UVRq7Z.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UVRBFP.jpg"><img src="https://a.l3n.co/UVRBFP.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVRsIm.jpg"><img src="https://c.l3n.co/UVRsIm.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVRp89.jpg"><img src="https://c.l3n.co/UVRp89.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVR3mi.jpg"><img src="https://b.l3n.co/UVR3mi.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UVRHyC.jpg"><img src="https://a.l3n.co/UVRHyC.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVRzR5.jpg"><img src="https://b.l3n.co/UVRzR5.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVRS7z.jpg"><img src="https://d.l3n.co/UVRS7z.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVReUT.jpg"><img src="https://b.l3n.co/UVReUT.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UVR4oo.jpg"><img src="https://a.l3n.co/UVR4oo.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVRfTq.jpg"><img src="https://b.l3n.co/UVRfTq.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVRNyD.jpg"><img src="https://c.l3n.co/UVRNyD.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVRUUM.jpg"><img src="https://d.l3n.co/UVRUUM.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/UVEgPQ.jpg"><img src="https://a.l3n.co/UVEgPQ.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/UVEZ4M.jpg"><img src="https://c.l3n.co/UVEZ4M.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UVRXZQ.jpg"><img src="https://a.l3n.co/UVRXZQ.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVRbma.jpg"><img src="https://b.l3n.co/UVRbma.jpg"/></a></div></div>
+					</div>
+				</div>
+				<h2 format="p">
+					<p>
+						競争
+					</p>
+				</h2>
+				<p>
+							
+			三時になって、そろそろ競争があって選手は列を作る。
+			競争になったのに機嫌な雰囲気がある。
+			選手がバク宙を頑張ってると観客は息を殺す。
+			最後にスタッフは選手が飛び越えるフェンスも立ってみる。
+				</p>
+				
+				<div class="photoblock">
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVR5Qx.jpg"><img src="https://b.l3n.co/UVR5Qx.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVT2Tc.jpg"><img src="https://c.l3n.co/UVT2Tc.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVEItA.jpg"><img src="https://d.l3n.co/UVEItA.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/UVRa51.jpg"><img src="https://d.l3n.co/UVRa51.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/UVT8OK.jpg"><img src="https://a.l3n.co/UVT8OK.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVTiZP.jpg"><img src="https://b.l3n.co/UVTiZP.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVTjsm.jpg"><img src="https://c.l3n.co/UVTjsm.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVTZAo.jpg"><img src="https://b.l3n.co/UVTZAo.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://a.l3n.co/UVTt5v.jpg"><img src="https://a.l3n.co/UVTt5v.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVTTO5.jpg"><img src="https://d.l3n.co/UVTTO5.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/UVTREC.jpg"><img src="https://c.l3n.co/UVTREC.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/UVTrv2.jpg"><img src="https://b.l3n.co/UVTrv2.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVTgV9.jpg"><img src="https://c.l3n.co/UVTgV9.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVT6gT.jpg"><img src="https://c.l3n.co/UVT6gT.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVTEcz.jpg"><img src="https://b.l3n.co/UVTEcz.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVTqG0.jpg"><img src="https://d.l3n.co/UVTqG0.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVTSGH.jpg"><img src="https://d.l3n.co/UVTSGH.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVTCsb.jpg"><img src="https://d.l3n.co/UVTCsb.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/UVT9VF.jpg"><img src="https://b.l3n.co/UVT9VF.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/UVTdv3.jpg"><img src="https://a.l3n.co/UVTdv3.jpg"/></a></div>
+						</div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVT3XA.jpg"><img src="https://c.l3n.co/UVT3XA.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/UVTmED.jpg"><img src="https://b.l3n.co/UVTmED.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/UVTsHq.jpg"><img src="https://a.l3n.co/UVTsHq.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/UVTHWe.jpg"><img src="https://d.l3n.co/UVTHWe.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://b.l3n.co/UVTKgM.jpg"><img src="https://b.l3n.co/UVTKgM.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVTai7.jpg"><img src="https://d.l3n.co/UVTai7.jpg"/></a></div></div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/UVEtia.jpg"><img src="https://b.l3n.co/UVEtia.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/UVETax.jpg"><img src="https://d.l3n.co/UVETax.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://b.l3n.co/UVEk6H.jpg"><img src="https://b.l3n.co/UVEk6H.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/UVE6z1.jpg"><img src="https://c.l3n.co/UVE6z1.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://d.l3n.co/UVTLXK.jpg"><img src="https://d.l3n.co/UVTLXK.jpg"/></a></div>
+							<div class="img"><a href="https://c.l3n.co/UVTnk1.jpg"><img src="https://c.l3n.co/UVTnk1.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/UVEQtK.jpg"><img src="https://a.l3n.co/UVEQtK.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/UVEqjm.jpg"><img src="https://b.l3n.co/UVEqjm.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVTl9k.jpg"><img src="https://c.l3n.co/UVTl9k.jpg"/></a></div></div>
+						<div class="imgWrap"><div class="img"><a href="https://c.l3n.co/UVE9PP.jpg"><img src="https://c.l3n.co/UVE9PP.jpg"/></a></div></div>
+					</div>
+					<div class="photorow">
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/UVTo3P.jpg"><img src="https://c.l3n.co/UVTo3P.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/UVTuNm.jpg"><img src="https://b.l3n.co/UVTuNm.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/UVTfL9.jpg"><img src="https://c.l3n.co/UVTfL9.jpg"/></a></div>
+							<div class="img"><a href="https://b.l3n.co/UVTFa2.jpg"><img src="https://b.l3n.co/UVTFa2.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://a.l3n.co/UVTckv.jpg"><img src="https://a.l3n.co/UVTckv.jpg"/></a></div>
+							<div class="img"><a href="https://d.l3n.co/UVTbX5.jpg"><img src="https://d.l3n.co/UVTbX5.jpg"/></a></div>
+						</div>
+						<div class="imgWrap">
+							<div class="img"><a href="https://c.l3n.co/UVTxrz.jpg"><img src="https://c.l3n.co/UVTxrz.jpg"/></a></div>
+							<div class="img"><a href="https://a.l3n.co/UVT5Nb.jpg"><img src="https://a.l3n.co/UVT5Nb.jpg"/></a></div>
+						</div>
+						<div class="imgWrap"><div class="img"><a href="https://d.l3n.co/UVTP9o.jpg"><img src="https://d.l3n.co/UVTP9o.jpg"/></a></div></div>
+					</div>
+				</div>
+			</div>
+			<table class="credits">
+				<tr>
+					<td>撮影者</td>
+					<td>狼牙クレシ</td>
+				</tr>
+				<tr>
+					<td>撮影回</td>
+					<td>1回</td>
+				</tr>
+				<tr>
+					<td>行き先</td>
+					<td>ルンド（Lund）・ルンドガード（Lundagård）</td>
+				</tr>
+				
+				<tr tryobj="reference">
+					<td>参考資料</td>
+					<td class="creditref">Elsa,&ensp;Hagström.&ensp;『Därför landar 30 kubik snö i Lundagård』（通訳『雪の30平方メートルがルンダゴードまで運ぶ理由』）.&ensp;article.&ensp;（Sydsvenskan,&ensp;2026年）.&ensp;入手先<a href="https://www.sydsvenskan.se/lund/darfor-landar-30-kubik-sno-i-lundagard/">https://www.sydsvenskan.se/lund/darfor-landar-30-kubik-sno-i-lundagard/</a>［2022年02月20日・典語］.</td>
+				</tr>
+			</table>
+			<hr/>
+			
+			
+			
+			<div id="bottom">
+				<hr/>©CrasyWolfang 2014-2026
+				✉ <adress>forwardtowolf@gmail.com</adress>
+				<a href="#top">top ↑</a>
+			</div>
+		</div>
+	</body>
+</html>
